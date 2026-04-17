@@ -127,3 +127,112 @@ La persona recurrirá al producto ante la necesidad de dividir los gastos del ho
 
 Genera tensiones, discusiones y desequilibrios económicos dentro del hogar, mientras que con la implementación de la aplicación se logra transparencia, justicia en las aportaciones y una mejor organización financiera compartida.
 
+## 1.2.2 Lean UX Process
+
+El Lean UX se define como un proceso en el que varios colaboradores trabajan juntos de manera continua y repetitiva, centrado en la experimentación y el aprendizaje constante. A diferencia de los métodos convencionales, este enfoque no se centra en la creación de una documentación detallada, sino que enfatiza la elaboración de prototipos y la ejecución de pruebas rápidas. Estas pruebas se realizan con usuarios auténticos y en situaciones específicas, lo que facilita la validación de hipótesis y la realización de cambios en el producto basados en la evidencia recopilada. Su propósito esencial es minimizar el desperdicio de recursos y optimizar la eficiencia en el ciclo de desarrollo, facilitando que los equipos de diseño y desarrollo puedan adaptarse con mayor agilidad a las demandas y expectativas de los usuarios (Gothelf & Seiden, 2013).
+
+### 1.2.2.1 Lean UX Problem Statements
+
+Los miembros de un mismo hogar con ingresos desiguales (como roommates, parejas o familias) enfrentan dificultades constantes al intentar dividir sus gastos compartidos de manera justa. Las herramientas tradicionales no consideran la capacidad adquisitiva real de cada integrante o no permiten una división rápida y auditable por el resto, lo que resulta en un sistema de cobro rígido.
+
+Hemos observado que esta falta de proporcionalidad genera tensiones, desconfianza y conflictos domésticos entre los convivientes, afectando negativamente la organización económica del hogar. Al no contar con una plataforma accesible y transparente que refleje su realidad, los usuarios sienten que asumen cargas financieras injustas, lo que provoca desmotivación y un manejo ineficiente del presupuesto común.
+
+¿Cómo podríamos desarrollar una aplicación móvil que automatice la distribución de los gastos del hogar de forma proporcional a los ingresos de cada integrante, facilitando el registro de recibos y el pago de cuotas, para fortalecer la equidad, la transparencia y la convivencia financiera?
+
+
+### 1.2.2.2 Lean UX Assumptions
+
+### Supuestos del Negocio – Harmonix
+
+1. **Creo que mis clientes tienen la necesidad de:**  
+   Organizar, transparentar y distribuir equitativamente los gastos compartidos del hogar (alquiler, servicios, alimentos) basándose en los ingresos reales de cada miembro, para evitar tensiones financieras y conflictos de convivencia.
+
+2. **Estas necesidades pueden resolverse con:**  
+   Harmonix, una solución digital conformada por una aplicación móvil, que calcula aportes proporcionales automáticamente, permite escanear recibos físicos usando la cámara del dispositivo, y facilita la liquidación de deudas mediante la integración con una pasarela de pagos de terceros.
+
+3. **Mis clientes iniciales son (o serán):**  
+   - Jóvenes profesionales y estudiantes universitarios que comparten departamento (roommates).  
+   - Parejas jóvenes o familias con ingresos económicos dispares que buscan mayor transparencia financiera.
+
+4. **El principal valor que un cliente quiere obtener de mi servicio es:**  
+   Justicia financiera, transparencia y reducción drástica de las discusiones por dinero dentro del hogar.  
+   **También pueden obtener estos beneficios adicionales:**  
+   Ahorro de tiempo en cálculos manuales, recordatorios automáticos de pago (notificaciones push), y un historial claro y accesible del estado de las finanzas.
+
+5. **Adquiriré la mayoría de mis clientes a través de:**  
+   - Nuestro sitio web estático (Landing Page) optimizado para motores de búsqueda (SEO).  
+   - Marketing digital en redes sociales dirigido a grupos demográficos jóvenes.  
+   - Recomendaciones "boca a boca" e invitaciones directas enviadas desde la app por el representante del hogar hacia sus convivientes.
+
+6. **Ganaré dinero mediante:**  
+   - Modelo Freemium: acceso gratuito a las funciones de cálculo proporcional básico.     
+   - Comisiones transaccionales derivadas de los pagos procesados a través de nuestra integración API con pasarelas de pago.
+
+7. **Mi principal competencia en el mercado será:**  
+   Aplicaciones genéricas de división de gastos, hojas de cálculo manuales (Excel) y la simple memoria o acuerdos informales.  
+   **Superaremos a la competencia debido a:**  
+   Nuestro algoritmo de cálculo enfocado estrictamente en la proporcionalidad de los ingresos, el uso de hardware (cámara) para automatizar ingresos de recibos, y la experiencia fluida de liquidar la deuda directamente desde la misma app móvil.
+
+8. **El mayor riesgo de mi producto es:**  
+   La desconfianza de los usuarios al tener que registrar sus ingresos reales en una plataforma digital o la reticencia a enlazar métodos de pago en una app nueva.  
+   **Lo resolveremos mediante:**  
+   Políticas de privacidad estrictas, encriptación de datos, un diseño que denote seguridad institucional, y alianzas con pasarelas de pago de terceros ampliamente reconocidas y confiables.
+
+9. **Otras suposiciones que, si se demuestran falsas, harán que nuestro negocio fracase:**  
+   - Que las personas están dispuestas a transparentar su nivel de ingresos con sus convivientes.  
+   - Que los usuarios prefieran descargar una app dedicada a este fin en lugar de usar transferencias bancarias directas (Yape/Plin) con cálculos mentales.  
+   - Que los usuarios cuenten con dispositivos móviles con capacidad de almacenamiento y características de hardware necesarias para correr la aplicación fluidamente.
+
+   ### Supuestos del Cliente – Harmonix
+
+1. **¿Quién es el cliente?**  
+   Jóvenes profesionales y estudiantes universitarios que comparten departamento (roommates), así como parejas jóvenes o familias con ingresos económicos dispares que buscan una gestión más justa de los gastos del hogar.
+
+2. **¿Dónde encaja nuestro producto en su vida?**  
+   En su vida cotidiana dentro del hogar compartido, específicamente en la gestión mensual de gastos como alquiler, servicios, alimentos y otros gastos comunes.
+
+3. **¿Qué problemas soluciona nuestro producto?**  
+   - Conflictos y tensiones por la división desigual o poco clara de los gastos.  
+   - Falta de transparencia en los aportes de cada miembro del hogar.  
+   - Pérdida de tiempo realizando cálculos manuales.  
+   - Dificultad para llevar un registro ordenado de pagos y deudas.
+
+4. **¿Cuándo y cómo se utiliza nuestro producto?**  
+   - Uso frecuente al registrar gastos compartidos (diarios o semanales).  
+   - Uso mensual al calcular y distribuir los gastos totales del hogar.  
+   - Uso puntual al escanear recibos físicos o al realizar pagos entre convivientes.  
+   - Acceso a través de la app móvil para gestionar gastos, revisar balances y liquidar deudas.
+
+5. **¿Qué características son importantes?**  
+   - Cálculo automático proporcional basado en ingresos.  
+   - Integración con pasarelas de pago.  
+   - Notificaciones y recordatorios de pago.  
+   - Historial claro y accesible de gastos y deudas.
+
+6. **¿Cómo debe verse y comportarse nuestro producto?**  
+   - Diseño moderno, intuitivo y fácil de usar.  
+   - Interfaz clara que transmita confianza y seguridad.  
+   - Navegación fluida en dispositivos móviles.  
+   - Respuestas rápidas, cálculos precisos.
+
+### 1.2.2.3 Lean UX Hypothesis Statements
+
+**Hipótesis 1 – Distribución equitativa de gastos**  
+Creemos que automatizar la asignación de contribuciones según los ingresos individuales aumentará la equidad y reducirá los conflictos financieros.  
+**Consideraremos que hemos alcanzado el éxito cuando** el **70 % de los usuarios** manifieste una **disminución en las discusiones por dinero** y una **mayor satisfacción con la gestión financiera** durante los primeros tres meses.
+
+**Hipótesis 2 – Transparencia y control del representante del hogar**  
+Suponemos que al ofrecer reportes automáticos y alertas visuales, el representante del hogar logrará fortalecer la transparencia y el cumplimiento de pagos.  
+**Consideraremos que hemos alcanzado el éxito cuando** el número de **pagos atrasados se reduzca en un 50 %**, y el **60 % de los hogares** utilice activamente el panel de control.
+
+**Hipótesis 3 – Adopción y facilidad de uso**  
+Creemos que una interfaz intuitiva y adaptable incrementará la adopción del sistema incluso entre usuarios con poca experiencia digital.  
+**Consideraremos que hemos alcanzado el éxito cuando** el **80 % de los usuarios** complete el registro y uso básico sin requerir asistencia técnica.
+
+**Hipótesis 4 – Cultura de ahorro cooperativo**  
+Consideramos que introducir metas de ahorro compartidas fomentará la planificación y cooperación económica familiar.  
+**Consideraremos que hemos alcanzado el éxito cuando** al menos el **50 % de los hogares** cree y mantenga una **meta de ahorro en común** durante los primeros dos meses.
+
+### 1.2.2.4 Lean UX Canvas
+
+<img src="./assets/LeanUX_Canvas.png" alt="Lean UX Canvas" width="100%">
