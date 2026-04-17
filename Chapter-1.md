@@ -236,3 +236,56 @@ Consideramos que introducir metas de ahorro compartidas fomentará la planificac
 ### 1.2.2.4 Lean UX Canvas
 
 <img src="./assets/LeanUX_Canvas.png" alt="Lean UX Canvas" width="100%">
+
+
+### 1.3 Segmentos objetivo
+
+Para el modelo de negocio de Harmonix, se han identificado dos segmentos principales que interactuarán con la solución móvil y web. A continuación, se detallan sus perfiles y el sustento estadístico que valida la necesidad del producto en el mercado.
+
+---
+
+#### Segmento objetivo 1: Convivientes y Roommates (Miembros del hogar)
+
+##### Aspectos demográficos
+- Sexo: Masculino y femenino  
+- Edad: 18 – 65 años  
+- Nivel socioeconómico: Clases A, B y C (alta, media-alta y media)  
+- Estado civil: Solteros, casados, convivientes, parejas, compañeros de cuarto  
+
+##### Aspectos geográficos
+- Nacionalidad: Peruana  
+- Zona geográfica: Urbana y suburbana  
+- Departamento: Lima Metropolitana y principales ciudades del país  
+
+##### Aspectos psicográficos
+- Buscan una forma justa y equitativa de compartir gastos del hogar (alquiler, servicios, alimentación, etc.)  
+- Están interesados en herramientas que brinden transparencia y simplicidad en la gestión de las finanzas  
+- Se preocupan por mantener un equilibrio financiero entre los miembros del hogar, asegurando que cada uno aporte de acuerdo a sus ingresos  
+- Tienen un estilo de vida basado en la convivencia y la corresponsabilidad, por lo que valoran soluciones que reduzcan discusiones y simplifiquen la organización de pagos  
+
+##### Información estadística de sustento
+Según un estudio de Ipsos Perú sobre Perfiles Socioeconómicos, la convivencia entre jóvenes (roommates) o parejas sin casarse ha aumentado significativamente en zonas urbanas debido al alto costo de los alquileres. Además, reportes del sector inmobiliario indican que más del 40% de los jóvenes profesionales optan por compartir departamento para aligerar la carga económica. A nivel de comportamiento financiero, la Superintendencia de Banca, Seguros y AFP (SBS) señala que la población joven y adulta joven es altamente afín a la adopción de billeteras digitales (como Yape o Plin) y aplicaciones móviles para resolver sus transacciones cotidianas, lo que valida la disposición de este segmento a utilizar una app como Harmonix para liquidar sus deudas.
+
+---
+
+#### Segmento objetivo 2: Representante o Administrador del hogar
+
+##### Aspectos demográficos
+- Sexo: Masculino y femenino  
+- Edad: 25 – 50 años  
+- Nivel socioeconómico: Clases A, B y C (alta, media-alta y media)  
+- Estado civil: Casados, convivientes, parejas con hijos o personas encargadas de la administración financiera del hogar  
+
+##### Aspectos geográficos
+- Nacionalidad: Peruana  
+- Zona geográfica: Urbana y suburbana  
+- Departamento: Lima Metropolitana y principales ciudades del país  
+
+##### Aspectos psicográficos
+- Son responsables de la planificación y control de los gastos familiares, buscando asegurar la equidad entre los integrantes  
+- Muestran interés en herramientas digitales que permitan monitorear y organizar finanzas de manera práctica  
+- Buscan evitar conflictos financieros dentro del hogar mediante claridad y control en los aportes de cada miembro  
+- Están comprometidos con la eficiencia en la gestión de recursos y valoran soluciones que distribuyan gastos de manera proporcional y transparente  
+
+##### Información estadística de sustento
+De acuerdo con encuestas de Datum Internacional sobre la economía familiar en Perú, más del 65% de las familias y hogares afirman que el pago de servicios básicos (agua, luz, internet) y alimentación representan su mayor carga de estrés a fin de mes. En muchos de estos hogares, suele haber un "administrador principal" (generalmente uno de los miembros de la pareja) que asume la carga mental de recolectar el dinero y pagar los recibos. Por otro lado, datos de la Cámara Peruana de Comercio Electrónico (CAPECE) muestran que la digitalización y el uso de smartphones para la gestión de finanzas creció por encima del 50% en los últimos años en los sectores A, B y C. Esto demuestra que los administradores del hogar ya cuentan con las capacidades tecnológicas y el dispositivo necesario para adoptar Harmonix y digitalizar la captura de recibos y el cobro.
