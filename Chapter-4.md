@@ -9,6 +9,7 @@
 <br>
 <img src="assets/HouseholdContext.png" alt="ContextDiagram">
 <br>
+
 ### 2.5.3.2. Software Architecture Container Level Diagrams
 
 <br>
