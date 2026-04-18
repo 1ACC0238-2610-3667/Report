@@ -6,5 +6,8 @@
 ## 2.5.2. Context Mapping
 ## 2.5.3. Software Architecture
 ### 2.5.3.1. Software Architecture Context Level Diagrams
+<br>
+<img src="assets/HouseholdContext.png" alt="ContextDiagram">
+<br>
 ### 2.5.3.2. Software Architecture Container Level Diagrams
 ### 2.5.3.3. Software Architecture Deployment Diagrams
