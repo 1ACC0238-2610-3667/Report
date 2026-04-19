@@ -28,12 +28,15 @@ En esta etapa se construyó el Context Map de Splitly con los cuatro bounded con
 
 El mapa final permitió:
 
-Visualizar las dependencias entre contextos, mostrando qué módulos proveen información y cuáles la consumen.
-Identificar los contextos core (Bilss, Contributions, MemberContributions), los de manejo de grupos de hogar (HouseholdMembers, Households, Invitations) y los genéricos (IAM, Settings).
+- Visualizar las dependencias entre contextos, mostrando qué módulos proveen información y cuáles la consumen.
+- Identificar los contextos core (Bilss, Contributions, MemberContributions), los de manejo de grupos de hogar (HouseholdMembers, Households, Invitations) y los genéricos (IAM, Settings).
+
 Clasificar las relaciones:
-Household Member/Household Representative en la mayoría de flujos operativos (Settings → IAM, Contribution → MemberContribution, Households → Household Members).
-Anti-Corruption Layer en la interacción entre los diferentes BCs.
+- Household Member/Household Representative en la mayoría de flujos operativos (Settings → IAM, Contribution → MemberContribution, Households → Household Members).
+- Anti-Corruption Layer en la interacción entre los diferentes BCs.
+
 De esta manera, el Context Mapping consolida una visión global del sistema, mostrando cómo los distintos contextos colaboran para dar soporte al negocio.
+
 ## 2.5.3. Software Architecture
 ### 2.5.3.1. Software Architecture Context Level Diagrams
 <br>
