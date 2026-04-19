@@ -61,6 +61,20 @@ Para la construcción de estos flujos se aplicó la técnica de Domain Storytell
 <br>
 
 ### 2.5.1.3. Bounded Context Canvases
+En esta sección se desarrollaron los Bounded Context Canvases de Splitly. El propósito fue delimitar con precisión las responsabilidades, el lenguaje ubicuo y las decisiones de negocio, además de explicitar las comunicaciones (Queries, Commands y Events) y los colaboradores (otros BC, sistemas externos y frontend).
+
+Cada canvas documenta:
+
+- Descripción
+- Clasificación estratégica (core, supporting, generic)
+- Rol de dominio (draft, execution, analysis, gateway)
+- Inbound/Outbound communication
+- Lenguaje ubicuo
+- Decisiones de negocio
+- Colaboradores
+
+Esta definición establece el ownership de los datos, reduce ambigüedades y prepara los contratos de integración que se implementarán en APIs y mensajería.
+
 ## 2.5.2. Context Mapping
 
 En la etapa de Context Mapping del sistema Splitly, se identificaron diversos patrones de relación entre bounded contexts propuestos por Domain-Driven Design (DDD), con el objetivo de definir la manera en que los distintos contextos delimitados interactúan entre sí manteniendo la autonomía de sus modelos de dominio.
