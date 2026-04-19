@@ -18,11 +18,22 @@ Household Management: manejo de integrantes de grupo de hogar
 
 App Management: manejo de ajustes dentro de la aplicacion
  - Settings
+ - Payment Gateway
 
 
 ### 2.5.1.2. Domain Message Flows Modeling
 ### 2.5.1.3. Bounded Context Canvases
 ## 2.5.2. Context Mapping
+En esta etapa se construyó el Context Map de Splitly con los cuatro bounded contexts identificados. El objetivo fue representar las relaciones estructurales entre ellos aplicando Domain-Driven Design.
+
+El mapa final permitió:
+
+Visualizar las dependencias entre contextos, mostrando qué módulos proveen información y cuáles la consumen.
+Identificar los contextos core (Bilss, Contributions, MemberContributions), los de manejo de grupos de hogar (HouseholdMembers, Households, Invitations) y los genéricos (IAM, Settings).
+Clasificar las relaciones:
+Household Member/Household Representative en la mayoría de flujos operativos (Settings → IAM, Contribution → MemberContribution, Households → Household Members).
+Anti-Corruption Layer en la interacción entre los diferentes BCs.
+De esta manera, el Context Mapping consolida una visión global del sistema, mostrando cómo los distintos contextos colaboran para dar soporte al negocio.
 ## 2.5.3. Software Architecture
 ### 2.5.3.1. Software Architecture Context Level Diagrams
 <br>
