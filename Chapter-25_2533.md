@@ -28,6 +28,35 @@ Link: https://miro.com/app/board/uXjVGgNmWGI=/?share_link_id=935627302895
 
 
 ### 2.5.1.2. Domain Message Flows Modeling
+
+En esta etapa se desarrolló el modelado de flujos de mensajes de dominio (Domain Message Flows) con el objetivo de visualizar cómo colaboran los bounded contexts identificados en el Candidate Context Discovery para resolver los principales casos de negocio del sistema Splitly.
+
+Para la construcción de estos flujos se aplicó la técnica de Domain Storytelling, la cual permite describir las interacciones en un lenguaje natural, mostrando cómo un evento generado en un bounded context desencadena comandos o nuevos eventos en otros contextos. De este modo se logra una visión clara de la cooperación entre módulos y del ciclo de vida de la información dentro de la plataforma
+
+**Historias de dominio (Domain Stories)**
+
+ 1. **Identity and Access Management:**
+- Cuando un usuario se registra en Identity and Access Management, se crea la cuenta y se validan sus credenciales de acceso. Una vez autenticado, este contexto habilita la sesión del usuario y permite que otros bounded contexts accedan a la información básica de identidad.
+- Cuando App Management necesita consultar o actualizar configuraciones relacionadas con la cuenta, solicita la información al contexto Identity and Access Management, el cual valida la autenticidad del usuario antes de procesar la solicitud.
+- Además, cuando un usuario inicia sesión exitosamente, el contexto de identidad habilita el acceso a las funcionalidades disponibles según el rol asignado, ya sea Household Representative o Household Member.
+
+ 2. **Contributions Distribution:**
+- Cuando un Household Representative crea un hogar en Household Management, se registra la información del grupo y se asocia al usuario creador como administrador del hogar.
+- Posteriormente, el representante puede enviar invitaciones a nuevos integrantes. Cuando una invitación es aceptada, el sistema registra al usuario como Household Member dentro del hogar correspondiente.
+- Una vez actualizado el listado de integrantes, Household Management pone esta información a disposición de Contributions Distribution, permitiendo que los gastos se distribuyan entre los miembros registrados.
+
+ 3. **Household Management:**
+- Cuando se registra una cuenta en el módulo Bills dentro de Contributions Distribution, se genera una nueva contribución asociada al hogar correspondiente.
+- Luego, el módulo Contributions calcula cómo se dividirá el gasto entre los miembros del hogar, generando los registros individuales en Member Contributions.
+- Cada contribución individual representa el monto que debe asumir cada integrante y se asigna utilizando la información de miembros proporcionada por Household Management.
+- Cuando se actualiza una contribución, el sistema recalcula los montos pendientes y mantiene actualizado el estado de las obligaciones de cada miembro.
+
+ 4. **App Management:**
+- Cuando un usuario modifica configuraciones dentro de App Management, el sistema actualiza sus preferencias en el módulo Settings, incluyendo ajustes relacionados con la cuenta o preferencias de uso.
+- Si la configuración implica métodos de pago o procesamiento de cobros, App Management utiliza el módulo Payment Gateway para gestionar la operación y registrar la información correspondiente.
+- Asimismo, App Management consulta a Identity and Access Management para validar permisos antes de permitir cambios sensibles en la configuración del usuario.
+
+
 ### 2.5.1.3. Bounded Context Canvases
 ## 2.5.2. Context Mapping
 
