@@ -20,6 +20,12 @@ App Management: manejo de ajustes dentro de la aplicacion
  - Settings
  - Payment Gateway
 
+Link: https://miro.com/app/board/uXjVGgNmWGI=/?share_link_id=935627302895
+
+<br>
+<img src="assets/ASE-CandidateContextDiscovery.jpg" alt="CandidateContextDiscovery">
+<br>
+
 
 ### 2.5.1.2. Domain Message Flows Modeling
 ### 2.5.1.3. Bounded Context Canvases
