@@ -75,6 +75,24 @@ Cada canvas documenta:
 
 Esta definición establece el ownership de los datos, reduce ambigüedades y prepara los contratos de integración que se implementarán en APIs y mensajería.
 
+- Link: https://miro.com/app/board/uXjVHfgsAFg=/?share_link_id=564858049353
+
+<br>
+<img src="assets/C1.png" alt="C1">
+<br>
+
+<br>
+<img src="assets/C2.png" alt="C2">
+<br>
+
+<br>
+<img src="assets/C3.png" alt="C3">
+<br>
+
+<br>
+<img src="assets/C4.png" alt="C4">
+<br>
+
 ## 2.5.2. Context Mapping
 
 En la etapa de Context Mapping del sistema Splitly, se identificaron diversos patrones de relación entre bounded contexts propuestos por Domain-Driven Design (DDD), con el objetivo de definir la manera en que los distintos contextos delimitados interactúan entre sí manteniendo la autonomía de sus modelos de dominio.
