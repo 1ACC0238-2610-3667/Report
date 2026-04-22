@@ -27,8 +27,6 @@ Este contexto delimitado es de alcance global y de naturaleza técnica. Su respo
 **Events**
 * Actualmente, el modelo está preparado para soportar eventos de dominio (Domain Events) que permitirán reaccionar a cambios de estado (por ejemplo, notificar a otros Bounded Contexts cuando un nuevo `User` se registre exitosamente).
 
-#### 2.6.1.2. Application & Domain Services Layer
-
 **Repositories (Interfaces de Persistencia)**
 * **`IUserRepository`**: Define el contrato para las operaciones de acceso a datos relacionadas con la entidad `User`.
 * **`IRoleRepository`**: Define el contrato para la persistencia y consulta de la entidad `Role`.
@@ -64,3 +62,4 @@ Esta capa actúa como el punto de entrada a los servicios de IAM para la aplicac
 * **`SignInCommandFromResourceAssembler`**: Traduce los datos del `SignInResource` a un comando de autenticación para ser procesado por la Application Layer.
 * **`SignUpCommandFromResourceAssembler`**: Convierte el recurso de registro (`SignUpResource`) en el comando correspondiente para iniciar la creación del nuevo usuario.
 * **`UserResourceFromEntityAssembler`**: Realiza la conversión de la entidad agregada `User` hacia un `UserResource`, filtrando cualquier dato que no deba ser enviado a la capa de presentación.
+
