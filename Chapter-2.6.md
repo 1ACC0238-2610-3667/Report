@@ -6,7 +6,6 @@
 
 Mediante un análisis comparativo, hemos organizado información clave de cada propuesta de valor. Esto nos ayudará a entender mejor en qué se diferencia nuestra solución y compararla con las de nuestros competidores.
 
-### Análisis Competitivo - Proyecto Splitly
 
 | Categoría | Detalle | **Splitly** | **Halfway** | **UnityPay** | **Parity** |
 | :--- | :--- | :--- | :--- | :--- | :--- |
