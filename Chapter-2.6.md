@@ -1,49 +1,40 @@
 ## 2.6. Tactical-Level Domain-Driven Design
 
+## 2.6. Bounded Contexts
+
 ### 2.6.1. Bounded Context: Identity and Access Management (IAM)
 
-Este contexto delimitado es de alcance global y puramente técnico. Su única responsabilidad es gestionar la identidad de los usuarios registrados en Splitly, emitir tokens de acceso y validar las credenciales. No contiene lógica de negocio sobre las casas o la distribución de pagos; únicamente proporciona una identidad segura (UUID/ID) que los demás contextos (como Household Management) utilizarán para vincular sus propias entidades.
+Este contexto delimitado es de alcance global y de naturaleza técnica. Su responsabilidad es gestionar la identidad de los usuarios registrados en Splitly y proporcionar los mecanismos de autenticación y autorización mediante tokens, abstrayéndose completamente de la lógica de negocio de la distribución de gastos.
 
-#### 2.6.1.1. Domain Layer
+#### 2.6.1.1. Domain Layer (Model)
 
-**Entidades Principales**
-
-**User (Aggregate Root)**
-* **Propósito:** Representa la identidad global del usuario dentro de la plataforma Splitly.
-* **Atributos principales:**
-    * `id` — Identificador único global (UUID), utilizado como clave foránea conceptual en otros contextos.
-    * `email` — Correo electrónico único (usado como credencial principal de login).
-    * `passwordHash` — Hash seguro de la contraseña.
-    * `firstName`, `lastName` — Datos básicos de perfil.
-    * `isActive` — Estado de la cuenta en el sistema.
-    * `systemRoles` — Lista de roles del sistema (ej. `USER`, `SYS_ADMIN`). *Nota: Los roles de administración del hogar se manejan en Household Management.*
-* **Métodos principales:**
-    * `updateCredentials(email, newPasswordHash)`
-    * `lockAccount()`, `unlockAccount()`
-
-**Role (Entity)**
-* **Propósito:** Define niveles de acceso al sistema (a nivel de la plataforma general, no de la casa).
-* **Atributos principales:**
-    * `id`
-    * `name` — (ej. `STANDARD_USER`, `SUPPORT_ADMIN`)
+**Aggregates**
+* **`User` (Aggregate Root):** Representa la identidad central del usuario en el sistema. Administra los datos de acceso, credenciales y su estado de actividad.
+* **`Role` (Entity):** Define los niveles de acceso a nivel de plataforma (sistema) que pueden ser asignados a un `User`.
 
 **Value Objects**
-* **EmailAddress:** Reglas de validación de formato (Regex).
-* **EncryptedPassword:** Encapsula el proceso de hashing (BCrypt/Argon2) y validación de fuerza.
-* **AuthToken:** Representa el JWT emitido, encapsulando sus claims (ID del usuario, expiración).
-
-**Domain Services**
-* **AuthenticationService:** Coordina la validación de credenciales (email + password) contra la base de datos y solicita la emisión del token.
-* **TokenGeneratorService:** Construye y firma digitalmente el Access Token y Refresh Token.
+* **`Roles` (Enum):** Enumerador que encapsula y restringe los valores permitidos para los roles del sistema, garantizando type-safety en la capa de dominio.
 
 **Commands (CQRS)**
-* `RegisterAccountCommand`
-* `AuthenticateUserCommand`
-* `ResetPasswordCommand`
+* **`SeedRolesCommand`**: Comando empleado al inicio de la aplicación para poblar la base de datos con los roles fundamentales del sistema si estos no existen.
 
 **Queries (CQRS)**
-* `ValidateTokenQuery`
-* `GetBasicProfileQuery`
+* **`GetAllRolesQuery`**: Solicitud para obtener la lista completa de roles disponibles.
+* **`GetRoleByNameQuery`**: Solicitud para buscar un rol específico mediante su nombre.
+* **`GetUserByIdQuery`**: Solicitud para obtener los detalles de un usuario a partir de su identificador único.
+* **`GetUserByUsernameQuery`**: Solicitud para recuperar el perfil de un usuario utilizando su nombre de usuario (útil para validaciones de login o registro).
 
 **Events**
-* `AccountRegisteredEvent` (Notifica a otros contextos que un nuevo usuario global existe. Por ejemplo, `Household Management` podría escuchar esto para preparar un perfil vacío).
+* Actualmente, el modelo está preparado para soportar eventos de dominio (Domain Events) que permitirán reaccionar a cambios de estado (por ejemplo, notificar a otros Bounded Contexts cuando un nuevo `User` se registre exitosamente).
+
+#### 2.6.1.2. Application & Domain Services Layer
+
+**Repositories (Interfaces de Persistencia)**
+* **`IUserRepository`**: Define el contrato para las operaciones de acceso a datos relacionadas con la entidad `User`.
+* **`IRoleRepository`**: Define el contrato para la persistencia y consulta de la entidad `Role`.
+
+**Services**
+* **`IUserCommandService` / `IUserQueryService`**: Segregan las responsabilidades de mutación (escritura) y lectura de la identidad del usuario, respetando el principio CQRS.
+* **`IRoleCommandService` / `IRoleQueryService`**: Abstracciones para la administración y consulta de los roles del sistema.
+* **`IHashingService`**: Servicio de dominio encargado de aplicar algoritmos de derivación unidireccional (hashing) a las contraseñas para su almacenamiento seguro.
+* **`ITokenService`**: Servicio responsable de la generación, firma y validación de los tokens (JWT) requeridos para el acceso desde la aplicación móvil multiplataforma.
