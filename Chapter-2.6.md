@@ -8,7 +8,7 @@ Mediante un análisis comparativo, hemos organizado información clave de cada p
 
 ### Análisis Competitivo - Proyecto Splitly
 
-| Categoría | Detalle | **Su Startup: Splitly** | **Competidor 1: Halfway** | **Competidor 2: UnityPay** | **Competidor 3: Parity** |
+| Categoría | Detalle | **Splitly** | **Halfway** | **UnityPay** | **Parity** |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **¿Por qué este análisis?** | **Objetivo** | Automatizar la distribución de los gastos del hogar de forma proporcional a los ingresos de cada integrante. | Identificar el estándar de automatización de gastos en parejas. | Evaluar la flexibilidad de las reglas de equidad financiera. | Analizar la experiencia de usuario en apps de nicho de reciente lanzamiento. |
 | **Perfil** | **Overview** | Aplicación móvil y sitio web estático diseñados para facilitar la distribución equitativa de gastos del hogar considerando los ingresos personales de cada individuo. | App que automatiza finanzas compartidas mediante sincronización bancaria directa. | Plataforma de gestión de dinero para parejas que permite configurar "reglas de equidad". | App móvil minimalista enfocada exclusivamente en el cálculo porcentual por ingresos. |
