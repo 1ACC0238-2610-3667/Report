@@ -119,4 +119,11 @@ En el diagrama se detalla cómo las solicitudes de los clientes (como el inicio 
 
 #### 2.6.1.6.1 Bounded Context Domain Layer Class Diagrams
 
+El siguiente diagrama de clases de la capa de dominio representa el modelo conceptual de negocio para el contexto de **Identity and Access Management (IAM)**. En este esquema se visualizan las entidades fundamentales, como `User` (Aggregate Root) y `Role`, junto con sus atributos esenciales y las relaciones que definen el comportamiento del sistema de identidades. 
+
+Este modelo se mantiene estrictamente agnóstico a factores externos, como la persistencia en base de datos o los protocolos de comunicación, centrándose únicamente en las reglas de dominio que rigen la creación y validación de usuarios y sus niveles de acceso dentro de la plataforma **Splitly**.
+
+![Diagrama de Clases del Dominio](images/Class-Diagram.png)
+
 #### 2.6.1.6.2 Bounded Context Database Design Diagram
+
