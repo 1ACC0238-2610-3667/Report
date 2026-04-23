@@ -94,13 +94,12 @@ Asimismo, será crucial implementar un modelo de privacidad y "onboarding" amiga
 ### 2.3.1. User Personas
 
 - Segmento #1:  Convivientes y Roommates
-
 <p styles="align: left">
-  <img src="../assets/Adriana Zambrano.png" width="1100">
+  <img src="./assets/Adriana Zambrano.png" width="1100">
 </p>
 
 - Segmento #2: Representante o Administrador del hoga
 
 <p styles="align: left">
-  <img src="../assets/Miriam Hernandez.png" width="1100">
+  <img src="./assets/Miriam Hernandez.png" width="1100">
 </p>
