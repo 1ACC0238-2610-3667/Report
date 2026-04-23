@@ -21,3 +21,72 @@ Mediante un análisis comparativo, hemos organizado información clave de cada p
 | | **Debilidades** | Posible desconfianza de los usuarios para registrar ingresos reales en una plataforma digital o enlazar métodos de pago en una app nueva. | Muy dependiente de la infraestructura bancaria local. | Puede resultar compleja de configurar inicialmente. | Funcionalidades limitadas; no gestiona ahorros ni inversiones. |
 | | **Oportunidades** | La población joven es altamente afín a la adopción de billeteras digitales y apps móviles. La digitalización para gestión de finanzas creció más del 50% en los últimos años en sectores A, B y C. | Expansión a mercados internacionales donde el Open Banking crece. | Integración con sistemas de pago directo (como wallets digitales). | Posicionarse como la app de entrada para quienes nunca han compartido gastos. |
 | | **Amenazas** | Aplicaciones genéricas de división de gastos y métodos informales (Excel, memoria). Riesgo de que los usuarios prefieran transferencias bancarias directas (Yape/Plin) realizando cálculos mentales. | Apps de banca tradicional lanzando funciones de "cuentas compartidas". | Competencia directa de neobancos que ya incluyen gestión de gastos. | Facilidad de ser copiada por apps de gestión de gastos más grandes. |
+
+### 2.1.2. Estrategias y tácticas frente a competidores
+Para que Splitly penetre con éxito en el mercado, la estrategia que seguiremos se enfocará en integrarse fluidamente a los hábitos de pago diarios del segmento joven mediante las pasarelas de paga conocidas en el país. A nivel de producto, el verdadero diferenciador será aprovechar la función de cálculo proporcional no solo para dividir gastos, sino para proyectar metas de ahorro compartidas que mejoren la salud financiera del hogar. 
+
+Asimismo, será crucial implementar un modelo de privacidad y "onboarding" amigable donde los ingresos absolutos se mantengan ocultos para el resto de los convivientes, mostrando únicamente los porcentajes de deuda correspondientes a cada uno. De esta manera, estaremos garantizando la equidad sin vulnerar la confidencialidad de los demás.
+## 2.2. Entrevistas
+
+### 2.2.1. Diseño de entrevistas
+
+### Segmento objetivo 1: Convivientes y Roommates (Miembros del hogar)
+
+**Aspectos demográficos y psicográficos clave**
+
+- Sexo: Masculino o femenino
+- Edad: 18 a 65 años
+- Nivel socioeconómico: A, B, y C
+- Estado civil: Solteros, casados, convivientes, parejas, roommates
+- Zona: Urbana y suburbana (Perú)
+
+**Preguntas demográficas:**
+
+1. ¿Me podria decir su edad?
+2. ¿Cual es su sexo?
+3. ¿En que zona vive actualmente?
+4. ¿Con cuál de estas opciones se identifica su nivel socioeconómico? (A / B / C)
+5. ¿Cuál es su estado civil o situación actual?
+
+**Preguntas Principales:**
+
+1. ¿Con quién vive actualmente y cómo reparten los gastos del hogar?
+2. ¿Considera justo el sistema que usan para dividir los pagos? ¿Por qué?
+3. ¿Cuáles son los mayores retos al organizar los gastos compartidos?
+4. ¿Han tenido desacuerdos por temas de dinero o pagos en el hogar?
+5. ¿Han considerado dividir los gastos en función de los ingresos de cada persona?
+6. ¿Utilizan alguna app para anotar los pagos del hogar? ¿Cuál y qué tan útil les resulta?
+7. ¿Qué funcionalidades cree que debería tener una app ideal para gestionar gastos entre varias personas?
+8. ¿Cómo le gustaría visualizar lo que le toca pagar, lo que ya pagó y lo que está pendiente?
+9. ¿Cree que una aplicación como Harmonix podría ayudar a mejorar la convivencia y la organización en su hogar?
+
+### Segmento objetivo 2: Representante o Administrador del hogar
+
+**Aspectos demográficos y psicográficos clave**
+
+- Sexo: Masculino o femenino
+- Edad: 25 a 50 años
+- Nivel socioeconómico: A, B, y C
+- Estado civil: Casados, convivientes, parejas con hijos, personas responsables de las finanzas del hogar
+- Zona: Urbana y suburbana (Perú)
+
+**Preguntas demográficas:**
+
+1. ¿Me podria decir su edad?
+2. ¿Cual es su sexo?
+3. ¿En que zona vive actualmente?
+4. ¿Con cuál de estas opciones se identifica su nivel socioeconómico? (A / B / C)
+5. ¿Cuál es su estado civil o situación actual?
+
+**Preguntas Principales:**
+
+1. ¿Cuál es su rol dentro de su hogar en cuanto a la administración del dinero?
+2. ¿Cómo organiza actualmente los ingresos y gastos del hogar?
+3. ¿Considera que el reparto de los gastos es equitativo para todos los miembros?
+4. ¿Qué dificultades enfrenta para lograr un reparto justo de los gastos?
+5. ¿Cómo controla que cada miembro cumpla con su parte financiera?
+6. ¿Qué herramientas (apps, cuadernos, Excel, etc.) usa actualmente para llevar este control?
+7. ¿Qué funcionalidades le gustaría que tenga una app como SplitEasy?
+8. ¿Qué tan importante considera la transparencia financiera dentro del hogar?
+9. ¿Estaría dispuesto(a) a registrar los ingresos de cada miembro para que la aplicación calcule automáticamente cuánto debe aportar cada uno?
+10. ¿Qué beneficios cree que traería una solución como Harmonix en la convivencia familiar?
