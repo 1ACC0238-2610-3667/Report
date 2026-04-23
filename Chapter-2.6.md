@@ -90,3 +90,17 @@ Asimismo, será crucial implementar un modelo de privacidad y "onboarding" amiga
 8. ¿Qué tan importante considera la transparencia financiera dentro del hogar?
 9. ¿Estaría dispuesto(a) a registrar los ingresos de cada miembro para que la aplicación calcule automáticamente cuánto debe aportar cada uno?
 10. ¿Qué beneficios cree que traería una solución como Harmonix en la convivencia familiar?
+
+### 2.3.1. User Personas
+
+- Segmento #1:  Convivientes y Roommates
+
+<p styles="align: left">
+  <img src="../assets/Adriana Zambrano.png" width="1100">
+</p>
+
+- Segmento #2: Representante o Administrador del hoga
+
+<p styles="align: left">
+  <img src="../assets/Miriam Hernandez.png" width="1100">
+</p>
