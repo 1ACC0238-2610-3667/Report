@@ -91,6 +91,28 @@ Asimismo, será crucial implementar un modelo de privacidad y "onboarding" amiga
 9. ¿Estaría dispuesto(a) a registrar los ingresos de cada miembro para que la aplicación calcule automáticamente cuánto debe aportar cada uno?
 10. ¿Qué beneficios cree que traería una solución como Harmonix en la convivencia familiar?
 
+
+## 2.3. Needfinding
+A partir del análisis de entrevistas y del Lean UX Canvas presentado en el capítulo 1, se identificaron las principales necesidades y motivaciones de los segmentos objetivo. Los hallazgos confirman los problemas detectados en el Canvas: la falta de equidad en la distribución de gastos, la poca transparencia y la ausencia de herramientas colaborativas adaptadas a la realidad económica de cada hogar.
+
+De esta manera, se presentan a continuación los hallazgos clave que guiarán el desarrollo de la solución
+  
+## Segmento #1: Convivientes y Roommates
+
+- **Dividir los gastos comunes** forma justa y proporcional a los ingresos de cada miembro.  
+- **Contar con visibilidad en tiempo real** sobre pagos realizados y saldos pendientes.  
+- **Garantizar transparencia** para evitar malentendidos y conflictos dentro de la convivencia.  
+- **Usar una aplicación movil sencilla** que organice los pagos del hogar y reduzca la carga mental.  
+
+## Segmento #2: Representante o Administrador del hoga
+
+- **Gestionar y supervisar** todos los aportes desde un panel centralizado.  
+- **Recibir alertas automáticas** y recordatorios de pagos pendientes.  
+- **Asegurar que las contribuciones** sean equitativas y basadas en ingresos reales.  
+- **Obtener reportes financieros claros** y automáticos para ahorrar tiempo en la planificación y fortalecer la confianza del grupo.  
+
+
+
 ### 2.3.1. User Personas
 
 - Segmento #1:  Convivientes y Roommates
@@ -98,8 +120,28 @@ Asimismo, será crucial implementar un modelo de privacidad y "onboarding" amiga
   <img src="./assets/Adriana Zambrano.png" width="1100">
 </p>
 
-- Segmento #2: Representante o Administrador del hoga
+- Segmento #2: Representante o Administrador del hogar
 
 <p styles="align: left">
   <img src="./assets/Miriam Hernandez.png" width="1100">
 </p>
+
+
+
+### 2.3.2. User Task Matrix.
+
+En esta sección se presenta la *User Task Matrix*, enfocada en los dos segmentos clave de **Splitly**: Convivientes/Roommates y Representante/Administrador.  
+Este instrumento permite identificar sus tareas habituales, nivel de importancia y frecuencia, así como los beneficios esperados (*Outcomes*) que el sistema debe ofrecer.  
+Su análisis facilita la priorización de funcionalidades y asegura la coherencia con la propuesta de valor del producto: **automatización, transparencia y colaboración en la gestión financiera compartida.**
+
+| **Persona** | **Tarea** | **Importancia** | **Frecuencia** | **Beneficio / Outcome** |
+|--------------|------------|------------------|----------------|--------------------------|
+| **Adriana (Miembro del hogar)** | Registrar su ingreso mensual | Alta | Baja | Permite que el sistema calcule automáticamente su aporte proporcional. |
+|  | Revisar cuánto debe aportar según su ingreso | Alta | Alta | Aumenta la transparencia y confianza en los pagos. |
+|  | Recibir recordatorios y confirmar pagos | Media | Media | Reduce los olvidos y mejora la convivencia financiera. |
+|  | Consultar historial de pagos | Media | Baja | Brinda control y claridad sobre su participación mensual. |
+| **Miriam (Representante del hogar)** | Crear y gestionar gastos compartidos | Alta | Alta | Centraliza la información y simplifica la planificación mensual. |
+|  | Supervisar pagos realizados y pendientes | Alta | Alta | Asegura la equidad y el cumplimiento de las contribuciones. |
+|  | Enviar recordatorios automáticos | Media | Media | Disminuye la carga operativa y los conflictos por pagos atrasados. |
+|  | Generar reportes mensuales | Alta | Baja | Facilita la toma de decisiones y la comunicación con los miembros. |
+
