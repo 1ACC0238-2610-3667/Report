@@ -113,7 +113,7 @@ El siguiente diagrama de componentes ilustra la estructura interna y el flujo de
 
 En el diagrama se detalla cómo las solicitudes de los clientes (como el inicio de sesión o el registro) son interceptadas por la **Interface Layer** (Controllers), las cuales delegan la orquestación a la **Application Layer** (Command y Query Handlers). Asimismo, se observa cómo estos servicios orquestadores interactúan con las entidades de la **Domain Layer** para validar las reglas de negocio, y finalmente se apoyan en la **Infrastructure Layer** (Repositories, TokenService, y IAMContext) para la persistencia de datos y la generación de credenciales seguras.
 
-![Diagrama de componentes IAM](images/Diagram-API_Components_BoundedContexts.png)
+![Diagrama de componentes IAM](images/IAM-diagram-components.png)
 
 ### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -123,7 +123,13 @@ El siguiente diagrama de clases de la capa de dominio representa el modelo conce
 
 Este modelo se mantiene estrictamente agnóstico a factores externos, como la persistencia en base de datos o los protocolos de comunicación, centrándose únicamente en las reglas de dominio que rigen la creación y validación de usuarios y sus niveles de acceso dentro de la plataforma **Splitly**.
 
-![Diagrama de Clases del Dominio](images/Class-Diagram.png)
+![Diagrama de Clases del Dominio](images/diagram-class-IAM.png)
 
 #### 2.6.1.6.2 Bounded Context Database Design Diagram
+
+El siguiente diagrama representa el modelo físico de datos (Entity-Relationship) estructurado específicamente para el contexto de **Identity and Access Management (IAM)**. 
+
+En este esquema se visualiza la estructura relacional de las tablas empleadas para la persistencia de identidades y accesos, aislando las tablas `users`, `roles` y la tabla de resolución `user_roles`. Se especifican los atributos, las claves primarias (PK) y las claves foráneas (FK) que garantizan la integridad referencial y modelan correctamente la asignación de permisos a los usuarios registrados en la plataforma **Splitly**.
+
+![Diagrama de Base de Datos](images/diagram-BD-IAM.png)
 
