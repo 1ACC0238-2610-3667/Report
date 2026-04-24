@@ -92,6 +92,64 @@ Asimismo, será crucial implementar un modelo de privacidad y "onboarding" amiga
 10. ¿Qué beneficios cree que traería una solución como Harmonix en la convivencia familiar?
 
 
+### 2.2.2. Registro de entrevistas
+
+En esta sección, se registra cada entrevista realizada. En total, se realizaron tres entrevistas por cada segmento objetivo. Se detalla el nombre del miembro entrevistador y el del entrevistado. Además, se redacta un resumen general del contenido de la entrevista realizada.
+
+Segmento Objetivo 1: Miembros del hogar
+  
+Entrevista 1:  
+  
+| Entrevista | Registro |  
+| ----- | ----- |  
+| <p align="center"><img src="https://i.imgur.com/lwoUnG9.png"/></p> | **Zona:** Bruguerio Miran <br>**Entrevistado:** Harris Herrada |  
+| [Link](https://acortar.link/zzUnyO)|  **Entrevistadora:** Camila Leonor Espinoza Vivas |  
+| Timing: Minuto 0:05-3:24| **Resumen:** Harri Herrada, de 20 años, es soltero y vive junto a su padre y su primo. En su hogar, los gastos más importantes, como el pago de servicios principales y compromisos de mayor monto, son asumidos por su padre. En cambio, los gastos comunes, relacionados con el día a día, se dividen entre Harri y su primo. Esta forma de organización les resulta práctica y cómoda, ya que no genera conflictos y todos saben con claridad qué parte les corresponde cubrir. El principal reto que enfrenta al organizar sus finanzas surge al momento de realizar las compras para la casa, aunque señala que no han tenido desacuerdos al repartir los gastos. Harri no considera necesario dividirlos según los ingresos de cada miembro, ya que el método que utilizan les resulta más cómodo. Además, opina que una aplicación amigable y fácil de usar le ayudaría a gestionar mejor sus gastos. Utiliza como browser Google Chrome y Safari. Como tecnologias utiliza un celular android y una laptop con sistema operativo MacOS.|  
+  
+Entrevista 2:  
+  
+| Entrevista | Registro |  
+| ----- | ----- |  
+| <p align="center"><img src="https://i.imgur.com/pHSOv6I.png"/></p> | **Zona:** Magdalena <br>**Entrevistada:** Maria Fernanda |  
+| [Link](https://acortar.link/zzUnyO)|  **Entrevistador:** Jose Luis Martinez Valdivia |  
+| Timing: Minuto 3:25-7:49| **Resumen:** María Fernanda, de 20 años, es soltera y vive con su familia. En su hogar, los gastos se dividen entre todos los miembros, lo que en general les permite cubrir sus necesidades de manera organizada. Ella considera que el sistema que llevan actualmente para gestionar los gastos es eficiente, ya que cada integrante asume una parte proporcional, pero reconoce que su mayor dificultad está en mantener un registro claro y ordenado de cada desembolso. Para ella, contar con una aplicación que ofrezca registros rápidos y fáciles de consultar sería de gran utilidad, pues le permitiría llevar un control más transparente y evitar confusiones en el futuro. Utiliza como browser Google Chrome y Edge. Como tecnologias utiliza un celular iphone y una laptop con sistema operativo Windows.|  
+  
+Entrevista 3:  
+  
+| Entrevista | Registro |  
+| ----- | ----- |  
+| <p align="center"><img src="https://i.imgur.com/EtZ8Jbp.png"/></p> | **Zona:** Lima Metropolitana<br>**Entrevistado:** Abraham Estrada |  
+| [Link](https://acortar.link/zzUnyO)|  **Entrevistador:** Sebastias Cordova Valdivia |  
+| Timing: Minuto 7:50-12:46| **Resumen:** Abraham Estrada, de 22 años, es soltero y comparte vivienda con tres amigos, todos ellos con empleo. Para organizarse, decidieron dividir los gastos del hogar entre los cuatro. Aunque este método les permite cubrir sus necesidades básicas, Abraham comenta que el mayor reto que enfrentan es ponerse de acuerdo sobre quién debe pagar en cada ocasión, así como recordar quién ya cumplió con su parte y quién no lo ha hecho. Esta situación ha generado varios desacuerdos, especialmente al momento de realizar los pagos compartidos. considera que dividir los gastos según los ingresos de cada miembro no sería una alternativa viable, ya que complicaría aún más la organización y la gestión de sus finanzas. Por esta razón, Abraham cree que una aplicación con funciones específicas, como recordar los gastos pendientes y notificar las acciones que realizan los demás integrantes, sería de gran utilidad. Utiliza como browser Google Chrome y Safari. Como tecnologias utiliza un celular iphone y una laptop MacOS.|  
+  
+Segmento Objetivo 2: Representante del hogar
+  
+Entrevista 4:  
+  
+| Entrevista | Registro |  
+| ----- | ----- |  
+| <p align="center"><img src="https://i.imgur.com/1JJCSgx.png"/></p> | **Zona:** Chorrillos<br>**Entrevistada:** Jessica Castillo |  
+| [Link](https://acortar.link/zzUnyO)| **Entrevistador:** Angel Martin Gonzales Castillo |  
+| Timing: Minuto 12:47-18:12| **Resumen:** Jessica Castillo, de 47 años es casada y vive con su familia. Ella se encarga de administrar el dinero destinado a los pagos y la organización de los gastos del hogar. Considera que la distribución de los gastos es equitativa, ya que tanto ella como su esposo aportan a las necesidades principales de la familia, cubriendo servicios, alimentación y otros compromisos esenciales. Su mayor dificultad al momento de gestionar las finanzas surge cuando realiza compras innecesarias, ya que esto provoca que en ocasiones se exceda del presupuesto establecido. Jessica cree que una aplicación que registre los gastos de manera automática y que, además, envíe recordatorios mensuales sobre pagos próximos o recurrentes sería de gran ayuda para evitar retrasos y mantener un control más estricto. También considera muy útil una función que identifique y clasifique los gastos innecesarios, lo que le permitiría reconocer patrones de consumo, tomar decisiones más conscientes y, al mismo tiempo, contar con una herramienta que calcule de forma automática cuánto gasta cada integrante de la familia, garantizando mayor transparencia y equidad en la administración del dinero, y fortaleciendo así la confianza y la organización en el hogar. Utiliza como browser Google Chrome y Edge. Como tecnologias utiliza un celular android y una laptop con sistema operativo Windows.|  
+
+Entrevista 5:  
+  
+| Entrevista | Registro |  
+| ----- | ----- |  
+| <p align="center"><img src="https://i.imgur.com/H6oMX8H.png"/></p> | **Zona:** San Isidro<br> **Entrevistado:** Frank |  
+| [Link](https://acortar.link/zzUnyO)|  **Entrevistador:** Kevin Patrick Pardo Chumpitazi |  
+| Timing: Minuto 18:13-22:18| **Resumen:** Frank, de 25 años, vive con su pareja y es quien se encarga principalmente de los gastos del hogar. Para mantener un control adecuado, organiza un presupuesto mensual en el que contempla tanto los gastos fijos como los variables. Además, utiliza Excel como herramienta de apoyo para calcular y registrar sus finanzas, lo que le permite tener una visión más ordenada de sus ingresos y egresos. Él considera que la forma en que distribuyen los gastos en el hogar es equitativa; sin embargo, reconoce que su mayor dificultad surge con los gastos imprevistos, especialmente aquellos relacionados con urgencias o problemas que no estaban contemplados en el presupuesto inicial. Frank cree que sería de gran utilidad contar con una aplicación que automatice la división de los gastos y que, además, ofrezca reportes claros, alertas y recordatorios. Para él, una herramienta sencilla de usar que le permita organizar mejor las finanzas del hogar, anticiparse a posibles problemas y visualizar de manera clara la distribución de sus recursos sería clave para optimizar la gestión de su dinero.Utiliza como browser Google Chrome y Safari. Como tecnologias utiliza un celular iphone y una laptop MacOS.|  
+  
+Entrevista 6:  
+  
+| Entrevista | Registro |  
+| ----- | ----- |  
+| <p align="center"><img src="https://i.imgur.com/7634sfl.png"/></p> | **Zona:** Chorrillos<br> **Entrevistado:** Renzo Ichibache |  
+| [Link](https://acortar.link/zzUnyO)|  **Entrevistador:** Sebastian Cordova Valdivia |  
+| Timing: Minuto 22:19-27:04| **Resumen:**  Renzo Ichibache, de 27 años, es soltero pero vive con su pareja. Él se encarga principalmente de pagar los servicios del hogar y, junto con su pareja, organiza sus gastos a través de hojas de cálculo en Excel. Este método les permite tener cierto control, aunque reconoce que pueden surgir dificultades al momento de gestionar las finanzas debido a que los sueldos de cada uno varían, lo que genera diferencias en la capacidad de aportar de manera constante. Para Renzo, una de las principales necesidades es contar con una herramienta más práctica y sencilla que les ayude a clasificar sus gastos de forma detallada. Considera que una aplicación similar a Excel, pero con una interfaz más amigable y con la posibilidad de implementar subcategorías, sería de gran utilidad para su uso diario. Utiliza como browser Google Chrome y Edge. Como tecnologias utiliza un celular android y una laptop con sistema operativo Windows.|
+
+
+
 ## 2.3. Needfinding
 A partir del análisis de entrevistas y del Lean UX Canvas presentado en el capítulo 1, se identificaron las principales necesidades y motivaciones de los segmentos objetivo. Los hallazgos confirman los problemas detectados en el Canvas: la falta de equidad en la distribución de gastos, la poca transparencia y la ausencia de herramientas colaborativas adaptadas a la realidad económica de cada hogar.
 
@@ -179,7 +237,7 @@ El Empathy Mapping permite comprender a fondo qué piensan, sienten, ven, escuch
   <img src="./assets/MiriamEM.png" width="1100">
 </p>
 
-### 2.3.5. As-is Scenario Mapping.
+### 2.3.5. Big Picture EventStorming.
 
 
 ### 2.3.6. Ubiquitous Language
