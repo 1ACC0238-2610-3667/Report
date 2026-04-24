@@ -1,8 +1,3 @@
-### 2.3.2. User Task Matrix
-### 2.3.3. User Journey Mapping
-### 2.3.4. Empathy Mapping
-### 2.3.5. Big Picture EventStorming
-### 2.3.6. Ubiquitous Language
 ## 2.4. Requirements specification
 ### 2.4.1. User Stories
 #### Epics
