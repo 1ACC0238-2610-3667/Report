@@ -227,15 +227,16 @@ Se proveen las implementaciones concretas de las interfaces del dominio, interac
 
 ### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-The following component diagram illustrates the internal software architecture of the **Contributions Distribution** Bounded Context. This visual representation details how the logical sub-domains (Bills, Contributions, and Members Contribution) are structured using Clean Architecture principles and the C4 Model.
+El siguiente diagrama de componentes ilustra la arquitectura de software interna del Bounded Context de **Contributions Distribution**. Esta representación visual detalla cómo los sub-dominios lógicos (Bills, Contributions y Members Contribution) están estructurados utilizando los principios de Clean Architecture y el Modelo C4.
 
-The diagram outlines the flow of dependencies across the four main layers:
-* **Interface Layer:** Exposes the REST API endpoints (`ExpensesController`, `ContributionsController`, `PaymentsController`) to handle incoming HTTP requests from the client.
-* **Application Layer:** Orchestrates the system's use cases through Command and Query services, delegating tasks without containing any core business logic.
-* **Domain Layer:** The heart of the Bounded Context, encapsulating the pure business rules, mathematical allocation methods, and Aggregates (`Expense`, `Contribution`, `Payment`).
-* **Infrastructure Layer:** Implements the persistence interfaces, mapping the domain entities to the **Relational Database** using Entity Framework Core, and interacting with external **Cloud Storage Services** to manage `DocumentAttachments` (such as expense receipts).
+El diagrama describe el flujo de dependencias a través de las cuatro capas principales:
 
-By enforcing these boundaries, the architecture ensures that the core financial logic remains isolated from database technologies and UI frameworks.
+* **Interface Layer:** Expone los endpoints de la API REST (`ExpensesController`, `ContributionsController`, `PaymentsController`) para manejar las peticiones HTTP entrantes desde las aplicaciones cliente.
+* **Application Layer:** Orquesta los casos de uso del sistema a través de servicios de tipo Command y Query, delegando tareas sin contener ninguna lógica de negocio central.
+* **Domain Layer:** El corazón del Bounded Context, donde se encapsulan las reglas puras de negocio, los métodos matemáticos de asignación o reparto y los Agregados principales (`Expense`, `Contribution`, `Payment`).
+* **Infrastructure Layer:** Implementa las interfaces de persistencia, mapeando las entidades del dominio a la **Base de Datos Relacional** mediante Entity Framework Core, e interactuando con servicios externos de almacenamiento en la nube (**Cloud Storage Services**) para gestionar los `DocumentAttachments` (como los recibos o comprobantes de gastos).
+
+Al imponer estos límites, la arquitectura garantiza que la lógica financiera central permanezca completamente aislada de las tecnologías de base de datos y de los frameworks de interfaz de usuario.
 
 ![Diagrama de Componentes Contributions Distribution](images/component-diagram-Contributions%20Distribution.png)
 
@@ -350,4 +351,42 @@ Se proveen las clases concretas que implementan las interfaces del dominio, inte
 
 **Integración con Servicios Externos:**
 * **Email / Notification Service (Adapter):** Para dar soporte al sub-dominio de `Invitations`, esta capa puede incluir la implementación de adaptadores que se conecten con proveedores de mensajería externos (ej. SendGrid o un SMTP Server). De esta forma, cuando el dominio ordena el envío de una invitación, la capa de infraestructura materializa el envío físico del correo electrónico o notificación al destinatario sin acoplar la lógica de negocio al proveedor de correo.
+
+#### 2.6.3.5 Bounded Context Software Architecture Component Level Diagrams
+
+El siguiente diagrama a nivel de componentes ilustra la arquitectura de software interna del Bounded Context de **Household Management**. Esta representación visual demuestra cómo los sub-dominios lógicos (Households, HouseholdMembers e Invitations) están estructurados utilizando las capas de Clean Architecture y el enfoque del Modelo C4.
+
+El diagrama detalla el flujo de control y las dependencias a través de las cuatro capas principales:
+* **Interface Layer:** Expone los endpoints de la API REST (`HouseholdsController`, `HouseholdMembersController`, `InvitationsController`) responsables de recibir y manejar las peticiones HTTP provenientes de las aplicaciones cliente.
+* **Application Layer:** Orquesta los casos de uso centrales a través de servicios de tipo Command y Query, gestionando el ciclo de vida de los grupos y el proceso de invitaciones sin contener reglas puras de negocio.
+* **Domain Layer:** Actúa como el núcleo aislado del Bounded Context, encapsulando la lógica de negocio, las reglas organizativas y los Agregados principales (`Household`, `HouseholdMember`, `Invitation`).
+* **Infrastructure Layer:** Implementa los adaptadores técnicos requeridos. Maneja la persistencia de datos mapeando las entidades del dominio hacia la **Base de Datos Relacional** mediante Entity Framework Core, y se integra con servicios externos de **Email / Notificaciones** (como SendGrid o SMTP) para el envío físico de los enlaces de invitación a los nuevos usuarios.
+
+Este diseño arquitectónico garantiza una alta cohesión dentro de la lógica de gestión de grupos, manteniendo al mismo tiempo un bajo acoplamiento con los proveedores de bases de datos y los servicios de comunicación externos.
+
+![Diagrama de componentes Household Management](images/Household%20Management%20-%20component%20diagram.png)
+
+### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
+
+El siguiente diagrama de clases de la capa de dominio ilustra el modelo conceptual de negocio estructurado específicamente para el Bounded Context de **Household Management**. Este esquema visualiza las entidades centrales y Aggregate Roots que conforman este límite transaccional, respetando estrictamente los principios tácticos de Domain-Driven Design (DDD).
+
+En el modelo se identifica a `Household` como el Aggregate Root principal, responsable de mantener la consistencia del grupo u hogar. A esta raíz se asocian de manera transaccional las entidades subordinadas `HouseholdMember` (que define el vínculo usuario-hogar y su rol interno) e `Invitation` (que gestiona el ciclo de vida de los accesos organizativos). 
+
+Se detallan además los enumeradores necesarios (`HouseholdRole`, `InvitationStatus`) y los métodos de comportamiento (tales como `Accept()`, `AddMember()` o `CreateInvitation()`), asegurando un modelo cohesivo que permanece agnóstico de frameworks externos o detalles de persistencia.
+
+![Diagrama de contexto Household Management](images/Household%20Management%20BC%20-%20diagram%20-%20context.png)
+
+#### 2.6.3.6.2. Bounded Context Database Design Diagram
+
+El siguiente diagrama representa el modelo físico de datos estructurado específicamente para dar soporte al Bounded Context de **Household Management**. Este esquema aísla las tablas responsables de almacenar la estructura organizativa de los grupos dentro de la plataforma.
+
+En el diagrama se observa la tabla principal `households` (que almacena los metadatos de los grupos), relacionada mediante claves foráneas (FK) con las tablas subordinadas `household_members` (que registra la unión de los usuarios con el grupo y sus roles locales) e `invitations` (que persiste los tokens de acceso temporales y su estado de vigencia). 
+
+Este diseño garantiza la integridad referencial de la organización de los equipos, manteniendo estas tablas lógicamente separadas de otros dominios de la base de datos, como las transacciones financieras o la gestión global de identidades (IAM).
+
+![Diagrama de base de datos Household Management](images/diagrama%20-%20base%20de%20datos%20-%20Household%20Management.png)
+
+
 
