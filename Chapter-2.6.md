@@ -6,7 +6,7 @@
 
 Este contexto delimitado es de alcance global y de naturaleza técnica. Su responsabilidad es gestionar la identidad de los usuarios registrados en Splitly y proporcionar los mecanismos de autenticación y autorización mediante tokens, abstrayéndose completamente de la lógica de negocio de la distribución de gastos.
 
-#### 2.6.1.1. Domain Layer (Model)
+#### 2.6.1.1. Domain Layer 
 
 **Aggregates**
 * **`User` (Aggregate Root):** Representa la identidad central del usuario en el sistema. Administra los datos de acceso, credenciales y su estado de actividad.
@@ -262,3 +262,92 @@ En este esquema se aíslan las tablas responsables de almacenar la información 
 El diagrama detalla los atributos físicos, los tipos de datos implícitos, las claves primarias (PK) y las relaciones de clave foránea (FK) que garantizan la integridad referencial de las reglas de negocio finacieras de **Splitly**, manteniendo este esquema lógicamente separado de otros dominios como la gestión de identidades o el ciclo de vida de los hogares.
 
 ![Diagrama de base de datos Contributions Distribution](images/diagrama%20-%20base%20de%20datos%20-%20contribution%20distributions.png)
+
+### 2.6.3. Bounded Context: Household Management
+
+El Bounded Context de **Household Management** constituye la base estructural y organizativa de la plataforma. Su propósito fundamental es administrar el ciclo de vida de los grupos o "hogares", actuando como el contenedor lógico principal donde interactúan los usuarios y sobre el cual se asociarán posteriormente los gastos y deudas.
+
+A nivel de diseño guiado por el dominio (DDD), este límite transaccional consolida de manera natural tres sub-dominios que comparten un alto grado de cohesión y operan en conjunto:
+* **Households:** Encargado de la creación, configuración y administración del hogar en sí (entidad raíz), definiendo sus metadatos (como nombre o moneda base) y su estado de actividad.
+* **HouseholdMembers:** Responsable de establecer el vínculo entre los usuarios del sistema y un hogar específico. Gestiona los roles locales dentro del grupo, la fecha de ingreso y el estado de la membresía.
+* **Invitations:** Maneja la lógica de integración de nuevos participantes, controlando la generación, envío, validación, aceptación o expiración de los enlaces o códigos de invitación para unirse a un grupo.
+
+La unificación de estas responsabilidades en un solo Bounded Context garantiza que las reglas de negocio sobre quién pertenece a un hogar y cómo ingresa a él se procesen de forma atómica. Esto asegura la integridad de los datos organizativos y proporciona una fuente de la verdad confiable para que módulos externos (como el de distribución de aportes) puedan operar sin preocuparse por la gestión de los usuarios.
+
+#### 2.6.3.1. Domain Layer 
+
+La capa de dominio (Domain Layer) para el Bounded Context de **Household Management** encapsula las reglas de negocio centrales encargadas de la estructuración y organización de los grupos de usuarios. Esta capa se mantiene completamente aislada de bases de datos, frameworks externos o detalles de la interfaz, enfocándose en la lógica pura de la creación de hogares, la administración de sus integrantes y la seguridad de los accesos mediante invitaciones.
+
+A continuación, se detallan los elementos tácticos que estructuran esta capa, reflejando la integración de los submódulos de *Households*, *HouseholdMembers* e *Invitations*:
+
+**Aggregates y Entities:**
+* **`Household` (Aggregate Root):** Es la entidad principal que representa un grupo, vivienda o departamento compartido. Concentra la información base (nombre, descripción, moneda principal para las transacciones internas) y actúa como el límite de consistencia transaccional del módulo.
+* **`HouseholdMember` (Entity):** Representa el vínculo específico entre un usuario del sistema y un hogar. Define el estado de la membresía, la fecha en la que el usuario se unió (`joinedAt`) y el nivel de permisos locales que posee dentro de ese grupo específico.
+* **`Invitation` (Entity):** Gestiona el ciclo de vida de las solicitudes o códigos de acceso para integrar nuevos miembros a un hogar. Encapsula la lógica para verificar la validez del token, comprobar las fechas de expiración (`expiresAt`) y actualizar su estado una vez que un usuario acepta la invitación.
+
+**Value Objects y Enumeradores:**
+* **`InvitationStatus`:** Enumerador que define las transiciones de estado de una invitación (por ejemplo: *Pending*, *Accepted*, *Expired*, *Revoked*).
+* **`HouseholdRole`:** Enumerador que define la jerarquía o nivel de permisos de un integrante dentro del hogar (por ejemplo: *Owner/Admin*, *Regular Member*).
+
+**Repositories (Interfaces):**
+Para garantizar la persistencia de estas entidades asegurando el principio de Inversión de Dependencias (Dependency Inversion), el dominio expone los siguientes contratos:
+* **`IHouseholdRepository`:** Contrato para la creación, actualización y recuperación de los metadatos de los hogares.
+* **`IHouseholdMemberRepository`:** Contrato para gestionar el listado de participantes de un hogar y para consultar a cuántos grupos pertenece un usuario en particular.
+* **`IInvitationRepository`:** Contrato encargado de almacenar, consultar y actualizar los tokens de acceso temporales.
+
+#### 2.6.3.2. Interface Layer
+
+La capa de interfaz (Interface Layer) para el Bounded Context de **Household Management** funciona como el punto de entrada y la frontera de comunicación externa del módulo. Su responsabilidad principal es recibir las solicitudes HTTP enviadas desde las aplicaciones cliente (Web o Móvil), transformar las cargas útiles (payloads) utilizando objetos de transferencia de datos (DTOs), y delegar la ejecución hacia la capa de aplicación, protegiendo así la lógica de negocio subyacente.
+
+Basándose en los agregados y entidades definidos en el modelo de dominio, esta capa expone los siguientes controladores RESTful y componentes:
+
+**REST Controllers:**
+* **`HouseholdsController`:** Constituye el punto de entrada para la gestión principal de los grupos. Expone endpoints para crear un nuevo hogar, actualizar su información base (como el nombre o la moneda), y consultar los detalles de los hogares a los que pertenece el usuario autenticado.
+* **`HouseholdMembersController`:** Maneja las peticiones relacionadas con los integrantes de un grupo específico. Expone rutas para listar a los miembros actuales, actualizar sus roles internos (`HouseholdRole`), o procesar la salida/eliminación de un integrante del hogar.
+* **`InvitationsController`:** Gestiona el flujo de integración de nuevos usuarios. Expone endpoints para generar un nuevo token o enlace de invitación, consultar el estado de una invitación y procesar la aceptación de la misma por parte de un usuario invitado.
+
+**Data Transfer Objects (DTOs / Resources):**
+Para aislar el modelo de dominio de los contratos de la API, se implementan recursos de entrada y salida para estructurar la información:
+* **Request Resources:** Clases como `CreateHouseholdResource`, `UpdateMemberRoleResource`, o `GenerateInvitationResource`, encargadas de encapsular los datos enviados por el cliente y aplicar validaciones de formato (Data Annotations) antes de que la petición ingrese al sistema.
+* **Response Resources:** Clases como `HouseholdResponse`, `HouseholdMemberResponse`, e `InvitationResponse`, diseñadas para mapear las entidades internas y devolver al cliente únicamente la información estructurada, segura y necesaria para la interfaz de usuario.
+
+#### 2.6.3.3. Application Layer
+
+La capa de aplicación (Application Layer) en el Bounded Context de **Household Management** actúa como el orquestador central de los casos de uso relacionados con la administración de los grupos. Su función primordial es recibir las intenciones de los usuarios desde la capa de interfaz, recuperar las entidades pertinentes a través de los repositorios, invocar las reglas de negocio del dominio y coordinar la persistencia de los cambios de estado.
+
+Para garantizar un código mantenible, escalable y con responsabilidades segregadas, esta capa implementa el patrón CQRS (Command and Query Responsibility Segregation), dividiendo el flujo de ejecución en operaciones de escritura y de lectura:
+
+**Commands (Operaciones de Escritura) y Command Handlers:**
+Encapsulan las solicitudes que mutan o alteran el estado organizativo de los hogares. Los servicios o *Handlers* encargados orquestan el flujo transaccional:
+* **`HouseholdCommandService` / Handlers:** Orquesta casos de uso fundamentales como `CreateHouseholdCommand` (que inicializa un nuevo grupo) y `UpdateHouseholdCommand` (para modificar metadatos del hogar).
+* **`HouseholdMemberCommandService` / Handlers:** Gestiona la administración del equipo humano mediante comandos como `AddMemberToHouseholdCommand`, `UpdateMemberRoleCommand` (para escalar o reducir privilegios locales) y `RemoveMemberCommand`.
+* **`InvitationCommandService` / Handlers:** Controla el flujo de seguridad e integración ejecutando comandos críticos como `GenerateInvitationCommand`, `RevokeInvitationCommand` y, especialmente, el `AcceptInvitationCommand`, el cual orquesta la transición de una invitación aceptada a la creación de un nuevo `HouseholdMember`.
+
+**Queries (Operaciones de Lectura) y Query Handlers:**
+Encapsulan las solicitudes de información, diseñadas para consultar el estado del sistema sin producir efectos secundarios, optimizando la lectura de datos:
+* **`HouseholdQueryService` / Handlers:** Resuelve consultas como `GetHouseholdByIdQuery` y `GetHouseholdsByUserIdQuery`, permitiendo al cliente saber a qué grupos pertenece el usuario autenticado.
+* **`HouseholdMemberQueryService` / Handlers:** Atiende solicitudes como `GetMembersByHouseholdIdQuery`, vital para renderizar la lista de participantes y sus roles dentro de la interfaz de la aplicación.
+* **`InvitationQueryService` / Handlers:** Gestiona consultas como `GetInvitationByTokenQuery`, utilizada para validar que el enlace o código que ingresa un usuario invitado siga vigente antes de permitirle unirse.
+
+Mediante esta arquitectura, la capa de aplicación coordina eficientemente la gestión del ciclo de vida de los hogares, delegando la complejidad técnica a la infraestructura y las reglas organizativas a la capa de dominio.
+
+#### 2.6.3.4 Infrastructure Layer
+
+La capa de infraestructura (Infrastructure Layer) para el Bounded Context de **Household Management** es la encargada de proveer las implementaciones tecnológicas concretas para las abstracciones definidas en la capa de dominio. Su rol principal es gestionar el acceso a la base de datos relacional y coordinar la integración con servicios externos, manteniendo el núcleo de la aplicación completamente agnóstico respecto a la infraestructura física.
+
+En este contexto delimitado, la infraestructura se organiza mediante los siguientes componentes técnicos:
+
+**Persistencia de Datos y ORM:**
+La persistencia transaccional se maneja a través de Entity Framework Core (EF Core), utilizando un contexto de base de datos específico para el módulo (o un esquema delimitado) que aísla las tablas organizativas del resto del sistema.
+* **Mapeo de Entidades (Fluent API):** Se configuran las reglas de mapeo objeto-relacional (O/RM) garantizando la integridad referencial. Se establecen las relaciones estructurales, como la relación de uno a muchos (1..*) entre un `Household` y sus múltiples `HouseholdMembers` e `Invitations`.
+* **Configuración de Enumeradores y Restricciones:** Los Value Objects y estados transicionales (como `InvitationStatus` y `HouseholdRole`) se configuran para ser persistidos eficientemente (generalmente como cadenas de texto o enteros), mientras que se aplican restricciones de base de datos, como índices únicos para los tokens de invitación, evitando duplicidades.
+
+**Implementación de Repositorios:**
+Se proveen las clases concretas que implementan las interfaces del dominio, interactuando directamente con el `DbContext`:
+* **`HouseholdRepository`:** Implementa la lógica SQL/LINQ para la inserción, actualización y consulta de los metadatos de los hogares.
+* **`HouseholdMemberRepository`:** Gestiona el almacenamiento de los vínculos entre los usuarios y los grupos, incluyendo la persistencia de los roles y permisos locales asignados a cada integrante.
+* **`InvitationRepository`:** Encargado de registrar los tokens de invitación generados, actualizar su estado (ej. de *Pending* a *Accepted* o *Expired*) y recuperar validaciones críticas directamente desde la base de datos.
+
+**Integración con Servicios Externos:**
+* **Email / Notification Service (Adapter):** Para dar soporte al sub-dominio de `Invitations`, esta capa puede incluir la implementación de adaptadores que se conecten con proveedores de mensajería externos (ej. SendGrid o un SMTP Server). De esta forma, cuando el dominio ordena el envío de una invitación, la capa de infraestructura materializa el envío físico del correo electrónico o notificación al destinatario sin acoplar la lógica de negocio al proveedor de correo.
+
