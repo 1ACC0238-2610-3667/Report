@@ -32,7 +32,7 @@
 |       Ríos Pacheco, Héctor Javier           |              u20231c540               |
 | Cuentas Peña, JoaquinAlberto                |              u20201f788               |
 |       Ramirez Escalante, Walter Luis        |              u202221632               |
-|       Miraval Pomalaya, Rodrigo Jesús       |                             |
+|       Miraval Pomalaya, Rodrigo Jesús       |              u202311082               |
 
 </div>
 
@@ -208,7 +208,7 @@ A través de un sistema digital automatizado, claro y accesible, Splitly fomenta
 | **Héctor Javier Rios Pacheco - u20231c540**<br> <img src="assets/integrantes/FotoHector.png" alt="foto-hector" width="170px"/>   |  Soy responsable, me gusta involucrarme activamente en los proyectos, aportar ideas útiles y cumplir con mis tareas a tiempo. Siempre estoy dispuesto a colaborar y ayudar al equipo a avanzar de la mejor manera posible.     |  Cuento con formación en desarrollo de software, incluyendo estructuras de datos, algoritmos y arquitecturas orientadas a servicios. Trabajo con lenguajes como Java, TypeScript, JavaScript, HTML5 y CSS3, y utilizo herramientas y frameworks como Angular, Spring Boot, Git/GitHub, Swagger y bases de datos relacionales.       |
 | **JoaquinAlberto Cuentas Peña - u20201f788**<br>|       |         |
 | **Walter Luis Fajardo Monrroy - u202221632**<br>   |       |         |
-| **Rodrigo Jesús Miraval Pomalaya**<br>    |       |         |
+| **Rodrigo Jesús Miraval Pomalaya - u202311082**<br> <img src="assets/integrantes/FotoRodrigo.png" alt="foto-rodrigo" width="170px"/>    |  Mi nombre es Rodrigo Jesus Miraval Pomalaya y estudio Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas. Me considero una persona adaptable y detallista, siempre en busca de aprender y mejorar en lo que hago. Me gusta aplicar lo aprendido en proyectos académicos y trabajar en equipo, ya que compartir ideas no solo ayuda a obtener mejores resultados, sino también a ampliar mi visión en la carrera.       | Tengo conocimientos en Python, JavaScript, HTML y CSS, además de un nivel intermedio en SQL Server y MySQL.       |
 
 
 ## 1.2. Solution Profile
