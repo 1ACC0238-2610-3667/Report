@@ -99,10 +99,10 @@ En esta sección, se registra cada entrevista realizada. En total, se realizaron
 Segmento Objetivo 1: Miembros del hogar
   
 Entrevista 1:  
-  
+
 | Entrevista | Registro |  
 | ----- | ----- |  
-| <p align="center"><img src="https://i.imgur.com/pHSOv6I.png"/></p> | **Zona:** Magdalena <br>**Entrevistada:** Maria Fernanda |  
+| <p align="center"><img src="./assets/Entrevista1"/></p> | **Zona:** Magdalena <br>**Entrevistada:** Maria Fernanda |  
 | [Link](https://acortar.link/zzUnyO)|  **Entrevistador:** Jose Luis Martinez Valdivia |  
 | Timing: Minuto 0:00-4:10| **Resumen:** María Fernanda, de 20 años, es soltera y vive con su familia. En su hogar, los gastos se dividen entre todos los miembros, lo que en general les permite cubrir sus necesidades de manera organizada. Ella considera que el sistema que llevan actualmente para gestionar los gastos es eficiente, ya que cada integrante asume una parte proporcional, pero reconoce que su mayor dificultad está en mantener un registro claro y ordenado de cada desembolso. Para ella, contar con una aplicación que ofrezca registros rápidos y fáciles de consultar sería de gran utilidad, pues le permitiría llevar un control más transparente y evitar confusiones en el futuro. Como tecnologias utiliza un celular iphone con IOS 25.|  
 
@@ -110,7 +110,7 @@ Entrevista 2:
   
 | Entrevista | Registro |  
 | ----- | ----- |  
-| <p align="center"><img src="https://i.imgur.com/lwoUnG9.png"/></p> | **Zona:** Magdalena del Mar <br>**Entrevistado:** Melisa Geraldine Sulca |  
+| <p align="center"><img src="./assets/Entrevista2"/></p> | **Zona:** Magdalena del Mar <br>**Entrevistado:** Melisa Geraldine Sulca |  
 | [Link](https://acortar.link/zzUnyO)|  **Entrevistador:** Joaquin Alberto Cuentas Peña |  
 | Timing: Minuto 4:11-10:26| **Resumen:** Melisa Sulca, de 23 años, es soltera y vive junto a su hermana y su prima. En su hogar, los gastos más importantes, como el pago de servicios principales y compromisos de mayor monto, son asumidos por su padre. En cambio, los gastos comunes, relacionados con el día a día, se dividen entre Harri y su primo. Esta forma de organización les resulta práctica y cómoda, ya que no genera conflictos y todos saben con claridad qué parte les corresponde cubrir. El principal reto que enfrenta al organizar sus finanzas surge al momento de realizar las compras para la casa, aunque señala que no han tenido desacuerdos al repartir los gastos. Melisa no considera necesario dividirlos según los ingresos de cada miembro, ya que como convive con su familia le resulta practico el tema de dividir proporcionalmente los gastos; sin embargo, si viviera con otras personas considera que sí sería provechoso. Como tecnologia movil utiliza un celular android Samsung con Android 15.|  
   
@@ -118,7 +118,7 @@ Entrevista 3:
   
 | Entrevista | Registro |  
 | ----- | ----- |  
-| <p align="center"><img src="https://i.imgur.com/EtZ8Jbp.png"/></p> | **Zona:** San Miguel<br>**Entrevistado:** Diego Avalos |  
+| <p align="center"><img src="./assets/Entrevista3"/></p> | **Zona:** San Miguel<br>**Entrevistado:** Diego Avalos |  
 | [Link](https://acortar.link/zzUnyO)|  **Entrevistador:** Joaquin Alberto Cuentas Peña |  
 | Timing: Minuto 10:27-15:45| **Resumen:** Diego Avalos, de 20 años, es soltero y comparte vivienda con 2 amigos de la universidad, todos ellos son estudiantes que vienen de provincia y alquilar una vivienda en común cerca a la Universidad. Para organizarse, decidieron dividir los gastos del hogar entre los cuatro. Aunque este método les permite cubrir sus necesidades básicas, Diego comenta que el mayor reto que enfrentan es ponerse de acuerdo sobre quién debe pagar en cada ocasión, así como recordar quién ya cumplió con su parte y quién no lo ha hecho. Esta situación ha generado varios desacuerdos, especialmente al momento de realizar los pagos compartidos. considera que dividir los gastos según los ingresos de cada miembro no sería una alternativa viable, ya que complicaría aún más la organización y la gestión de sus finanzas. Por esta razón, Diego cree que una aplicación con funciones específicas, como recordar los gastos pendientes y notificar las acciones que realizan los demás integrantes, sería de gran utilidad. Como tecnologia movil utiliza un celular Xiaomi con Android 15.  
   
@@ -128,7 +128,7 @@ Entrevista 4:
   
 | Entrevista | Registro |  
 | ----- | ----- |  
-| <p align="center"><img src="https://i.imgur.com/1JJCSgx.png"/></p> | **Zona:** Magdalena del Mar<br>**Entrevistada:** Juan Castillo |  
+| <p align="center"><img src="./assets/Entrevista4"/></p> | **Zona:** Magdalena del Mar<br>**Entrevistada:** Juan Castillo |  
 | [Link](https://acortar.link/zzUnyO)| **Entrevistador:** Walter Fajardo |  
 | Timing: Minuto 15:46-20:38| **Resumen:** Juan Castillo, de 27 años es soltero y vive con su hermano menor. Él se encarga de administrar el dinero destinado a los pagos y la organización de los gastos del hogar. Considera que la distribución de los gastos es equitativa, ya que él trabaja y recibe un salario considerable que le permite cubrir el 70% de los gastos, mientras que su hermano cubre el 30%. Su mayor dificultad al momento de gestionar las finanzas surge cuando realiza compras innecesarias, ya que esto provoca que en ocasiones se exceda del presupuesto establecido. Juan cree que una aplicación que registre los gastos de manera automática y que, además, envíe recordatorios mensuales sobre pagos próximos o recurrentes sería de gran ayuda para evitar retrasos y mantener un control más estricto. También considera muy útil una función que identifique y clasifique los gastos innecesarios, lo que le permitiría reconocer patrones de consumo, tomar decisiones más conscientes y, al mismo tiempo, contar con una herramienta que calcule de forma automática cuánto gasta cada integrante de la familia, garantizando mayor transparencia y equidad en la administración del dinero, y fortaleciendo así la confianza y la organización en el hogar. Como tecnologia movil utiliza un celular android con Android 16.|  
 
@@ -136,7 +136,7 @@ Entrevista 5:
   
 | Entrevista | Registro |  
 | ----- | ----- |  
-| <p align="center"><img src="https://i.imgur.com/H6oMX8H.png"/></p> | **Zona:** San Isidro<br> **Entrevistado:** Frank |  
+| <p align="center"><img src="./assets/Entrevista5"/></p> | **Zona:** San Isidro<br> **Entrevistado:** Frank |  
 | [Link](https://acortar.link/zzUnyO)|  **Entrevistador:** Kevin Patrick Pardo Chumpitazi |  
 | Timing: Minuto 20:39-24:45| **Resumen:** Frank, de 25 años, vive con su pareja y es quien se encarga principalmente de los gastos del hogar. Para mantener un control adecuado, organiza un presupuesto mensual en el que contempla tanto los gastos fijos como los variables. Además, utiliza Excel como herramienta de apoyo para calcular y registrar sus finanzas, lo que le permite tener una visión más ordenada de sus ingresos y egresos. Él considera que la forma en que distribuyen los gastos en el hogar es equitativa; sin embargo, reconoce que su mayor dificultad surge con los gastos imprevistos, especialmente aquellos relacionados con urgencias o problemas que no estaban contemplados en el presupuesto inicial. Frank cree que sería de gran utilidad contar con una aplicación que automatice la división de los gastos y que, además, ofrezca reportes claros, alertas y recordatorios. Para él, una herramienta sencilla de usar que le permita organizar mejor las finanzas del hogar, anticiparse a posibles problemas y visualizar de manera clara la distribución de sus recursos sería clave para optimizar la gestión de su dinero. Como tecnología movil utiliza un celular iphone con IOS 25.|  
   
@@ -144,7 +144,7 @@ Entrevista 6:
   
 | Entrevista | Registro |  
 | ----- | ----- |  
-| <p align="center"><img src="https://i.imgur.com/1JJCSgx.png"/></p> | **Zona:** Chorrillos<br>**Entrevistada:** Jessica Castillo |  
+| <p align="center"><img src="./assets/Entrevista6"/></p> | **Zona:** Chorrillos<br>**Entrevistada:** Jessica Castillo |  
 | [Link](https://acortar.link/zzUnyO)| **Entrevistador:** Angel Martin Gonzales Castillo |  
 | Timing: Minuto 24:45-30:00| **Resumen:** Jessica Castillo, de 47 años es casada y vive con su familia. Ella se encarga de administrar el dinero destinado a los pagos y la organización de los gastos del hogar. Considera que la distribución de los gastos es equitativa, ya que tanto ella como su esposo aportan a las necesidades principales de la familia, cubriendo servicios, alimentación y otros compromisos esenciales. Su mayor dificultad al momento de gestionar las finanzas surge cuando realiza compras innecesarias, ya que esto provoca que en ocasiones se exceda del presupuesto establecido. Jessica cree que una aplicación que registre los gastos de manera automática y que, además, envíe recordatorios mensuales sobre pagos próximos o recurrentes sería de gran ayuda para evitar retrasos y mantener un control más estricto. También considera muy útil una función que identifique y clasifique los gastos innecesarios, lo que le permitiría reconocer patrones de consumo, tomar decisiones más conscientes y, al mismo tiempo, contar con una herramienta que calcule de forma automática cuánto gasta cada integrante de la familia, garantizando mayor transparencia y equidad en la administración del dinero, y fortaleciendo así la confianza y la organización en el hogar. Utiliza como browser Google Chrome y Edge. Como tecnologias utiliza un celular android y una laptop con sistema operativo Windows.|  
 
