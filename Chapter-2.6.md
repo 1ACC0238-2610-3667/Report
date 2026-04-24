@@ -474,3 +474,44 @@ Se proveen las clases concretas que implementan las interfaces del dominio:
 Esta es la sección más crítica de la infraestructura de este módulo, ya que encapsula los SDKs y las librerías de terceros (ej. Stripe.net, PayPal SDK o Niubiz):
 * **`StripePaymentGatewayAdapter` (o equivalente):** Es la clase concreta que implementa la interfaz `IPaymentGatewayService` del dominio. Su responsabilidad es traducir los comandos del sistema interno (como "Cobrar 50 Soles") al formato y las llamadas HTTP específicas que exige la API del proveedor de pagos. 
 * Si en el futuro **Splitly** decide cambiar de pasarela de pagos (por ejemplo, migrar de Stripe a PayPal), los cambios tecnológicos se limitarán exclusivamente a crear un nuevo adaptador en esta capa, sin que la capa de dominio o de aplicación sufran la más mínima alteración.
+
+#### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+El siguiente diagrama a nivel de componentes ilustra la arquitectura de software interna del Bounded Context de **App Management**. Esta representación visual demuestra cómo los sub-dominios transversales (Settings y Payment Gateway) se estructuran respetando los principios de Clean Architecture y el Modelo C4, aislando la complejidad técnica del proveedor de pagos.
+
+El diagrama detalla el flujo de control y las dependencias a través de las cuatro capas principales, destacando el ciclo de vida de las transacciones financieras:
+* **Interface Layer:** Expone los endpoints de la API REST para las configuraciones y actúa como receptor asíncrono (`PaymentWebhooksController`) para los eventos enviados por el procesador de pagos.
+* **Application Layer:** Orquesta los casos de uso a través de servicios dedicados, procesando la intención de los usuarios y desencriptando/validando los eventos (webhooks) recibidos desde el exterior.
+* **Domain Layer:** El núcleo agnóstico del Bounded Context, donde residen entidades críticas como `UserSetting` y `PaymentIntent`, modelando el estado de la transacción sin acoplarse a SDKs externos.
+* **Infrastructure Layer:** Implementa la Capa Anticorrupción (ACL) mediante el `PaymentGatewayAdapter`, el cual traduce las directivas del dominio en llamadas HTTP a la **External Payment Gateway** (ej. Stripe o PayPal). Adicionalmente, maneja la persistencia en la **Base de Datos Relacional** mediante Entity Framework Core, garantizando que no se almacene información sensible (PCI-DSS).
+
+Esta arquitectura asegura un flujo circular robusto: la infraestructura inicia los cobros, y la pasarela externa confirma el resultado enviando *webhooks* de vuelta a la capa de interfaz.
+
+![Diagrama de componentes App Management](images/BC%20App%20-%20diagrama%20-%20componentes.png)
+
+### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+El siguiente diagrama de clases de la capa de dominio ilustra el modelo conceptual diseñado para el Bounded Context de **App Management**. Este esquema visualiza las entidades y Aggregate Roots responsables de gestionar la infraestructura transversal de la aplicación, incluyendo las preferencias del usuario y la integración con las pasarelas de pago.
+
+El modelo se divide en dos enfoques principales:
+* Por un lado, `UserSetting` actúa como un Aggregate Root aislado que centraliza la personalización de la experiencia del usuario (idioma, tema visual y notificaciones).
+* Por otro lado, se definen los elementos del sub-dominio de pagos, donde `PaymentIntent` (Aggregate Root) orquesta el ciclo de vida de una transacción financiera, y se relaciona de manera segura con `PaymentMethodProfile`. Esta última entidad es crítica para la seguridad (cumplimiento PCI-DSS), ya que únicamente almacena el token externo (`ExternalToken`) provisto por el proveedor de pagos, en lugar de los datos sensibles de la tarjeta.
+
+El diseño asegura que la lógica de cobros y configuraciones permanezca fuertemente tipada a través de enumeradores como `TransactionStatus` y `ThemePreference`, manteniendo el dominio limpio de implementaciones tecnológicas específicas.
+
+![Diagrama de clases App Management](images/app%20%20BC%20-%20diagrama%20contexto.png)
+
+#### 2.6.4.6.2. Bounded Context Database Design Diagram
+
+El siguiente diagrama representa el modelo físico de datos estructurado para el Bounded Context de **App Management**. Este esquema aísla las tablas responsables de almacenar las preferencias transversales de la aplicación y el registro histórico de la interacción con la pasarela de pagos.
+
+En el diagrama se observan tres tablas principales, todas fuertemente vinculadas al identificador del usuario (delegado del módulo IAM):
+* **`user_settings`**: Almacena las preferencias de localización y experiencia visual (idioma, tema y notificaciones).
+* **`payment_transactions`**: Funciona como un registro auditable de los intentos de cobro, guardando el monto, la moneda, el estado de la transacción y, de forma crucial, el `external_transaction_id` que permite la conciliación con el proveedor externo (ej. Stripe).
+* **`payment_methods`**: Almacena los perfiles de pago del usuario cumpliendo con los estándares de seguridad (PCI-DSS). No guarda datos sensibles, sino únicamente el `external_token` provisto por la pasarela y los últimos 4 dígitos de la tarjeta (`card_last_4`) para fines de visualización en la interfaz.
+
+Este diseño asegura que el núcleo del negocio esté completamente separado de la configuración técnica y de los detalles de infraestructura de cobros.
+
+![Diagrama de base de datos App Management](images/base%20de%20datos%20-%20diagrama%20-%20app%20BC.png)
