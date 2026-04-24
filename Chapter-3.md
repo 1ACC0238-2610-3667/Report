@@ -154,6 +154,20 @@
 
 
 ### 2.4.2. Impact Mapping
+
+### Segmento 1: Miembros del hogar
+
+<p styles="align: left">
+  <img src="assets/ImpactMappingSeg1.png" width="1100">
+</p>
+
+
+### Segmento 2: Representante del hogar
+
+<p styles="align: left">
+  <img src="assets/ImpactMappingSeg2.png" width="1100">
+</p>
+
 ### 2.4.3. Product Backlog
 
 | Prioridad | User Story ID | Título HU                                                 | Story Points |
