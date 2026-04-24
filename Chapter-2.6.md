@@ -239,6 +239,10 @@ El Empathy Mapping permite comprender a fondo qué piensan, sienten, ven, escuch
 
 ### 2.3.5. Big Picture EventStorming.
 
+La técnica del Evenstorming funcionará en Splitly para detallar el flujo de acciones que un usuario de la aplicación podrá ejecutar 
+
+  <img src="./assets/Captura de pantalla 2026-04-24 134123.png" width="1100">
+
 
 ### 2.3.6. Ubiquitous Language
 
