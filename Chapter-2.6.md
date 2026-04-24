@@ -103,7 +103,7 @@ Entrevista 1:
 | Entrevista | Registro |  
 | ----- | ----- |  
 | <p align="center"><img src="./assets/Entrevista1"/></p> | **Zona:** Magdalena <br>**Entrevistada:** Maria Fernanda |  
-| [Link](https://acortar.link/zzUnyO)|  **Entrevistador:** Jose Luis Martinez Valdivia |  
+| [Link](upc-pre-202601-cc238-3667-Splitly%20needfinding-sprint-1%20.mp4)|  **Entrevistador:** Jose Luis Martinez Valdivia |  
 | Timing: Minuto 0:00-4:10| **Resumen:** María Fernanda, de 20 años, es soltera y vive con su familia. En su hogar, los gastos se dividen entre todos los miembros, lo que en general les permite cubrir sus necesidades de manera organizada. Ella considera que el sistema que llevan actualmente para gestionar los gastos es eficiente, ya que cada integrante asume una parte proporcional, pero reconoce que su mayor dificultad está en mantener un registro claro y ordenado de cada desembolso. Para ella, contar con una aplicación que ofrezca registros rápidos y fáciles de consultar sería de gran utilidad, pues le permitiría llevar un control más transparente y evitar confusiones en el futuro. Como tecnologias utiliza un celular iphone con IOS 25.|  
 
 Entrevista 2:  
