@@ -113,7 +113,7 @@ El siguiente diagrama de componentes ilustra la estructura interna y el flujo de
 
 En el diagrama se detalla cómo las solicitudes de los clientes (como el inicio de sesión o el registro) son interceptadas por la **Interface Layer** (Controllers), las cuales delegan la orquestación a la **Application Layer** (Command y Query Handlers). Asimismo, se observa cómo estos servicios orquestadores interactúan con las entidades de la **Domain Layer** para validar las reglas de negocio, y finalmente se apoyan en la **Infrastructure Layer** (Repositories, TokenService, y IAMContext) para la persistencia de datos y la generación de credenciales seguras.
 
-![Diagrama de componentes IAM](images/IAM-diagram-components.png)
+![Diagrama de componentes IAM](images/IAM%20-%20diagraman%20-%20componentes.png)
 
 ### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
 
