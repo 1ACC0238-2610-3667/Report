@@ -100,8 +100,6 @@ Segmento Objetivo 1: Miembros del hogar
   
 Entrevista 1:  
 
-<img src="./assets/Adriana Zambrano.png" width="1100">
-
 | Entrevista | Registro |  
 | ----- | ----- |  
 | <p align="center"><img src="./assets/Entrevista1.png"/></p> | **Zona:** Magdalena <br>**Entrevistada:** Maria Fernanda |  
