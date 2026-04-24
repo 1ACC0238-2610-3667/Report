@@ -388,5 +388,89 @@ Este diseño garantiza la integridad referencial de la organización de los equi
 
 ![Diagrama de base de datos Household Management](images/diagrama%20-%20base%20de%20datos%20-%20Household%20Management.png)
 
+### 2.6.4. Bounded Context: App Management
 
+El Bounded Context de **App Management** actúa como la columna vertebral operativa y de infraestructura de la plataforma. A diferencia de los módulos centrales que manejan la lógica matemática de las deudas o la organización de los hogares, este contexto se enfoca exclusivamente en los aspectos transversales necesarios para el funcionamiento, la personalización y la integración técnica del sistema.
 
+Bajo la perspectiva de Domain-Driven Design (DDD), este límite transaccional agrupa dos sub-dominios clave que dictan el comportamiento global de la aplicación y su comunicación con servicios financieros externos:
+
+* **Settings:** Responsable de administrar las preferencias y configuraciones, tanto a nivel de sistema como de usuario. Esto incluye la gestión de metadatos de la aplicación, preferencias de notificaciones, localización (idioma/moneda por defecto), temas visuales (Dark/Light mode) y el versionado de políticas operativas.
+* **Payment Gateway:** Funciona como una Capa Anticorrupción (Anti-Corruption Layer) diseñada para integrar y gestionar la comunicación con procesadores de pago externos (como Stripe, PayPal o pasarelas locales). Su responsabilidad es encapsular la complejidad técnica de las transacciones reales, la tokenización de métodos de pago y el procesamiento de *webhooks*, aislando al resto del sistema de los cambios en las APIs de terceros.
+
+#### 2.6.4.1. Domain Layer
+
+La capa de dominio (Domain Layer) para el Bounded Context de **App Management** encapsula la lógica central enfocada en la personalización de la experiencia del usuario y las reglas de validación para las transacciones financieras externas. Esta capa se mantiene estrictamente aislada de los detalles de implementación tecnológica, como la base de datos o los SDKs específicos de los proveedores de pago (ej. Stripe, PayPal o Niubiz).
+
+A continuación, se detallan los elementos tácticos que estructuran esta capa, reflejando la consolidación de los submódulos de *Settings* y *Payment Gateway*:
+
+**Aggregates y Entities:**
+* **`UserSetting` (Aggregate Root):** Es la entidad encargada de gestionar las preferencias transversales de un usuario dentro de la plataforma. Centraliza la configuración de la experiencia, manejando atributos como el idioma preferido, el tema de la interfaz (modo oscuro/claro) y los permisos generales de notificaciones.
+* **`PaymentIntent` / `TransactionRecord` (Aggregate Root):** Entidad que representa y rastrea una solicitud de pago canalizada hacia un proveedor externo. Encapsula datos críticos como el monto total, la moneda, el identificador externo de la transacción y la fecha de inicio, controlando el ciclo de vida del pago de forma agnóstica.
+* **`PaymentMethodProfile` (Entity):** Representa un método de pago previamente guardado y tokenizado de un usuario. Por razones de seguridad y cumplimiento normativo (PCI-DSS), no almacena datos sensibles reales (como el número completo de tarjeta o el CVV), sino únicamente el token de referencia provisto por la pasarela de pagos.
+
+**Value Objects y Enumeradores:**
+* **`TransactionStatus`:** Enumerador que define las transiciones de estado de un intento de pago (por ejemplo: *Pending*, *RequiresAction*, *Succeeded*, *Failed*, *Refunded*).
+* **`ThemePreference`:** Enumerador para los ajustes visuales de la aplicación (*Light*, *Dark*, *SystemDefault*).
+* **`Money` (Value Object):** Estructura inmutable que combina la cantidad y la divisa (código ISO), asegurando que todas las solicitudes enviadas a la pasarela de pagos tengan precisión decimal y validación económica correcta.
+
+**Repositories y Domain Services (Interfaces):**
+Para establecer una Capa Anticorrupción (ACL) y asegurar el principio de Inversión de Dependencias (Dependency Inversion), el dominio expone los siguientes contratos:
+* **`IUserSettingRepository`:** Contrato para recuperar, crear y actualizar las preferencias de la aplicación para un usuario específico.
+* **`IPaymentTransactionRepository`:** Contrato responsable de registrar y auditar el historial de los intentos de pago.
+* **`IPaymentGatewayService` (Domain Service Contract):** Contrato vital que define las operaciones permitidas con el procesador de pagos externo (por ejemplo, `ChargeTokenizedCard()`, `GeneratePaymentLink()`, `RefundTransaction()`). La implementación real residirá en la capa de infraestructura, blindando el núcleo de **Splitly** ante cualquier cambio en las APIs de terceros.
+
+#### 2.6.4.2. Interface Layer
+
+La capa de interfaz (Interface Layer) para el Bounded Context de **App Management** actúa como la frontera de comunicación entre las aplicaciones cliente (Web y Móvil) y los procesos transversales del sistema. Su responsabilidad principal es gestionar las peticiones HTTP relacionadas con las preferencias del usuario y procesar de forma segura las interacciones con los proveedores de pago externos, incluyendo la recepción vital de eventos asíncronos (Webhooks).
+
+Basándose en las entidades y contratos definidos en el dominio, esta capa expone los siguientes controladores RESTful y componentes:
+
+**REST Controllers:**
+* **`SettingsController`:** Constituye el punto de entrada para la personalización de la experiencia del usuario. Expone endpoints para consultar la configuración actual, actualizar preferencias de visualización (como el tema oscuro/claro o el idioma base), y modificar los permisos de notificaciones u otras métricas operativas.
+* **`PaymentsController`:** Maneja el flujo de transacciones financieras desde la perspectiva del cliente. Expone rutas para generar intenciones de pago (Payment Intents), gestionar la tokenización de métodos de pago de forma segura (sin exponer datos de tarjetas al backend) y consultar el estado histórico de una transacción.
+* **`PaymentWebhooksController`:** Un controlador crítico y especializado en escuchar los eventos asíncronos (callbacks) enviados directamente por el proveedor externo de pagos (ej. Stripe, PayPal o Niubiz). Su responsabilidad es validar las firmas criptográficas de las peticiones entrantes para confirmar eventos de éxito, fallo o reembolso, delegando luego la actualización del estado al sistema.
+
+**Data Transfer Objects (DTOs / Resources):**
+Para mantener el aislamiento estructural y asegurar que la información de la pasarela y las configuraciones no expongan el modelo de dominio interno, se implementan los siguientes contratos de datos:
+* **Request Resources:** Clases como `UpdateUserSettingResource` o `CreatePaymentIntentResource`, encargadas de encapsular los datos enviados por el cliente y ejecutar validaciones de formato mediante Data Annotations antes de que la petición ingrese a la capa de aplicación.
+* **Response Resources:** Clases como `SettingResponse` y `PaymentTransactionResponse`, que estructuran y filtran los datos de salida, asegurando que el frontend reciba exactamente la información necesaria para renderizar la interfaz o procesar el flujo de caja.
+
+#### 2.6.4.3. Application Layer
+
+La capa de aplicación (Application Layer) en el Bounded Context de **App Management** actúa como el orquestador central de los casos de uso relacionados con las preferencias del sistema y la integración de pagos. Su función principal es recibir las solicitudes desde la capa de interfaz, interactuar con los repositorios y servicios de dominio para aplicar las reglas de negocio, y delegar la ejecución técnica de las transacciones financieras a los servicios de infraestructura externos.
+
+Para garantizar un código mantenible y altamente cohesivo, esta capa implementa el patrón CQRS (Command and Query Responsibility Segregation), dividiendo el flujo en operaciones de lectura y escritura:
+
+**Commands (Operaciones de Escritura) y Command Handlers:**
+Encapsulan las solicitudes que mutan el estado de las configuraciones o inician y procesan transacciones financieras. Los servicios encargados orquestan el flujo transaccional:
+* **`SettingsCommandService` / Handlers:** Orquesta casos de uso para la personalización de la experiencia mediante comandos como `CreateDefaultSettingsCommand` (ejecutado al registrar un nuevo usuario) y `UpdateUserSettingCommand` (para modificar preferencias de idioma, temas o notificaciones).
+* **`PaymentCommandService` / Handlers:** Gestiona el ciclo de vida de los pagos mediante comandos como `CreatePaymentIntentCommand` (que orquesta la creación de una intención de pago a través de los contratos del dominio) y `SavePaymentMethodCommand` (para asociar de forma segura un token de tarjeta al usuario).
+* **`PaymentWebhookCommandService` / Handlers:** Un orquestador crítico que procesa eventos asíncronos recibidos desde el exterior. Mediante el `ProcessWebhookEventCommand`, recibe la confirmación de la pasarela de pagos (éxito, fallo o fraude) y actualiza el estado transaccional interno, actuando como puente seguro entre el proveedor externo y el núcleo del sistema.
+
+**Queries (Operaciones de Lectura) y Query Handlers:**
+Encapsulan las solicitudes de información, optimizando la lectura de datos sin generar efectos secundarios en el sistema:
+* **`SettingsQueryService` / Handlers:** Resuelve consultas como `GetUserSettingsByUserIdQuery`, permitiendo a la interfaz de usuario cargar rápidamente las preferencias visuales y de localización en el arranque de la aplicación.
+* **`PaymentQueryService` / Handlers:** Atiende solicitudes como `GetTransactionStatusByIdQuery` y `GetUserPaymentMethodsQuery`, brindando a los clientes un historial claro de sus transacciones y métodos de pago guardados (tokenizados).
+
+Mediante esta arquitectura, la capa de aplicación coordina eficientemente la integración con pasarelas de pago y la gestión de configuraciones, asegurando que el núcleo de **Splitly** permanezca completamente agnóstico de las librerías o SDKs de proveedores de terceros (como Stripe o PayPal), delegando dicha complejidad técnica a la capa de infraestructura.
+
+#### 2.6.4.4 Infrastructure Layer
+
+La capa de infraestructura (Infrastructure Layer) para el Bounded Context de **App Management** es la responsable de proporcionar las implementaciones tecnológicas concretas para los contratos y abstracciones definidos en la capa de dominio. En este módulo en particular, su rol es doblemente crítico: gestionar la persistencia de las configuraciones y actuar como una Capa Anticorrupción (Anti-Corruption Layer - ACL) física frente a los proveedores de pagos externos.
+
+Los componentes técnicos que estructuran esta capa se dividen de la siguiente manera:
+
+**Persistencia de Datos y ORM:**
+Al igual que en los demás Bounded Contexts, la persistencia se gestiona mediante Entity Framework Core (EF Core), utilizando un contexto de base de datos (`DbContext`) delimitado para aislar estas operaciones:
+* **Mapeo de Entidades:** Se configuran las reglas de mapeo (Fluent API) para las tablas de configuraciones (`user_settings`) y el registro histórico de transacciones (`payment_transactions`).
+* **Seguridad y Cumplimiento:** A nivel de configuración de base de datos, se asegura que la tabla de métodos de pago (`payment_methods`) únicamente almacene identificadores o *tokens* provistos por la pasarela de pagos, garantizando el cumplimiento de normativas de seguridad (como PCI-DSS) al no guardar nunca datos sensibles de tarjetas de crédito o débito.
+
+**Implementación de Repositorios:**
+Se proveen las clases concretas que implementan las interfaces del dominio:
+* **`UserSettingRepository`:** Implementa la lógica SQL/LINQ para consultar y modificar las preferencias de visualización, notificaciones y localización de cada usuario.
+* **`PaymentTransactionRepository`:** Encargado de registrar en la base de datos local cada intento de pago, actualizando su estado (ej. de *Pending* a *Succeeded*) conforme los *webhooks* confirman los resultados.
+
+**Integración con Servicios Externos (Payment Gateway Adapters):**
+Esta es la sección más crítica de la infraestructura de este módulo, ya que encapsula los SDKs y las librerías de terceros (ej. Stripe.net, PayPal SDK o Niubiz):
+* **`StripePaymentGatewayAdapter` (o equivalente):** Es la clase concreta que implementa la interfaz `IPaymentGatewayService` del dominio. Su responsabilidad es traducir los comandos del sistema interno (como "Cobrar 50 Soles") al formato y las llamadas HTTP específicas que exige la API del proveedor de pagos. 
+* Si en el futuro **Splitly** decide cambiar de pasarela de pagos (por ejemplo, migrar de Stripe a PayPal), los cambios tecnológicos se limitarán exclusivamente a crear un nuevo adaptador en esta capa, sin que la capa de dominio o de aplicación sufran la más mínima alteración.
