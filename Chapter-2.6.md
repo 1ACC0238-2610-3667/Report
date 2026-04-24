@@ -224,3 +224,41 @@ Se proveen las implementaciones concretas de las interfaces del dominio, interac
 
 **Servicios Externos (Integraciones):**
 * **Storage Services:** Para respaldar la entidad `DocumentAttachment`, se implementa un servicio de infraestructura (ej. `S3StorageService` o `BlobStorageService`) que gestiona la subida física de los comprobantes (imágenes o PDFs) a la nube, devolviendo el `fileKey` que finalmente se guarda en la base de datos relacional.
+
+### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+The following component diagram illustrates the internal software architecture of the **Contributions Distribution** Bounded Context. This visual representation details how the logical sub-domains (Bills, Contributions, and Members Contribution) are structured using Clean Architecture principles and the C4 Model.
+
+The diagram outlines the flow of dependencies across the four main layers:
+* **Interface Layer:** Exposes the REST API endpoints (`ExpensesController`, `ContributionsController`, `PaymentsController`) to handle incoming HTTP requests from the client.
+* **Application Layer:** Orchestrates the system's use cases through Command and Query services, delegating tasks without containing any core business logic.
+* **Domain Layer:** The heart of the Bounded Context, encapsulating the pure business rules, mathematical allocation methods, and Aggregates (`Expense`, `Contribution`, `Payment`).
+* **Infrastructure Layer:** Implements the persistence interfaces, mapping the domain entities to the **Relational Database** using Entity Framework Core, and interacting with external **Cloud Storage Services** to manage `DocumentAttachments` (such as expense receipts).
+
+By enforcing these boundaries, the architecture ensures that the core financial logic remains isolated from database technologies and UI frameworks.
+
+![Diagrama de Componentes Contributions Distribution](images/component-diagram-Contributions%20Distribution.png)
+
+
+### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+#### 2.6.2.6.1 Bounded Context Domain Layer Class Diagrams
+
+El siguiente diagrama de clases de la capa de dominio ilustra el modelo conceptual de negocio estructurado específicamente para el Bounded Context de **Contributions Distribution**. 
+
+En este esquema se visualizan las entidades centrales que conforman este límite transaccional, destacando los Aggregate Roots (`Expense` y `Contribution`) y sus entidades relacionadas (`ExpenseLine`, `Payment`, `ContributionItem`). Se detallan sus atributos esenciales, métodos de comportamiento (como `recompute()` y `registerPayment()`) y las multiplicidades que rigen las reglas de división de gastos y liquidación de deudas.
+
+Al omitir intencionalmente detalles de infraestructura y dependencias externas, este modelo demuestra una alta cohesión interna y se mantiene estrictamente agnóstico a frameworks de persistencia o interfaces de usuario, cumpliendo fielmente con los principios tácticos de Domain-Driven Design (DDD).
+
+![Diagrama de contexto Contributions Distribution](images/diagrama%20-%20context%20domain%20-%20distribution%20contribution.png)
+
+
+#### 2.6.2.6.2 Bounded Context Database Design Diagram
+
+El siguiente diagrama representa el modelo físico de datos (Entity-Relationship) estructurado específicamente para dar soporte a la persistencia del Bounded Context de **Contributions Distribution**. 
+
+En este esquema se aíslan las tablas responsables de almacenar la información financiera y transaccional del módulo. Se observan las tablas `bills` (que materializa el agregado de gastos), `contributions` (que almacena las cuotas proporcionales calculadas mediante las políticas de reparto) y `member_contributions` (que registra el estado de los pagos y liquidaciones de cada usuario).
+
+El diagrama detalla los atributos físicos, los tipos de datos implícitos, las claves primarias (PK) y las relaciones de clave foránea (FK) que garantizan la integridad referencial de las reglas de negocio finacieras de **Splitly**, manteniendo este esquema lógicamente separado de otros dominios como la gestión de identidades o el ciclo de vida de los hogares.
+
+![Diagrama de base de datos Contributions Distribution](images/diagrama%20-%20base%20de%20datos%20-%20contribution%20distributions.png)
