@@ -306,7 +306,7 @@ La técnica del Evenstorming funcionará en Splitly para detallar el flujo de ac
   <img src="./assets/Captura de pantalla 2026-04-24 134123.png" width="1100">
 
 
-### 2.4. Ubiquitous Language
+### 2.3.6. Ubiquitous Language
 
 En esta sección se presenta el *Ubiquitous Language* definido para **Splitly**, el cual unifica la terminología utilizada por el equipo de desarrollo, los diseñadores y los usuarios.  
 Su propósito es garantizar una comprensión común del dominio, evitando ambigüedades en la comunicación y manteniendo la coherencia entre los artefactos de diseño, los modelos de datos y la experiencia de usuario.
