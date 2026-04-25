@@ -1696,3 +1696,16 @@ En el diagrama se observan tres tablas principales, todas fuertemente vinculadas
 Este diseño asegura que el núcleo del negocio esté completamente separado de la configuración técnica y de los detalles de infraestructura de cobros.
 
 ![Diagrama de base de datos App Management](assets/base%20de%20datos%20-%20diagrama%20-%20app%20BC.png)
+
+
+
+# Conclusiones y recomendaciones
+
+## Conclusiones
+- Las sesiones de validación confirmaron nuestra hipótesis principal respecto a la equidad financiera: la automatización del cálculo proporcional de gastos basado en los ingresos reales disminuye significativamente las tensiones domésticas. Los resultados demostraron que la aplicación móvil resuelve de forma efectiva la problemática planteada en los Problem Statements, logrando que tanto los representantes del hogar como los convivientes confíen en el algoritmo de distribución y perciban un alto valor en la transparencia de la información compartida.
+
+- Frente a los assumptions de riesgo iniciales sobre una posible resistencia tecnológica o desconfianza al registrar datos financieros personales, las validaciones evidenciaron una rápida curva de adopción. Esto se logró gracias a la usabilidad de la interfaz y a la integración ágil de los recursos del dispositivo (como el uso de la cámara para registrar recibos). Se concluye que la solución, apoyada por una propuesta de valor clara desde el Landing Page, supera las barreras de entrada y cumple satisfactoriamente con los criterios de éxito definidos en el ciclo Lean UX.
+
+## Recomendaciones
+
+- Dentro del roadmap a corto y mediano plazo de la aplicación móvil, se sugiere priorizar la expansión de las integraciones con billeteras digitales locales y pasarelas de pago externas. Las validaciones indicaron que los usuarios buscan liquidar sus deudas con la menor cantidad de fricción posible, por lo que agilizar el flujo de pago directo in-app será vital para la retención y la reducción de la morosidad.
