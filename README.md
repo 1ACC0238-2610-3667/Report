@@ -1739,9 +1739,7 @@ Adicionalmente, se incluyeron tareas técnicas relacionadas con la documentació
 
 El trabajo colaborativo del equipo se gestionó en la herramienta Trello, lo que permitió organizar, priorizar y dar seguimiento a cada tarea de manera eficiente.
 
-Link al tablero de Trello: 
-
-<img src="../images/trelloSPRINT1.png" alt="Trello" width="100%">
+Link al tablero de Trello: https://trello.com/invite/b/6a04a4676f2c78852edaeb1a/ATTI85b6ff75c99bfbde325e6f171ad6e8b4E226ADCE/splitly-sprint-backlog
 
 | **User Story Id** | **Title** | **Task Id** | **Task Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
 |------------------|----------|------------|---------------|-----------------|------------------------|-----------------|------------|
