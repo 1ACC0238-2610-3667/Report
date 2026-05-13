@@ -1265,7 +1265,7 @@ Define las interfaces y servicios necesarios para interactuar con componentes t�
 * **Hashing**: 
     * `IHashingService`: Define el contrato para los servicios de criptografía, encargándose de transformar las contraseñas en hashes seguros y validar las credenciales durante el inicio de sesión.
 * **Tokens**:
-    * `ITokenService`: Define el contrato para la gestión de la seguridad basada en tokens. Es responsable de la generación, firma y validación de los JSON Web Tokens (JWT) utilizados para autorizar las solicitudes desde la aplicación móvil.
+    * `ITokenService`: Define el contrato para la gestión de la seguridad basada en tokens. Es responsable de la generación, firma y validación de los JSON Web Tokens (JWT) utilizados para autorizRamírezsolicitudes desde la aplicación móvil.
 * **ACL (Anti-Corruption Layer)**:
     * `IExternalProfileService` / `ExternalProfileService`: Actúa como una capa de anticorrupción que facilita la comunicación con otros Bounded Contexts. Su función es traducir y transferir información de identidad hacia módulos externos (como la gestión de perfiles o el registro en hogares) sin acoplar los modelos de dominio entre sí.
 
@@ -1705,10 +1705,69 @@ Este diseño asegura que el núcleo del negocio esté completamente separado de 
 #### 4.1.3. Source Code Style Guide & Conventions
 #### 4.1.4. Software Deployment Configuration
 ### 4.2. Landing Page & Mobile Application Implementation
-#### 4.2.1. Sprint n
+
+#### 4.2.1. Sprint 1
+
+A continuación, se presenta el Sprint Planning 1, donde se incluyen las evidencias de planificación e implementación del Landing Page, Mobile App y Backend. También se registran los avances del proyecto e insights de colaboración del equipo a través de GitHub.
+
 ##### 4.2.1.1. Sprint Planning n
-##### 4.2.1.2. Sprint Backlog n
+
+| **Campo**                              | **Descripción**                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Sprint #**                           | Sprint 1                                                                                                                                                                                                                                                                                                           |
+| **Sprint Planning Background**         |                                                                                                                                                                                                                                                                                                                    |
+| **Date**                               | 2026-05-04                                                                                                                                                                                                                                                                                                         |
+| **Time**                               | 03:00 PM (GMT -5)                                                                                                                                                                                                                                                                                                  |
+| **Location**                           | Modalidad remota por Google Meet                                                                                                                                                                                                                                                                                   |
+| **Prepared By**                        | Testigos de Splitly                                                                                                                                                                                                                                                                                              |
+| **Attendees (to planning meeting)**    | Equipo Splitly                                                                                                                                                                                                                                                            |
+| **Sprint 0 Review Summary**        | Este es el primer sprint, por lo tanto, no hay una revisión de sprint anterior.                                                                                                                                                                                                                                    |
+| **Sprint 0 Retrospective Summary** | Al ser el inicio del proyecto, se identificaron aspectos técnicos por aprender, como el uso de frameworks CSS. Se revisó el diseño del Landing Page en Figma, el desarrollo de las pantallas de la Mobile App y el despliegue del backend. Se discutió el contenido a incluir y se definió el objetivo principal: lograr desplegar el Landing Page y Backend al final del sprint. |
+| **Sprint Goal & User Stories**         |                                                                                                                                                                                                                                                                                                                    |
+| **Sprint 1 Goal**                      | Desplegar un Landing Page y Backend funcional con diseño responsive y estructura definida, accesible públicamente.                                                                                                                                                                                        |
+| **Sprint 1 Velocity**                  | 20                                                                                                                                                                                                                                                                                                                  |
+| **Sum of Story Points**                | 10                                                                                                                                                                                                                                                                                                                  |
+
+
+
+
+##### 4.2.1.2. Sprint Backlog 1
+
+El Sprint Backlog 1 corresponde a la planificación inicial del desarrollo de la plataforma Splitly, donde se definieron y priorizaron las primeras funcionalidades clave para la Landing Page y la configuración básica de despliegue. En este sprint, el equipo trabajó en la implementación de secciones informativas que presentan los objetivos, beneficios y funcionalidades de la aplicación, así como en la incorporación de ejemplos visuales y accesos directos para el registro e inicio de sesión de usuarios.
+
+Adicionalmente, se incluyeron tareas técnicas relacionadas con la documentación del despliegue y la configuración de monitoreo básico, asegurando que el proyecto cuente con una base sólida para futuras iteraciones.
+
+El trabajo colaborativo del equipo se gestionó en la herramienta Trello, lo que permitió organizar, priorizar y dar seguimiento a cada tarea de manera eficiente.
+
+Link al tablero de Trello: 
+
+<img src="../images/trelloSPRINT1.png" alt="Trello" width="100%">
+
+| **User Story Id** | **Title**                                                                  | **Task Id** | **Task Title**              | **Description**                                                                                  | **Estimation (Hours)** | **Assigned To** | **Status (To-do/In-Process/To-Review/Done)** |
+| ----------------- | -------------------------------------------------------------------------- | ----------- | --------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------- | --------------- | -------------------------------------------- |
+| US31              | Visualizar información general sobre Splitly desde la landing page       | T1          | Información general         | Desarrollo de la sección con información introductoria de Harmonix                              | 2                      | Jose Luis Martinez Validivia               | Done                                        |
+| US32              | Conocer las funciones principales para representantes y miembros del hogar | T1          | Funciones principales       | Diseño y desarrollo de la sección que explica las funciones clave para representantes y miembros | 2                      | Héctor Ríos | Done                                        |
+| US33              | Explorar beneficios del sistema de aportes proporcionales                  | T1          | Beneficios                  | Desarrollo de la sección que muestre los beneficios de usar el sistema de aportes proporcionales | 2                      | Joaquin Cuentas            | Done                                        |
+| US34              | Ver ejemplos o simulaciones de cómo funciona la plataforma                 | T1          | Ejemplos y simulaciones     | Implementación de ejemplos visuales o simulaciones del funcionamiento de la plataforma           | 3                      |  Walter Ramírez               | Done                                        |
+| US35              | Acceder fácilmente al registro o login desde botones destacados            | T1          | Botones de acceso           | Diseño e implementación de botones visibles para registro y login                                | 1                      | Rodrigo Miraval               | Done                                        |
+| TS18              | Documentar los pasos para desplegar nuevas versiones                       | T1          | Documentación de despliegue | Redacción de la guía de pasos necesarios para desplegar nuevas versiones                         | 2                      | Jose Luis Martinez Validivia               | Done                                        |
+| TS19              | Habilitar monitoreo básico del sistema desplegado (logs, uptime)           | T1          | Monitoreo básico            | Configuración inicial para registrar logs y habilitar monitoreo de uptime                        | 3                      | Camila Leonor Espinoza Vivas               | Done                                        |
+
+
+
 ##### 4.2.1.3. Development Evidence for Sprint Review
+
+|Repository Branch |  Commit Id  |  Commit Message | Commit Message Body | Commited on (Date)|
+|-----------------|--------------|-----------------|---------------------|-------------------|
+|Landing Page - develop   |   4c76760…f3dcfd9     |  chores(landingpage): added some translation words    |           |   10/05/2026 |
+|Landing Page - develop   |    c62b615…4c76760     |  chore(landingpage): add completed landing page       |           |   11/05/2026 |
+|Landing Page - reviews   |   c62b615…3c7fbde      |  feature(reviews): completed landing page-OurSystem - added HTML  |    |12/05/2026|
+|Landing Page - home   |   c62b615…7769d76     |  feat: add section home structure and styling    |           |   12/05/2026 |
+|Landing Page - about us   |   c62b615…3f0f246     |  update landing page about us   |           |   13/05/2026 |
+| Landing Page - pricing |  c62b615…6a35cc4         |  feature(pricing): completed Reviews on an 80%  |    |      13/05/2026    |
+
+
+
 ##### 4.2.1.4. Testing Suite Evidence for Sprint Review
 ##### 4.2.1.5. Execution Evidence for Sprint Review
 ##### 4.2.1.6. Services Documentation Evidence for Sprint Review
