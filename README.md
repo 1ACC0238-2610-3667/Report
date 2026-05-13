@@ -1743,19 +1743,36 @@ Link al tablero de Trello:
 
 <img src="../images/trelloSPRINT1.png" alt="Trello" width="100%">
 
-| **User Story Id** | **Title**                                                                  | **Task Id** | **Task Title**              | **Description**                                                                                  | **Estimation (Hours)** | **Assigned To** | **Status (To-do/In-Process/To-Review/Done)** |
-| ----------------- | -------------------------------------------------------------------------- | ----------- | --------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------- | --------------- | -------------------------------------------- |
-| US31              | Visualizar información general sobre Splitly desde la landing page       | T1          | Información general         | Desarrollo de la sección con información introductoria de Harmonix                              | 2                      | Jose Luis Martinez Validivia               | Done                                        |
-| US32              | Conocer las funciones principales para representantes y miembros del hogar | T1          | Funciones principales       | Diseño y desarrollo de la sección que explica las funciones clave para representantes y miembros | 2                      | Héctor Ríos | Done                                        |
-| US33              | Explorar beneficios del sistema de aportes proporcionales                  | T1          | Beneficios                  | Desarrollo de la sección que muestre los beneficios de usar el sistema de aportes proporcionales | 2                      | Joaquin Cuentas            | Done                                        |
-| US34              | Ver ejemplos o simulaciones de cómo funciona la plataforma                 | T1          | Ejemplos y simulaciones     | Implementación de ejemplos visuales o simulaciones del funcionamiento de la plataforma           | 3                      |  Walter Ramírez               | Done                                        |
-| US35              | Acceder fácilmente al registro o login desde botones destacados            | T1          | Botones de acceso           | Diseño e implementación de botones visibles para registro y login                                | 1                      | Rodrigo Miraval               | Done                                        |
-| TS18              | Documentar los pasos para desplegar nuevas versiones                       | T1          | Documentación de despliegue | Redacción de la guía de pasos necesarios para desplegar nuevas versiones                         | 2                      | Jose Luis Martinez Validivia               | Done                                        |
-| TS19              | Habilitar monitoreo básico del sistema desplegado (logs, uptime)           | T1          | Monitoreo básico            | Configuración inicial para registrar logs y habilitar monitoreo de uptime                        | 3                      | Camila Leonor Espinoza Vivas               | Done                                        |
-
+| **User Story Id** | **Title** | **Task Id** | **Task Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+|------------------|----------|------------|---------------|-----------------|------------------------|-----------------|------------|
+| US01 | Registro de usuario | T1 | Registro backend | Implementación de endpoint para registro de usuarios | 4 | Walter Ramirez | To-do |
+| US02 | Inicio de sesión seguro | T1 | Login backend | Implementación de autenticación de usuarios | 4 | Héctor Ríos | To-do |
+| US03 | Edición de información personal | T1 | Perfil usuario | Endpoint para edición de perfil | 3 | Jose Luis Martinez Validivia | To-do |
+| US04 | Cierre de sesión global | T1 | Logout global | Invalidación de sesiones activas | 3 | Joaquin Cuentas | To-do |
+| US05 | Configuración de notificaciones | T1 | Preferencias | Gestión de notificaciones del usuario | 3 | TBD | To-do |
+| US06 | Crear hogar | T1 | Crear hogar | Endpoint para creación de hogar | 4 | Rodrigo Miraval | To-do |
+| US07 | Aprobar gastos | T1 | Aprobación de gastos | Lógica para aprobación de gastos | 4 | Rodrigo Miraval | To-do |
+| US08 | Ajustar aportes | T1 | Configuración aportes | Actualización de porcentajes | 3 | Rodrigo Miraval | To-do |
+| US10 | Métodos de pago | T1 | Configuración pagos | Gestión de métodos habilitados | 3 | Joaquin Cuentas | To-do |
+| US11 | Ingresar ingresos | T1 | Registro ingresos | Endpoint para ingresos personales | 3 | TBD | To-do |
+| US12 | Ver monto a pagar | T1 | Cálculo aportes | Lógica de cálculo de pagos | 4 | Walter Ramirez | To-do |
+| US13 | Registrar pagos | T1 | Registro pagos | Endpoint para registrar pagos | 3 | Joaquin Cuentas | To-do |
+| US16 | Registrar gasto | T1 | Registro gasto | CRUD de gastos | 4 | Walter Ramirez | To-do |
+| US18 | Categorizar gastos | T1 | Categorías | Clasificación y filtros | 3 | Héctor Ríos | To-do |
+| US21 | Recordatorios de pago | T1 | Recordatorios | Sistema de notificaciones automáticas | 4 | Héctor Ríos | To-do |
+| US24 | Confirmación de aportes | T1 | Confirmación pagos | Notificaciones post pago | 3 | Jose Luis Martinez Validivia | To-do |
+| US25 | Notificación cambios hogar | T1 | Notificaciones hogar | Eventos de cambios en hogar | 3 | Jose Luis Martinez Validivia | To-do |
+| US31 | Visualizar información general | T1 | Información general | Desarrollo sección introductoria | 2 | Jose Luis Martinez Validivia | Done |
+| US32 | Funciones principales | T1 | Funciones principales | Explicación de funcionalidades | 2 | Héctor Ríos | Done |
+| US33 | Beneficios del sistema | T1 | Beneficios | Mostrar ventajas del sistema | 2 | Joaquin Cuentas | Done |
+| US35 | Botones acceso | T1 | Botones login/register | Accesos rápidos | 1 | Rodrigo Miraval | Done |
+| US36 | Manejar errores servidor | T1 | Manejo errores | Mensajes de error backend | 2 | Walter Ramirez | To-do |
 
 
 ##### 4.2.1.3. Development Evidence for Sprint Review
+
+
+- **Landing Page:**
 
 |Repository Branch |  Commit Id  |  Commit Message | Commit Message Body | Commited on (Date)|
 |-----------------|--------------|-----------------|---------------------|-------------------|
@@ -1767,6 +1784,17 @@ Link al tablero de Trello:
 | Landing Page - pricing |  c62b615…6a35cc4         |  feature(pricing): completed Reviews on an 80%  |    |      13/05/2026    |
 
 
+- **Mobile App:**
+
+| Repository Branch | Commit Id     | Commit Message                               | Commit Message Body | Commited on (Date) |
+|------------------|--------------|-----------------------------------------------|---------------------|-------------------|
+| Mobile App - develop | 3861935 | chore(): add sharedPreferences                 |                     | 11/05/2026 |
+| Mobile App - develop | b151bf1 | chore(): add drawer and navigation bar        |                     | 11/05/2026 |
+| Mobile App - develop | fc52f52 | chore(): add working login flow               |                     | 11/05/2026 |
+| Mobile App - develop | bdb50ad | chore(): add entities models                  |                     | 10/05/2026 |
+| Mobile App - develop | 023ad09 | chore(): add initial signup screen            |                     | 10/05/2026 |
+| Mobile App - develop | fe8c024 | chore(): add new login screen styles          |                     | 10/05/2026 |
+| Mobile App - develop | 3312219 | initial commit                                |                     | 10/05/2026 |
 
 ##### 4.2.1.4. Testing Suite Evidence for Sprint Review
 ##### 4.2.1.5. Execution Evidence for Sprint Review
