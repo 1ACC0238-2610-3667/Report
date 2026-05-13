@@ -1797,6 +1797,17 @@ Link al tablero de Trello:
 | Mobile App - develop | 3312219 | initial commit                                |                     | 10/05/2026 |
 
 ##### 4.2.1.4. Testing Suite Evidence for Sprint Review
+
+Durante este sprint no se implementaron pruebas automatizadas (Unit Tests, Integration Tests ni Acceptance Tests), ya que el alcance definido por el equipo contemplaba únicamente la construcción de la Landing Page e implementacion parcial del Mobile App y Backend.
+
+El objetivo principal del sprint fue realizar la Landing Page y Mobile App a nivel de diseño e implementar el backend a un 70%. Todo esto estableciendo la arquitectura modular y los bounded contexts principales del sistema Splitly.
+
+En esta etapa aún no se contaba con un backend definitivo ni con los servicios reales, por lo que las pruebas automatizadas se reprogramaron para el siguiente sprint, donde se incluirán los Integration Tests y Acceptance Tests asociados a los módulos existentes.
+
+Conclusión: La etapa de testing se limitó a verificaciones manuales de flujo, validación visual de componentes y pruebas de integración básicas.
+
+No se realizaron commits relacionados a proyectos o archivos de testing automatizado, dado que esta funcionalidad no formaba parte del alcance planificado para el sprint actual.
+
 ##### 4.2.1.5. Execution Evidence for Sprint Review
 ##### 4.2.1.6. Services Documentation Evidence for Sprint Review
 ##### 4.2.1.7. Software Deployment Evidence for Sprint Review
