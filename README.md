@@ -1736,9 +1736,6 @@ La identidad visual se apoya en un esquema cromático que combina **sobriedad y 
 - **Apoyo**: `#E3F2FD` (azul claro)  
 - **Texto**: `#FFFFFF` (blanco)  
 
-<p styles="align: left">
-  <img src="../images/paleta.PNG" alt="paleta de colores" width="500">
-</p>  
 
 Esta combinación de colores refuerza la **claridad, accesibilidad y coherencia visual** de la plataforma.  
 
@@ -1803,7 +1800,7 @@ Este tono refuerza la **transparencia y cercanía** de la marca, asegurando que 
 En la plataforma **Splitly**, se aplican diferentes sistemas de organización del contenido para optimizar la **accesibilidad** y la **experiencia de usuario**, en función del tipo de información presentada.  
 Estos sistemas garantizan una navegación intuitiva, clara y eficiente.  
 
-#### Organización Visual del Contenido  
+#### Organización Visual del Contenidfo  
 
 **Jerárquica (Visual Hierarchy):**  
 Se utiliza en secciones que requieren una estructura clara de importancia y relevancia, como formularios de creación de hogar o asignación de aportes.  
@@ -1863,18 +1860,16 @@ En el menú principal, ubicado en la parte superior de la landing page, se emple
 - **Contact us** (`bi-envelope-fill`)  
 
 <p styles="align: left">
-  <img src="../images/imagen3.png" alt="imagen3" width="500">  
+  <img src="assets/NavBar.png" alt="imagen3" width="500">  
 </p>  
 
 #### Botón principal (CTA)  
 
 El botón principal de la landing page funciona como la **llamada a la acción (CTA)** más destacada:  
 
-- **Register** → etiqueta clara y universal, válida tanto para miembros como para representantes.  
+- **Empieza Gratis** → etiqueta clara y universal, válida tanto para miembros como para representantes.  
 
-<p styles="align: left">
-  <img src="../images/imagen1.png" alt="imagen4" width="500">  
-</p>  
+ 
 
 #### Sección *How does it work?* – Representantes  
 
@@ -1885,9 +1880,7 @@ Para los **representantes del hogar**, las etiquetas enfatizan acciones de gesti
 - **Assign contributions** (`bi-cash-coin`)  
 - **Control your finances** (`bi-bar-chart-fill`)  
 
-<p styles="align: left">
-  <img src="../images/imagenrepre.png" alt="" width="500">  
-</p>  
+
 
 #### Sección *How does it work?* – Miembros  
 
@@ -1898,9 +1891,7 @@ Para los **miembros del hogar**, las etiquetas refuerzan su rol de participació
 - **Declare your income** (`bi-wallet-fill`)  
 - **Monitor your contributions** (`bi-graph-up-arrow`)  
 
-<p styles="align: left">
-  <img src="../images/imagenmiem.png" alt="" width="500">  
-</p>  
+ 
 
 
 #### Footer  
@@ -1919,9 +1910,7 @@ El pie de página organiza el etiquetado en dos bloques principales:
 
 Además, se incluyen **íconos de redes sociales** (Facebook, Instagram, Twitter, LinkedIn) que funcionan como accesos rápidos.  
 
-<p styles="align: left">
-  <img src="../images/imagen6.png" alt="" width="500">  
-</p>  
+ 
 
 #### 3.1.2.3. SEO Tags and Meta Tags
 
@@ -2073,7 +2062,7 @@ Los esquemas se centran en reflejar los bloques fundamentales de la interfaz, co
 #### 3.1.3.2. Landing Page Mock-up
 
 
-El **mock-up de la Landing Page** representa la materialización visual del wireframe previamente diseñado, incorporando el uso de tipografías, paleta de colores, íconos y demás elementos gráficos definidos en las **Web Style Guidelines**.  
+El **mock-up de la Landing Page** representa la materialización visual del wireframe previamente diseñado, incorporando el uso de tipografías, paleta de colores, íconos y demás elementos gráficos definidos. 
 Este recurso permite evaluar de manera más precisa la apariencia final de la página antes de su desarrollo, asegurando la coherencia entre la propuesta conceptual, la identidad visual de la marca y la experiencia de usuario deseada.  
 
 El mock-up facilita la validación temprana con los interesados (stakeholders), al ofrecer una visión clara y tangible de cómo se presentarán los contenidos, las llamadas a la acción y la navegación en un entorno realista.
