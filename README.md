@@ -2055,19 +2055,19 @@ El wireframe presentado a continuación permite visualizar de manera preliminar 
 Los esquemas se centran en reflejar los bloques fundamentales de la interfaz, como el menú de navegación, secciones de presentación de servicios, planes de precios, testimonios, y la sección de contacto. Este enfoque asegura una experiencia de usuario consistente con los objetivos de comunicación de la startup.
 
 <p styles="align: left">
-  <img src="../assets/lpw1.PNG" alt="lpw1" width="500">
+  <img src="assets/lpw1.PNG" alt="lpw1" width="500">
 </p>
 <p styles="align: left">
-  <img src="../assets/lpw2.PNG" alt="lpw2" width="500">
+  <img src="assets/lpw2.PNG" alt="lpw2" width="500">
 </p>
 <p styles="align: left">
-  <img src="../assets/lpw3.PNG" alt="lpw3" width="500">
+  <img src="assets/lpw3.PNG" alt="lpw3" width="500">
 </p>
 <p styles="align: left">
-  <img src="../assets/lpw4.PNG" alt="lpw4" width="500">
+  <img src="assets/lpw4.PNG" alt="lpw4" width="500">
 </p>
 <p styles="align: left">
-  <img src="../assets/lpw5.PNG" alt="lpw5" width="500">
+  <img src="assets/lpw5.PNG" alt="lpw5" width="500">
 </p>
 
 #### 3.1.3.2. Landing Page Mock-up
@@ -2079,7 +2079,7 @@ Este recurso permite evaluar de manera más precisa la apariencia final de la p�
 El mock-up facilita la validación temprana con los interesados (stakeholders), al ofrecer una visión clara y tangible de cómo se presentarán los contenidos, las llamadas a la acción y la navegación en un entorno realista.
 
 <p styles="align: left">
-  <img src="../images/LandingPageMockUp.jpg" alt="lpw5" width="500">
+  <img src="assets/LandingPageMockUp.jpg" alt="lpm" width="500">
 </p>
 
 ### 3.1.4. Mobile Applications UX/UI Design
