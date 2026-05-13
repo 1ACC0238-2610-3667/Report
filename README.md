@@ -1924,11 +1924,164 @@ Además, se incluyen **íconos de redes sociales** (Facebook, Instagram, Twitter
 </p>  
 
 #### 3.1.2.3. SEO Tags and Meta Tags
+
+En el desarrollo de la landing page de Splitly, la correcta implementación de etiquetas SEO (Search Engine Optimization) y Meta Tags resulta fundamental para optimizar la visibilidad del sitio en motores de búsqueda y garantizar una adecuada indexación del contenido. Estas etiquetas permiten describir de manera precisa el propósito de la plataforma, los servicios ofrecidos y las palabras clave asociadas, favoreciendo que el proyecto sea fácilmente localizable por usuarios interesados en soluciones de gestión financiera compartida.
+
+Asimismo, los Meta Tags proporcionan información esencial para la accesibilidad y la experiencia del usuario, ya que definen parámetros técnicos como la codificación de caracteres, la adaptación a distintos dispositivos y la atribución de autoría del proyecto. En conjunto, estos elementos no solo fortalecen el posicionamiento orgánico de Harmonix en buscadores, sino que también refuerzan su identidad digital, coherente con los valores de claridad, transparencia y equidad financiera que la marca transmite.
+
+html
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Splitly - Control financiero justo para tu hogar</title>
+    <meta name="description" content="Splitly te ayuda a dividir los gastos del hogar de forma proporcional según los ingresos de cada miembro. Fácil, justo y transparente.">
+    <meta name="keywords" content="Splitly, finanzas compartidas, gastos del hogar, app de finanzas, control de gastos, división de pagos">
+    <meta name="author" content="Equipo Splitly">
+
+    <!-- CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="/images/logo.PNG" alt="Logo">
+</head>
+
 #### 3.1.2.4. Searching Systems
+
+En el caso de **Splitly**, se implementará un sistema de búsqueda y filtros diseñado para que tanto los **miembros** como los **representantes del hogar** puedan acceder de manera rápida y sencilla a la información que necesitan.  
+El sistema estará optimizado según el rol del usuario, garantizando una navegación fluida y eficiente dentro de la aplicación.
+
+#### Filtros de búsqueda por entradas
+
+**Miembros del hogar:**
+- **Buscar por ID de hogar:** Permite unirse a un hogar ya creado ingresando el ID proporcionado por el representante.  
+- **Filtrar por fecha de contribución:** Visualizar el historial de aportes organizados por periodos (semanal, mensual).  
+- **Estado de los aportes:** Filtrar contribuciones por estado: `"Aportado"`, `"Pendiente"`, `"Excedente"`.  
+- **Filtrar por tipo de gasto:** Clasificar los gastos en categorías como `"Alimentos"`, `"Servicios"`, `"Otros"`.  
+
+**Representantes del hogar:**
+- **Filtrar por estado de los aportes:** Consultar las contribuciones según estado o rango de fechas.  
+- **Filtrar por miembros:** Buscar por nombre o ID de miembro para revisar su historial de aportes.  
+- **Balance financiero:** Filtrar el balance general del hogar por periodo o tipo de gasto.  
+
+
+#### Filtros de búsqueda por tabs
+
+Para una mejor experiencia, la aplicación contará con **tabs interactivos** que agrupan la información de forma clara y ordenada.
+
+**Miembros:**
+- **Historial de aportes:** Resumen con filtros por fecha, monto y estado.  
+- **Estado de gastos:** Visualización gráfica de la distribución de los gastos del hogar.  
+- **Unirse a hogar (ID):** Asociación rápida al perfil vinculado mediante el ID del hogar.  
+
+**Representantes:**
+- **Gestión de aportes:** Vista completa de aportes de todos los miembros, filtrable por estado y fecha.  
+- **Balance general:** Resumen financiero global con filtros por categorías y periodos.  
+
+
+#### Flujo de búsqueda y filtros
+
+El flujo será **intuitivo y dinámico**.  
+En cada sección relevante (aportaciones, balances, gastos), se integrarán campos de búsqueda y filtros configurables.  
+Los usuarios podrán aplicar o remover filtros con facilidad, garantizando una experiencia ágil, clara y sin fricciones.
+
+
 #### 3.1.2.5. Navigation Systems
+
+En **Splitly**, la navegación está diseñada para ser **fluida, intuitiva y accesible**, garantizando una experiencia clara tanto en la **Landing Page** como en la **Web Application**.
+
+#### 1. Navegación en la Landing Page
+
+La **página principal** guía a nuevos usuarios de manera sencilla hacia el registro y la información clave del producto, combinando estética y usabilidad.
+
+**Elementos principales de navegación:**
+- **Menú de navegación superior (con iconos):**
+  - *Home*  
+  - *About*  
+  - *Services*  
+  - *How it works*  
+  - *Plans & Pricing*  
+  - *Reviews*  
+  - *Contact us*
+- **Call To Actions (CTAs):**
+  - Ejemplo: *"Sign up now"*, *"Get started"*.
+- **Desplazamiento fluido:**
+  - Scroll natural por secciones sin necesidad de recargar la página. 
+
+#### 2. Navegación en la Web Application
+
+La navegación se adapta al **tipo de usuario** y sus funcionalidades más relevantes.
+
+#### Para Representantes del Hogar:
+
+**Menú lateral fijo con opciones:**
+- Dashboard  
+- Miembros del hogar  
+- Gastos  
+- Aportes  
+- Configuración del hogar  
+
+**Breadcrumbs (migas de pan):**  
+Permiten volver fácilmente a secciones anteriores o más generales.
+
+#### Para Miembros del Hogar:
+
+**Menú superior simplificado con opciones:**
+- Dashboard  
+- Aportes  
+- Estado del hogar  
+- Unirse mediante ID de hogar  
+
+**Accesos rápidos (botones flotantes):**
+- Agregar aporte  
+- Ver detalles del gasto  
+
+#### Interacción con el sistema 
+
+- **Accesibilidad:** Navegación clara, visible y con etiquetas comprensibles para todo tipo de usuarios.  
+- **Navegación de búsqueda:** Accesos rápidos para filtrar por ID de hogar, estado de aportes o categorías de gastos.  
+- **Soporte y ayuda:** Sección de tutoriales y guías interactivas paso a paso, integradas dentro de la aplicación.  
+
+
 ### 3.1.3. Landing Page UI Design
 #### 3.1.3.1. Landing Page Wireframe
+
+La **Landing Page** constituye el primer punto de interacción entre el usuario y la plataforma **Splitly**, por lo que su diseño debe ser claro, atractivo y funcional.  
+El wireframe presentado a continuación permite visualizar de manera preliminar la disposición de los elementos clave, garantizando una **navegación intuitiva**, la **jerarquización de la información** y la correcta integración de **llamadas a la acción (CTAs)** que orienten al usuario hacia el registro y el uso de la aplicación.  
+
+Los esquemas se centran en reflejar los bloques fundamentales de la interfaz, como el menú de navegación, secciones de presentación de servicios, planes de precios, testimonios, y la sección de contacto. Este enfoque asegura una experiencia de usuario consistente con los objetivos de comunicación de la startup.
+
+<p styles="align: left">
+  <img src="../images/lpw1.PNG" alt="lpw1" width="500">
+</p>
+<p styles="align: left">
+  <img src="../images/lpw2.PNG" alt="lpw2" width="500">
+</p>
+<p styles="align: left">
+  <img src="../images/lpw3.PNG" alt="lpw3" width="500">
+</p>
+<p styles="align: left">
+  <img src="../images/lpw4.PNG" alt="lpw4" width="500">
+</p>
+<p styles="align: left">
+  <img src="../images/lpw5.PNG" alt="lpw5" width="500">
+</p>
+
 #### 3.1.3.2. Landing Page Mock-up
+
+
+El **mock-up de la Landing Page** representa la materialización visual del wireframe previamente diseñado, incorporando el uso de tipografías, paleta de colores, íconos y demás elementos gráficos definidos en las **Web Style Guidelines**.  
+Este recurso permite evaluar de manera más precisa la apariencia final de la página antes de su desarrollo, asegurando la coherencia entre la propuesta conceptual, la identidad visual de la marca y la experiencia de usuario deseada.  
+
+El mock-up facilita la validación temprana con los interesados (stakeholders), al ofrecer una visión clara y tangible de cómo se presentarán los contenidos, las llamadas a la acción y la navegación en un entorno realista.
+
+<p styles="align: left">
+  <img src="../images/App web_page-0001.jpg" alt="lpw5" width="500">
+</p>
+
 ### 3.1.4. Mobile Applications UX/UI Design
 #### 3.1.4.1. Mobile Applications Wireframes
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
