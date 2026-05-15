@@ -2321,7 +2321,7 @@ Durante el proceso de entrevistas con los usuarios finales, se identificaron div
 
 1. Primera impresión sobre la interfaz:
 
-- ¿Qué opinas del diseño de la página? ¿Te resulta fácil de entender?
+- ¿Qué opinas del diseño de la landing page? ¿Te resulta fácil de entender?
 
 - ¿Hay algún elemento visual que te llame la atención o que encuentres confuso?
 
@@ -2390,7 +2390,7 @@ Durante el proceso de entrevistas con los usuarios finales, se identificaron div
 
 6. Satisfacción general y recomendaciones:
 
-- ¿Crees que esta plataforma facilitaría la convivencia en términos de finanzas? ¿Por qué?
+- ¿Crees que esta app facilitaría la convivencia en términos de finanzas? ¿Por qué?
 
 - ¿Qué cambios harías para mejorar la experiencia como representante del hogar?
 
