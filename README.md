@@ -1807,8 +1807,335 @@ Conclusión: La etapa de testing se limitó a verificaciones manuales de flujo, 
 No se realizaron commits relacionados a proyectos o archivos de testing automatizado, dado que esta funcionalidad no formaba parte del alcance planificado para el sprint actual.
 
 ##### 4.2.1.5. Execution Evidence for Sprint Review
+
+Durante la realización de este sprint se logró la correcta elaboración y despliegue de la landing page, de igual manera se alcanzó a realizar las principales pantallas relacionadas al core de la aplicación. Asimismo, se logró el desarrollo y deploy del backend.
+
+**Backend:**
+
+<br>
+<img src="assets/backend_evidence1.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/backend_evidence2.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/backend_evidence3.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/backend_evidence4.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/backend_evidence5.jpg" alt="CandidateContextDiscovery">
+<br>
+
+
+**Views app mobile**
+
+
+
+**Landing Page**
+
+<br>
+<img src="assets/landing_evidence1.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence2.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence3.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence4.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence5.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence6.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence7.jpg" alt="CandidateContextDiscovery">
+<br>
+
+
 ##### 4.2.1.6. Services Documentation Evidence for Sprint Review
+
+Durante el presente Sprint se implementó y documentó el conjunto de endpoints correspondientes a los módulos de la aplicación.
+La documentación fue elaborada utilizando OpenAPI/Swagger, permitiendo describir de manera clara las operaciones disponibles, parámetros requeridos, ejemplos de requests y responses, así como los códigos de estado HTTP soportados.
+
+
+### MemberContribution
+
+
+
+
+| Endpoint                                                        | Acción Implementada                          | Método HTTP | Sintaxis de Llamada                                             | Parámetros                                        | Descripción del Response                                                                                            |
+| --------------------------------------------------------------- | -------------------------------------------- | ----------- | --------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `/api/v1/member_contribution`                                   | Obtener todas las contribuciones             | GET         | `/api/v1/member_contribution`                                   | No requiere parámetros                            | Retorna la lista completa de contribuciones registradas con información del miembro, monto, estado y fecha de pago. |
+| `/api/v1/member_contribution`                                   | Registrar una nueva contribución             | POST        | `/api/v1/member_contribution`                                   | Body JSON: `contributionId`, `memberId`, `amount` | Crea una nueva contribución asociada a un miembro y retorna el objeto creado junto con su identificador y estado.   |
+| `/api/v1/member_contribution/bycontributionid/{contributionId}` | Buscar contribuciones por ID de contribución | GET         | `/api/v1/member_contribution/bycontributionid/{contributionId}` | Path Parameter: `contributionId`                  | Retorna la información de las contribuciones asociadas al identificador de contribución especificado.               |
+| `/api/v1/member_contribution/bymemberid/{memberId}`             | Buscar contribuciones por ID de miembro      | GET         | `/api/v1/member_contribution/bymemberid/{memberId}`             | Path Parameter: `memberId`                        | Retorna las contribuciones realizadas por un miembro específico.                                                    |
+| `/api/v1/member_contribution/{id}`                              | Eliminar contribución                        | DELETE      | `/api/v1/member_contribution/{id}`                              | Path Parameter: `id`                              | Elimina la contribución indicada y retorna la información del recurso eliminado.                                    |
+
+
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/member_contribution` | Ninguno | ```json { "id":"MC001","contributionId":"CON001","memberId":"MEM001","amount":150.0,"status":"PAID","payedAt":"2026-05-14T10:30:00" } ``` | `200 OK` |
+| POST | `/api/v1/member_contribution` | Body: `contributionId`, `memberId`, `amount` | ```json { "contributionId":"CON001","memberId":"MEM001","amount":150.0 } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/member_contribution/bycontributionid/{contributionId}` | Path: `contributionId` | ```json { "id":"MC001","contributionId":"CON001","memberId":"MEM001","amount":150.0,"status":"PAID","payedAt":"2026-05-14T10:30:00" } ``` | `200 OK` |
+| GET | `/api/v1/member_contribution/bymemberid/{memberId}` | Path: `memberId` | ```json { "id":"MC001","contributionId":"CON001","memberId":"MEM001","amount":150.0,"status":"PAID","payedAt":"2026-05-14T10:30:00" } ``` | `200 OK` |
+| DELETE | `/api/v1/member_contribution/{id}` | Path: `id` | ```json { "id":"MC001","contributionId":"CON001","memberId":"MEM001","amount":150.0,"status":"PAID","payedAt":"2026-05-14T10:30:00" } ``` | `200 OK`, `404 Not Found` |
+
+
+### Invitation
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/invitations` | Crear invitación | POST | `/api/v1/invitations` | Body JSON: `email`, `householdId`, `description` | Registra una nueva invitación asociada a un hogar y correo electrónico. |
+| `/api/v1/invitations/pending` | Obtener invitación pendiente | GET | `/api/v1/invitations/pending?email={email}&householdId={householdId}` | Query Params: `email`, `householdId` | Retorna la invitación pendiente asociada al correo y hogar especificados. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| POST | `/api/v1/invitations` | Body: `email`, `householdId`, `description` | ```json { "email":"user@mail.com","householdId":"HH001","description":"Invitation to join household" } ``` | `200 OK` |
+| GET | `/api/v1/invitations/pending` | Query: `email`, `householdId` | ```json { "email":"user@mail.com","householdId":"HH001","description":"Invitation to join household","status":"PENDING" } ``` | `200 OK` |
+
+
+### Authentication
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/authentication/sign-in` | Iniciar sesión | POST | `/api/v1/authentication/sign-in` | Body JSON: `email`, `password` | Autentica al usuario y retorna la información de acceso correspondiente. |
+| `/api/v1/authentication/sign-up` | Registrar usuario | POST | `/api/v1/authentication/sign-up` | Body JSON: `email`, `password`, `name`, `role`, `plan`, `householdId` | Registra un nuevo usuario en el sistema y retorna la información creada. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| POST | `/api/v1/authentication/sign-in` | Body: `email`, `password` | ```json { "email":"user@mail.com","password":"123456" } ``` | `200 OK` |
+| POST | `/api/v1/authentication/sign-up` | Body: `email`, `password`, `name`, `role`, `plan`, `householdId` | ```json { "email":"user@mail.com","password":"123456","name":"Juan Perez","role":"MEMBER","plan":1,"householdId":"HH001" } ``` | `200 OK` |
+
+
+### User
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/user/user/{id}` | Obtener usuario por ID | GET | `/api/v1/user/user/{id}` | Path Parameter: `id` | Retorna la información del usuario asociado al identificador especificado. |
+| `/api/v1/user` | Obtener todos los usuarios | GET | `/api/v1/user` | No requiere parámetros | Retorna la lista de usuarios registrados en el sistema. |
+| `/api/v1/user/householdid/{mainHouseHoldId}` | Obtener usuarios por household | GET | `/api/v1/user/householdid/{mainHouseHoldId}` | Path Parameter: `mainHouseHoldId`, Query: `houseHoldId` | Retorna los usuarios asociados al household indicado. |
+| `/api/v1/user/byemail/{emailAddress}` | Actualizar usuario por email | PUT | `/api/v1/user/byemail/{emailAddress}` | Path Parameter: `emailAddress`, Body JSON: `emailAddress`, `personName`, `password` | Actualiza la información del usuario asociado al correo especificado. |
+| `/api/v1/user/byemail/{email}` | Eliminar usuario por email | DELETE | `/api/v1/user/byemail/{email}` | Path Parameter: `email` | Elimina el usuario asociado al correo especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/user/user/{id}` | Path: `id` | ```json { "id":1,"email":"user@mail.com","personName":"Juan Perez" } ``` | `200 OK` |
+| GET | `/api/v1/user` | Ninguno | ```json [ { "id":1,"email":"user@mail.com","personName":"Juan Perez" } ] ``` | `200 OK` |
+| GET | `/api/v1/user/householdid/{mainHouseHoldId}` | Path: `mainHouseHoldId`, Query: `houseHoldId` | ```json [ { "id":1,"email":"user@mail.com","personName":"Juan Perez","householdId":"HH001" } ] ``` | `200 OK` |
+| PUT | `/api/v1/user/byemail/{emailAddress}` | Path: `emailAddress`, Body: `emailAddress`, `personName`, `password` | ```json { "emailAddress":"user@mail.com","personName":"Juan Perez","password":"123456" } ``` | `200 OK` |
+| DELETE | `/api/v1/user/byemail/{email}` | Path: `email` | ```json { "message":"User deleted successfully" } ``` | `200 OK` |
+
+
+### UserIncome
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/user-income` | Crear ingreso de usuario | POST | `/api/v1/user-income` | Body JSON: `id`, `userId`, `income` | Registra un nuevo ingreso asociado a un usuario. |
+| `/api/v1/user-income/{id}` | Obtener ingreso por ID | GET | `/api/v1/user-income/{id}` | Path Parameter: `id` | Retorna la información del ingreso asociado al identificador especificado. |
+| `/api/v1/user-income/byuserid/{userId}` | Obtener ingreso por usuario | GET | `/api/v1/user-income/byuserid/{userId}` | Path Parameter: `userId` | Retorna los ingresos asociados al usuario especificado. |
+| `/api/v1/user-income/byid/{id}` | Actualizar ingreso | PUT | `/api/v1/user-income/byid/{id}` | Path Parameter: `id`, Body JSON: `id`, `income` | Actualiza la información del ingreso asociado al identificador especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| POST | `/api/v1/user-income` | Body: `id`, `userId`, `income` | ```json { "id":"UI001","userId":1,"income":2500.0 } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/user-income/{id}` | Path: `id` | ```json { "id":"UI001","userId":1,"income":2500.0,"createdDate":"2026-05-14","updatedDate":"2026-05-14" } ``` | `200 OK` |
+| GET | `/api/v1/user-income/byuserid/{userId}` | Path: `userId` | ```json { "id":"UI001","userId":1,"income":2500.0,"createdDate":"2026-05-14","updatedDate":"2026-05-14" } ``` | `200 OK` |
+| PUT | `/api/v1/user-income/byid/{id}` | Path: `id`, Body: `id`, `income` | ```json { "id":"UI001","income":3000.0 } ``` | `200 OK`, `400 Bad Request`, `404 Not Found` |
+
+
+### Contribution
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/contribution` | Obtener todas las contribuciones | GET | `/api/v1/contribution` | No requiere parámetros | Retorna la lista de contribuciones registradas. |
+| `/api/v1/contribution` | Crear contribución | POST | `/api/v1/contribution` | Body JSON: `billId`, `householdId`, `description`, `deadlineForMembers`, `strategy` | Registra una nueva contribución asociada a un household y recibo. |
+| `/api/v1/contribution/{id}` | Obtener contribución por ID | GET | `/api/v1/contribution/{id}` | Path Parameter: `id` | Retorna la contribución asociada al identificador especificado. |
+| `/api/v1/contribution/{id}` | Eliminar contribución | DELETE | `/api/v1/contribution/{id}` | Path Parameter: `id` | Elimina la contribución asociada al identificador especificado. |
+| `/api/v1/contribution/bybillid/{billId}` | Obtener contribución por billId | GET | `/api/v1/contribution/bybillid/{billId}` | Path Parameter: `billId` | Retorna las contribuciones asociadas al bill indicado. |
+| `/api/v1/contribution/byhouseholdid/{householdId}` | Obtener contribuciones por household | GET | `/api/v1/contribution/byhouseholdid/{householdId}` | Path Parameter: `householdId` | Retorna las contribuciones asociadas al household indicado. |
+| `/api/v1/contribution/byid/{id}` | Actualizar contribución | PUT | `/api/v1/contribution/byid/{id}` | Path Parameter: `id`, Body JSON: `description`, `deadlineForMembers`, `strategy` | Actualiza la información de la contribución especificada. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/contribution` | Ninguno | ```json { "id":"C001","billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `200 OK` |
+| POST | `/api/v1/contribution` | Body: `billId`, `householdId`, `description`, `deadlineForMembers`, `strategy` | ```json { "billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/contribution/{id}` | Path: `id` | ```json { "id":"C001","billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `200 OK` |
+| DELETE | `/api/v1/contribution/{id}` | Path: `id` | ```json { "id":"C001","billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `200 OK`, `404 Not Found` |
+| GET | `/api/v1/contribution/bybillid/{billId}` | Path: `billId` | ```json { "id":"C001","billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `200 OK` |
+| GET | `/api/v1/contribution/byhouseholdid/{householdId}` | Path: `householdId` | ```json { "id":"C001","billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `200 OK` |
+| PUT | `/api/v1/contribution/byid/{id}` | Path: `id`, Body: `description`, `deadlineForMembers`, `strategy` | ```json { "description":"Updated contribution","deadlineForMembers":"2026-05-25","strategy":2 } ``` | `200 OK`, `400 Bad Request`, `404 Not Found` |
+
+### Bills
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/bills` | Obtener todos los bills | GET | `/api/v1/bills` | No requiere parámetros | Retorna la lista de bills registrados en el sistema. |
+| `/api/v1/bills` | Crear bill | POST | `/api/v1/bills` | Body JSON: `houseHoldId`, `description`, `amount`, `createdBy`, `paymentDate` | Registra un nuevo bill asociado a un household. |
+| `/api/v1/bills/byhousehold/{householdId}` | Obtener bills por household | GET | `/api/v1/bills/byhousehold/{householdId}` | Path Parameter: `householdId` | Retorna los bills asociados al household especificado. |
+| `/api/v1/bills/byid/{id}` | Actualizar bill | PUT | `/api/v1/bills/byid/{id}` | Path Parameter: `id`, Body JSON: `description`, `amount`, `paymentDate` | Actualiza la información del bill especificado. |
+| `/api/v1/bills/{id}` | Eliminar bill | DELETE | `/api/v1/bills/{id}` | Path Parameter: `id` | Elimina el bill asociado al identificador especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/bills` | Ninguno | ```json { "id":"B001","houseHoldId":"HH001","description":"Electricity bill","amount":120.0,"createdBy":1,"paymentDate":"2026-05-20","createdAt":"2026-05-14","updatedAt":"2026-05-14" } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/bills` | Body: `houseHoldId`, `description`, `amount`, `createdBy`, `paymentDate` | ```json { "houseHoldId":"HH001","description":"Electricity bill","amount":120.0,"createdBy":1,"paymentDate":"2026-05-20" } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/bills/byhousehold/{householdId}` | Path: `householdId` | ```json [ { "id":"B001","houseHoldId":"HH001","description":"Electricity bill","amount":120.0,"createdBy":1,"paymentDate":"2026-05-20","createdAt":"2026-05-14","updatedAt":"2026-05-14" } ] ``` | `200 OK`, `404 Not Found` |
+| PUT | `/api/v1/bills/byid/{id}` | Path: `id`, Body: `description`, `amount`, `paymentDate` | ```json { "description":"Updated bill","amount":150.0,"paymentDate":"2026-05-25" } ``` | `200 OK`, `400 Bad Request`, `404 Not Found` |
+| DELETE | `/api/v1/bills/{id}` | Path: `id` | ```json { "id":"B001","houseHoldId":"HH001","description":"Electricity bill","amount":120.0,"createdBy":1,"paymentDate":"2026-05-20","createdAt":"2026-05-14","updatedAt":"2026-05-14" } ``` | `200 OK`, `404 Not Found` |
+
+
+### HouseHold
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/house_hold/{id}` | Obtener household por ID | GET | `/api/v1/house_hold/{id}` | Path Parameter: `id` | Retorna la información del household asociado al identificador especificado. |
+| `/api/v1/house_hold/{id}` | Actualizar household | PUT | `/api/v1/house_hold/{id}` | Path Parameter: `id`, Body JSON: `name`, `description`, `memberCount`, `currency`, `startDate` | Actualiza la información del household especificado. |
+| `/api/v1/house_hold` | Crear household | POST | `/api/v1/house_hold` | Body JSON: `id`, `name`, `representativeId`, `currency`, `description`, `memberCount`, `startDate` | Registra un nuevo household en el sistema. |
+| `/api/v1/house_hold/representative/{representativeId}` | Obtener households por representante | GET | `/api/v1/house_hold/representative/{representativeId}` | Path Parameter: `representativeId` | Retorna los households asociados al representante especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/house_hold/{id}` | Path: `id` | ```json { "id":"HH001","name":"Family House","description":"Main household","memberCount":4,"representativeId":1,"currency":"USD","startDate":"2026-05-01","createdAt":"2026-05-14","updatedAt":"2026-05-14" } ``` | `200 OK`, `404 Not Found` |
+| PUT | `/api/v1/house_hold/{id}` | Path: `id`, Body: `name`, `description`, `memberCount`, `currency`, `startDate` | ```json { "name":"Updated House","description":"Updated description","memberCount":5,"currency":"USD","startDate":"2026-05-01" } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/house_hold` | Body: `id`, `name`, `representativeId`, `currency`, `description`, `memberCount`, `startDate` | ```json { "id":"HH001","name":"Family House","representativeId":1,"currency":"USD","description":"Main household","memberCount":4,"startDate":"2026-05-01" } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/house_hold/representative/{representativeId}` | Path: `representativeId` | ```json [ { "id":"HH001","name":"Family House","description":"Main household","memberCount":4,"representativeId":1,"currency":"USD","startDate":"2026-05-01","createdAt":"2026-05-14","updatedAt":"2026-05-14" } ] ``` | `200 OK` |
+
+
+### HouseholdMember
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/household_member` | Crear household member | POST | `/api/v1/household_member` | Body JSON: `householdId`, `userId`, `isRepresentative`, `income` | Registra un nuevo miembro en un household. |
+| `/api/v1/household_member` | Obtener todos los household members | GET | `/api/v1/household_member` | No requiere parámetros | Retorna la lista de miembros registrados. |
+| `/api/v1/household_member/{id}` | Obtener household member por ID | GET | `/api/v1/household_member/{id}` | Path Parameter: `id` | Retorna la información del miembro especificado. |
+| `/api/v1/household_member/{id}` | Actualizar household member | PUT | `/api/v1/household_member/{id}` | Path Parameter: `id`, Body JSON: `householdId`, `userId`, `isRepresentative`, `income`, `allocations` | Actualiza la información del miembro especificado. |
+| `/api/v1/household_member/{id}` | Eliminar household member | DELETE | `/api/v1/household_member/{id}` | Path Parameter: `id` | Elimina el miembro especificado. |
+| `/api/v1/household_member/household/{householdId}` | Obtener miembros por household | GET | `/api/v1/household_member/household/{householdId}` | Path Parameter: `householdId` | Retorna los miembros asociados al household indicado. |
+| `/api/v1/household_member/household/{householdId}/detailed` | Obtener miembros detallados | GET | `/api/v1/household_member/household/{householdId}/detailed` | Path Parameter: `householdId` | Retorna miembros con información detallada de usuario y contribuciones. |
+| `/api/v1/household_member/user/{userId}` | Obtener households por usuario | GET | `/api/v1/household_member/user/{userId}` | Path Parameter: `userId` | Retorna los households asociados al usuario indicado. |
+| `/api/v1/household_member/{id}/promote-representative` | Promover representante | POST | `/api/v1/household_member/{id}/promote-representative` | Path Parameter: `id` | Promueve un miembro a representante del household. |
+| `/api/v1/household_member/{id}/demote-representative` | Degradar representante | POST | `/api/v1/household_member/{id}/demote-representative` | Path Parameter: `id` | Remueve el rol de representante del miembro indicado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| POST | `/api/v1/household_member` | Body: `householdId`, `userId`, `isRepresentative`, `income` | ```json { "householdId":"HH001","userId":1,"isRepresentative":true,"income":2500.0 } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/household_member` | Ninguno | ```json [ { "id":"HM001","householdId":"HH001","userId":1 } ] ``` | `200 OK` |
+| GET | `/api/v1/household_member/{id}` | Path: `id` | ```json { "id":"HM001","householdId":"HH001","userId":1,"isRepresentative":true,"income":2500.0 } ``` | `200 OK`, `404 Not Found` |
+| PUT | `/api/v1/household_member/{id}` | Path: `id`, Body: `householdId`, `userId`, `isRepresentative`, `income`, `allocations` | ```json { "householdId":"HH001","userId":1,"isRepresentative":false,"income":3000.0 } ``` | `200 OK`, `404 Not Found` |
+| DELETE | `/api/v1/household_member/{id}` | Path: `id` | ```json { "message":"Household member deleted" } ``` | `200 OK`, `404 Not Found` |
+| GET | `/api/v1/household_member/household/{householdId}` | Path: `householdId` | ```json [ { "id":"HM001","householdId":"HH001","userId":1 } ] ``` | `200 OK` |
+| GET | `/api/v1/household_member/household/{householdId}/detailed` | Path: `householdId` | ```json [ { "id":"HM001","userId":1,"income":2500.0,"contributions":[] } ] ``` | `200 OK` |
+| GET | `/api/v1/household_member/user/{userId}` | Path: `userId` | ```json [ { "householdId":"HH001","userId":1 } ] ``` | `200 OK` |
+| POST | `/api/v1/household_member/{id}/promote-representative` | Path: `id` | ```json { "message":"Representative promoted successfully" } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/household_member/{id}/demote-representative` | Path: `id` | ```json { "message":"Representative demoted successfully" } ``` | `200 OK`, `404 Not Found` |
+
+### IncomeAllocation
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/income_allocation/byhousehold/{householdId}` | Obtener allocations por household | GET | `/api/v1/income_allocation/byhousehold/{householdId}` | Path Parameter: `householdId` | Retorna las asignaciones de ingreso asociadas al household indicado. |
+| `/api/v1/income_allocation/byuserid/{userId}` | Obtener allocations por usuario | GET | `/api/v1/income_allocation/byuserid/{userId}` | Path Parameter: `userId` | Retorna las asignaciones de ingreso asociadas al usuario indicado. |
+| `/api/v1/income_allocation` | Crear income allocation | POST | `/api/v1/income_allocation` | Body JSON: `userId`, `householdId`, `percentage` | Registra una nueva asignación de ingreso. |
+| `/api/v1/income_allocation/byid/{id}` | Actualizar income allocation | PUT | `/api/v1/income_allocation/byid/{id}` | Path Parameter: `id`, Body JSON: `id`, `userId`, `householdId`, `percentage` | Actualiza la asignación de ingreso especificada. |
+| `/api/v1/income_allocation/{id}` | Eliminar income allocation | DELETE | `/api/v1/income_allocation/{id}` | Path Parameter: `id` | Elimina la asignación de ingreso especificada. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/income_allocation/byhousehold/{householdId}` | Path: `householdId` | ```json { "id":"IA001","userId":1,"householdId":"HH001","percentage":50.0 } ``` | `200 OK`, `404 Not Found` |
+| GET | `/api/v1/income_allocation/byuserid/{userId}` | Path: `userId` | ```json { "id":"IA001","userId":1,"householdId":"HH001","percentage":50.0 } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/income_allocation` | Body: `userId`, `householdId`, `percentage` | ```json { "userId":1,"householdId":"HH001","percentage":50.0 } ``` | `201 Created`, `400 Bad Request` |
+| PUT | `/api/v1/income_allocation/byid/{id}` | Path: `id`, Body: `id`, `userId`, `householdId`, `percentage` | ```json { "id":"IA001","userId":1,"householdId":"HH001","percentage":60.0 } ``` | `200 OK`, `400 Bad Request` |
+| DELETE | `/api/v1/income_allocation/{id}` | Path: `id` | ```json { "id":"IA001","userId":1,"householdId":"HH001","percentage":50.0 } ``` | `200 OK`, `404 Not Found` |
+
+### Settings
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/settings` | Obtener settings por usuario | GET | `/api/v1/settings?userId={userId}` | Query Parameter: `userId` | Retorna la configuración asociada al usuario especificado. |
+| `/api/v1/settings` | Crear settings | POST | `/api/v1/settings` | Body JSON: `userId`, `language`, `darkMode`, `notificationEnabled` | Registra la configuración de un usuario o retorna la existente. |
+| `/api/v1/settings/{id}` | Actualizar settings | PUT | `/api/v1/settings/{id}` | Path Parameter: `id`, Body JSON: `userId`, `language`, `darkMode`, `notificationEnabled` | Actualiza la configuración asociada al identificador especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/settings?userId={userId}` | Query: `userId` | ```json { "id":1,"userId":1,"language":"EN","darkMode":true,"notificationEnabled":true,"createdAt":"2026-05-15","updatedAt":"2026-05-15" } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/settings` | Body: `userId`, `language`, `darkMode`, `notificationEnabled` | ```json { "userId":1,"language":"EN","darkMode":true,"notificationEnabled":true } ``` | `200 OK`, `201 Created` |
+| PUT | `/api/v1/settings/{id}` | Path: `id`, Body: `userId`, `language`, `darkMode`, `notificationEnabled` | ```json { "userId":1,"language":"ES","darkMode":false,"notificationEnabled":true } ``` | `200 OK`, `404 Not Found` |
+
+
+### Settings
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/settings` | Obtener settings por usuario | GET | `/api/v1/settings?userId={userId}` | Query Parameter: `userId` | Retorna la configuración asociada al usuario especificado. |
+| `/api/v1/settings` | Crear settings | POST | `/api/v1/settings` | Body JSON: `userId`, `language`, `darkMode`, `notificationEnabled` | Registra la configuración de un usuario o retorna la existente. |
+| `/api/v1/settings/{id}` | Actualizar settings | PUT | `/api/v1/settings/{id}` | Path Parameter: `id`, Body JSON: `userId`, `language`, `darkMode`, `notificationEnabled` | Actualiza la configuración asociada al identificador especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/settings?userId={userId}` | Query: `userId` | ```json { "id":1,"userId":1,"language":"EN","darkMode":true,"notificationEnabled":true,"createdAt":"2026-05-15","updatedAt":"2026-05-15" } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/settings` | Body: `userId`, `language`, `darkMode`, `notificationEnabled` | ```json { "userId":1,"language":"EN","darkMode":true,"notificationEnabled":true } ``` | `200 OK`, `201 Created` |
+| PUT | `/api/v1/settings/{id}` | Path: `id`, Body: `userId`, `language`, `darkMode`, `notificationEnabled` | ```json { "userId":1,"language":"ES","darkMode":false,"notificationEnabled":true } ``` | `200 OK`, `404 Not Found` |
+
 ##### 4.2.1.7. Software Deployment Evidence for Sprint Review
+
+**Landing Page - Deploy:**
+
+https://1acc0238-2610-3667.github.io/Landing-Page/
+
+<br>
+<img src="assets/landing_deploy1.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_deploy2.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_deploy3.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_deploy4.jpg" alt="CandidateContextDiscovery">
+<br>
+
+
+
+**Frontend - Deploy:**
+
+https://front-end-5cbz.vercel.app/
+
+
+<br>
+<img src="assets/frontend_deploy.jpg" alt="CandidateContextDiscovery">
+<br>
+
+
+**Backend - Deploy:**
+
+https://backend-harmonix.onrender.com/swagger
+
+<br>
+<img src="assets/backend_deploy.jpg" alt="CandidateContextDiscovery">
+<br>
+
+
 ##### 4.2.1.8. Team Collaboration Insights during Sprint
 ### 4.3. Validation Interviews
 #### 4.3.1. Diseño de Entrevistas
