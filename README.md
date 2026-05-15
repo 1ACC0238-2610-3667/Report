@@ -2521,6 +2521,18 @@ El alcance de esta evaluación incluye la revisión de la usabilidad de las sigu
 * **Problema:** El componente de selección de fecha incluye botones de "Set" y "Cancel" como parte de la misma fila de entrada. Esto rompe el flujo natural de introducción de datos y puede causar que el usuario cancele el proceso por error al intentar ajustar el día o el mes.
 * **Recomendación:** Implementar un Date Picker nativo del sistema operativo (iOS/Android) que se despliegue en un modal o menú inferior independiente.
 
+### PROBLEMA #12: Variación de etiquetas de retroceso ("Back" vs "Go back")
+* **Severidad:** 1
+* **Heurística violada:** Usabilidad - Consistencia y estándares
+* **Problema:** Existe una falta de consistencia en las etiquetas textuales asignadas a los botones de navegación de retorno en la barra superior de la interfaz móvil. En ciertas vistas se utiliza el texto "< Back", mientras que en otras pantallas de la misma aplicación se visualiza como "< Go back". Esta variabilidad rompe con el principio de uniformidad y previsibilidad del sistema.
+* **Recomendación:** Estandarizar un único formato de botón de retroceso para todas las pantallas de la aplicación móvil (se sugiere adoptar la etiqueta estándar "< Back" o emplear únicamente un icono de flecha limpia) para unificar la experiencia de navegación.
+
+### PROBLEMA #13: Botones de sistema incrustados dentro de inputs de texto
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Estética y diseño minimalista
+* **Problema:** Los botones de acción interactivos del sistema, tales como "Search" y "Generate ID", se encuentran posicionados directamente dentro del contenedor interno del campo de texto de entrada. Este patrón de diseño compromete el espacio útil horizontal para la introducción y lectura de datos por parte del usuario, además de saturar la jerarquía visual dentro de los formularios.
+* **Recomendación:** Extraer los botones de acción fuera de las cajas de texto y reubicarlos de manera externa (ya sea al lado derecho como un elemento adyacente o debajo del campo correspondiente) para asegurar un área de entrada limpia, espaciosa y legible.
+
 ### PROBLEMA #14: Contraste crítico de accesibilidad en el Login
 * **Severidad:** 3
 * **Heurística violada:** Diseño Inclusivo - Experiencias comparables
