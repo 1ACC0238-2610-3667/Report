@@ -1790,6 +1790,32 @@ La sección *‘type’* indica el tipo de mensaje de confirmación que se usar�
 Luego, se tienen distintos tipos de mensajes de confirmación. Por ejemplo, se tiene el mensaje tipo *‘fix’* que incluye una corrección al proyecto. Utilizar este tipo conlleva aumentar el número terciario de la versión del proyecto (por ejemplo, de 1.0.0. a 1.0.1.). Después, utilizar el mensaje de tipo *‘feat’* conlleva agregar una nueva función a la aplicación, por lo tanto, se debe aumentar el número secundario de la versión (por ejemplo, de 1.0.0. a 1.1.0.). Finalmente, si se agrega una sección de tipo ‘BREAKING CHANGE’ indicaría que las versiones anteriores del proyecto dejarán de ser compatibles entre sí, lo que conlleva un cambio significativo y el aumento del número principal de la versión (por ejemplo, de 1.0.0. a 2.0.0.).
 
 #### 4.1.3. Source Code Style Guide & Conventions
+
+En esta sección, se definen las referencias que se usaron para adoptar estrategias de nomenclatura de elementos de programación en los lenguajes y tecnologías que se usarán para la solución móvil (**Kotlin, C#, Android Studio y SQLite**). En general, la nomenclatura de los archivos y secciones en la programación se hará en inglés.
+
+* **Nomenclatura en Kotlin:** Para la codificación del aplicativo móvil en Kotlin, se utilizará el documento oficial *“Kotlin Coding Conventions”.* Este artículo contiene información útil y necesaria para conocer cómo debe ser la nomenclatura de los diversos aspectos que conforman un proyecto desarrollado en Kotlin, abarcando desde la capitalización de clases y variables hasta el formato y diseño del código idiomático.  
+  **Referencia:** [https://kotlinlang.org/docs/coding-conventions.html](https://kotlinlang.org/docs/coding-conventions.html)  
+  Finalmente, se aplicará el contenido del artículo para el desarrollo del Front-End de la aplicación móvil de Harmonix.
+
+* **Nomenclatura en Android Studio (Recursos y XML):** Para la organización del proyecto y diseño de interfaces en Android Studio, se utilizará la documentación *“App resources overview”* y las guías de estilo para desarrolladores de Android. Estos documentos contienen información sobre cómo nombrar correctamente los archivos de recursos (layouts, strings, drawables, colores) usando convenciones como *snake_case* y los prefijos adecuados para las vistas en XML.  
+  **Referencia:** [https://developer.android.com/guide/topics/resources/providing-resources](https://developer.android.com/guide/topics/resources/providing-resources)  
+  Finalmente, se aplicará el contenido para la estructuración visual e internacionalización de la aplicación móvil a desarrollar.
+
+* **Nomenclatura en C#:** Para la codificación del proyecto en C#, se utilizará el artículo *“C# Coding Conventions”.* Este artículo contiene información útil y necesaria para conocer cómo debe ser la nomenclatura de los diversos aspectos que conforman un proyecto desarrollado en C#, según las convenciones oficiales de codificación establecidas por Microsoft. Se trata de la guía de convenciones de estilo de código para C# publicada por Microsoft, la cual proporciona una serie de recomendaciones para escribir código claro, coherente y mantenible en aplicaciones .NET.  
+  **Referencia:** [https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)  
+  Finalmente, se aplicará el contenido del artículo para los Web Services de Harmonix.
+
+* **Nomenclatura en ASP.NET:** Para la codificación del proyecto en ASP.NET, se utilizará el artículo *“Microsoft ASP.NET Core Coding Guidelines”.* Este artículo contiene información útil y necesaria para conocer cómo debe ser la nomenclatura y el estilo de los diversos aspectos que conforman un proyecto desarrollado con ASP.NET Core. Se trata de la guía de ingeniería oficial del equipo de ASP.NET Core, en la cual se detallan las convenciones recomendadas para escribir código claro, consistente y fácil de mantener.  
+  **Referencia:** [https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#codingguidelines](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#codingguidelines)  
+  Finalmente, se aplicará el contenido del artículo para los Web Services de Harmonix.
+
+* **Nomenclatura para RESTful API:** Para la nomenclatura de endpoints a implementar en la aplicación Back-End, se usó el artículo *"REST API URI Naming Conventions and Best Practices".* Este mismo contiene información sobre consejos y buenas prácticas al momento de nombrar correctamente a los endpoints en una aplicación back-end que use el esquema REST.  
+  **Referencia:** [https://restfulapi.net/resource-naming/](https://restfulapi.net/resource-naming/)
+
+* **Nomenclatura en SQLite:** Para la nomenclatura de objetos en la base de datos local embebida usando SQLite, se utilizará la guía *"SQL Style Guide"*. Dado que SQLite es altamente flexible, adoptar un estándar de la industria asegura una correcta nomenclatura de tablas, columnas y llaves foráneas consistentes. Este documento detalla las mejores prácticas como el uso de *snake_case* y sustantivos colectivos.  
+  **Referencia:** [https://www.sqlstyle.guide/](https://www.sqlstyle.guide/)  
+  Finalmente, se aplicará el contenido para el diseño y persistencia de datos locales dentro de la aplicación móvil de Harmonix.
+
 #### 4.1.4. Software Deployment Configuration
 ### 4.2. Landing Page & Mobile Application Implementation
 
