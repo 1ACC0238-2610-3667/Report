@@ -1735,6 +1735,60 @@ En esta sección, se explica los entornos en donde se decidió llevar a cabo el 
   - Para los despliegues de la Landing Page se uso el servicio web de GITHUB PAGES, este servicio se especializa en el despliegue de sitios web staticos directamente desde un repositorio creado en GitHub.
 
 #### 4.1.2. Source Code Management
+
+En esta sección, se describen los medios y esquemas de organización para gestionar de manera efectiva los archivos de proyecto relacionados a Landing Page, Web Services y Frontend Web Applications. En el caso de los repositorios, se usará GitHub para almacenar los archivos. Además, se implementará GitFlow. Esta función de GitHub ayudará al equipo, gracias a las ramas de características de lanzamiento, a poder trabajar paralelamente en el proyecto y a tomar el control de versiones de avance del proyecto.
+
+#### **5.1.2.1. Repositorios**
+
+A continuación, se adjuntan los enlaces para acceder a los repositorios donde se almacenarán los archivos y avances de proyecto relacionados al Landing Page, Front-End y Back-End Application.
+
+* **Landing Page: [https://github.com/1ACC0238-2610-3667/Landing-Page](https://github.com/1ACC0238-2610-3667/Landing-Page)**
+* **Front End: [https://github.com/1ACC0238-2610-3667/Mobile-App](https://github.com/1ACC0238-2610-3667/Mobile-App)**
+* **Backend: [https://github.com/1ACC0238-2610-3667/BackEnd](https://github.com/1ACC0238-2610-3667/BackEnd)**
+
+**5.1.2.2. GitFlow**
+
+Para el desarrollo de este proyecto, GITFLOW ayudará al equipo de desarrollo a gestionar de manera efectiva el proyecto en su ciclo de vida. En general, GITHUB ayudará a facilitar el desarrollo del proyecto para el equipo ya que es más sencillo desarrollar trabajos en equipo en los repositorios de los archivos de proyecto.
+
+##### **5.1.2.2.1. Main Branches**
+
+* **Main Branch**   
+  Llamada también rama principal del proyecto, esta es la rama predeterminada del proyecto creado en el repositorio. Esta rama representa el historial del proyecto lo que ayuda a llevar el control de versiones del mismo.
+    
+* **Develop Branch**  
+  Llamada también rama de desarrollo del proyecto. Esta rama es una bifurcación de código original del proyecto para definir nuevos rumbos respecto del proyecto original que servirá para evaluar variaciones del proyecto para su evolución. Además, ayudan a incorporar nuevas funciones al proyecto.
+
+##### **5.1.2.2.2. Supporting Branches**
+
+* **Feature Branch**  
+  También llamada rama de característica del proyecto, es una rama de desarrollo que ayuda a incorporar nuevas funciones al proyecto en desarrollo. Además, permite el aislamiento de la función agregada y que varios colaboradores puedan trabajar simultáneamente en dicha funcionalidad.
+
+* **Release Branch**  
+  También llamada rama de lanzamiento del proyecto, es una versión de código del proyecto que se usa para empezar un nuevo ciclo de lanzamiento del producto de software. Además, en esta rama se pueden realizar correcciones de errores de la versión pasada del proyecto. Finalmente, una vez terminada con esta rama, se suma a la rama principal del proyecto y se le asigna un nuevo número de versión de proyecto.
+    
+* **Hotfix Branch**  
+  También llamada rama de corrección del proyecto, es una rama que permite dar mantenimiento al código del proyecto. Se utiliza principalmente para arreglar errores en alguna sección del producto de software de manera rápida.
+
+  #### **5.1.2.3. Release Versioning Conventions**
+
+Para la nomenclatura de los lanzamientos de la Landing Page, se utilizará Semantic Versioning que consta de tres partes para describir cambios mayores, cambios menores y parches para corrección de bugs, según la siguiente estructura:
+
+* Número principal: Incrementa cuando se realiza un cambio mayor y significativo al proyecto.  
+* Número secundario: Incrementa cuando se realiza un cambio menor al proyecto como arreglo de errores o agregación de características.  
+* Número terciario: Incrementa cuando se realiza un parche al proyecto como una corrección de bugs o errores visuales.
+
+#### **5.1.2.3. Commits Conventions**
+
+Para los textos de mensajes en los *‘commits’* del proyecto en Git, se utilizará Conventional Commits. Estos son mensajes de confirmación que son fáciles de entender por los colaboradores del proyecto. Finalmente, estos mensajes siguen la siguiente estructura:
+
+<!-- Commits-->
+<p align="center">
+  <img src="https://i.imgur.com/vfirypa.png" alt="Commits">
+</p>
+
+La sección *‘type’* indica el tipo de mensaje de confirmación que se usará. A continuación, la sección *‘description’* indica la descripción que se le agrega al mensaje de confirmación, por ejemplo, una característica agregada. Además, la sección *‘body’* incluye una descripción más detallada del cambio aplicado al proyecto.  
+Luego, se tienen distintos tipos de mensajes de confirmación. Por ejemplo, se tiene el mensaje tipo *‘fix’* que incluye una corrección al proyecto. Utilizar este tipo conlleva aumentar el número terciario de la versión del proyecto (por ejemplo, de 1.0.0. a 1.0.1.). Después, utilizar el mensaje de tipo *‘feat’* conlleva agregar una nueva función a la aplicación, por lo tanto, se debe aumentar el número secundario de la versión (por ejemplo, de 1.0.0. a 1.1.0.). Finalmente, si se agrega una sección de tipo ‘BREAKING CHANGE’ indicaría que las versiones anteriores del proyecto dejarán de ser compatibles entre sí, lo que conlleva un cambio significativo y el aumento del número principal de la versión (por ejemplo, de 1.0.0. a 2.0.0.).
+
 #### 4.1.3. Source Code Style Guide & Conventions
 #### 4.1.4. Software Deployment Configuration
 ### 4.2. Landing Page & Mobile Application Implementation
