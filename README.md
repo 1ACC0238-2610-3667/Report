@@ -2312,6 +2312,11 @@ https://backend-harmonix.onrender.com/swagger
 
 
 ##### 4.2.1.8. Team Collaboration Insights during Sprint
+
+<br>
+<img src="assets/insights_backend.jpg" alt="CandidateContextDiscovery">
+<br>
+
 ### 4.3. Validation Interviews
 #### 4.3.1. Diseño de Entrevistas
 
