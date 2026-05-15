@@ -1817,7 +1817,86 @@ En esta sección, se definen las referencias que se usaron para adoptar estrateg
   Finalmente, se aplicará el contenido para el diseño y persistencia de datos locales dentro de la aplicación móvil de Harmonix.
 
 #### 4.1.4. Software Deployment Configuration
+
+En esta sección, se especifica la configuración para realizar el despliegue de la solución en el repositorio. Para realizar esto, se usó GITHUB PAGES para desplegar el landing page.
+
+## Sitio web estático ##
+* **Paso 1: Creación del repositorio**  
+  Como primer paso, se debe crear el repositorio en GitHub que será el lugar donde se aloja todo lo relacionado al Landing Page.
+
+* **Paso 2: Carga de archivos necesarios**  
+  Como segundo paso, se importan todos los archivos necesarios para el desarrollo de la landing page como imágenes, archivos HTML, CSS y JavaScript.
+
+* **Paso 3: Preparar el lanzamiento**  
+  Como tercer paso, se juntan todas las características del proyecto en una sola para verificar el correcto funcionamiento de cada una. Luego, se envía todo a la rama principal donde se encuentra, por defecto, el proyecto.
+
+* **Paso 4: Desplegar la Landing Page**  
+  Como cuarto paso, cuando todo se encuentre en la rama principal, se accede a la sección Configuración del repositorio, luego, se selecciona la opción “GitHub Pages” y se seleccionará la rama principal que es la que se desea desplegar.
+
+* **Paso 5: Acceder al Landing Page**  
+  Como paso final, el entorno otorgará un enlace para poder acceder al proyecto desplegado.
+  
+![Link del despliegue](assets/landing%20page.png)
+
+![Pagina desplegada](assets/despliegue.png)
+
+## Despliegue del Backend en Render ##
+
+* **Paso 1: Creación del servicio y conexión** Como primer paso, se crea un nuevo "Web Service" dentro de la plataforma de Render y se conecta con el repositorio de GitHub que contiene el código del backend, seleccionando la rama principal (`main`).
+
+* **Paso 2: Configuración general y entorno** Como segundo paso, se le asigna un nombre al servicio (en este caso, *Splitly-Mobile-Backend*) y se selecciona **Docker** como el entorno de ejecución para el proyecto.
+
+* **Paso 3: Configuración del Dockerfile** Como tercer paso, se le indica a Render dónde encontrar las instrucciones para construir el proyecto. Se especifica la ruta del archivo Docker (en el *Dockerfile Path* como `com.split.backend/Dockerfile`) y el directorio base (*Build Context* como `.`).
+
+* **Paso 4: Variables de Entorno** Como cuarto paso, se accede a la sección "Environment" para configurar de forma segura las variables de entorno que necesita el backend para funcionar, como las cadenas de conexión a la base de datos (`ConnectionStrings`).
+
+* **Paso 5: Construcción y Despliegue** Como paso final, Render lee el Dockerfile, construye la imagen y realiza el despliegue automáticamente, otorgando una URL pública para acceder a la API desplegada en producción.
+
+![Despliegue 1](assets/A1.jpeg)
+
+![Despliegue 1](assets/A2.jpeg)
+
+![Despliegue 1](assets/A3.jpeg)
+
+![Despliegue 1](assets/A4.jpeg)
+
+
 ### 4.2. Landing Page & Mobile Application Implementation
+
+* **Paso 1: Creación del repositorio**  
+  Como primer paso, se debe crear el repositorio en GitHub que será el lugar donde se aloja todo lo relacionado al Landing Page.
+
+<p align="center">
+  <img src="https://i.imgur.com/qpvh4Zt.png" alt="Repository creation">
+</p>
+
+* **Paso 2: Carga de archivos necesarios**  
+  Como segundo paso, se importan todos los archivos necesarios para el desarrollo de la landing page como imágenes, archivos HTML, CSS y JavaScript.
+
+<p align="center">
+  <img src="https://i.imgur.com/KC9BrHf.png" alt="File organization">
+</p>
+
+* **Paso 3: Preparar el lanzamiento**  
+  Como tercer paso, se juntan todas las características del proyecto en una sola para verificar el correcto funcionamiento de cada una. Luego, se envía todo a la rama principal donde se encuentra, por defecto, el proyecto.
+
+<p align="center">
+  <img src="https://i.imgur.com/LZxoPlI.png" alt="Master branch">
+</p>
+
+* **Paso 4: Desplegar la Landing Page**  
+  Como cuarto paso, cuando todo se encuentre en la rama principal, se accede a la sección Configuración del repositorio, luego, se selecciona la opción “GitHub Pages” y se seleccionará la rama principal que es la que se desea desplegar.
+
+<p align="center">
+  <img src="https://i.imgur.com/9dbeFRr.png" alt="List of deployments.">
+</p>
+
+* **Paso 5: Acceder al Landing Page**  
+  Como paso final, el entorno otorgará un enlace para poder acceder al proyecto desplegado.
+  
+<p align="center">
+  <img src="https://imgur.com/MJt1dLo.png" alt="View of the Landing Page">
+</p>
 
 #### 4.2.1. Sprint 1
 
