@@ -1832,11 +1832,6 @@ Durante la realización de este sprint se logró la correcta elaboración y desp
 <img src="assets/backend_evidence5.jpg" alt="CandidateContextDiscovery">
 <br>
 
-
-**Views app mobile**
-
-
-
 **Landing Page**
 
 <br>
@@ -2115,16 +2110,6 @@ https://1acc0238-2610-3667.github.io/Landing-Page/
 <img src="assets/landing_deploy4.jpg" alt="CandidateContextDiscovery">
 <br>
 
-
-
-**Frontend - Deploy:**
-
-https://front-end-5cbz.vercel.app/
-
-
-<br>
-<img src="assets/frontend_deploy.jpg" alt="CandidateContextDiscovery">
-<br>
 
 
 **Backend - Deploy:**
