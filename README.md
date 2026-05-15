@@ -2341,7 +2341,7 @@ Durante el proceso de entrevistas con los usuarios finales, se identificaron div
 
 - ¿Qué piensas sobre la transparencia de la herramienta? ¿Te resultó útil ver las contribuciones de los demás miembros del hogar?
 
-- ¿Sientes que el sistema te ayuda a comprender mejor la distribución de los gastos en el hogar?
+- ¿Sientes que la aplicación te ayuda a comprender mejor la distribución de los gastos en el hogar?
 
 5. Gráficos y reportes:
 
@@ -2353,7 +2353,7 @@ Durante el proceso de entrevistas con los usuarios finales, se identificaron div
 
 - ¿Te parece que esta herramienta puede ayudarte a gestionar los gastos del hogar de manera más equitativa?
 
-- ¿Usarías esta página de manera regular? ¿Qué haría que la usaras más seguido?
+- ¿Usarías esta aplicación de manera regular? ¿Qué haría que la usaras más seguido?
 
 
 **Para el Segmento 2: Representantes del hogar**
@@ -2380,11 +2380,11 @@ Durante el proceso de entrevistas con los usuarios finales, se identificaron div
 
 - ¿Te resultó fácil realizar tareas como agregar miembros al hogar o asignar contribuciones?
 
-- ¿Hubo algún momento en que pensaste que la plataforma podía hacer algo más para facilitar la gestión de los gastos?
+- ¿Hubo algún momento en que pensaste que la aplicación podía hacer algo más para facilitar la gestión de los gastos?
 
 5. Confianza en el sistema:
 
-- ¿Confías en que el sistema divide los gastos de manera justa? ¿Te gustaría que el sistema explique de manera más clara cómo se calculan los porcentajes?
+- ¿Confías en que la aplicación divide los gastos de manera justa? ¿Te gustaría que el sistema explique de manera más clara cómo se calculan los porcentajes?
 
 - ¿Hay alguna parte del proceso donde te gustaría tener más detalles o explicaciones sobre cómo funcionan los cálculos?
 
