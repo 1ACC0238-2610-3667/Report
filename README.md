@@ -2314,6 +2314,87 @@ https://backend-harmonix.onrender.com/swagger
 ##### 4.2.1.8. Team Collaboration Insights during Sprint
 ### 4.3. Validation Interviews
 #### 4.3.1. Diseño de Entrevistas
+
+Durante el proceso de entrevistas con los usuarios finales, se identificaron diversos requerimientos relevantes para la experiencia en base a las siguientes preguntas:
+
+**Para el Segmento 1: Miembros del hogar**
+
+1. Primera impresión sobre la interfaz:
+
+- ¿Qué opinas del diseño de la página? ¿Te resulta fácil de entender?
+
+- ¿Hay algún elemento visual que te llame la atención o que encuentres confuso?
+
+2. Facilidad de uso:
+
+- ¿Fue fácil encontrar dónde se registran los gastos o contribuciones?
+
+- ¿Hubo algún momento en el que te sentiste perdido o no supieras qué hacer en la página?
+
+3. Navegación y funcionalidades:
+
+- ¿La navegación entre secciones (como ver tus aportes, revisar los gastos) fue clara?
+
+- ¿Te resultó sencillo agregar un gasto o una contribución? ¿Qué mejoras sugerirías?
+
+4. Transparencia y confianza:
+
+- ¿Qué piensas sobre la transparencia de la herramienta? ¿Te resultó útil ver las contribuciones de los demás miembros del hogar?
+
+- ¿Sientes que el sistema te ayuda a comprender mejor la distribución de los gastos en el hogar?
+
+5. Gráficos y reportes:
+
+- ¿Qué opinas de los gráficos o reportes que muestra la página? ¿Son claros y fáciles de entender?
+
+- ¿Te gustaría tener más detalles en los reportes, o consideras que la información mostrada es suficiente?
+
+6. Experiencia general:
+
+- ¿Te parece que esta herramienta puede ayudarte a gestionar los gastos del hogar de manera más equitativa?
+
+- ¿Usarías esta página de manera regular? ¿Qué haría que la usaras más seguido?
+
+
+**Para el Segmento 2: Representantes del hogar**
+
+1. Gestión de finanzas en el panel:
+
+- ¿Qué opinas del panel de control donde puedes gestionar los gastos y contribuciones? ¿Lo encuentras útil?
+
+- ¿Fue fácil aprobar o modificar los gastos? ¿Hubo algo que te resultó confuso en el proceso?
+
+2. Visibilidad y control:
+
+- ¿Te pareció que tienes suficiente visibilidad sobre las contribuciones de los miembros del hogar?
+
+- ¿Qué tan útil encuentras la capacidad de ver los reportes mensuales y las contribuciones de todos los miembros del hogar?
+
+3. Personalización y ajustes:
+
+- ¿Te gustaría poder personalizar más aspectos de la herramienta, como las categorías de gastos o las reglas de división?
+
+- ¿Fue fácil ajustar los porcentajes de contribución o cambiar cualquier configuración?
+
+4. Usabilidad y eficiencia:
+
+- ¿Te resultó fácil realizar tareas como agregar miembros al hogar o asignar contribuciones?
+
+- ¿Hubo algún momento en que pensaste que la plataforma podía hacer algo más para facilitar la gestión de los gastos?
+
+5. Confianza en el sistema:
+
+- ¿Confías en que el sistema divide los gastos de manera justa? ¿Te gustaría que el sistema explique de manera más clara cómo se calculan los porcentajes?
+
+- ¿Hay alguna parte del proceso donde te gustaría tener más detalles o explicaciones sobre cómo funcionan los cálculos?
+
+6. Satisfacción general y recomendaciones:
+
+- ¿Crees que esta plataforma facilitaría la convivencia en términos de finanzas? ¿Por qué?
+
+- ¿Qué cambios harías para mejorar la experiencia como representante del hogar?
+
+
 #### 4.3.2. Registro de Entrevistas
 #### 4.3.3. Evaluaciones según heurísticas
 
