@@ -1894,9 +1894,7 @@ En esta sección, se especifica la configuración para realizar el despliegue de
 * **Paso 5: Acceder al Landing Page**  
   Como paso final, el entorno otorgará un enlace para poder acceder al proyecto desplegado.
   
-<p align="center">
-  <img src="https://imgur.com/MJt1dLo.png" alt="View of the Landing Page">
-</p>
+![Despliegue](assets/splity.jpg)
 
 #### 4.2.1. Sprint 1
 
