@@ -2076,6 +2076,20 @@ El mock-up facilita la validación temprana con los interesados (stakeholders), 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 #### 3.1.4.3. Mobile Applications Mock-ups
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
+A continuación, se presenta el User Flow Diagram, diseñado a partir de los objetivos principales de los usuarios. El flujo refleja cada meta funcional dentro de la aplicación y los distintos recorridos que pueden seguir para alcanzarla. Para una mejor comprensión, se incluyen mockups de alta fidelidad que ilustran visualmente cada paso, facilitando la validación de la experiencia y la coherencia del diseño.
+<p styles="align: left">
+  <img src="assets/User goal 1.png" alt="lpm" width="500">
+</p>
+<p styles="align: left">
+  <img src="assets/User goal 2.png" alt="lpm" width="500">
+</p>
+<p styles="align: left">
+  <img src="assets/User goal 3.png" alt="lpm" width="500">
+</p>
+<p styles="align: left">
+  <img src="assets/User goal 4.png" alt="lpm" width="500">
+</p>
+
 #### 3.1.4.5. Mobile Applications Prototyping
 
 # Conclusiones y recomendaciones
