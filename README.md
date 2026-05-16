@@ -2103,7 +2103,12 @@ A continuación, se presenta el User Flow Diagram, diseñado a partir de los obj
 </p>
 
 #### 3.1.4.5. Mobile Applications Prototyping
+Se diseñó un entorno digital interactivo orientado a la navegación web, con el objetivo de evaluar y optimizar la accesibilidad y la experiencia de usuario de cara al lanzamiento final.
+Esta solución presenta de manera realista el recorrido dentro de la aplicación, permitiendo explorar secciones y flujos clave tal como se experimentarían en la versión definitiva.
+El desarrollo se basó en una arquitectura clara, una jerarquía visual coherente y en principios de diseño inclusivo, asegurando una navegación intuitiva y accesible para todo tipo de usuarios.
 
+
+**Link al prototipo:** https://www.figma.com/design/Jqccm1Vaf6zCxfUNBOyRh4/Apps-moviles?node-id=4020-3418&t=mRC5nsVoIrEZnp9C-1
 # Conclusiones y recomendaciones
 
 ## Conclusiones
