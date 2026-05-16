@@ -1265,7 +1265,7 @@ Define las interfaces y servicios necesarios para interactuar con componentes t�
 * **Hashing**: 
     * `IHashingService`: Define el contrato para los servicios de criptografía, encargándose de transformar las contraseñas en hashes seguros y validar las credenciales durante el inicio de sesión.
 * **Tokens**:
-    * `ITokenService`: Define el contrato para la gestión de la seguridad basada en tokens. Es responsable de la generación, firma y validación de los JSON Web Tokens (JWT) utilizados para autorizar las solicitudes desde la aplicación móvil.
+    * `ITokenService`: Define el contrato para la gestión de la seguridad basada en tokens. Es responsable de la generación, firma y validación de los JSON Web Tokens (JWT) utilizados para autorizRamírezsolicitudes desde la aplicación móvil.
 * **ACL (Anti-Corruption Layer)**:
     * `IExternalProfileService` / `ExternalProfileService`: Actúa como una capa de anticorrupción que facilita la comunicación con otros Bounded Contexts. Su función es traducir y transferir información de identidad hacia módulos externos (como la gestión de perfiles o el registro en hogares) sin acoplar los modelos de dominio entre sí.
 
@@ -1696,6 +1696,1058 @@ En el diagrama se observan tres tablas principales, todas fuertemente vinculadas
 Este diseño asegura que el núcleo del negocio esté completamente separado de la configuración técnica y de los detalles de infraestructura de cobros.
 
 ![Diagrama de base de datos App Management](assets/base%20de%20datos%20-%20diagrama%20-%20app%20BC.png)
+
+# Capítulo IV: Product Implementation & Validation
+## 4. Product Implementation & Validation
+
+### 4.1. Software Configuration Management
+
+#### 4.1.1. Software Development Environment Configuration
+
+En esta sección, se explica los entornos en donde se decidió llevar a cabo el ciclo de vida de desarrollo de los productos de software relacionados al proyecto del curso.
+
+* **Project Management**
+
+  - En el aspecto de gestión y desarrollo del ciclo de vida del proyecto se utilizó la aplicación DISCORD y GOOGLE MEET para las reuniones de grupo en las cuales se conversan sobre temas relacionados a avances y corrección de aspectos del proyecto. Además, para la documentación del proyecto, se utilizó el formato Mark Down en un repositorio de GitHub para el control de versiones del informe.
+
+* **Requirements Management**
+
+  - Para el manejo de los requisitos (historias de usuario, product backlog, sprint backlog) del producto, se utilizó TRELLO la cual es una herramienta ideal para gestionar proyectos. Además, usando esta herramienta, se puede organizar un product backlog, ya que permite estructurar tareas visualmente en un tablero. También puedes crear listas que representen etapas del flujo de trabajo, y en cada lista añadir tarjetas que describan las user stories o tareas individuales. Estas tarjetas permiten detallar información clave, como prioridades, etiquetas de color, descripciones y checklists, facilitando así el seguimiento y la colaboración del equipo.
+
+* **Product UX/UI Design**
+
+  - Para el desarrollo de plantillas de los user persona, de los Impact Maps y los User Journey Maps se utilizó la aplicación UXPRESSIA la cual es una plataforma especializada en la creación de mapas de experiencia del usuario ofreciendo una interfaz enfocada exclusivamente en UX que facilita la estructuración clara y profesional de estos elementos. Destaca por sus plantillas personalizables, la posibilidad de añadir datos reales, imágenes y métricas, y por permitir la colaboración en tiempo real.
+
+  - Para la creación del Lean UX Canvas se utilizó la aplicación de diseño CANVA. Esta aplicación es una herramienta versátil para crear diversos diseños. Canva facilita la colaboración del equipo y la exportación de los proyectos en archivo PNG o PDF, manteniendo el proceso creativo ordenado y atractivo. Para los Journey Mapping, Empathy Mapping, entre otros mapas,  se decidió utilizar Miro. Esta aplicación permite una colaboración en tiempo real entre equipos, ofrece una interfaz visual e intuitiva, y cuenta con plantillas prediseñadas que agilizan el proceso sin perder calidad metodológica.
+
+  - Finalmente, para el desarrollo de interfaces de usuario (wireframes, mockups y prototipos de aplicación) se decidió utilizar FIGMA. Esta es una herramienta que facilita el diseño de interfaces, permitiéndonos trabajar con colores, imágenes, formas, y otros elementos visuales para crear nuestra aplicación. Nos ofrece la posibilidad de probar diversos modelos de dispositivos. Además, esta plataforma será clave en la creación de nuestro prototipo, ya que brinda una simulación interactiva que permite visualizar y experimentar el proyecto desde la perspectiva del usuario.
+
+* **Software Development**
+
+  - Para el desarrollo del producto de software correspondiente al Landing Page, se utilizarán dos aplicaciones, las cuales son GITHUB y JETBRAINS WEBSTORM. La primera ayuda al equipo a gestionar de manera correcta los avances colaborativos del proyecto. Por otro lado, JetBrains WebStorm ayudará a trabajar el proyecto con lenguajes como HTML5, CSS y JavaScript para el desarrollo del landing page.
+ 
+* **Software Testing**
+
+  - Las pruebas de la Landing Page se realizarán mediante uso del navegador web GOOGLE para verificar que el diseño del mismo cumple con aspectos como el diseño responsivo en cualquier dispositivo desde el que se acceda al landing page del proyecto. Además, para visualizar que se han implementado correctamente elementos visuales que deben aparecer en las distintas secciones de la página.
+
+* **Software Deployment**
+
+  - Para los despliegues de la Landing Page se uso el servicio web de GITHUB PAGES, este servicio se especializa en el despliegue de sitios web staticos directamente desde un repositorio creado en GitHub.
+
+#### 4.1.2. Source Code Management
+
+En esta sección, se describen los medios y esquemas de organización para gestionar de manera efectiva los archivos de proyecto relacionados a Landing Page, Web Services y Frontend Web Applications. En el caso de los repositorios, se usará GitHub para almacenar los archivos. Además, se implementará GitFlow. Esta función de GitHub ayudará al equipo, gracias a las ramas de características de lanzamiento, a poder trabajar paralelamente en el proyecto y a tomar el control de versiones de avance del proyecto.
+
+##### 4.1.2.1. Repositorios
+
+A continuación, se adjuntan los enlaces para acceder a los repositorios donde se almacenarán los archivos y avances de proyecto relacionados al Landing Page, Front-End y Back-End Application.
+
+* **Landing Page: [https://github.com/1ACC0238-2610-3667/Landing-Page](https://github.com/1ACC0238-2610-3667/Landing-Page)**
+* **Front End: [https://github.com/1ACC0238-2610-3667/Mobile-App](https://github.com/1ACC0238-2610-3667/Mobile-App)**
+* **Backend: [https://github.com/1ACC0238-2610-3667/BackEnd](https://github.com/1ACC0238-2610-3667/BackEnd)**
+
+##### 4.1.2.2. GitFlow
+
+Para el desarrollo de este proyecto, GITFLOW ayudará al equipo de desarrollo a gestionar de manera efectiva el proyecto en su ciclo de vida. En general, GITHUB ayudará a facilitar el desarrollo del proyecto para el equipo ya que es más sencillo desarrollar trabajos en equipo en los repositorios de los archivos de proyecto.
+
+##### 4.1.2.2.1. Main Branches
+
+* **Main Branch**   
+  Llamada también rama principal del proyecto, esta es la rama predeterminada del proyecto creado en el repositorio. Esta rama representa el historial del proyecto lo que ayuda a llevar el control de versiones del mismo.
+    
+* **Develop Branch**  
+  Llamada también rama de desarrollo del proyecto. Esta rama es una bifurcación de código original del proyecto para definir nuevos rumbos respecto del proyecto original que servirá para evaluar variaciones del proyecto para su evolución. Además, ayudan a incorporar nuevas funciones al proyecto.
+
+##### 4.1.2.2.2. Supporting Branches
+
+* **Feature Branch**  
+  También llamada rama de característica del proyecto, es una rama de desarrollo que ayuda a incorporar nuevas funciones al proyecto en desarrollo. Además, permite el aislamiento de la función agregada y que varios colaboradores puedan trabajar simultáneamente en dicha funcionalidad.
+
+* **Release Branch**  
+  También llamada rama de lanzamiento del proyecto, es una versión de código del proyecto que se usa para empezar un nuevo ciclo de lanzamiento del producto de software. Además, en esta rama se pueden realizar correcciones de errores de la versión pasada del proyecto. Finalmente, una vez terminada con esta rama, se suma a la rama principal del proyecto y se le asigna un nuevo número de versión de proyecto.
+    
+* **Hotfix Branch**  
+  También llamada rama de corrección del proyecto, es una rama que permite dar mantenimiento al código del proyecto. Se utiliza principalmente para arreglar errores en alguna sección del producto de software de manera rápida.
+
+##### 4.1.2.3. Release Versioning Conventions
+
+Para la nomenclatura de los lanzamientos de la Landing Page, se utilizará Semantic Versioning que consta de tres partes para describir cambios mayores, cambios menores y parches para corrección de bugs, según la siguiente estructura:
+
+* Número principal: Incrementa cuando se realiza un cambio mayor y significativo al proyecto.  
+* Número secundario: Incrementa cuando se realiza un cambio menor al proyecto como arreglo de errores o agregación de características.  
+* Número terciario: Incrementa cuando se realiza un parche al proyecto como una corrección de bugs o errores visuales.
+
+##### 4.1.2.3. Commits Conventions
+
+Para los textos de mensajes en los *‘commits’* del proyecto en Git, se utilizará Conventional Commits. Estos son mensajes de confirmación que son fáciles de entender por los colaboradores del proyecto. Finalmente, estos mensajes siguen la siguiente estructura:
+
+<!-- Commits-->
+<p align="center">
+  <img src="https://i.imgur.com/vfirypa.png" alt="Commits">
+</p>
+
+La sección *‘type’* indica el tipo de mensaje de confirmación que se usará. A continuación, la sección *‘description’* indica la descripción que se le agrega al mensaje de confirmación, por ejemplo, una característica agregada. Además, la sección *‘body’* incluye una descripción más detallada del cambio aplicado al proyecto.  
+Luego, se tienen distintos tipos de mensajes de confirmación. Por ejemplo, se tiene el mensaje tipo *‘fix’* que incluye una corrección al proyecto. Utilizar este tipo conlleva aumentar el número terciario de la versión del proyecto (por ejemplo, de 1.0.0. a 1.0.1.). Después, utilizar el mensaje de tipo *‘feat’* conlleva agregar una nueva función a la aplicación, por lo tanto, se debe aumentar el número secundario de la versión (por ejemplo, de 1.0.0. a 1.1.0.). Finalmente, si se agrega una sección de tipo ‘BREAKING CHANGE’ indicaría que las versiones anteriores del proyecto dejarán de ser compatibles entre sí, lo que conlleva un cambio significativo y el aumento del número principal de la versión (por ejemplo, de 1.0.0. a 2.0.0.).
+
+#### 4.1.3. Source Code Style Guide & Conventions
+
+En esta sección, se definen las referencias que se usaron para adoptar estrategias de nomenclatura de elementos de programación en los lenguajes y tecnologías que se usarán para la solución móvil (**Kotlin, C#, Android Studio y SQLite**). En general, la nomenclatura de los archivos y secciones en la programación se hará en inglés.
+
+* **Nomenclatura en Kotlin:** Para la codificación del aplicativo móvil en Kotlin, se utilizará el documento oficial *“Kotlin Coding Conventions”.* Este artículo contiene información útil y necesaria para conocer cómo debe ser la nomenclatura de los diversos aspectos que conforman un proyecto desarrollado en Kotlin, abarcando desde la capitalización de clases y variables hasta el formato y diseño del código idiomático.  
+  **Referencia:** [https://kotlinlang.org/docs/coding-conventions.html](https://kotlinlang.org/docs/coding-conventions.html)  
+  Finalmente, se aplicará el contenido del artículo para el desarrollo del Front-End de la aplicación móvil de Harmonix.
+
+* **Nomenclatura en Android Studio (Recursos y XML):** Para la organización del proyecto y diseño de interfaces en Android Studio, se utilizará la documentación *“App resources overview”* y las guías de estilo para desarrolladores de Android. Estos documentos contienen información sobre cómo nombrar correctamente los archivos de recursos (layouts, strings, drawables, colores) usando convenciones como *snake_case* y los prefijos adecuados para las vistas en XML.  
+  **Referencia:** [https://developer.android.com/guide/topics/resources/providing-resources](https://developer.android.com/guide/topics/resources/providing-resources)  
+  Finalmente, se aplicará el contenido para la estructuración visual e internacionalización de la aplicación móvil a desarrollar.
+
+* **Nomenclatura en C#:** Para la codificación del proyecto en C#, se utilizará el artículo *“C# Coding Conventions”.* Este artículo contiene información útil y necesaria para conocer cómo debe ser la nomenclatura de los diversos aspectos que conforman un proyecto desarrollado en C#, según las convenciones oficiales de codificación establecidas por Microsoft. Se trata de la guía de convenciones de estilo de código para C# publicada por Microsoft, la cual proporciona una serie de recomendaciones para escribir código claro, coherente y mantenible en aplicaciones .NET.  
+  **Referencia:** [https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions)  
+  Finalmente, se aplicará el contenido del artículo para los Web Services de Harmonix.
+
+* **Nomenclatura en ASP.NET:** Para la codificación del proyecto en ASP.NET, se utilizará el artículo *“Microsoft ASP.NET Core Coding Guidelines”.* Este artículo contiene información útil y necesaria para conocer cómo debe ser la nomenclatura y el estilo de los diversos aspectos que conforman un proyecto desarrollado con ASP.NET Core. Se trata de la guía de ingeniería oficial del equipo de ASP.NET Core, en la cual se detallan las convenciones recomendadas para escribir código claro, consistente y fácil de mantener.  
+  **Referencia:** [https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#codingguidelines](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#codingguidelines)  
+  Finalmente, se aplicará el contenido del artículo para los Web Services de Harmonix.
+
+* **Nomenclatura para RESTful API:** Para la nomenclatura de endpoints a implementar en la aplicación Back-End, se usó el artículo *"REST API URI Naming Conventions and Best Practices".* Este mismo contiene información sobre consejos y buenas prácticas al momento de nombrar correctamente a los endpoints en una aplicación back-end que use el esquema REST.  
+  **Referencia:** [https://restfulapi.net/resource-naming/](https://restfulapi.net/resource-naming/)
+
+* **Nomenclatura en SQLite:** Para la nomenclatura de objetos en la base de datos local embebida usando SQLite, se utilizará la guía *"SQL Style Guide"*. Dado que SQLite es altamente flexible, adoptar un estándar de la industria asegura una correcta nomenclatura de tablas, columnas y llaves foráneas consistentes. Este documento detalla las mejores prácticas como el uso de *snake_case* y sustantivos colectivos.  
+  **Referencia:** [https://www.sqlstyle.guide/](https://www.sqlstyle.guide/)  
+  Finalmente, se aplicará el contenido para el diseño y persistencia de datos locales dentro de la aplicación móvil de Harmonix.
+
+#### 4.1.4. Software Deployment Configuration
+
+En esta sección, se especifica la configuración para realizar el despliegue de la solución en el repositorio. Para realizar esto, se usó GITHUB PAGES para desplegar el landing page.
+
+## Sitio web estático ##
+* **Paso 1: Creación del repositorio**  
+  Como primer paso, se debe crear el repositorio en GitHub que será el lugar donde se aloja todo lo relacionado al Landing Page.
+
+* **Paso 2: Carga de archivos necesarios**  
+  Como segundo paso, se importan todos los archivos necesarios para el desarrollo de la landing page como imágenes, archivos HTML, CSS y JavaScript.
+
+* **Paso 3: Preparar el lanzamiento**  
+  Como tercer paso, se juntan todas las características del proyecto en una sola para verificar el correcto funcionamiento de cada una. Luego, se envía todo a la rama principal donde se encuentra, por defecto, el proyecto.
+
+* **Paso 4: Desplegar la Landing Page**  
+  Como cuarto paso, cuando todo se encuentre en la rama principal, se accede a la sección Configuración del repositorio, luego, se selecciona la opción “GitHub Pages” y se seleccionará la rama principal que es la que se desea desplegar.
+
+* **Paso 5: Acceder al Landing Page**  
+  Como paso final, el entorno otorgará un enlace para poder acceder al proyecto desplegado.
+  
+![Link del despliegue](assets/landing%20page.png)
+
+![Pagina desplegada](assets/despliegue.png)
+
+## Despliegue del Backend en Render ##
+
+* **Paso 1: Creación del servicio y conexión** Como primer paso, se crea un nuevo "Web Service" dentro de la plataforma de Render y se conecta con el repositorio de GitHub que contiene el código del backend, seleccionando la rama principal (`main`).
+
+* **Paso 2: Configuración general y entorno** Como segundo paso, se le asigna un nombre al servicio (en este caso, *Splitly-Mobile-Backend*) y se selecciona **Docker** como el entorno de ejecución para el proyecto.
+
+* **Paso 3: Configuración del Dockerfile** Como tercer paso, se le indica a Render dónde encontrar las instrucciones para construir el proyecto. Se especifica la ruta del archivo Docker (en el *Dockerfile Path* como `com.split.backend/Dockerfile`) y el directorio base (*Build Context* como `.`).
+
+* **Paso 4: Variables de Entorno** Como cuarto paso, se accede a la sección "Environment" para configurar de forma segura las variables de entorno que necesita el backend para funcionar, como las cadenas de conexión a la base de datos (`ConnectionStrings`).
+
+* **Paso 5: Construcción y Despliegue** Como paso final, Render lee el Dockerfile, construye la imagen y realiza el despliegue automáticamente, otorgando una URL pública para acceder a la API desplegada en producción.
+
+![Despliegue 1](assets/A1.jpeg)
+
+![Despliegue 1](assets/A2.jpeg)
+
+![Despliegue 1](assets/A3.jpeg)
+
+![Despliegue 1](assets/A4.jpeg)
+
+
+### 4.2. Landing Page & Mobile Application Implementation
+
+* **Paso 1: Creación del repositorio**  
+  Como primer paso, se debe crear el repositorio en GitHub que será el lugar donde se aloja todo lo relacionado al Landing Page.
+
+<p align="center">
+  <img src="https://i.imgur.com/qpvh4Zt.png" alt="Repository creation">
+</p>
+
+* **Paso 2: Carga de archivos necesarios**  
+  Como segundo paso, se importan todos los archivos necesarios para el desarrollo de la landing page como imágenes, archivos HTML, CSS y JavaScript.
+
+<p align="center">
+  <img src="https://i.imgur.com/KC9BrHf.png" alt="File organization">
+</p>
+
+* **Paso 3: Preparar el lanzamiento**  
+  Como tercer paso, se juntan todas las características del proyecto en una sola para verificar el correcto funcionamiento de cada una. Luego, se envía todo a la rama principal donde se encuentra, por defecto, el proyecto.
+
+<p align="center">
+  <img src="https://i.imgur.com/LZxoPlI.png" alt="Master branch">
+</p>
+
+* **Paso 4: Desplegar la Landing Page**  
+  Como cuarto paso, cuando todo se encuentre en la rama principal, se accede a la sección Configuración del repositorio, luego, se selecciona la opción “GitHub Pages” y se seleccionará la rama principal que es la que se desea desplegar.
+
+<p align="center">
+  <img src="https://i.imgur.com/9dbeFRr.png" alt="List of deployments.">
+</p>
+
+* **Paso 5: Acceder al Landing Page**  
+  Como paso final, el entorno otorgará un enlace para poder acceder al proyecto desplegado.
+  
+![Despliegue](assets/splity.jpg)
+
+#### 4.2.1. Sprint 1
+
+A continuación, se presenta el Sprint Planning 1, donde se incluyen las evidencias de planificación e implementación del Landing Page, Mobile App y Backend. También se registran los avances del proyecto e insights de colaboración del equipo a través de GitHub.
+
+##### 4.2.1.1. Sprint Planning n
+
+| **Campo**                              | **Descripción**                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Sprint #**                           | Sprint 1                                                                                                                                                                                                                                                                                                           |
+| **Sprint Planning Background**         |                                                                                                                                                                                                                                                                                                                    |
+| **Date**                               | 2026-05-04                                                                                                                                                                                                                                                                                                         |
+| **Time**                               | 03:00 PM (GMT -5)                                                                                                                                                                                                                                                                                                  |
+| **Location**                           | Modalidad remota por Google Meet                                                                                                                                                                                                                                                                                   |
+| **Prepared By**                        | Testigos de Splitly                                                                                                                                                                                                                                                                                              |
+| **Attendees (to planning meeting)**    | Equipo Splitly                                                                                                                                                                                                                                                            |
+| **Sprint 0 Review Summary**        | Este es el primer sprint, por lo tanto, no hay una revisión de sprint anterior.                                                                                                                                                                                                                                    |
+| **Sprint 0 Retrospective Summary** | Al ser el inicio del proyecto, se identificaron aspectos técnicos por aprender, como el uso de frameworks CSS. Se revisó el diseño del Landing Page en Figma, el desarrollo de las pantallas de la Mobile App y el despliegue del backend. Se discutió el contenido a incluir y se definió el objetivo principal: lograr desplegar el Landing Page y Backend al final del sprint. |
+| **Sprint Goal & User Stories**         |                                                                                                                                                                                                                                                                                                                    |
+| **Sprint 1 Goal**                      | Desplegar un Landing Page y Backend funcional con diseño responsive y estructura definida, accesible públicamente.                                                                                                                                                                                        |
+| **Sprint 1 Velocity**                  | 20                                                                                                                                                                                                                                                                                                                  |
+| **Sum of Story Points**                | 10                                                                                                                                                                                                                                                                                                                  |
+
+
+
+
+##### 4.2.1.2. Sprint Backlog 1
+
+El Sprint Backlog 1 corresponde a la planificación inicial del desarrollo de la plataforma Splitly, donde se definieron y priorizaron las primeras funcionalidades clave para la Landing Page y la configuración básica de despliegue. En este sprint, el equipo trabajó en la implementación de secciones informativas que presentan los objetivos, beneficios y funcionalidades de la aplicación, así como en la incorporación de ejemplos visuales y accesos directos para el registro e inicio de sesión de usuarios.
+
+Adicionalmente, se incluyeron tareas técnicas relacionadas con la documentación del despliegue y la configuración de monitoreo básico, asegurando que el proyecto cuente con una base sólida para futuras iteraciones.
+
+El trabajo colaborativo del equipo se gestionó en la herramienta Trello, lo que permitió organizar, priorizar y dar seguimiento a cada tarea de manera eficiente.
+
+Link al tablero de Trello: https://trello.com/invite/b/6a04a4676f2c78852edaeb1a/ATTI85b6ff75c99bfbde325e6f171ad6e8b4E226ADCE/splitly-sprint-backlog
+
+| **User Story Id** | **Title** | **Task Id** | **Task Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+|------------------|----------|------------|---------------|-----------------|------------------------|-----------------|------------|
+| US01 | Registro de usuario | T1 | Registro backend | Implementación de endpoint para registro de usuarios | 4 | Walter Ramirez | To-do |
+| US02 | Inicio de sesión seguro | T1 | Login backend | Implementación de autenticación de usuarios | 4 | Héctor Ríos | To-do |
+| US03 | Edición de información personal | T1 | Perfil usuario | Endpoint para edición de perfil | 3 | Jose Luis Martinez Validivia | To-do |
+| US04 | Cierre de sesión global | T1 | Logout global | Invalidación de sesiones activas | 3 | Joaquin Cuentas | To-do |
+| US05 | Configuración de notificaciones | T1 | Preferencias | Gestión de notificaciones del usuario | 3 | TBD | To-do |
+| US06 | Crear hogar | T1 | Crear hogar | Endpoint para creación de hogar | 4 | Rodrigo Miraval | To-do |
+| US07 | Aprobar gastos | T1 | Aprobación de gastos | Lógica para aprobación de gastos | 4 | Rodrigo Miraval | To-do |
+| US08 | Ajustar aportes | T1 | Configuración aportes | Actualización de porcentajes | 3 | Rodrigo Miraval | To-do |
+| US10 | Métodos de pago | T1 | Configuración pagos | Gestión de métodos habilitados | 3 | Joaquin Cuentas | To-do |
+| US11 | Ingresar ingresos | T1 | Registro ingresos | Endpoint para ingresos personales | 3 | TBD | To-do |
+| US12 | Ver monto a pagar | T1 | Cálculo aportes | Lógica de cálculo de pagos | 4 | Walter Ramirez | To-do |
+| US13 | Registrar pagos | T1 | Registro pagos | Endpoint para registrar pagos | 3 | Joaquin Cuentas | To-do |
+| US16 | Registrar gasto | T1 | Registro gasto | CRUD de gastos | 4 | Walter Ramirez | To-do |
+| US18 | Categorizar gastos | T1 | Categorías | Clasificación y filtros | 3 | Héctor Ríos | To-do |
+| US21 | Recordatorios de pago | T1 | Recordatorios | Sistema de notificaciones automáticas | 4 | Héctor Ríos | To-do |
+| US24 | Confirmación de aportes | T1 | Confirmación pagos | Notificaciones post pago | 3 | Jose Luis Martinez Validivia | To-do |
+| US25 | Notificación cambios hogar | T1 | Notificaciones hogar | Eventos de cambios en hogar | 3 | Jose Luis Martinez Validivia | To-do |
+| US31 | Visualizar información general | T1 | Información general | Desarrollo sección introductoria | 2 | Jose Luis Martinez Validivia | Done |
+| US32 | Funciones principales | T1 | Funciones principales | Explicación de funcionalidades | 2 | Héctor Ríos | Done |
+| US33 | Beneficios del sistema | T1 | Beneficios | Mostrar ventajas del sistema | 2 | Joaquin Cuentas | Done |
+| US35 | Botones acceso | T1 | Botones login/register | Accesos rápidos | 1 | Rodrigo Miraval | Done |
+| US36 | Manejar errores servidor | T1 | Manejo errores | Mensajes de error backend | 2 | Walter Ramirez | To-do |
+
+
+##### 4.2.1.3. Development Evidence for Sprint Review
+
+
+- **Landing Page:**
+
+|Repository Branch |  Commit Id  |  Commit Message | Commit Message Body | Commited on (Date)|
+|-----------------|--------------|-----------------|---------------------|-------------------|
+|Landing Page - develop   |   4c76760…f3dcfd9     |  chores(landingpage): added some translation words    |           |   10/05/2026 |
+|Landing Page - develop   |    c62b615…4c76760     |  chore(landingpage): add completed landing page       |           |   11/05/2026 |
+|Landing Page - reviews   |   c62b615…3c7fbde      |  feature(reviews): completed landing page-OurSystem - added HTML  |    |12/05/2026|
+|Landing Page - home   |   c62b615…7769d76     |  feat: add section home structure and styling    |           |   12/05/2026 |
+|Landing Page - about us   |   c62b615…3f0f246     |  update landing page about us   |           |   13/05/2026 |
+| Landing Page - pricing |  c62b615…6a35cc4         |  feature(pricing): completed Reviews on an 80%  |    |      13/05/2026    |
+
+
+- **Mobile App:**
+
+| Repository Branch | Commit Id     | Commit Message                               | Commit Message Body | Commited on (Date) |
+|------------------|--------------|-----------------------------------------------|---------------------|-------------------|
+| Mobile App - develop | 3861935 | chore(): add sharedPreferences                 |                     | 11/05/2026 |
+| Mobile App - develop | b151bf1 | chore(): add drawer and navigation bar        |                     | 11/05/2026 |
+| Mobile App - develop | fc52f52 | chore(): add working login flow               |                     | 11/05/2026 |
+| Mobile App - develop | bdb50ad | chore(): add entities models                  |                     | 10/05/2026 |
+| Mobile App - develop | 023ad09 | chore(): add initial signup screen            |                     | 10/05/2026 |
+| Mobile App - develop | fe8c024 | chore(): add new login screen styles          |                     | 10/05/2026 |
+| Mobile App - develop | 3312219 | initial commit                                |                     | 10/05/2026 |
+
+##### 4.2.1.4. Testing Suite Evidence for Sprint Review
+
+Durante este sprint no se implementaron pruebas automatizadas (Unit Tests, Integration Tests ni Acceptance Tests), ya que el alcance definido por el equipo contemplaba únicamente la construcción de la Landing Page e implementacion parcial del Mobile App y Backend.
+
+El objetivo principal del sprint fue realizar la Landing Page y Mobile App a nivel de diseño e implementar el backend a un 70%. Todo esto estableciendo la arquitectura modular y los bounded contexts principales del sistema Splitly.
+
+En esta etapa aún no se contaba con un backend definitivo ni con los servicios reales, por lo que las pruebas automatizadas se reprogramaron para el siguiente sprint, donde se incluirán los Integration Tests y Acceptance Tests asociados a los módulos existentes.
+
+Conclusión: La etapa de testing se limitó a verificaciones manuales de flujo, validación visual de componentes y pruebas de integración básicas.
+
+No se realizaron commits relacionados a proyectos o archivos de testing automatizado, dado que esta funcionalidad no formaba parte del alcance planificado para el sprint actual.
+
+##### 4.2.1.5. Execution Evidence for Sprint Review
+
+Durante la realización de este sprint se logró la correcta elaboración y despliegue de la landing page, de igual manera se alcanzó a realizar las principales pantallas relacionadas al core de la aplicación. Asimismo, se logró el desarrollo y deploy del backend.
+
+**Backend:**
+
+<br>
+<img src="assets/backend_evidence1.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/backend_evidence2.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/backend_evidence3.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/backend_evidence4.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/backend_evidence5.jpg" alt="CandidateContextDiscovery">
+<br>
+
+**Landing Page**
+
+<br>
+<img src="assets/landing_evidence1.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence2.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence3.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence4.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence5.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence6.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_evidence7.jpg" alt="CandidateContextDiscovery">
+<br>
+
+
+##### 4.2.1.6. Services Documentation Evidence for Sprint Review
+
+Durante el presente Sprint se implementó y documentó el conjunto de endpoints correspondientes a los módulos de la aplicación.
+La documentación fue elaborada utilizando OpenAPI/Swagger, permitiendo describir de manera clara las operaciones disponibles, parámetros requeridos, ejemplos de requests y responses, así como los códigos de estado HTTP soportados.
+
+
+### MemberContribution
+
+
+
+
+| Endpoint                                                        | Acción Implementada                          | Método HTTP | Sintaxis de Llamada                                             | Parámetros                                        | Descripción del Response                                                                                            |
+| --------------------------------------------------------------- | -------------------------------------------- | ----------- | --------------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `/api/v1/member_contribution`                                   | Obtener todas las contribuciones             | GET         | `/api/v1/member_contribution`                                   | No requiere parámetros                            | Retorna la lista completa de contribuciones registradas con información del miembro, monto, estado y fecha de pago. |
+| `/api/v1/member_contribution`                                   | Registrar una nueva contribución             | POST        | `/api/v1/member_contribution`                                   | Body JSON: `contributionId`, `memberId`, `amount` | Crea una nueva contribución asociada a un miembro y retorna el objeto creado junto con su identificador y estado.   |
+| `/api/v1/member_contribution/bycontributionid/{contributionId}` | Buscar contribuciones por ID de contribución | GET         | `/api/v1/member_contribution/bycontributionid/{contributionId}` | Path Parameter: `contributionId`                  | Retorna la información de las contribuciones asociadas al identificador de contribución especificado.               |
+| `/api/v1/member_contribution/bymemberid/{memberId}`             | Buscar contribuciones por ID de miembro      | GET         | `/api/v1/member_contribution/bymemberid/{memberId}`             | Path Parameter: `memberId`                        | Retorna las contribuciones realizadas por un miembro específico.                                                    |
+| `/api/v1/member_contribution/{id}`                              | Eliminar contribución                        | DELETE      | `/api/v1/member_contribution/{id}`                              | Path Parameter: `id`                              | Elimina la contribución indicada y retorna la información del recurso eliminado.                                    |
+
+
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/member_contribution` | Ninguno | ```json { "id":"MC001","contributionId":"CON001","memberId":"MEM001","amount":150.0,"status":"PAID","payedAt":"2026-05-14T10:30:00" } ``` | `200 OK` |
+| POST | `/api/v1/member_contribution` | Body: `contributionId`, `memberId`, `amount` | ```json { "contributionId":"CON001","memberId":"MEM001","amount":150.0 } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/member_contribution/bycontributionid/{contributionId}` | Path: `contributionId` | ```json { "id":"MC001","contributionId":"CON001","memberId":"MEM001","amount":150.0,"status":"PAID","payedAt":"2026-05-14T10:30:00" } ``` | `200 OK` |
+| GET | `/api/v1/member_contribution/bymemberid/{memberId}` | Path: `memberId` | ```json { "id":"MC001","contributionId":"CON001","memberId":"MEM001","amount":150.0,"status":"PAID","payedAt":"2026-05-14T10:30:00" } ``` | `200 OK` |
+| DELETE | `/api/v1/member_contribution/{id}` | Path: `id` | ```json { "id":"MC001","contributionId":"CON001","memberId":"MEM001","amount":150.0,"status":"PAID","payedAt":"2026-05-14T10:30:00" } ``` | `200 OK`, `404 Not Found` |
+
+
+### Invitation
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/invitations` | Crear invitación | POST | `/api/v1/invitations` | Body JSON: `email`, `householdId`, `description` | Registra una nueva invitación asociada a un hogar y correo electrónico. |
+| `/api/v1/invitations/pending` | Obtener invitación pendiente | GET | `/api/v1/invitations/pending?email={email}&householdId={householdId}` | Query Params: `email`, `householdId` | Retorna la invitación pendiente asociada al correo y hogar especificados. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| POST | `/api/v1/invitations` | Body: `email`, `householdId`, `description` | ```json { "email":"user@mail.com","householdId":"HH001","description":"Invitation to join household" } ``` | `200 OK` |
+| GET | `/api/v1/invitations/pending` | Query: `email`, `householdId` | ```json { "email":"user@mail.com","householdId":"HH001","description":"Invitation to join household","status":"PENDING" } ``` | `200 OK` |
+
+
+### Authentication
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/authentication/sign-in` | Iniciar sesión | POST | `/api/v1/authentication/sign-in` | Body JSON: `email`, `password` | Autentica al usuario y retorna la información de acceso correspondiente. |
+| `/api/v1/authentication/sign-up` | Registrar usuario | POST | `/api/v1/authentication/sign-up` | Body JSON: `email`, `password`, `name`, `role`, `plan`, `householdId` | Registra un nuevo usuario en el sistema y retorna la información creada. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| POST | `/api/v1/authentication/sign-in` | Body: `email`, `password` | ```json { "email":"user@mail.com","password":"123456" } ``` | `200 OK` |
+| POST | `/api/v1/authentication/sign-up` | Body: `email`, `password`, `name`, `role`, `plan`, `householdId` | ```json { "email":"user@mail.com","password":"123456","name":"Juan Perez","role":"MEMBER","plan":1,"householdId":"HH001" } ``` | `200 OK` |
+
+
+### User
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/user/user/{id}` | Obtener usuario por ID | GET | `/api/v1/user/user/{id}` | Path Parameter: `id` | Retorna la información del usuario asociado al identificador especificado. |
+| `/api/v1/user` | Obtener todos los usuarios | GET | `/api/v1/user` | No requiere parámetros | Retorna la lista de usuarios registrados en el sistema. |
+| `/api/v1/user/householdid/{mainHouseHoldId}` | Obtener usuarios por household | GET | `/api/v1/user/householdid/{mainHouseHoldId}` | Path Parameter: `mainHouseHoldId`, Query: `houseHoldId` | Retorna los usuarios asociados al household indicado. |
+| `/api/v1/user/byemail/{emailAddress}` | Actualizar usuario por email | PUT | `/api/v1/user/byemail/{emailAddress}` | Path Parameter: `emailAddress`, Body JSON: `emailAddress`, `personName`, `password` | Actualiza la información del usuario asociado al correo especificado. |
+| `/api/v1/user/byemail/{email}` | Eliminar usuario por email | DELETE | `/api/v1/user/byemail/{email}` | Path Parameter: `email` | Elimina el usuario asociado al correo especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/user/user/{id}` | Path: `id` | ```json { "id":1,"email":"user@mail.com","personName":"Juan Perez" } ``` | `200 OK` |
+| GET | `/api/v1/user` | Ninguno | ```json [ { "id":1,"email":"user@mail.com","personName":"Juan Perez" } ] ``` | `200 OK` |
+| GET | `/api/v1/user/householdid/{mainHouseHoldId}` | Path: `mainHouseHoldId`, Query: `houseHoldId` | ```json [ { "id":1,"email":"user@mail.com","personName":"Juan Perez","householdId":"HH001" } ] ``` | `200 OK` |
+| PUT | `/api/v1/user/byemail/{emailAddress}` | Path: `emailAddress`, Body: `emailAddress`, `personName`, `password` | ```json { "emailAddress":"user@mail.com","personName":"Juan Perez","password":"123456" } ``` | `200 OK` |
+| DELETE | `/api/v1/user/byemail/{email}` | Path: `email` | ```json { "message":"User deleted successfully" } ``` | `200 OK` |
+
+
+### UserIncome
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/user-income` | Crear ingreso de usuario | POST | `/api/v1/user-income` | Body JSON: `id`, `userId`, `income` | Registra un nuevo ingreso asociado a un usuario. |
+| `/api/v1/user-income/{id}` | Obtener ingreso por ID | GET | `/api/v1/user-income/{id}` | Path Parameter: `id` | Retorna la información del ingreso asociado al identificador especificado. |
+| `/api/v1/user-income/byuserid/{userId}` | Obtener ingreso por usuario | GET | `/api/v1/user-income/byuserid/{userId}` | Path Parameter: `userId` | Retorna los ingresos asociados al usuario especificado. |
+| `/api/v1/user-income/byid/{id}` | Actualizar ingreso | PUT | `/api/v1/user-income/byid/{id}` | Path Parameter: `id`, Body JSON: `id`, `income` | Actualiza la información del ingreso asociado al identificador especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| POST | `/api/v1/user-income` | Body: `id`, `userId`, `income` | ```json { "id":"UI001","userId":1,"income":2500.0 } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/user-income/{id}` | Path: `id` | ```json { "id":"UI001","userId":1,"income":2500.0,"createdDate":"2026-05-14","updatedDate":"2026-05-14" } ``` | `200 OK` |
+| GET | `/api/v1/user-income/byuserid/{userId}` | Path: `userId` | ```json { "id":"UI001","userId":1,"income":2500.0,"createdDate":"2026-05-14","updatedDate":"2026-05-14" } ``` | `200 OK` |
+| PUT | `/api/v1/user-income/byid/{id}` | Path: `id`, Body: `id`, `income` | ```json { "id":"UI001","income":3000.0 } ``` | `200 OK`, `400 Bad Request`, `404 Not Found` |
+
+
+### Contribution
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/contribution` | Obtener todas las contribuciones | GET | `/api/v1/contribution` | No requiere parámetros | Retorna la lista de contribuciones registradas. |
+| `/api/v1/contribution` | Crear contribución | POST | `/api/v1/contribution` | Body JSON: `billId`, `householdId`, `description`, `deadlineForMembers`, `strategy` | Registra una nueva contribución asociada a un household y recibo. |
+| `/api/v1/contribution/{id}` | Obtener contribución por ID | GET | `/api/v1/contribution/{id}` | Path Parameter: `id` | Retorna la contribución asociada al identificador especificado. |
+| `/api/v1/contribution/{id}` | Eliminar contribución | DELETE | `/api/v1/contribution/{id}` | Path Parameter: `id` | Elimina la contribución asociada al identificador especificado. |
+| `/api/v1/contribution/bybillid/{billId}` | Obtener contribución por billId | GET | `/api/v1/contribution/bybillid/{billId}` | Path Parameter: `billId` | Retorna las contribuciones asociadas al bill indicado. |
+| `/api/v1/contribution/byhouseholdid/{householdId}` | Obtener contribuciones por household | GET | `/api/v1/contribution/byhouseholdid/{householdId}` | Path Parameter: `householdId` | Retorna las contribuciones asociadas al household indicado. |
+| `/api/v1/contribution/byid/{id}` | Actualizar contribución | PUT | `/api/v1/contribution/byid/{id}` | Path Parameter: `id`, Body JSON: `description`, `deadlineForMembers`, `strategy` | Actualiza la información de la contribución especificada. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/contribution` | Ninguno | ```json { "id":"C001","billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `200 OK` |
+| POST | `/api/v1/contribution` | Body: `billId`, `householdId`, `description`, `deadlineForMembers`, `strategy` | ```json { "billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/contribution/{id}` | Path: `id` | ```json { "id":"C001","billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `200 OK` |
+| DELETE | `/api/v1/contribution/{id}` | Path: `id` | ```json { "id":"C001","billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `200 OK`, `404 Not Found` |
+| GET | `/api/v1/contribution/bybillid/{billId}` | Path: `billId` | ```json { "id":"C001","billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `200 OK` |
+| GET | `/api/v1/contribution/byhouseholdid/{householdId}` | Path: `householdId` | ```json { "id":"C001","billId":"B001","householdId":"HH001","description":"Electricity contribution","deadlineForMembers":"2026-05-20","strategy":1 } ``` | `200 OK` |
+| PUT | `/api/v1/contribution/byid/{id}` | Path: `id`, Body: `description`, `deadlineForMembers`, `strategy` | ```json { "description":"Updated contribution","deadlineForMembers":"2026-05-25","strategy":2 } ``` | `200 OK`, `400 Bad Request`, `404 Not Found` |
+
+### Bills
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/bills` | Obtener todos los bills | GET | `/api/v1/bills` | No requiere parámetros | Retorna la lista de bills registrados en el sistema. |
+| `/api/v1/bills` | Crear bill | POST | `/api/v1/bills` | Body JSON: `houseHoldId`, `description`, `amount`, `createdBy`, `paymentDate` | Registra un nuevo bill asociado a un household. |
+| `/api/v1/bills/byhousehold/{householdId}` | Obtener bills por household | GET | `/api/v1/bills/byhousehold/{householdId}` | Path Parameter: `householdId` | Retorna los bills asociados al household especificado. |
+| `/api/v1/bills/byid/{id}` | Actualizar bill | PUT | `/api/v1/bills/byid/{id}` | Path Parameter: `id`, Body JSON: `description`, `amount`, `paymentDate` | Actualiza la información del bill especificado. |
+| `/api/v1/bills/{id}` | Eliminar bill | DELETE | `/api/v1/bills/{id}` | Path Parameter: `id` | Elimina el bill asociado al identificador especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/bills` | Ninguno | ```json { "id":"B001","houseHoldId":"HH001","description":"Electricity bill","amount":120.0,"createdBy":1,"paymentDate":"2026-05-20","createdAt":"2026-05-14","updatedAt":"2026-05-14" } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/bills` | Body: `houseHoldId`, `description`, `amount`, `createdBy`, `paymentDate` | ```json { "houseHoldId":"HH001","description":"Electricity bill","amount":120.0,"createdBy":1,"paymentDate":"2026-05-20" } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/bills/byhousehold/{householdId}` | Path: `householdId` | ```json [ { "id":"B001","houseHoldId":"HH001","description":"Electricity bill","amount":120.0,"createdBy":1,"paymentDate":"2026-05-20","createdAt":"2026-05-14","updatedAt":"2026-05-14" } ] ``` | `200 OK`, `404 Not Found` |
+| PUT | `/api/v1/bills/byid/{id}` | Path: `id`, Body: `description`, `amount`, `paymentDate` | ```json { "description":"Updated bill","amount":150.0,"paymentDate":"2026-05-25" } ``` | `200 OK`, `400 Bad Request`, `404 Not Found` |
+| DELETE | `/api/v1/bills/{id}` | Path: `id` | ```json { "id":"B001","houseHoldId":"HH001","description":"Electricity bill","amount":120.0,"createdBy":1,"paymentDate":"2026-05-20","createdAt":"2026-05-14","updatedAt":"2026-05-14" } ``` | `200 OK`, `404 Not Found` |
+
+
+### HouseHold
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/house_hold/{id}` | Obtener household por ID | GET | `/api/v1/house_hold/{id}` | Path Parameter: `id` | Retorna la información del household asociado al identificador especificado. |
+| `/api/v1/house_hold/{id}` | Actualizar household | PUT | `/api/v1/house_hold/{id}` | Path Parameter: `id`, Body JSON: `name`, `description`, `memberCount`, `currency`, `startDate` | Actualiza la información del household especificado. |
+| `/api/v1/house_hold` | Crear household | POST | `/api/v1/house_hold` | Body JSON: `id`, `name`, `representativeId`, `currency`, `description`, `memberCount`, `startDate` | Registra un nuevo household en el sistema. |
+| `/api/v1/house_hold/representative/{representativeId}` | Obtener households por representante | GET | `/api/v1/house_hold/representative/{representativeId}` | Path Parameter: `representativeId` | Retorna los households asociados al representante especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/house_hold/{id}` | Path: `id` | ```json { "id":"HH001","name":"Family House","description":"Main household","memberCount":4,"representativeId":1,"currency":"USD","startDate":"2026-05-01","createdAt":"2026-05-14","updatedAt":"2026-05-14" } ``` | `200 OK`, `404 Not Found` |
+| PUT | `/api/v1/house_hold/{id}` | Path: `id`, Body: `name`, `description`, `memberCount`, `currency`, `startDate` | ```json { "name":"Updated House","description":"Updated description","memberCount":5,"currency":"USD","startDate":"2026-05-01" } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/house_hold` | Body: `id`, `name`, `representativeId`, `currency`, `description`, `memberCount`, `startDate` | ```json { "id":"HH001","name":"Family House","representativeId":1,"currency":"USD","description":"Main household","memberCount":4,"startDate":"2026-05-01" } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/house_hold/representative/{representativeId}` | Path: `representativeId` | ```json [ { "id":"HH001","name":"Family House","description":"Main household","memberCount":4,"representativeId":1,"currency":"USD","startDate":"2026-05-01","createdAt":"2026-05-14","updatedAt":"2026-05-14" } ] ``` | `200 OK` |
+
+
+### HouseholdMember
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/household_member` | Crear household member | POST | `/api/v1/household_member` | Body JSON: `householdId`, `userId`, `isRepresentative`, `income` | Registra un nuevo miembro en un household. |
+| `/api/v1/household_member` | Obtener todos los household members | GET | `/api/v1/household_member` | No requiere parámetros | Retorna la lista de miembros registrados. |
+| `/api/v1/household_member/{id}` | Obtener household member por ID | GET | `/api/v1/household_member/{id}` | Path Parameter: `id` | Retorna la información del miembro especificado. |
+| `/api/v1/household_member/{id}` | Actualizar household member | PUT | `/api/v1/household_member/{id}` | Path Parameter: `id`, Body JSON: `householdId`, `userId`, `isRepresentative`, `income`, `allocations` | Actualiza la información del miembro especificado. |
+| `/api/v1/household_member/{id}` | Eliminar household member | DELETE | `/api/v1/household_member/{id}` | Path Parameter: `id` | Elimina el miembro especificado. |
+| `/api/v1/household_member/household/{householdId}` | Obtener miembros por household | GET | `/api/v1/household_member/household/{householdId}` | Path Parameter: `householdId` | Retorna los miembros asociados al household indicado. |
+| `/api/v1/household_member/household/{householdId}/detailed` | Obtener miembros detallados | GET | `/api/v1/household_member/household/{householdId}/detailed` | Path Parameter: `householdId` | Retorna miembros con información detallada de usuario y contribuciones. |
+| `/api/v1/household_member/user/{userId}` | Obtener households por usuario | GET | `/api/v1/household_member/user/{userId}` | Path Parameter: `userId` | Retorna los households asociados al usuario indicado. |
+| `/api/v1/household_member/{id}/promote-representative` | Promover representante | POST | `/api/v1/household_member/{id}/promote-representative` | Path Parameter: `id` | Promueve un miembro a representante del household. |
+| `/api/v1/household_member/{id}/demote-representative` | Degradar representante | POST | `/api/v1/household_member/{id}/demote-representative` | Path Parameter: `id` | Remueve el rol de representante del miembro indicado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| POST | `/api/v1/household_member` | Body: `householdId`, `userId`, `isRepresentative`, `income` | ```json { "householdId":"HH001","userId":1,"isRepresentative":true,"income":2500.0 } ``` | `201 Created`, `400 Bad Request` |
+| GET | `/api/v1/household_member` | Ninguno | ```json [ { "id":"HM001","householdId":"HH001","userId":1 } ] ``` | `200 OK` |
+| GET | `/api/v1/household_member/{id}` | Path: `id` | ```json { "id":"HM001","householdId":"HH001","userId":1,"isRepresentative":true,"income":2500.0 } ``` | `200 OK`, `404 Not Found` |
+| PUT | `/api/v1/household_member/{id}` | Path: `id`, Body: `householdId`, `userId`, `isRepresentative`, `income`, `allocations` | ```json { "householdId":"HH001","userId":1,"isRepresentative":false,"income":3000.0 } ``` | `200 OK`, `404 Not Found` |
+| DELETE | `/api/v1/household_member/{id}` | Path: `id` | ```json { "message":"Household member deleted" } ``` | `200 OK`, `404 Not Found` |
+| GET | `/api/v1/household_member/household/{householdId}` | Path: `householdId` | ```json [ { "id":"HM001","householdId":"HH001","userId":1 } ] ``` | `200 OK` |
+| GET | `/api/v1/household_member/household/{householdId}/detailed` | Path: `householdId` | ```json [ { "id":"HM001","userId":1,"income":2500.0,"contributions":[] } ] ``` | `200 OK` |
+| GET | `/api/v1/household_member/user/{userId}` | Path: `userId` | ```json [ { "householdId":"HH001","userId":1 } ] ``` | `200 OK` |
+| POST | `/api/v1/household_member/{id}/promote-representative` | Path: `id` | ```json { "message":"Representative promoted successfully" } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/household_member/{id}/demote-representative` | Path: `id` | ```json { "message":"Representative demoted successfully" } ``` | `200 OK`, `404 Not Found` |
+
+### IncomeAllocation
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/income_allocation/byhousehold/{householdId}` | Obtener allocations por household | GET | `/api/v1/income_allocation/byhousehold/{householdId}` | Path Parameter: `householdId` | Retorna las asignaciones de ingreso asociadas al household indicado. |
+| `/api/v1/income_allocation/byuserid/{userId}` | Obtener allocations por usuario | GET | `/api/v1/income_allocation/byuserid/{userId}` | Path Parameter: `userId` | Retorna las asignaciones de ingreso asociadas al usuario indicado. |
+| `/api/v1/income_allocation` | Crear income allocation | POST | `/api/v1/income_allocation` | Body JSON: `userId`, `householdId`, `percentage` | Registra una nueva asignación de ingreso. |
+| `/api/v1/income_allocation/byid/{id}` | Actualizar income allocation | PUT | `/api/v1/income_allocation/byid/{id}` | Path Parameter: `id`, Body JSON: `id`, `userId`, `householdId`, `percentage` | Actualiza la asignación de ingreso especificada. |
+| `/api/v1/income_allocation/{id}` | Eliminar income allocation | DELETE | `/api/v1/income_allocation/{id}` | Path Parameter: `id` | Elimina la asignación de ingreso especificada. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/income_allocation/byhousehold/{householdId}` | Path: `householdId` | ```json { "id":"IA001","userId":1,"householdId":"HH001","percentage":50.0 } ``` | `200 OK`, `404 Not Found` |
+| GET | `/api/v1/income_allocation/byuserid/{userId}` | Path: `userId` | ```json { "id":"IA001","userId":1,"householdId":"HH001","percentage":50.0 } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/income_allocation` | Body: `userId`, `householdId`, `percentage` | ```json { "userId":1,"householdId":"HH001","percentage":50.0 } ``` | `201 Created`, `400 Bad Request` |
+| PUT | `/api/v1/income_allocation/byid/{id}` | Path: `id`, Body: `id`, `userId`, `householdId`, `percentage` | ```json { "id":"IA001","userId":1,"householdId":"HH001","percentage":60.0 } ``` | `200 OK`, `400 Bad Request` |
+| DELETE | `/api/v1/income_allocation/{id}` | Path: `id` | ```json { "id":"IA001","userId":1,"householdId":"HH001","percentage":50.0 } ``` | `200 OK`, `404 Not Found` |
+
+### Settings
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/settings` | Obtener settings por usuario | GET | `/api/v1/settings?userId={userId}` | Query Parameter: `userId` | Retorna la configuración asociada al usuario especificado. |
+| `/api/v1/settings` | Crear settings | POST | `/api/v1/settings` | Body JSON: `userId`, `language`, `darkMode`, `notificationEnabled` | Registra la configuración de un usuario o retorna la existente. |
+| `/api/v1/settings/{id}` | Actualizar settings | PUT | `/api/v1/settings/{id}` | Path Parameter: `id`, Body JSON: `userId`, `language`, `darkMode`, `notificationEnabled` | Actualiza la configuración asociada al identificador especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/settings?userId={userId}` | Query: `userId` | ```json { "id":1,"userId":1,"language":"EN","darkMode":true,"notificationEnabled":true,"createdAt":"2026-05-15","updatedAt":"2026-05-15" } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/settings` | Body: `userId`, `language`, `darkMode`, `notificationEnabled` | ```json { "userId":1,"language":"EN","darkMode":true,"notificationEnabled":true } ``` | `200 OK`, `201 Created` |
+| PUT | `/api/v1/settings/{id}` | Path: `id`, Body: `userId`, `language`, `darkMode`, `notificationEnabled` | ```json { "userId":1,"language":"ES","darkMode":false,"notificationEnabled":true } ``` | `200 OK`, `404 Not Found` |
+
+
+### Settings
+
+| Endpoint | Acción Implementada | Método HTTP | Sintaxis de Llamada | Parámetros | Descripción del Response |
+|---|---|---|---|---|---|
+| `/api/v1/settings` | Obtener settings por usuario | GET | `/api/v1/settings?userId={userId}` | Query Parameter: `userId` | Retorna la configuración asociada al usuario especificado. |
+| `/api/v1/settings` | Crear settings | POST | `/api/v1/settings` | Body JSON: `userId`, `language`, `darkMode`, `notificationEnabled` | Registra la configuración de un usuario o retorna la existente. |
+| `/api/v1/settings/{id}` | Actualizar settings | PUT | `/api/v1/settings/{id}` | Path Parameter: `id`, Body JSON: `userId`, `language`, `darkMode`, `notificationEnabled` | Actualiza la configuración asociada al identificador especificado. |
+
+| Método | Endpoint | Parámetros | Ejemplo Request/Response | Códigos HTTP |
+|---|---|---|---|---|
+| GET | `/api/v1/settings?userId={userId}` | Query: `userId` | ```json { "id":1,"userId":1,"language":"EN","darkMode":true,"notificationEnabled":true,"createdAt":"2026-05-15","updatedAt":"2026-05-15" } ``` | `200 OK`, `404 Not Found` |
+| POST | `/api/v1/settings` | Body: `userId`, `language`, `darkMode`, `notificationEnabled` | ```json { "userId":1,"language":"EN","darkMode":true,"notificationEnabled":true } ``` | `200 OK`, `201 Created` |
+| PUT | `/api/v1/settings/{id}` | Path: `id`, Body: `userId`, `language`, `darkMode`, `notificationEnabled` | ```json { "userId":1,"language":"ES","darkMode":false,"notificationEnabled":true } ``` | `200 OK`, `404 Not Found` |
+
+##### 4.2.1.7. Software Deployment Evidence for Sprint Review
+
+**Landing Page - Deploy:**
+
+https://1acc0238-2610-3667.github.io/Landing-Page/
+
+<br>
+<img src="assets/landing_deploy1.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_deploy2.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_deploy3.jpg" alt="CandidateContextDiscovery">
+<br>
+
+<br>
+<img src="assets/landing_deploy4.jpg" alt="CandidateContextDiscovery">
+<br>
+
+
+
+**Backend - Deploy:**
+
+https://backend-harmonix.onrender.com/swagger
+
+<br>
+<img src="assets/backend_deploy.jpg" alt="CandidateContextDiscovery">
+<br>
+
+
+##### 4.2.1.8. Team Collaboration Insights during Sprint
+
+<br>
+<img src="assets/insights_backend.jpg" alt="CandidateContextDiscovery">
+<br>
+
+### 4.3. Validation Interviews
+#### 4.3.1. Diseño de Entrevistas
+
+Durante el proceso de entrevistas con los usuarios finales, se identificaron diversos requerimientos relevantes para la experiencia en base a las siguientes preguntas:
+
+**Para el Segmento 1: Miembros del hogar**
+
+1. Primera impresión sobre la interfaz:
+
+- ¿Qué opinas del diseño de la landing page? ¿Te resulta fácil de entender?
+
+- ¿Hay algún elemento visual que te llame la atención o que encuentres confuso?
+
+2. Facilidad de uso:
+
+- ¿Fue fácil encontrar dónde se registran los gastos o contribuciones?
+
+- ¿Hubo algún momento en el que te sentiste perdido o no supieras qué hacer en la página?
+
+3. Navegación y funcionalidades:
+
+- ¿La navegación entre secciones (como ver tus aportes, revisar los gastos) fue clara?
+
+- ¿Te resultó sencillo agregar un gasto o una contribución? ¿Qué mejoras sugerirías?
+
+4. Transparencia y confianza:
+
+- ¿Qué piensas sobre la transparencia de la herramienta? ¿Te resultó útil ver las contribuciones de los demás miembros del hogar?
+
+- ¿Sientes que la aplicación te ayuda a comprender mejor la distribución de los gastos en el hogar?
+
+5. Gráficos y reportes:
+
+- ¿Qué opinas de los gráficos o reportes que muestra la página? ¿Son claros y fáciles de entender?
+
+- ¿Te gustaría tener más detalles en los reportes, o consideras que la información mostrada es suficiente?
+
+6. Experiencia general:
+
+- ¿Te parece que esta herramienta puede ayudarte a gestionar los gastos del hogar de manera más equitativa?
+
+- ¿Usarías esta aplicación de manera regular? ¿Qué haría que la usaras más seguido?
+
+
+**Para el Segmento 2: Representantes del hogar**
+
+1. Gestión de finanzas en el panel:
+
+- ¿Qué opinas del panel de control donde puedes gestionar los gastos y contribuciones? ¿Lo encuentras útil?
+
+- ¿Fue fácil aprobar o modificar los gastos? ¿Hubo algo que te resultó confuso en el proceso?
+
+2. Visibilidad y control:
+
+- ¿Te pareció que tienes suficiente visibilidad sobre las contribuciones de los miembros del hogar?
+
+- ¿Qué tan útil encuentras la capacidad de ver los reportes mensuales y las contribuciones de todos los miembros del hogar?
+
+3. Personalización y ajustes:
+
+- ¿Te gustaría poder personalizar más aspectos de la herramienta, como las categorías de gastos o las reglas de división?
+
+- ¿Fue fácil ajustar los porcentajes de contribución o cambiar cualquier configuración?
+
+4. Usabilidad y eficiencia:
+
+- ¿Te resultó fácil realizar tareas como agregar miembros al hogar o asignar contribuciones?
+
+- ¿Hubo algún momento en que pensaste que la aplicación podía hacer algo más para facilitar la gestión de los gastos?
+
+5. Confianza en el sistema:
+
+- ¿Confías en que la aplicación divide los gastos de manera justa? ¿Te gustaría que el sistema explique de manera más clara cómo se calculan los porcentajes?
+
+- ¿Hay alguna parte del proceso donde te gustaría tener más detalles o explicaciones sobre cómo funcionan los cálculos?
+
+6. Satisfacción general y recomendaciones:
+
+- ¿Crees que esta app facilitaría la convivencia en términos de finanzas? ¿Por qué?
+
+- ¿Qué cambios harías para mejorar la experiencia como representante del hogar?
+
+
+#### 4.3.2. Registro de Entrevistas
+
+En esta sección se presentan los registros de las entrevistas realizadas para validar los productos de software enfocados a los representantes y miembros del hogar. Cada entrevista incluye información sobre el entrevistado, el entrevistador, el tiempo de la entrevista, un resumen de la misma
+
+**Entrevista 1**
+
+| Entrevista                                                         | Registro                                                                                                                                                                                                                                                                                                                         |
+|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <p align="center"><img src="./assets/melisa-vi.jpeg"/></p> | **Distrito:** Magdalena <br>**Entrevistado:** Melisa Sulca                                                                                                                                                                                                                                                                       |
+| [Enlace al video de validación](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20201f788_upc_edu_pe/IQAWtLL35_1RTJ8ARHXxQwr7ASAayhCOSOgCbG8H7l69KWw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=rqnxCq)                                | **Entrevistador:** Joaquin Cuentas                                                                                                                                                                                                                                                                                               |
+|                                         | **Resumen:** La entrevistada comentó que al inicio se confundió un poco, pero tras explorar la interfaz entendió rápido cómo usar la aplicación web. Consideró que la navegación es clara una vez familiarizado, los gráficos son suficientes y que la herramienta sí ayuda a comprender y gestionar mejor los gastos del hogar. |
+
+
+**Entrevista 2**
+
+| Entrevista                                                         | Registro                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|--------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <p align="center"><img src="./assets/walter-vi.jpeg"/></p> | **Distrito:** San Miguel <br>**Entrevistado:**  Walter Fajardo                                                                                                                                                                                                                                                                                                                                                                       |
+| [Enlace al video de validación](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20201f788_upc_edu_pe/IQD0Lb8dbu__S4Cj2bW3_BiEActS_rI2Ffp4gPIkN_bvnb4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=MYv6Z2)                                | **Entrevistador:**    Joaquin Cuentas                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                        | **Resumen:** El entrevistado indicó que no tuvo ningún problema al usar el panel de control y que todas las funciones —gestión de gastos, visibilidad de contribuciones, reportes y ajustes— le parecieron claras y suficientes. Señaló que todo estuvo en orden, que la herramienta funciona como espera un representante del hogar y que considera que puede facilitar la gestión financiera sin necesidad de cambios adicionales. |
+
+
+**Entrevista 3**
+
+| Entrevista                                                         | Registro                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|--------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <p align="center"><img src="./assets/diego-vi.jpeg"/></p> | **Distrito:** San Miguel <br>**Entrevistado:**  Diego Ávalos                                                                                                                                                                                                                                                                                                                                                                         |
+| [Enlace al video de validación](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20201f788_upc_edu_pe/IQCnL77pZNIxQ7IfQ5ZGXYnYAaCW8LKC-rpNBGOayP7NYXU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=eWygIB)                                | **Entrevistador:**    Joaquin Cuentas                                                                                                                                                                                                                                                                                                                                                                                                |
+|                                     | **Resumen:** El entrevistado indicó que no tuvo ningún problema de usabilidad ni de navegación de la aplicación. Todas las secciones estuvieron claras.
+
+**Entrevista 4**
+
+| Entrevista                                                         | Registro                                                                                                                                                                                             |
+|--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <p align="center"><img src="./assets/andrea-vi.jpeg"/></p> | **Distrito:** Los Olivos <br>**Entrevistado:** Andrea Santur                                                                                                                                         |
+| [Entrevista de Validación - Andrea](https://upcedupe-my.sharepoint.com/personal/u20201f788_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu20201f788%5Fupc%5Fedu%5Fpe%2FDocuments%2FAndrea%2Dvalidation%20interviews%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E8c76d770%2Dc34a%2D48fb%2Db1db%2Dc0359abb5c42)                                | **Entrevistador:** Joaquin Cuentas                                                                                                                                                                   |
+|                               | **Resumen:**  Andrea, menciono que tuvo facilidad para entender la plataforma, funcionalidades y como usrala en el dia dia. Destaca que esto le ayudara mucho en su dia a dia, en los gastos hormiga |
+
+
+**Entrevista 5**
+
+| Entrevista                                                         | Registro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|--------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <p align="center"><img src="../images/Entrevista 4.png"/></p> | **Distrito:** Chorrillos <br>**Entrevistado:** Eduardo Chareo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| [Link](bit.ly/444Hopn)                                | **Entrevistador:** Jose Martinez                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|                            | **Resumen:**  Eduardo, representante del hogar de 23 años, consideró la plataforma clara, intuitiva y útil para organizar gastos y aportes entre los miembros. Destacó que el dashboard es fácil de entender, la gestión de gastos es sencilla y los reportes mensuales serían muy valiosos. Sugirió únicamente añadir un calendario y una explicación más transparente de cómo se calculan los porcentajes de contribución. En general, afirmó que la herramienta facilitaría la convivencia financiera y no hizo más cambios adicionales. |
+
+
+**Entrevista 6**
+
+| Entrevista                                                         | Registro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <p align="center"><img src="https://imgur.com/hwh99wf.png"/></p> | **Distrito:** Chorrillos<br>**Entrevistada:** Jessica Castillo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| [Link](bit.ly/4hYUwlD)                                | **Entrevistador:** Joaquin Cuentas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | 
+|                                       | **Resumen:**  Jessica Castillo, de 47 años, consideró que la herramienta es interesante y útil porque le permitiría medir y organizar sus gastos mensuales, mantener sus pagos al día y controlar mejor el dinero disponible en su hogar, especialmente porque a veces se desfasa en sus compras y termina quedándose ajustada. Durante la demostración, comprendió y validó las funciones principales como la creación y edición del hogar, el registro de miembros, la carga de facturas, la visualización de contribuciones y el uso de ajustes, confirmando que estas características responden a sus necesidades de orden y seguimiento. Además, resaltó que la aplicación la ayudaría a ahorrar un poco al tener claro qué debe pagar y cuándo, y como única mejora sugirió incorporar la opción de realizar pagos directamente desde la plataforma, lo cual reforzaría aún más su utilidad como herramienta de gestión financiera.|
+
+
+
+
+#### 4.3.3. Evaluaciones según heurísticas
+
+# Evaluación según Heurísticas (Evaluación propia)
+
+- **CARRERA:** Ingeniería de Software
+- **CURSO:** 1acc0238 Aplicaciones para dispositivos móviles
+- **SECCIÓN:** Todos
+- **AUDITOR:** Grupo 2
+- **CLIENTE(S):** Grupo 3
+---
+## SITE o APP A EVALUAR:
+
+Spitly
+
+## 1. Tareas a Evaluar
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas tanto en la Landing Page como en la aplicación móvil:
+
+1. Identificación de la propuesta de valor y misión.
+2. Navegación por el catálogo de servicios y funcionamiento por roles.
+3. Comparación y selección de planes de pago.
+4. Registro de un usuario nuevo e inicio de sesión.
+5. Creación de un "Hogar" (Household) y unión mediante ID.
+6. Gestión de miembros de la comunidad.
+7. Registro de contribuciones económicas y visualización de gastos.
+8. Seguimiento del cumplimiento de metas grupales.
+
+---
+
+2. Escala de Severidad
+   Los problemas detectados se puntúan bajo la siguiente métrica:
+
+* **1. Problema superficial:** Ocurre con muy poca frecuencia; no necesita ser arreglado a menos que exista disponibilidad de tiempo.
+* **2. Problema menor:** Se le debería asignar una prioridad baja de cara al siguiente release.
+* **3. Problema mayor:** Ocurre frecuentemente; es importante que sean corregidos con prioridad alta.
+* **4. Problema muy grave:** Impide al usuario continuar con el uso de la herramienta; imperativo corregir antes del lanzamiento.
+
+---
+
+## 3. Tabla Resumen
+
+| #   | Problema                                                  | Severidad | Heurística/Principio Violada(o)                        |
+| :-- | :-------------------------------------------------------- | :-------: | :----------------------------------------------------- |
+| 1   | Sección de testimonios sin contenido visible              |   **4**   | Information Architecture: Is it usable?                |
+| 2   | Inconsistencia de idioma (Inglés/Español)                 |   **1**   | Usability: Consistencia y estándares                   |
+| 3   | Duplicidad de encabezados de sección                      |   **2**   | Usability: Consistencia y estándares                   |
+| 4   | Superposición de texto sobre mapa interactivo             |   **2**   | Inclusive Design: Proporciona experiencias comparables |
+| 5   | Falta de indicadores de campos obligatorios               |   **2**   | Usability: Prevención de errores                       |
+| 6   | Iconos de redes sociales sin etiquetas descriptivas       |   **3**   | Inclusive Design: Diseño accesible                     |
+| 7   | Ambigüedad visual en el toggle de ahorro anual            |   **2**   | Information Architecture: Is it findable?              |
+| 8   | Contraste insuficiente en selector de rol inactivo        |   **2**   | Usability: Visibilidad del estado del sistema          |
+| 9   | Inconsistencia monetaria (S/ frente a $)                  |   **3**   | Usability: Consistencia y estándares                   |
+| 10  | Menú de navegación inferior (Tab Bar) volátil             |   **4**   | Usability: Consistencia y estándares                   |
+| 11  | Componente de fecha con lógica de botones inusual         |   **3**   | Usability: Libertad y control del usuario              |
+| 12  | Variación de etiquetas de retroceso ("Back" vs "Go back") |   **1**   | Usability: Consistencia y estándares                   |
+| 13  | Botones de sistema incrustados dentro de inputs de texto  |   **2**   | Usability: Estética y diseño minimalista               |
+| 14  | Contraste crítico de accesibilidad en el Login            |   **3**   | Inclusive Design: Proporciona experiencias comparables |
+
+---
+
+## 4. Descripción de Problemas
+
+### **PROBLEMA #1: Sección de testimonios sin contenido visible**
+* **Severidad:** 4
+* **Heurística violada:** Arquitectura de Información - ¿Es usable?
+* **Problema:** En la landing page, el menú de navegación incluye el enlace "Opiniones", pero al dirigirse a dicha sección, solo se muestra el título sin ningún testimonio o reseña de usuario. Esto genera una percepción de producto incompleto y resta credibilidad a la marca.
+* **Recomendación:** Integrar al menos tres testimonios reales con fotografía y nombre, o en su defecto, ocultar la sección y el acceso desde el menú hasta que se cuente con contenido validado.
+### **PROBLEMA #2: Inconsistencia de idioma (Inglés/Español)**
+* **Severidad:** 1
+* **Heurística violada:** Usabilidad - Consistencia y estándares
+* **Problema:** Se detectan elementos en inglés dentro de una interfaz configurada en español. Específicamente, los placeholders de los videos ("VIDEO ABOUT THE PRODUCT") y etiquetas de navegación móvil ("Back") rompen la armonía idiomática del sitio.
+* **Recomendación:** Traducir todos los recursos gráficos y etiquetas de navegación al español para mantener la consistencia en la experiencia del usuario local.
+
+### **PROBLEMA #3: Duplicidad de encabezados de sección**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Consistencia y estándares
+* **Problema:** El título "Nuestros Servicios" aparece repetido en dos secciones consecutivas de la landing page. Esto puede confundir al usuario sobre la jerarquía de la información y hace que la navegación se sienta redundante.
+* **Recomendación:** Unificar ambas secciones bajo un solo encabezado o renombrar la primera como "Introducción a Splitly" y la segunda como "Características principales".
+
+### **PROBLEMA #4: Superposición de texto sobre mapa interactivo**
+* **Severidad:** 2
+* **Heurística violada:** Diseño Inclusivo - Proporciona experiencias comparables
+* **Problema:** En la sección de contacto, las instrucciones de uso del mapa ("Utiliza la tecla Ctrl...") aparecen superpuestas directamente sobre la cartografía. Dependiendo del color del mapa en esa zona, el texto puede volverse ilegible.
+* **Recomendación:** Colocar las instrucciones de interacción en un cintillo informativo debajo del mapa o dentro de un contenedor con fondo sólido para garantizar el contraste.
+
+### **PROBLEMA #5: Falta de indicadores de campos obligatorios**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Prevención de errores
+* **Problema:** Los formularios de la landing page y de la aplicación móvil (como el de registro) no especifican qué campos son obligatorios. Esto obliga al usuario a adivinar y puede generar frustración tras intentos fallidos de envío.
+* **Recomendación:** Añadir el asterisco estándar (*) en los campos obligatorios y un mensaje aclaratorio al inicio del formulario.
+
+### **PROBLEMA #6: Iconos de redes sociales sin etiquetas descriptivas**
+* **Severidad:** 3
+* **Heurística violada:** Diseño Inclusivo - Diseño accesible
+* **Problema:** Los iconos de redes sociales en el footer carecen de etiquetas de texto o atributos "aria-label". Esto hace que la sección sea inaccesible para usuarios que dependen de lectores de pantalla.
+* **Recomendación:** Implementar etiquetas descriptivas invisibles (como aria-label="Síguenos en Instagram") para cada enlace social.
+
+### **PROBLEMA #7: Ambigüedad visual en el toggle de ahorro anual**
+* **Severidad:** 2
+* **Heurística violada:** Arquitectura de Información - ¿Es fácil de encontrar?
+* **Problema:** En la sección de precios, el beneficio "Ahorra 2 meses" es visualmente pequeño. Al activar el modo anual, el sistema no resalta con suficiente fuerza el cambio en el costo total, diluyendo la percepción de valor de la oferta.
+* **Recomendación:** Utilizar un color de contraste más llamativo para el distintivo de ahorro y mostrar el cálculo del precio mensual anterior tachado.
+
+### **PROBLEMA #8: Contraste insuficiente en selector de rol inactivo**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Visibilidad del estado del sistema
+* **Problema:** En el flujo de "¿Cómo funciona?", el botón del rol no seleccionado tiene un color tan claro que parece estar deshabilitado en lugar de simplemente "no activo". El usuario podría pensar que la opción no está disponible.
+* **Recomendación:** Aplicar un borde definido o un tono gris más oscuro al estado inactivo para comunicar que el elemento es interactivo pero no está seleccionado.
+
+### **PROBLEMA #9: Inconsistencia monetaria (S/ frente a $)**
+* **Severidad:** 3
+* **Heurística violada:** Usabilidad - Consistencia y estándares
+* **Problema:** Existe una contradicción en el uso de divisas dentro de la aplicación móvil. Mientras la mayoría de pantallas usan Soles (S/), la vista de detalles de gastos utiliza el signo de Dólares ($). Esto genera incertidumbre financiera crítica en una app de gestión de gastos.
+* **Recomendación:** Configurar una variable global de moneda que se aplique a toda la interfaz según la preferencia del hogar, asegurando que el símbolo sea idéntico en todas las pantallas.
+### PROBLEMA #10: Navegación inferior (Tab Bar) inconsistente
+* **Severidad:** 4
+* **Heurística violada:** Usabilidad - Consistencia y estándares
+* **Problema:** El menú inferior (Tab Bar) no mantiene una estructura fija. En la pantalla de gastos aparece la opción "Bills", mientras que en la de invitaciones es reemplazada por "Members", y en el seguimiento por "Contributions". Esto desorienta al usuario al cambiarle las rutas principales de navegación según la pantalla en la que se encuentre.
+* Recomendación:** Definir un set de 4 o 5 iconos globales que representen las secciones más importantes del sistema y mantenerlos estáticos en toda la aplicación móvil.
+
+### PROBLEMA #11: Control de fecha con botones internos confusos
+* **Severidad:** 3
+* **Heurística violada:** Usabilidad - Libertad y control del usuario
+* **Problema:** El componente de selección de fecha incluye botones de "Set" y "Cancel" como parte de la misma fila de entrada. Esto rompe el flujo natural de introducción de datos y puede causar que el usuario cancele el proceso por error al intentar ajustar el día o el mes.
+* **Recomendación:** Implementar un Date Picker nativo del sistema operativo (iOS/Android) que se despliegue en un modal o menú inferior independiente.
+
+### PROBLEMA #12: Variación de etiquetas de retroceso ("Back" vs "Go back")
+* **Severidad:** 1
+* **Heurística violada:** Usabilidad - Consistencia y estándares
+* **Problema:** Existe una falta de consistencia en las etiquetas textuales asignadas a los botones de navegación de retorno en la barra superior de la interfaz móvil. En ciertas vistas se utiliza el texto "< Back", mientras que en otras pantallas de la misma aplicación se visualiza como "< Go back". Esta variabilidad rompe con el principio de uniformidad y previsibilidad del sistema.
+* **Recomendación:** Estandarizar un único formato de botón de retroceso para todas las pantallas de la aplicación móvil (se sugiere adoptar la etiqueta estándar "< Back" o emplear únicamente un icono de flecha limpia) para unificar la experiencia de navegación.
+
+### PROBLEMA #13: Botones de sistema incrustados dentro de inputs de texto
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Estética y diseño minimalista
+* **Problema:** Los botones de acción interactivos del sistema, tales como "Search" y "Generate ID", se encuentran posicionados directamente dentro del contenedor interno del campo de texto de entrada. Este patrón de diseño compromete el espacio útil horizontal para la introducción y lectura de datos por parte del usuario, además de saturar la jerarquía visual dentro de los formularios.
+* **Recomendación:** Extraer los botones de acción fuera de las cajas de texto y reubicarlos de manera externa (ya sea al lado derecho como un elemento adyacente o debajo del campo correspondiente) para asegurar un área de entrada limpia, espaciosa y legible.
+
+### PROBLEMA #14: Contraste crítico de accesibilidad en el Login
+* **Severidad:** 3
+* **Heurística violada:** Diseño Inclusivo - Experiencias comparables
+* **Problema:** En la pantalla de inicio de sesión, las etiquetas de los campos ("Email", "Password") utilizan un color azul oscuro sobre un fondo negro. Esta combinación no cumple con los estándares mínimos de contraste de la WCAG, dificultando severamente la lectura para personas con visión reducida o en entornos con mucha luz.
+* Recomendación:** Cambiar el color de las etiquetas a blanco o un gris de alta luminancia para asegurar una legibilidad universal.
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+# Evaluación según Heurísticas (Evaluación a otro grupo)
+
+- **CARRERA:** Ingeniería de Software
+- **CURSO:** 1acc0238 Aplicaciones para dispositivos móviles
+- **SECCIÓN:** Todos
+- **AUDITOR:** Grupo 3
+- **CLIENTE(S):** Grupo 2
+
+---
+## SITE o APP A EVALUAR:
+
+SoftWork    
+
+## 1. Tareas a Evaluar 
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas tanto en la Landing Page como en la aplicación móvil (flujos de Empleado y RRHH):
+
+1. Identificación de la propuesta de valor.
+2. Registro de un usuario nuevo con validación de correo corporativo.
+3. Inicio de sesión seguro.
+4. Selección de planes de membresía y registro de método de pago.
+5. Configuración de preferencias de privacidad en el perfil.
+6. Interacción comunitaria: lectura, publicación y votación en foros anónimos.
+7. Cumplimentación de encuestas diarias de clima laboral y bienestar.
+8. Gestión y visualización de reportes de clima por equipos (Rol RRHH).
+9. Revisión del centro de notificaciones y alertas.
+
+---
+
+## 2. Escala de Severidad
+Los problemas detectados se puntúan bajo la siguiente métrica:
+
+* **1. Problema superficial:** Ocurre con muy poca frecuencia; no necesita ser arreglado a menos que exista disponibilidad de tiempo.
+* **2. Problema menor:** Se le debería asignar una prioridad baja de cara al siguiente release.
+* **3. Problema mayor:** Ocurre frecuentemente; es importante que sean corregidos con prioridad alta.
+* **4. Problema muy grave:** Impide al usuario continuar con el uso de la herramienta; imperativo corregir antes del lanzamiento.
+
+---
+
+## 3. Tabla Resumen
+
+| #   | Problema                                                | Severidad | Heurística/Principio Violada(o)                        |
+| :-- |:--------------------------------------------------------| :-------: | :----------------------------------------------------- |
+| 1   | Desorden ilógico en el eje Y del gráfico de reportes    |   **4** | Usability: Prevención de errores / Consistencia        |
+| 2   | Enlaces inoperativos en la Landing Page                 |   **3** | Information Architecture: Is it usable?                |
+| 3   | Inconsistencia de idioma en formulario de tarjeta       |   **1** | Usability: Consistencia y estándares                   |
+| 4   | Botón principal de "Iniciar sesión" en web sin ruta     |   **4** | Usability: Control y libertad del usuario              |
+| 5   | Formato de fecha extranjero en el dashboard de RRHH     |   **2** | Usability: Relación entre el sistema y el mundo real   |
+| 6   | Contraste insuficiente en enlaces de login/registro     |   **3** | Inclusive Design: Diseño accesible                     |
+| 7   | Pantallas de éxito carentes de contexto o resumen       |   **2** | Usability: Visibilidad del estado del sistema          |
+| 8   | Ausencia de fechas explícitas en notificaciones de pago |   **2** | Usability: Reconocimiento antes que recuerdo           |
+| 9   | Semántica de colores confusa en tarjetas del dashboard  |   **3** | Usability: Consistencia y estándares                   |
+| 10  | Estados vacíos sin orientación a la acción              |   **2** | Usability: Ayudar a los usuarios a reconocer errores   |
+| 11  | Ambigüedad visual en el estado por defecto del dropdown |   **2** | Usability: Estética y diseño minimalista               |
+| 12  | Duplicidad de acceso a "Métodos de pago" para RRHH      |   **1** | Information Architecture: Is it findable?              |
+| 13  | Botón flotante en el foro sin etiqueta descriptiva      |   **2** | Usability: Reconocimiento antes que recuerdo           |
+| 14  | Falta de botón de cancelación en el modal de encuesta   |   **3** | Usability: Control y libertad del usuario              |
+
+---
+
+## 4. Descripción de Problemas
+
+### **PROBLEMA #1: Desorden ilógico en el eje Y del gráfico de reportes**
+* **Severidad:** 4
+* **Heurística violada:** Usabilidad - Prevención de errores / Consistencia
+* **Problema:** En la pantalla de "Reportes" (vista RRHH), el gráfico de líneas presenta un eje Y completamente desordenado numéricamente ("10, 0, 80, 50, 20, 10"). Esto hace que la visualización de datos de clima laboral sea totalmente inútil, impidiendo al analista interpretar la evolución del equipo.
+* **Recomendación:** Corregir la lógica de renderizado del componente del gráfico para que el eje Y mantenga un orden ascendente estricto (ej. 0, 20, 40, 60, 80, 100).
+
+### **PROBLEMA #2: Enlaces inoperativos (anclas `#`) en la Landing Page**
+* **Severidad:** 3
+* **Heurística violada:** Arquitectura de Información - ¿Es usable?
+* **Problema:** En el *footer* y en la navegación principal de la página web promocional, varios enlaces clave (como "Hablar con ventas", "Integraciones" y todas las políticas legales) apuntan a un ancla vacía (`#`). El usuario hace clic esperando información vital y no ocurre ninguna acción.
+* **Recomendación:** Deshabilitar y ocultar estos enlaces si las páginas aún no existen en esta fase del proyecto, o enlazar a un modal de "Próximamente" para no romper el flujo de navegación.
+
+### **PROBLEMA #3: Inconsistencia de idioma en formulario de tarjeta**
+* **Severidad:** 1
+* **Heurística violada:** Usabilidad - Consistencia y estándares
+* **Problema:** En la pantalla "Agregar método de pago" de la aplicación móvil, los *placeholders* de los campos de texto están en inglés ("Name on the card", "Card number", "Month / Year"), a pesar de que toda la interfaz y los títulos de la app están en español.
+* **Recomendación:** Traducir los atributos de marcador de posición (placeholders) al español ("Nombre en la tarjeta", "Número de tarjeta", "Mes / Año") para mantener la cohesión del idioma.
+
+### **PROBLEMA #4: Botón principal de "Iniciar sesión" en web sin ruta**
+* **Severidad:** 4
+* **Heurística violada:** Usabilidad - Control y libertad del usuario
+* **Problema:** En la cabecera de la *landing page*, el botón primario de "Iniciar sesión" apunta a `#`. Esto bloquea completamente a los usuarios existentes que intentan ingresar a la plataforma web desde la página principal.
+* **Recomendación:** Enlazar inmediatamente el botón al subdominio de la aplicación (ej. `app.softwork.com/login`) o a la vista web de autenticación.
+
+### **PROBLEMA #5: Formato de fecha extranjero en el dashboard de RRHH**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Relación entre el sistema y el mundo real
+* **Problema:** En el eje X del gráfico de reportes, las fechas están formateadas en el estándar estadounidense "Mes/Día" (ej. "3/19", "3/20"). Para usuarios en Latinoamérica o España, esto resulta antinatural y puede causar confusión temporal.
+* **Recomendación:** Adaptar el formato de fecha a la configuración regional del usuario, utilizando el estándar "Día/Mes" (ej. "19/03", "20/03").
+
+### **PROBLEMA #6: Contraste insuficiente en enlaces de login/registro**
+* **Severidad:** 3
+* **Heurística violada:** Diseño Inclusivo - Diseño accesible
+* **Problema:** En las pantallas de autenticación de la app móvil, textos como "¿Olvidaste tu contraseña?" y "Registrate" utilizan un tono de azul claro sobre fondo blanco que no alcanza el ratio mínimo de contraste de la WCAG (4.5:1). Esto dificulta la lectura para personas con baja visión.
+* **Recomendación:** Oscurecer el código hexadecimal del color azul en estos enlaces de texto para cumplir con los estándares de accesibilidad visual.
+
+### **PROBLEMA #7: Pantallas de éxito carentes de contexto o resumen**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Visibilidad del estado del sistema
+* **Problema:** Tras realizar una compra o registrarse, la app muestra una pantalla blanca dominada casi por completo por un *check* gigante y el texto "Membresía adquirida" o "Usuario registrado". No se ofrece un recibo rápido, el correo registrado, ni el tipo de plan comprado, lo que genera dudas sobre si la transacción fue correcta.
+* **Recomendación:** Incluir una pequeña tarjeta de resumen debajo del check (ej. "Plan Pro - S/. 99 cobrados a tu tarjeta terminada en 4521") antes del botón de "Menú inicial".
+
+### **PROBLEMA #8: Ausencia de fechas explícitas en notificaciones de pago**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Reconocimiento antes que recuerdo
+* **Problema:** En la pestaña de Notificaciones, la alerta de pago indica "Tu plan vencerá pronto". Al no especificar la fecha exacta de vencimiento en la misma tarjeta, obliga al usuario a recordar la fecha de facturación o a hacer clics innecesarios para averiguarlo.
+* **Recomendación:** Dinamizar el texto para que incluya la fecha concreta: "Tu plan vencerá el 27 de Mayo. Actualiza tu método de pago".
+
+### **PROBLEMA #9: Semántica de colores confusa en tarjetas del dashboard**
+* **Severidad:** 3
+* **Heurística violada:** Usabilidad - Consistencia y estándares
+* **Problema:** En la pantalla de Reportes (vista RRHH), las tarjetas superiores utilizan colores pastel de fondo (celeste, verde, rojo, morado) que parecen ser meramente decorativos. Sin embargo, el rojo en "Reportes en foro: 1" transmite una alerta de error grave instintivamente, mientras que el verde en "Integrantes: 5" no representa un estado de éxito real.
+* **Recomendación:** Utilizar un esquema de colores neutro (blanco/gris) para los contenedores y reservar los colores semánticos (rojo, amarillo, verde) únicamente para los iconos o indicadores numéricos que representen cambios positivos o críticos.
+
+### **PROBLEMA #10: Estados vacíos sin orientación a la acción**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores
+* **Problema:** En la pantalla "Historial de pagos", si no hay registros, solo se lee el texto "No ha realizado ningún pago" flotando en el espacio en blanco. No hay ilustración, ni un botón que sugiera la siguiente acción lógica (como "Adquirir un plan").
+* **Recomendación:** Diseñar estados vacíos amigables que incluyan un gráfico ligero y un Call to Action (CTA) que dirija al usuario a resolver esa "ausencia" de datos.
+
+### **PROBLEMA #11: Ambigüedad visual en el estado por defecto del dropdown**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Estética y diseño minimalista
+* **Problema:** En la pantalla inicial de "Reportes", el selector de equipos dice "Ninguno" por defecto, dejando casi el 90% de la pantalla en un blanco absoluto sin instrucciones. Da la sensación de ser un error de carga o una pantalla inacabada.
+* **Recomendación:** Cambiar el texto "Ninguno" por un placeholder instruccional como "Selecciona un equipo" y colocar un gráfico tenue de fondo con el texto "Elige un equipo de la lista para visualizar sus métricas de clima".
+
+### **PROBLEMA #12: Duplicidad de acceso a "Métodos de pago" para RRHH**
+* **Severidad:** 1
+* **Heurística violada:** Arquitectura de Información - ¿Es fácil de encontrar?
+* **Problema:** Para los perfiles de pago, la opción para gestionar o ver la facturación parece estar distribuida tanto en el "Perfil" del usuario como directamente expuesta en el "Menú inicial" mediante botones grandes. Esto infla la carga cognitiva sin necesidad.
+* **Recomendación:** Consolidar todo lo relacionado a facturación y pagos bajo una única ruta (preferiblemente dentro de "Mi Perfil" o "Configuración") para limpiar el dashboard principal.
+
+### **PROBLEMA #13: Botón flotante en el foro sin etiqueta descriptiva**
+* **Severidad:** 2
+* **Heurística violada:** Usabilidad - Reconocimiento antes que recuerdo
+* **Problema:** En la pantalla del Foro, hay un Floating Action Button (FAB) en la esquina inferior derecha con un simple ícono de suma (+). Aunque es un patrón común, en contextos laborales complejos, un ícono solitario puede dejar dudas sobre si es para "Crear post", "Invitar persona" o "Crear encuesta".
+* **Recomendación:** Al hacer scroll hacia arriba, expandir momentáneamente el FAB para mostrar el texto "Nueva publicación" junto al ícono (+), asegurando la claridad de la acción.
+
+### **PROBLEMA #14: Falta de botón de cancelación en el modal de encuesta**
+* **Severidad:** 3
+* **Heurística violada:** Usabilidad - Control y libertad del usuario
+* **Problema:** Una vez que el usuario ingresa a la pantalla de "Encuesta" (¿Cómo te sientes hoy?), no existe una "X" visible o un botón de "Cancelar" claro en la parte superior. El usuario podría sentirse atrapado y obligado a enviar la encuesta para poder regresar al menú.
+* **Recomendación:** Añadir un ícono de "X" o una flecha de retroceso explícita en la esquina superior izquierda de la vista de la encuesta para garantizar una salida segura sin enviar datos.
 
 
 
