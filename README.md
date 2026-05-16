@@ -2078,6 +2078,10 @@ El mock-up facilita la validación temprana con los interesados (stakeholders), 
 </p>
 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
+<p styles="align: left">
+  <img src="assets/Wireflow Diagram.png" alt="lpm" width="500">
+</p>
+
 #### 3.1.4.3. Mobile Applications Mock-ups
 <p styles="align: left">
   <img src="assets/Mockups.png" alt="lpm" width="500">
