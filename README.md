@@ -2073,6 +2073,10 @@ El mock-up facilita la validación temprana con los interesados (stakeholders), 
 
 ### 3.1.4. Mobile Applications UX/UI Design
 #### 3.1.4.1. Mobile Applications Wireframes
+<p styles="align: left">
+  <img src="assets/Wireframes.png" alt="lpm" width="500">
+</p>
+
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 #### 3.1.4.3. Mobile Applications Mock-ups
 <p styles="align: left">
