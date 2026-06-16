@@ -2761,3 +2761,17 @@ Los problemas detectados se puntúan bajo la siguiente métrica:
 ## Recomendaciones
 
 - Dentro del roadmap a corto y mediano plazo de la aplicación móvil, se sugiere priorizar la expansión de las integraciones con billeteras digitales locales y pasarelas de pago externas. Las validaciones indicaron que los usuarios buscan liquidar sus deudas con la menor cantidad de fricción posible, por lo que agilizar el flujo de pago directo in-app será vital para la retención y la reducción de la morosidad.
+
+
+## Video About the Product
+
+<br>
+<img src="assets/VideoAboutTheProduct.jpg" alt="videabouttheproduct">
+<br>
+
+- Duración: 6:12 mins
+
+- Youtube: https://www.youtube.com/watch?v=NVFVIfCgTQ4
+- Microsoft: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQBxWyY8_jhcQILuW-XuEOtQAR76RRQ-3nte36kfHOY16HU?e=cgvTo8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
+
