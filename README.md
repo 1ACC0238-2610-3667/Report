@@ -2317,6 +2317,62 @@ https://backend-harmonix.onrender.com/swagger
 <img src="assets/insights_backend.jpg" alt="CandidateContextDiscovery">
 <br>
 
+
+#### 4.2.2. Sprint 2
+
+A continuación, se presenta el Sprint Planning 2, donde se incluyen las evidencias de planificación e implementación del Landing Page, Mobile App y Backend. También se registran los avances del proyecto e insights de colaboración del equipo a través de GitHub.
+
+##### 4.2.2.1. Sprint Planning 2
+
+| **Campo**                              | **Descripción**                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Sprint #**                           | Sprint 1                                                                                                                                                                                                                                                                                                           |
+| **Sprint Planning Background**         |                                                                                                                                                                                                                                                                                                                    |
+| **Date**                               | 2026-06-11                                                                                                                                                                                                                                                                                                         |
+| **Time**                               | 03:00 PM (GMT -5)                                                                                                                                                                                                                                                                                                  |
+| **Location**                           | Modalidad remota por Google Meet                                                                                                                                                                                                                                                                                   |
+| **Prepared By**                        | Testigos de Splitly                                                                                                                                                                                                                                                                                              |
+| **Attendees (to planning meeting)**    | Equipo Splitly                                                                                                                                                                                                                                                            |
+| **Sprint 0 Review Summary**        | Este es el segundo sprint. Del Sprint anterior concluimos que nos falta pulir un pequeño porcentaje del backend y estamos listos para implementar la aplicación.                                                                                                                                                                                                                                   |
+| **Sprint 0 Retrospective Summary** | Al estar en una face intermedia del proyecto, se identificaron aspectos técnicos por aprender, como el uso kotlin y Flutter para el desarrollo movil de nuestras pantallas previamente diseñadas en figma. Se discutió el contenido a incluir y se definió el objetivo principal: Implementar una primera versión de la aplicación Splitly al final del sprint. |
+| **Sprint Goal & User Stories**         |                                                                                                                                                                                                                                                                                                                    |
+| **Sprint 1 Goal**                      | Completar el Backend de la aplicación al 100% e implementar una primera versión de la aplición móvil Splitly.                                                                                                                                                                                        |
+| **Sprint 1 Velocity**                  | 20                                                                                                                                                                                                                                                                                                                  |
+| **Sum of Story Points**                | 10                                                                                                                                                                                                                                                                                                                  |
+
+
+##### 4.2.2.2. Sprint Backlog 2
+
+El Sprint Backlog 2 corresponde al desarrollo de la primera versión de la aplicación Splitly. En este sprint nos enfocaremos en conectar el frontend con el backend, asegurar la aplicación mediante autenticación y roles, y cerrar los flujos centrales de gastos y pagos.
+
+Adicionalmente, se incluyeron tareas técnicas relacionadas con la documentación del despliegue y la configuración de monitoreo básico, asegurando que el proyecto cuente con una base sólida para futuras iteraciones.
+
+El trabajo colaborativo del equipo se gestionó en la herramienta Trello, lo que permitió organizar, priorizar y dar seguimiento a cada tarea de manera eficiente.
+Link al tablero de Trello: https://trello.com/invite/b/6a04a4676f2c78852edaeb1a/ATTI85b6ff75c99bfbde325e6f171ad6e8b4E226ADCE/splitly-sprint-backlog
+
+
+| User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **TS01** | Implementar autenticación JWT | T1 | Configuración JWT | Generación y validación de tokens en el backend | 4 | Héctor Ríos | To-do |
+| **TS02** | Cifrar contraseñas | T1 | Hashing de passwords | Integración de Bcrypt antes de guardar en BD | 3 | Walter Ramirez | To-do |
+| **TS03** | Validar roles backend | T1 | Middleware roles | Proteger rutas según rol (administrador/miembro) | 4 | Joaquin Cuentas | To-do |
+| **TS05** | Conectar formularios con endpoints | T1 | Integración Auth | Conectar UI de login y registro con API | 4 | Jose Luis Martinez Validivia | To-do |
+| **TS05** | Conectar formularios con endpoints | T2 | Integración Gastos | Conectar UI de creación de gastos y pagos con API | 5 | Rodrigo Miraval | To-do |
+| **TS06** | Validar respuestas del backend | T1 | Interceptores HTTP | Manejo centralizado de respuestas y códigos de estado | 3 | Walter Ramirez | To-do |
+| **US37** | Manejo de estados de carga | T1 | UI Loaders | Implementar spinners y mensajes de éxito en la app | 4 | Héctor Ríos | To-do |
+| **TS04** | Actualización de perfil API | T1 | UI Update Perfil | Conectar pantalla de edición con el endpoint de perfil | 3 | Jose Luis Martinez Validivia | To-do |
+| **US09** | Visualizar reportes mensuales | T1 | Reporte básico | Consolidar ingresos y gastos del mes en una vista | 5 | Rodrigo Miraval | To-do |
+| **TS09** | Update/Delete gastos | T1 | Endpoints mutación | Lógica para editar o eliminar un gasto ya registrado | 4 | Joaquin Cuentas | To-do |
+| **TS10** | Integración de gastos | T1 | Testing flujo gastos | Pruebas end-to-end de registro, vista y cálculo de gastos | 3 | Walter Ramirez | To-do |
+
+
+##### 4.2.2.3. Development Evidence for Sprint Review
+##### 4.2.2.4. Testing Suite Evidence for Sprint Review
+##### 4.2.2.5. Execution Evidence for Sprint Review
+##### 4.2.2.6. Services Documentation Evidence for Sprint Review
+##### 4.2.2.7. Software Deployment Evidence for Sprint Review
+##### 4.2.2.8. Team Collaboration Insights during Sprint
+
 ### 4.3. Validation Interviews
 #### 4.3.1. Diseño de Entrevistas
 
