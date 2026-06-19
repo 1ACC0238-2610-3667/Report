@@ -2446,6 +2446,57 @@ La ejecución de la suite automatizada se realizó directamente desde el entorno
 Con la integración de esta suite, se mitiga la deuda técnica del sprint anterior y se establece una base sólida de integración continua, asegurando que las futuras actualizaciones de los flujos de Splitly no rompan las funcionalidades ya validadas.
 
 ##### 4.2.2.5. Execution Evidence for Sprint Review
+
+Durante la realización de este segundo sprint, se logró la finalización al 100% del desarrollo y despliegue del backend. Asimismo, se implementó con éxito la primera versión funcional de la aplicación móvil (Mobile App) en Flutter, logrando la integración completa con los servicios web para los flujos críticos como autenticación, gestión de hogares y control de gastos.
+
+**Backend:**
+
+<br>
+<img src="assets/backend2-1.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/backend2-2.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/backend2-3.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/backend2-4.png" alt="Swagger Backend Sprint 2">
+<br>
+
+**Mobile App:**
+
+<br>
+<img src="assets/app1.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app2.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app3.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app4.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app5.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app6.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app7.jpg" alt="Pantalla de Login / Registro">
+<br>
+
 ##### 4.2.2.6. Services Documentation Evidence for Sprint Review
 ##### 4.2.2.7. Software Deployment Evidence for Sprint Review
 ##### 4.2.2.8. Team Collaboration Insights during Sprint
