@@ -2570,15 +2570,15 @@ Durante el Sprint 2, se desplegó el backend al 100% de Splitly en el servicio R
 Evidencias de los insighs del sprint 2:
 
 <br>
-<img src="assets/insights2.1" alt="Swagger Backend Sprint 2">
+<img src="assets/insights2.1.png" alt="Insights Sprint 2">
 <br>
 
 <br>
-<img src="assets/insights2.2" alt="Swagger Backend Sprint 2">
+<img src="assets/insights2.2.png" alt="Insights Sprint 2">
 <br>
 
 <br>
-<img src="assets/insights2.3" alt="Swagger Backend Sprint 2">
+<img src="assets/insights2.3.png" alt="Insights Sprint 2">
 <br>
 
 
