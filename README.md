@@ -2567,11 +2567,19 @@ Durante el Sprint 2, se desplegó el backend al 100% de Splitly en el servicio R
 
 ##### 4.2.2.8. Team Collaboration Insights during Sprint
 
-Kotlin App Insights :
+Evidencias de los insighs del sprint 2:
 
+<br>
+<img src="assets/insights2.1" alt="Swagger Backend Sprint 2">
+<br>
 
+<br>
+<img src="assets/insights2.2" alt="Swagger Backend Sprint 2">
+<br>
 
-Flutter 1st version App Insights :
+<br>
+<img src="assets/insights2.3" alt="Swagger Backend Sprint 2">
+<br>
 
 
 ### 4.3. Validation Interviews
