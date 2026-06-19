@@ -2498,6 +2498,58 @@ Durante la realización de este segundo sprint, se logró la finalización al 10
 <br>
 
 ##### 4.2.2.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 1 se estableció la estructura base de la documentación de la API. Para este segundo sprint, la documentación en OpenAPI/Swagger fue actualizada en su totalidad para reflejar la culminación del 100% de los endpoints del backend.
+
+El avance más significativo en esta iteración documentada fue la integración del esquema de seguridad **JWT (JSON Web Token)** en los contratos de la API. A continuación, se presentan las tablas de los endpoints finales actualizados, donde se especifica claramente la restricción de autorización. Se documentó que todos los módulos críticos exigen un token Bearer válido, a excepción de las rutas de autenticación inicial.
+
+### 1. Identity and Access Management (Autenticación y Usuarios)
+
+Este módulo fue documentado para diferenciar claramente las rutas públicas de las operaciones privadas que requieren validación del usuario en sesión.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/authentication/sign-up` | Registrar nuevo usuario | POST | Body: `email`, `password`, `name`, `role`, `householdId` | Acceso Público | `200 OK`, `400 Bad Request` |
+| `/api/v1/authentication/sign-in` | Iniciar sesión y obtener token | POST | Body: `email`, `password` | Acceso Público | `200 OK`, `401 Unauthorized` |
+| `/api/v1/user/user/{id}` | Consultar perfil por ID | GET | Path: `id` | Requiere Token | `200 OK`, `401 Unauthorized` |
+| `/api/v1/user/byemail/{emailAddress}`| Actualizar perfil de usuario | PUT | Path: `emailAddress`, Body: `personName`, `password`| Requiere Token | `200 OK`, `403 Forbidden` |
+| `/api/v1/user-income` | Registrar ingresos del usuario | POST | Body: `userId`, `income` | Requiere Token | `201 Created`, `400 Bad Request` |
+
+### 2. Contributions Distribution (Gastos y Cuotas)
+
+La documentación de este módulo fue actualizada para incluir los flujos de creación de facturas (Bills) y el cálculo de la distribución (Contributions), asegurando que solo usuarios autenticados del hogar puedan modificarlos.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/bills` | Registrar nuevo gasto central | POST | Body: `houseHoldId`, `amount`, `description`, `paymentDate`| Requiere Token | `201 Created`, `401 Unauthorized` |
+| `/api/v1/bills/byhousehold/{id}` | Listar gastos del hogar | GET | Path: `id` (Household ID) | Requiere Token | `200 OK`, `404 Not Found` |
+| `/api/v1/contribution` | Generar distribución de pago | POST | Body: `billId`, `strategy`, `deadlineForMembers` | Requiere Token | `201 Created`, `400 Bad Request` |
+| `/api/v1/member_contribution` | Registrar pago de cuota individual| POST | Body: `contributionId`, `memberId`, `amount` | Requiere Token | `201 Created`, `403 Forbidden` |
+| `/api/v1/member_contribution/{id}` | Eliminar registro de pago | DELETE | Path: `id` (Member Contribution ID) | Requiere Token | `200 OK`, `401 Unauthorized` |
+
+### 3. Household Management (Gestión de Hogares e Invitaciones)
+
+Documentación finalizada para el ciclo de vida de los grupos. Se detallaron las respuestas esperadas al interactuar con las invitaciones y los roles internos.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/house_hold` | Crear un nuevo hogar | POST | Body: `name`, `representativeId`, `currency`, `startDate`| Requiere Token | `201 Created`, `401 Unauthorized` |
+| `/api/v1/house_hold/{id}` | Actualizar datos del hogar | PUT | Path: `id`, Body: `name`, `currency`, `memberCount` | Requiere Token | `200 OK`, `404 Not Found` |
+| `/api/v1/household_member` | Añadir miembro al hogar | POST | Body: `householdId`, `userId`, `income` | Requiere Token | `201 Created`, `400 Bad Request` |
+| `/api/v1/invitations` | Generar invitación por correo | POST | Body: `email`, `householdId`, `description` | Requiere Token | `200 OK`, `401 Unauthorized` |
+| `/api/v1/invitations/pending` | Validar invitación pendiente | GET | Query: `email`, `householdId` | Requiere Token | `200 OK`, `404 Not Found` |
+
+### 4. App Management (Configuraciones)
+
+Se agregaron a Swagger los endpoints transversales para manejar las preferencias de la aplicación, garantizando que un usuario solo pueda alterar sus propios ajustes mediante el token.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/settings` | Crear preferencias de usuario | POST | Body: `userId`, `language`, `darkMode`, `notificationEnabled` | Requiere Token | `201 Created`, `400 Bad Request` |
+| `/api/v1/settings?userId={id}` | Consultar preferencias | GET | Query: `userId` | Requiere Token | `200 OK`, `404 Not Found` |
+| `/api/v1/settings/{id}` | Actualizar preferencias | PUT | Path: `id`, Body: `language`, `darkMode`, `notification` | Requiere Token | `200 OK`, `403 Forbidden` |
+
+
 ##### 4.2.2.7. Software Deployment Evidence for Sprint Review
 ##### 4.2.2.8. Team Collaboration Insights during Sprint
 
