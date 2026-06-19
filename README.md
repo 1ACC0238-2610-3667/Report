@@ -2437,7 +2437,7 @@ La siguiente tabla detalla un subconjunto representativo de los casos de prueba 
 La ejecución de la suite automatizada se realizó directamente desde el entorno de desarrollo mediante los comandos de testing de Flutter. Todas las aserciones (*expects*) diseñadas para los módulos de IAM y Contributions Distribution pasaron satisfactoriamente.
 
 <p align="center">
-  <img src="./assets/tu_captura_de_flutter_test.png" alt="Ejecución de pruebas en Flutter" width="100%">
+  <img src="./assets/testeo prueba.jpg" alt="Ejecución de pruebas en Flutter" width="100%">
   <br>
   <em>Figura 1. Consola de comandos mostrando la ejecución exitosa de la suite de pruebas unitarias y de widgets en Flutter.</em>
 </p>
