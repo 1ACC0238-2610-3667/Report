@@ -2407,6 +2407,44 @@ Link al tablero de Trello: https://trello.com/invite/b/6a04a4676f2c78852edaeb1a/
 | Mobile App - develop | 3312219 | initial commit                                |                     | 10/05/2026 |
 
 ##### 4.2.2.4. Testing Suite Evidence for Sprint Review
+
+Tal como se estableció en la planificación y retrospectiva del Sprint 1, durante este segundo sprint se procedió con la implementación de la suite de pruebas automatizadas, aprovechando que el backend alcanzó su etapa de completitud y la estructura de la aplicación móvil en Flutter se encontraba consolidada.
+
+El objetivo principal en esta fase fue garantizar la estabilidad de los flujos críticos del sistema (autenticación y gestión de gastos) mediante herramientas nativas del ecosistema de Flutter (`flutter_test` e `integration_test`).
+
+**1. Tipos de Pruebas Implementadas**
+
+Para asegurar la calidad del producto, la estrategia de pruebas abarcó los siguientes niveles:
+
+* **Unit Tests (Pruebas Unitarias):** Se evaluó la lógica de negocio aislada de la interfaz gráfica. Esto incluyó la validación de los modelos de datos, la correcta serialización/deserialización de las respuestas JSON provenientes del backend, y las utilidades matemáticas encargadas del cálculo proporcional de las cuotas.
+* **Widget Tests (Pruebas de Componentes):** Se verificó el correcto renderizado y comportamiento de los componentes individuales de la UI en Flutter. Se comprobó que los formularios de registro e inicio de sesión muestren las validaciones de estado correctas (ej. campos obligatorios vacíos o formatos de correo inválidos) sin necesidad de levantar un emulador completo.
+* **Integration Tests (Pruebas de Integración y Aceptación):** Cumpliendo con lo reprogramado en el Sprint 1, se implementaron pruebas End-to-End (E2E) corriendo en dispositivos simulados. Estas pruebas validaron la comunicación real entre la aplicación móvil y los endpoints del backend desplegados, confirmando flujos completos como el inicio de sesión seguro (JWT) y el registro de un nuevo gasto.
+
+**2. Resumen de Ejecución de Pruebas**
+
+La siguiente tabla detalla un subconjunto representativo de los casos de prueba ejecutados exitosamente durante el cierre del Sprint 2:
+
+| ID Prueba | Tipo de Prueba | Módulo / Historia de Usuario | Descripción de la Validación | Resultado |
+| :--- | :--- | :--- | :--- | :---: |
+| TS-01 | Unit Test | Identity and Access Management | Serialización correcta del modelo `User` y extracción del JWT. | Exitoso |
+| TS-02 | Unit Test | Contributions Distribution | Validación del algoritmo de cálculo proporcional de un gasto entre `n` miembros. | Exitoso |
+| TS-03 | Widget Test | Interfaz de Usuario (UI) | Renderizado del formulario de Login y validación visual de campos vacíos. | Exitoso |
+| TS-04 | Widget Test | Interfaz de Usuario (UI) | Visualización correcta de estados de carga (Spinners) al procesar peticiones. | Exitoso |
+| TS-05 | Integration Test | Flujo End-to-End | Inicio de sesión exitoso con credenciales reales y redirección al Dashboard. | Exitoso |
+
+**3. Evidencias de Ejecución**
+
+La ejecución de la suite automatizada se realizó directamente desde el entorno de desarrollo mediante los comandos de testing de Flutter. Todas las aserciones (*expects*) diseñadas para los módulos de IAM y Contributions Distribution pasaron satisfactoriamente.
+
+<p align="center">
+  <img src="./assets/tu_captura_de_flutter_test.png" alt="Ejecución de pruebas en Flutter" width="100%">
+  <br>
+  <em>Figura 1. Consola de comandos mostrando la ejecución exitosa de la suite de pruebas unitarias y de widgets en Flutter.</em>
+</p>
+
+**Conclusión del Sprint en Testing:**
+Con la integración de esta suite, se mitiga la deuda técnica del sprint anterior y se establece una base sólida de integración continua, asegurando que las futuras actualizaciones de los flujos de Splitly no rompan las funcionalidades ya validadas.
+
 ##### 4.2.2.5. Execution Evidence for Sprint Review
 ##### 4.2.2.6. Services Documentation Evidence for Sprint Review
 ##### 4.2.2.7. Software Deployment Evidence for Sprint Review
