@@ -2536,24 +2536,36 @@ Se agregaron a Swagger los endpoints transversales para manejar las preferencias
 
 ##### 4.2.2.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 2, se desplegó el backend de Splitly en el servicio RENDER, asegurando su disponibilidad y persistencia de datos. Se validó el funcionamiento de los endpoints por medio de Swagger y pruebas de integración, y se dejó preparada la arquitectura para futuros desarrollos. Aquí las evidencias principales:
+Durante el Sprint 2, se desplegó el backend al 100% de Splitly en el servicio RENDER, asegurando su disponibilidad y persistencia de datos. Se validó el funcionamiento de los endpoints por medio de Swagger y pruebas de integración, y se dejó preparada la arquitectura para futuros desarrollos. Aquí las evidencias principales:
 
 **Backend:**
 
 <br>
-<img src="assets/backend2-1.png" alt="Swagger Backend Sprint 2">
+<img src="assets/render1.png" alt="Swagger Backend Sprint 2">
 <br>
 
 <br>
-<img src="assets/backend2-2.png" alt="Swagger Backend Sprint 2">
+<img src="assets/render2.png" alt="Swagger Backend Sprint 2">
 <br>
 
 <br>
-<img src="assets/backend2-3.png" alt="Swagger Backend Sprint 2">
+<img src="assets/render3.png" alt="Swagger Backend Sprint 2">
 <br>
 
 <br>
-<img src="assets/backend2-4.png" alt="Swagger Backend Sprint 2">
+<img src="assets/render4.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render5.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render6.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render7.png" alt="Swagger Backend Sprint 2">
 <br>
 
 
