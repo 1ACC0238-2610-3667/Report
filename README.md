@@ -2396,15 +2396,23 @@ Link al tablero de Trello: https://trello.com/invite/b/6a04a4676f2c78852edaeb1a/
 
 ##### 4.2.2.3. Development Evidence for Sprint Review
 
-| Repository Branch | Commit Id     | Commit Message                               | Commit Message Body | Commited on (Date) |
-|------------------|--------------|-----------------------------------------------|---------------------|-------------------|
-| Mobile App - develop | 3861935 | chore(): add sharedPreferences                 |                     | 11/05/2026 |
-| Mobile App - develop | b151bf1 | chore(): add drawer and navigation bar        |                     | 11/05/2026 |
-| Mobile App - develop | fc52f52 | chore(): add working login flow               |                     | 11/05/2026 |
-| Mobile App - develop | bdb50ad | chore(): add entities models                  |                     | 10/05/2026 |
-| Mobile App - develop | 023ad09 | chore(): add initial signup screen            |                     | 10/05/2026 |
-| Mobile App - develop | fe8c024 | chore(): add new login screen styles          |                     | 10/05/2026 |
-| Mobile App - develop | 3312219 | initial commit                                |                     | 10/05/2026 |
+| Repository Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- |
+| Mobile App - develop | f11feed | feature: aggregate test | Se añadieron pruebas automatizadas para verificar el correcto funcionamiento de las funciones de agregación y consolidación de saldos. | 19/06/2026 |
+| Mobile App - develop | cc89d24 | feat: replace LaunchedEffect with DisposableEffect for lifecycle-aware data loading | Optimización del ciclo de vida en Compose. Reemplazo para garantizar la correcta limpieza de observadores y evitar fugas de memoria al salir de la pantalla. | 18/06/2026 |
+| Mobile App - develop | e089319 | chore: add .env to gitignore | Se actualizó el archivo .gitignore global para excluir archivos de configuración local (.env) y proteger credenciales sensibles. | 18/06/2026 |
+| Mobile App - develop | d8dc4e6 | feat: add .env files to .gitignore for environment variable management | Configuración explícita en el entorno móvil para asegurar que las variables de entorno de desarrollo no sean subidas al repositorio remoto. | 18/06/2026 |
+| Mobile App - develop | f70b021 | feat: integrate dotenv for dynamic base URL configuration | Integración de la librería dotenv para permitir la modificación dinámica de la URL base de las API según el entorno de ejecución (dev/prod). | 18/06/2026 |
+| Mobile App - develop | b56beb7 | feature: 4.2.2.4. Testing Suite Evidence for Sprint Review v1 | Estructuración y carga de evidencias correspondientes a la suite de pruebas unitarias preparadas para la revisión del Sprint 2. | 18/06/2026 |
+| Mobile App - develop | 04456aa | doc(): update README with contributions and reflections | Actualización del archivo de documentación principal con el desglose de aportes individuales del equipo y conclusiones del sprint. | 18/06/2026 |
+| Mobile App - develop | b6e1205 | Add development evidence table to README | Inclusión de la tabla formal de evidencias técnicas dentro del archivo README para simplificar la auditoría técnica. | 18/06/2026 |
+| Mobile App - develop | bee1b20 | Document Sprint Planning 2 and Backlog details | Registro detallado de los acuerdos del Sprint Planning 2, metas del equipo y la estimación de horas asociadas al backlog. | 18/06/2026 |
+| Mobile App - develop | a6f7d8e | refactor: refactor fuctions | Refactorización de funciones secundarias de cálculo y mapeo de datos con el objetivo de mejorar la legibilidad y mantenibilidad del código. | 16/06/2026 |
+| Mobile App - develop | 4ba47d4 | feat: add member app | Implementación y maquetado de la vista inicial con los flujos de funcionalidad específicos para usuarios con rol de Miembro. | 16/06/2026 |
+| Mobile App - develop | 919dd20 | feat: add video about the product | Inclusión del recurso audiovisual explicativo sobre el funcionamiento general de la aplicación Splitly para la presentación técnica. | 16/06/2026 |
+| Mobile App - develop | 4e8ce08 | chore: add new views | Creación y enrutamiento inicial de los contenedores base para las nuevas pantallas requeridas en el Sprint 2. | 14/06/2026 |
+| Mobile App - develop | 109ee85 | chore: add contributionVM instance as paramas to navs views | Inyección de la instancia global de ContributionViewModel en el grafo de navegación para persistir el estado entre pantallas hijas. | 14/06/2026 |
+| Mobile App - develop | 5fadc05 | chore: add complete view Contributions | Finalización de la interfaz de usuario de la pantalla de Contribuciones, permitiendo visualizar los aportes financieros del grupo. | 14/06/2026 |
 
 ##### 4.2.2.4. Testing Suite Evidence for Sprint Review
 
