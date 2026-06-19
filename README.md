@@ -2447,25 +2447,9 @@ Con la integración de esta suite, se mitiga la deuda técnica del sprint anteri
 
 ##### 4.2.2.5. Execution Evidence for Sprint Review
 
-Durante la realización de este segundo sprint, se logró la finalización al 100% del desarrollo y despliegue del backend. Asimismo, se implementó con éxito la primera versión funcional de la aplicación móvil (Mobile App) en Flutter, logrando la integración completa con los servicios web para los flujos críticos como autenticación, gestión de hogares y control de gastos.
+Durante la realización de este segundo sprint se implementó con éxito la primera versión funcional de la aplicación móvil (Mobile App) en Flutter, logrando la integración completa con los servicios web para los flujos críticos como autenticación, gestión de hogares y control de gastos.
 
-**Backend:**
 
-<br>
-<img src="assets/backend2-1.png" alt="Swagger Backend Sprint 2">
-<br>
-
-<br>
-<img src="assets/backend2-2.png" alt="Swagger Backend Sprint 2">
-<br>
-
-<br>
-<img src="assets/backend2-3.png" alt="Swagger Backend Sprint 2">
-<br>
-
-<br>
-<img src="assets/backend2-4.png" alt="Swagger Backend Sprint 2">
-<br>
 
 **Mobile App:**
 
@@ -2551,6 +2535,28 @@ Se agregaron a Swagger los endpoints transversales para manejar las preferencias
 
 
 ##### 4.2.2.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2, se desplegó el backend de Splitly en el servicio RENDER, asegurando su disponibilidad y persistencia de datos. Se validó el funcionamiento de los endpoints por medio de Swagger y pruebas de integración, y se dejó preparada la arquitectura para futuros desarrollos. Aquí las evidencias principales:
+
+**Backend:**
+
+<br>
+<img src="assets/backend2-1.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/backend2-2.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/backend2-3.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/backend2-4.png" alt="Swagger Backend Sprint 2">
+<br>
+
+
 ##### 4.2.2.8. Team Collaboration Insights during Sprint
 
 ### 4.3. Validation Interviews
