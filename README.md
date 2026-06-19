@@ -2908,3 +2908,14 @@ Los problemas detectados se puntúan bajo la siguiente métrica:
 - Microsoft: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQBxWyY8_jhcQILuW-XuEOtQAR76RRQ-3nte36kfHOY16HU?e=cgvTo8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
 
+
+## Video App Validation
+
+<br>
+<img src="assets/videoAppValidation.jpg" alt="videabouttheproduct">
+<br>
+
+- Youtube: https://youtu.be/AKwF7MdLJfs
+
+- Microsoft:https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQDKI97wfxZsT6ojQ84-Z26DAcRBgbcwj5sN4bSOb-4Na9U?e=wSybbE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
