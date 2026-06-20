@@ -3472,3 +3472,15 @@ Los problemas detectados se puntúan bajo la siguiente métrica:
 
 - Microsoft:https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQDKI97wfxZsT6ojQ84-Z26DAcRBgbcwj5sN4bSOb-4Na9U?e=wSybbE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
 
+
+## Video About The Team
+
+
+<br>
+<img src="assets/videoAboutTheTeam.jpg" alt="videabouttheproduct">
+<br>
+
+- Youtube: https://youtu.be/CcP1D0Q3aAc
+- Microsoft: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQBcmZdw6h5TT7H1-OUkyZktAcmiqVvxR1kofcM7Q2MqiS0?e=xMDlBF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
+
