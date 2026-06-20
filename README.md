@@ -175,9 +175,37 @@ que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Ou
 
 
 | Criterio específico | Acciones realizadas | Conclusiones |
-| :--- | :--- | :--- |
-| **Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software.** |  **Héctor Rios:** Contribuí realizando el capítulo 1 y organizando las ideas para la continuación del proyecto <br><br> **Jose Luis Martínez Valdivia:** Contribui en El desarrollo del capitulo 2 - Strategic Level Domain Driven Design <br><br> **Joaquin Alberto Cuentas Peña:** Contribuí en El desarrollo del capítulo 2 – con el análisis de segmentos objetivos, entrevistas y elaboración de personas <br><br> **Walter Luis Fajardo Monrroy:** Contribuí en el desarrollo de diagramas, así como segmentación de bounded context  <br><br> **Rodrigo Jesus Miraval Pomalaya:** Contribui realizando parte del capítulo 2, con las user historias, el impact mapping y el product backlog. <br><br>|    **Héctor Rios** **TB1:** El desarrollo del capítulo 1 me permitió reforzar mis conocimientos sobre la estructura inicial de un proyecto de software. Sentí que este proceso me ayudó a entender mejor cómo plantear una base sólida, lo cual considero clave para mi crecimiento profesional. <br><br>   <br><br> **Jose Luis Martínez Valdivia:** El desarrollo del capitulo 2 me permitió comentar y enriquecer mis conocimientos de DDD y la forma en la que se debaten ideas para implementar una solución de Servicio Web <br><br> **Joaquin Alberto Cuentas Peña:** El desarrollo de este capítulo me permitió conocer la perspectiva de los usuarios que usarán la aplicación. <br><br>  **Walter Luis Fajardo Monrroy:** El desarrollo de este capítulo permitirá a los desarrolladores asignar los bounded context y hacer consultas de funcionamiento e interconexión. <br><br> **Rodrigo Jesus Miraval Pomalaya:** El desarrollo del capítulo 2 me permitió profundizar en la construcción de artefactos clave como las user historias, el impact mapping y el product backlog. A través de este proceso, logré entender mejor cómo traducir necesidades del negocio en requerimientos claros y estructurados, facilitando una mejor organización del trabajo y priorización de funcionalidades dentro del proyecto <br><br>|
-| **Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones detecnologías de ingeniería de software** | **Héctor Rios:** Contribuí realizando el capítulo 1,sedimentando las bases del proyecto <br><br> **Jose Luis Martínez Valdivia:** Contribui en El desarrollo del capitulo 2 - Strategic Level Domain Driven Design <br><br> **Joaquin Alberto Cuentas Peña:** Reconocí las necesidades de los usuarios a través de entrevistas, así como sus gustos y molestias <br><br> **Walter Luis Fajardo Monrroy:** Reconocí segmentos, funcionalidades y los convertí en bounded context para desarrollo  <br><br> **Rodrigo Jesus Miraval Pomalaya:** Contribui realizando parte del capítulo 2, con las user historias, el impact mapping y el product backlog. <br><br>| **Héctor Rios** **TB1:** A lo largo del desarrollo del capítulo 1, comprendí que siempre hay aspectos que mejorar y aprender. Esta experiencia me hizo reflexionar sobre la importancia de mantenerme en constante actualización para poder aportar mejor en futuros proyectos. <br><br> **Jose Luis Martínez Valdivia:** Durante El desarrollo de capitulo 2, logre entender los procesos y requerimientos que se deben llevar acabo para poder delimitar el alcance y arquitectura de desarrollo del proyecto a implementar <br><br> **Joaquin Alberto Cuentas Peña: :** Este conocimiento me permitió hacer un análisis y crear personas para enfocarnos en posibles requisitos funcionales <br><br> **Walter Luis Fajardo Monrroy:** El desarrollo de este capítulo me permitió aprender como segmentar bounded context en el contexto de desarrollo móvil <br><br> **Rodrigo Jesus Miraval Pomalaya:** Durante el desarrollo del capítulo 2, comprendí mejor cómo definir y organizar el alcance del proyecto. El uso de herramientas como el impact mapping y el product backlog me ayudó a estructurar las ideas, priorizar funcionalidades y tener una visión más clara del desarrollo del software. <br><br>|
+|--------------------|--------------------|--------------|
+| Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software | Héctor Rios - AV1: Contribuí realizando el capítulo 1 y organizando las ideas para la continuación del proyecto | Héctor Rios - AV1: El desarrollo del capítulo 1 me permitió reforzar mis conocimientos sobre la estructura inicial de un proyecto de software |
+| | Héctor Rios - TB1: Reforcé la estructuración inicial del proyecto documentando y organizando los contenidos base | Héctor Rios - TB1: Comprendí la importancia de establecer bases sólidas para el desarrollo eficiente del proyecto |
+| | Héctor Rios - AV2: Amplié la documentación del capítulo 1 incorporando mejoras en la definición del problema y objetivos | Héctor Rios - AV2: Consolidé mis conocimientos sobre la planificación estratégica del proyecto |
+| | Jose Luis Martínez Valdivia - AV1: Contribuí en el desarrollo del capítulo 2 - Strategic Level Domain Driven Design | Jose Luis Martínez Valdivia - AV1: El desarrollo del capítulo 2 me permitió enriquecer mis conocimientos de DDD |
+| | Jose Luis Martínez Valdivia - TB1: Apoyé en la definición estratégica del dominio y discusión de soluciones basadas en DDD | Jose Luis Martínez Valdivia - TB1: Fortalecí mi capacidad para debatir e implementar soluciones de servicios web |
+| | Jose Luis Martínez Valdivia - AV2: Profundicé en la aplicación de patrones de DDD en el capítulo 2 | Jose Luis Martínez Valdivia - AV2: Mejoré mi comprensión sobre la aplicación práctica de DDD |
+| | Joaquin Alberto Cuentas Peña - AV1: Contribuí en el desarrollo del capítulo 2 con análisis de segmentos objetivos, entrevistas y elaboración de personas | Joaquin Alberto Cuentas Peña - AV1: Conocí la perspectiva de los usuarios que usarán la aplicación |
+| | Joaquin Alberto Cuentas Peña - TB1: Profundicé en el análisis de usuarios y construcción de perfiles enfocados en requisitos | Joaquin Alberto Cuentas Peña - TB1: Logré enfocar mejor los requisitos en función de las necesidades reales del usuario |
+| | Joaquin Alberto Cuentas Peña - AV2: Refiné perfiles de usuario y validé segmentos objetivo | Joaquin Alberto Cuentas Peña - AV2: Logré mayor alineación entre usuario y requisitos |
+| | Walter Luis Fajardo Monrroy - AV1: Contribuí en el desarrollo de diagramas y segmentación de bounded context | Walter Luis Fajardo Monrroy - AV1: Permitió asignar bounded context y comprender su interconexión |
+| | Walter Luis Fajardo Monrroy - TB1: Elaboré diagramas adicionales para mejorar la comprensión de los contextos delimitados | Walter Luis Fajardo Monrroy - TB1: Mejoré mi entendimiento sobre la organización modular del sistema |
+| | Walter Luis Fajardo Monrroy - AV2: Ajusté y optimicé diagramas de bounded context | Walter Luis Fajardo Monrroy - AV2: Fortalecí la integración entre contextos |
+| | Rodrigo Jesus Miraval Pomalaya - AV1: Contribuí realizando parte del capítulo 2 con user historias, impact mapping y product backlog | Rodrigo Jesus Miraval Pomalaya - AV1: Profundicé en user historias, impact mapping y backlog |
+| | Rodrigo Jesus Miraval Pomalaya - TB1: Apoyé en la estructuración de requerimientos y priorización mediante herramientas ágiles | Rodrigo Jesus Miraval Pomalaya - TB1: Comprendí mejor la traducción de necesidades del negocio en requisitos claros |
+| | Rodrigo Jesus Miraval Pomalaya - AV2: Mejoré la priorización del backlog | Rodrigo Jesus Miraval Pomalaya - AV2: Afianzé la estructuración ágil de requerimientos |
+| Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de tecnologías de ingeniería de software | Héctor Rios - AV1: Contribuí realizando el capítulo 1, sedimentando las bases del proyecto | Héctor Rios - AV1: Comprendí la importancia de la actualización constante |
+| | Héctor Rios - TB1: Fortalecí la documentación inicial del proyecto para su mejora continua | Héctor Rios - TB1: Reflexioné sobre el aprendizaje continuo como base del crecimiento profesional |
+| | Héctor Rios - AV2: Revisé y actualicé la documentación con retroalimentación | Héctor Rios - AV2: Comprendí la importancia de la mejora continua |
+| | Jose Luis Martínez Valdivia - AV1: Contribuí en el desarrollo del capítulo 2 - Strategic Level DDD | Jose Luis Martínez Valdivia - AV1: Entendí procesos para delimitar alcance y arquitectura |
+| | Jose Luis Martínez Valdivia - TB1: Apoyé en la definición del alcance y arquitectura del proyecto | Jose Luis Martínez Valdivia - TB1: Mejoré mi criterio para planificar soluciones de software |
+| | Jose Luis Martínez Valdivia - AV2: Ajusté la arquitectura según nuevas discusiones | Jose Luis Martínez Valdivia - AV2: Reforcé mi adaptabilidad en diseño de sistemas |
+| | Joaquin Alberto Cuentas Peña - AV1: Reconocí necesidades de usuarios mediante entrevistas | Joaquin Alberto Cuentas Peña - AV1: Este conocimiento permitió crear personas y requisitos funcionales |
+| | Joaquin Alberto Cuentas Peña - TB1: Analicé datos de usuarios para definir posibles funcionalidades | Joaquin Alberto Cuentas Peña - TB1: Fortalecí la identificación de necesidades del usuario |
+| | Joaquin Alberto Cuentas Peña - AV2: Validé necesidades con enfoque iterativo | Joaquin Alberto Cuentas Peña - AV2: Fortalecí el aprendizaje basado en feedback |
+| | Walter Luis Fajardo Monrroy - AV1: Reconocí segmentos y los convertí en bounded context | Walter Luis Fajardo Monrroy - AV1: Aprendí a segmentar bounded context |
+| | Walter Luis Fajardo Monrroy - TB1: Profundicé en la organización de funcionalidades por contexto | Walter Luis Fajardo Monrroy - TB1: Consolidé mi conocimiento en arquitectura basada en contextos |
+| | Walter Luis Fajardo Monrroy - AV2: Reorganicé contextos según mejoras | Walter Luis Fajardo Monrroy - AV2: Consolidé conocimientos en arquitectura evolutiva |
+| | Rodrigo Jesus Miraval Pomalaya - AV1: Contribuí en user historias, impact mapping y backlog | Rodrigo Jesus Miraval Pomalaya - AV1: Comprendí cómo organizar el alcance del proyecto |
+| | Rodrigo Jesus Miraval Pomalaya - TB1: Refiné la priorización del desarrollo | Rodrigo Jesus Miraval Pomalaya - TB1: Mejoré la estructuración del trabajo |
+| | Rodrigo Jesus Miraval Pomalaya - AV2: Reestructuré backlog según nuevas prioridades | Rodrigo Jesus Miraval Pomalaya - AV2: Fortalecí la mejora continua en ágiles |
 
 
 ## Objetivos SMART
@@ -2730,6 +2758,251 @@ https://backend-harmonix.onrender.com/swagger
 <img src="assets/insights_backend.jpg" alt="CandidateContextDiscovery">
 <br>
 
+
+#### 4.2.2. Sprint 2
+
+A continuación, se presenta el Sprint Planning 2, donde se incluyen las evidencias de planificación e implementación del Landing Page, Mobile App y Backend. También se registran los avances del proyecto e insights de colaboración del equipo a través de GitHub.
+
+##### 4.2.2.1. Sprint Planning 2
+
+| **Campo**                              | **Descripción**                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Sprint #**                           | Sprint 1                                                                                                                                                                                                                                                                                                           |
+| **Sprint Planning Background**         |                                                                                                                                                                                                                                                                                                                    |
+| **Date**                               | 2026-06-11                                                                                                                                                                                                                                                                                                         |
+| **Time**                               | 03:00 PM (GMT -5)                                                                                                                                                                                                                                                                                                  |
+| **Location**                           | Modalidad remota por Google Meet                                                                                                                                                                                                                                                                                   |
+| **Prepared By**                        | Testigos de Splitly                                                                                                                                                                                                                                                                                              |
+| **Attendees (to planning meeting)**    | Equipo Splitly                                                                                                                                                                                                                                                            |
+| **Sprint 0 Review Summary**        | Este es el segundo sprint. Del Sprint anterior concluimos que nos falta pulir un pequeño porcentaje del backend y estamos listos para implementar la aplicación.                                                                                                                                                                                                                                   |
+| **Sprint 0 Retrospective Summary** | Al estar en una face intermedia del proyecto, se identificaron aspectos técnicos por aprender, como el uso kotlin y Flutter para el desarrollo movil de nuestras pantallas previamente diseñadas en figma. Se discutió el contenido a incluir y se definió el objetivo principal: Implementar una primera versión de la aplicación Splitly al final del sprint. |
+| **Sprint Goal & User Stories**         |                                                                                                                                                                                                                                                                                                                    |
+| **Sprint 1 Goal**                      | Completar el Backend de la aplicación al 100% e implementar una primera versión de la aplición móvil Splitly.                                                                                                                                                                                        |
+| **Sprint 1 Velocity**                  | 20                                                                                                                                                                                                                                                                                                                  |
+| **Sum of Story Points**                | 10                                                                                                                                                                                                                                                                                                                  |
+
+
+##### 4.2.2.2. Sprint Backlog 2
+
+El Sprint Backlog 2 corresponde al desarrollo de la primera versión de la aplicación Splitly. En este sprint nos enfocaremos en conectar el frontend con el backend, asegurar la aplicación mediante autenticación y roles, y cerrar los flujos centrales de gastos y pagos.
+
+Adicionalmente, se incluyeron tareas técnicas relacionadas con la documentación del despliegue y la configuración de monitoreo básico, asegurando que el proyecto cuente con una base sólida para futuras iteraciones.
+
+El trabajo colaborativo del equipo se gestionó en la herramienta Trello, lo que permitió organizar, priorizar y dar seguimiento a cada tarea de manera eficiente.
+Link al tablero de Trello: https://trello.com/invite/b/6a04a4676f2c78852edaeb1a/ATTI85b6ff75c99bfbde325e6f171ad6e8b4E226ADCE/splitly-sprint-backlog
+
+
+| User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **TS01** | Implementar autenticación JWT | T1 | Configuración JWT | Generación y validación de tokens en el backend | 4 | Héctor Ríos | To-do |
+| **TS02** | Cifrar contraseñas | T1 | Hashing de passwords | Integración de Bcrypt antes de guardar en BD | 3 | Walter Ramirez | To-do |
+| **TS03** | Validar roles backend | T1 | Middleware roles | Proteger rutas según rol (administrador/miembro) | 4 | Joaquin Cuentas | To-do |
+| **TS05** | Conectar formularios con endpoints | T1 | Integración Auth | Conectar UI de login y registro con API | 4 | Jose Luis Martinez Validivia | To-do |
+| **TS05** | Conectar formularios con endpoints | T2 | Integración Gastos | Conectar UI de creación de gastos y pagos con API | 5 | Rodrigo Miraval | To-do |
+| **TS06** | Validar respuestas del backend | T1 | Interceptores HTTP | Manejo centralizado de respuestas y códigos de estado | 3 | Walter Ramirez | To-do |
+| **US37** | Manejo de estados de carga | T1 | UI Loaders | Implementar spinners y mensajes de éxito en la app | 4 | Héctor Ríos | To-do |
+| **TS04** | Actualización de perfil API | T1 | UI Update Perfil | Conectar pantalla de edición con el endpoint de perfil | 3 | Jose Luis Martinez Validivia | To-do |
+| **US09** | Visualizar reportes mensuales | T1 | Reporte básico | Consolidar ingresos y gastos del mes en una vista | 5 | Rodrigo Miraval | To-do |
+| **TS09** | Update/Delete gastos | T1 | Endpoints mutación | Lógica para editar o eliminar un gasto ya registrado | 4 | Joaquin Cuentas | To-do |
+| **TS10** | Integración de gastos | T1 | Testing flujo gastos | Pruebas end-to-end de registro, vista y cálculo de gastos | 3 | Walter Ramirez | To-do |
+
+
+##### 4.2.2.3. Development Evidence for Sprint Review
+
+| Repository Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- |
+| Mobile App - develop | f11feed | feature: aggregate test | Se añadieron pruebas automatizadas para verificar el correcto funcionamiento de las funciones de agregación y consolidación de saldos. | 19/06/2026 |
+| Mobile App - develop | cc89d24 | feat: replace LaunchedEffect with DisposableEffect for lifecycle-aware data loading | Optimización del ciclo de vida en Compose. Reemplazo para garantizar la correcta limpieza de observadores y evitar fugas de memoria al salir de la pantalla. | 18/06/2026 |
+| Mobile App - develop | e089319 | chore: add .env to gitignore | Se actualizó el archivo .gitignore global para excluir archivos de configuración local (.env) y proteger credenciales sensibles. | 18/06/2026 |
+| Mobile App - develop | d8dc4e6 | feat: add .env files to .gitignore for environment variable management | Configuración explícita en el entorno móvil para asegurar que las variables de entorno de desarrollo no sean subidas al repositorio remoto. | 18/06/2026 |
+| Mobile App - develop | f70b021 | feat: integrate dotenv for dynamic base URL configuration | Integración de la librería dotenv para permitir la modificación dinámica de la URL base de las API según el entorno de ejecución (dev/prod). | 18/06/2026 |
+| Mobile App - develop | b56beb7 | feature: 4.2.2.4. Testing Suite Evidence for Sprint Review v1 | Estructuración y carga de evidencias correspondientes a la suite de pruebas unitarias preparadas para la revisión del Sprint 2. | 18/06/2026 |
+| Mobile App - develop | 04456aa | doc(): update README with contributions and reflections | Actualización del archivo de documentación principal con el desglose de aportes individuales del equipo y conclusiones del sprint. | 18/06/2026 |
+| Mobile App - develop | b6e1205 | Add development evidence table to README | Inclusión de la tabla formal de evidencias técnicas dentro del archivo README para simplificar la auditoría técnica. | 18/06/2026 |
+| Mobile App - develop | bee1b20 | Document Sprint Planning 2 and Backlog details | Registro detallado de los acuerdos del Sprint Planning 2, metas del equipo y la estimación de horas asociadas al backlog. | 18/06/2026 |
+| Mobile App - develop | a6f7d8e | refactor: refactor fuctions | Refactorización de funciones secundarias de cálculo y mapeo de datos con el objetivo de mejorar la legibilidad y mantenibilidad del código. | 16/06/2026 |
+| Mobile App - develop | 4ba47d4 | feat: add member app | Implementación y maquetado de la vista inicial con los flujos de funcionalidad específicos para usuarios con rol de Miembro. | 16/06/2026 |
+| Mobile App - develop | 919dd20 | feat: add video about the product | Inclusión del recurso audiovisual explicativo sobre el funcionamiento general de la aplicación Splitly para la presentación técnica. | 16/06/2026 |
+| Mobile App - develop | 4e8ce08 | chore: add new views | Creación y enrutamiento inicial de los contenedores base para las nuevas pantallas requeridas en el Sprint 2. | 14/06/2026 |
+| Mobile App - develop | 109ee85 | chore: add contributionVM instance as paramas to navs views | Inyección de la instancia global de ContributionViewModel en el grafo de navegación para persistir el estado entre pantallas hijas. | 14/06/2026 |
+| Mobile App - develop | 5fadc05 | chore: add complete view Contributions | Finalización de la interfaz de usuario de la pantalla de Contribuciones, permitiendo visualizar los aportes financieros del grupo. | 14/06/2026 |
+
+##### 4.2.2.4. Testing Suite Evidence for Sprint Review
+
+Tal como se estableció en la planificación y retrospectiva del Sprint 1, durante este segundo sprint se procedió con la implementación de la suite de pruebas automatizadas, aprovechando que el backend alcanzó su etapa de completitud y la estructura de la aplicación móvil en Flutter se encontraba consolidada.
+
+El objetivo principal en esta fase fue garantizar la estabilidad de los flujos críticos del sistema (autenticación y gestión de gastos) mediante herramientas nativas del ecosistema de Flutter (`flutter_test` e `integration_test`).
+
+**1. Tipos de Pruebas Implementadas**
+
+Para asegurar la calidad del producto, la estrategia de pruebas abarcó los siguientes niveles:
+
+* **Unit Tests (Pruebas Unitarias):** Se evaluó la lógica de negocio aislada de la interfaz gráfica. Esto incluyó la validación de los modelos de datos, la correcta serialización/deserialización de las respuestas JSON provenientes del backend, y las utilidades matemáticas encargadas del cálculo proporcional de las cuotas.
+* **Widget Tests (Pruebas de Componentes):** Se verificó el correcto renderizado y comportamiento de los componentes individuales de la UI en Flutter. Se comprobó que los formularios de registro e inicio de sesión muestren las validaciones de estado correctas (ej. campos obligatorios vacíos o formatos de correo inválidos) sin necesidad de levantar un emulador completo.
+* **Integration Tests (Pruebas de Integración y Aceptación):** Cumpliendo con lo reprogramado en el Sprint 1, se implementaron pruebas End-to-End (E2E) corriendo en dispositivos simulados. Estas pruebas validaron la comunicación real entre la aplicación móvil y los endpoints del backend desplegados, confirmando flujos completos como el inicio de sesión seguro (JWT) y el registro de un nuevo gasto.
+
+**2. Resumen de Ejecución de Pruebas**
+
+La siguiente tabla detalla un subconjunto representativo de los casos de prueba ejecutados exitosamente durante el cierre del Sprint 2:
+
+| ID Prueba | Tipo de Prueba | Módulo / Historia de Usuario | Descripción de la Validación | Resultado |
+| :--- | :--- | :--- | :--- | :---: |
+| TS-01 | Unit Test | Identity and Access Management | Serialización correcta del modelo `User` y extracción del JWT. | Exitoso |
+| TS-02 | Unit Test | Contributions Distribution | Validación del algoritmo de cálculo proporcional de un gasto entre `n` miembros. | Exitoso |
+| TS-03 | Widget Test | Interfaz de Usuario (UI) | Renderizado del formulario de Login y validación visual de campos vacíos. | Exitoso |
+| TS-04 | Widget Test | Interfaz de Usuario (UI) | Visualización correcta de estados de carga (Spinners) al procesar peticiones. | Exitoso |
+| TS-05 | Integration Test | Flujo End-to-End | Inicio de sesión exitoso con credenciales reales y redirección al Dashboard. | Exitoso |
+
+**3. Evidencias de Ejecución**
+
+La ejecución de la suite automatizada se realizó directamente desde el entorno de desarrollo mediante los comandos de testing de Flutter. Todas las aserciones (*expects*) diseñadas para los módulos de IAM y Contributions Distribution pasaron satisfactoriamente.
+
+<p align="center">
+  <img src="./assets/testeo prueba.jpg" alt="Ejecución de pruebas en Flutter" width="100%">
+  <br>
+  <em>Figura 1. Consola de comandos mostrando la ejecución exitosa de la suite de pruebas unitarias y de widgets en Flutter.</em>
+</p>
+
+**Conclusión del Sprint en Testing:**
+Con la integración de esta suite, se mitiga la deuda técnica del sprint anterior y se establece una base sólida de integración continua, asegurando que las futuras actualizaciones de los flujos de Splitly no rompan las funcionalidades ya validadas.
+
+##### 4.2.2.5. Execution Evidence for Sprint Review
+
+Durante la realización de este segundo sprint se implementó con éxito la primera versión funcional de la aplicación móvil (Mobile App) en Flutter, logrando la integración completa con los servicios web para los flujos críticos como autenticación, gestión de hogares y control de gastos.
+
+
+
+**Mobile App:**
+
+<br>
+<img src="assets/app1.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app2.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app3.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app4.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app5.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app6.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app7.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+##### 4.2.2.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 1 se estableció la estructura base de la documentación de la API. Para este segundo sprint, la documentación en OpenAPI/Swagger fue actualizada en su totalidad para reflejar la culminación del 100% de los endpoints del backend.
+
+El avance más significativo en esta iteración documentada fue la integración del esquema de seguridad **JWT (JSON Web Token)** en los contratos de la API. A continuación, se presentan las tablas de los endpoints finales actualizados, donde se especifica claramente la restricción de autorización. Se documentó que todos los módulos críticos exigen un token Bearer válido, a excepción de las rutas de autenticación inicial.
+
+### 1. Identity and Access Management (Autenticación y Usuarios)
+
+Este módulo fue documentado para diferenciar claramente las rutas públicas de las operaciones privadas que requieren validación del usuario en sesión.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/authentication/sign-up` | Registrar nuevo usuario | POST | Body: `email`, `password`, `name`, `role`, `householdId` | Acceso Público | `200 OK`, `400 Bad Request` |
+| `/api/v1/authentication/sign-in` | Iniciar sesión y obtener token | POST | Body: `email`, `password` | Acceso Público | `200 OK`, `401 Unauthorized` |
+| `/api/v1/user/user/{id}` | Consultar perfil por ID | GET | Path: `id` | Requiere Token | `200 OK`, `401 Unauthorized` |
+| `/api/v1/user/byemail/{emailAddress}`| Actualizar perfil de usuario | PUT | Path: `emailAddress`, Body: `personName`, `password`| Requiere Token | `200 OK`, `403 Forbidden` |
+| `/api/v1/user-income` | Registrar ingresos del usuario | POST | Body: `userId`, `income` | Requiere Token | `201 Created`, `400 Bad Request` |
+
+### 2. Contributions Distribution (Gastos y Cuotas)
+
+La documentación de este módulo fue actualizada para incluir los flujos de creación de facturas (Bills) y el cálculo de la distribución (Contributions), asegurando que solo usuarios autenticados del hogar puedan modificarlos.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/bills` | Registrar nuevo gasto central | POST | Body: `houseHoldId`, `amount`, `description`, `paymentDate`| Requiere Token | `201 Created`, `401 Unauthorized` |
+| `/api/v1/bills/byhousehold/{id}` | Listar gastos del hogar | GET | Path: `id` (Household ID) | Requiere Token | `200 OK`, `404 Not Found` |
+| `/api/v1/contribution` | Generar distribución de pago | POST | Body: `billId`, `strategy`, `deadlineForMembers` | Requiere Token | `201 Created`, `400 Bad Request` |
+| `/api/v1/member_contribution` | Registrar pago de cuota individual| POST | Body: `contributionId`, `memberId`, `amount` | Requiere Token | `201 Created`, `403 Forbidden` |
+| `/api/v1/member_contribution/{id}` | Eliminar registro de pago | DELETE | Path: `id` (Member Contribution ID) | Requiere Token | `200 OK`, `401 Unauthorized` |
+
+### 3. Household Management (Gestión de Hogares e Invitaciones)
+
+Documentación finalizada para el ciclo de vida de los grupos. Se detallaron las respuestas esperadas al interactuar con las invitaciones y los roles internos.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/house_hold` | Crear un nuevo hogar | POST | Body: `name`, `representativeId`, `currency`, `startDate`| Requiere Token | `201 Created`, `401 Unauthorized` |
+| `/api/v1/house_hold/{id}` | Actualizar datos del hogar | PUT | Path: `id`, Body: `name`, `currency`, `memberCount` | Requiere Token | `200 OK`, `404 Not Found` |
+| `/api/v1/household_member` | Añadir miembro al hogar | POST | Body: `householdId`, `userId`, `income` | Requiere Token | `201 Created`, `400 Bad Request` |
+| `/api/v1/invitations` | Generar invitación por correo | POST | Body: `email`, `householdId`, `description` | Requiere Token | `200 OK`, `401 Unauthorized` |
+| `/api/v1/invitations/pending` | Validar invitación pendiente | GET | Query: `email`, `householdId` | Requiere Token | `200 OK`, `404 Not Found` |
+
+### 4. App Management (Configuraciones)
+
+Se agregaron a Swagger los endpoints transversales para manejar las preferencias de la aplicación, garantizando que un usuario solo pueda alterar sus propios ajustes mediante el token.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/settings` | Crear preferencias de usuario | POST | Body: `userId`, `language`, `darkMode`, `notificationEnabled` | Requiere Token | `201 Created`, `400 Bad Request` |
+| `/api/v1/settings?userId={id}` | Consultar preferencias | GET | Query: `userId` | Requiere Token | `200 OK`, `404 Not Found` |
+| `/api/v1/settings/{id}` | Actualizar preferencias | PUT | Path: `id`, Body: `language`, `darkMode`, `notification` | Requiere Token | `200 OK`, `403 Forbidden` |
+
+
+##### 4.2.2.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2, se desplegó el backend al 100% de Splitly en el servicio RENDER, asegurando su disponibilidad y persistencia de datos. Se validó el funcionamiento de los endpoints por medio de Swagger y pruebas de integración, y se dejó preparada la arquitectura para futuros desarrollos. Aquí las evidencias principales:
+
+**Backend:**
+
+<br>
+<img src="assets/render1.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render2.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render3.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render4.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render5.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render6.png" alt="Swagger Backend Sprint 2">
+<br>
+
+
+##### 4.2.2.8. Team Collaboration Insights during Sprint
+
+Evidencias de los insighs del sprint 2:
+
+<br>
+<img src="assets/insights2.1.png" alt="Insights Sprint 2">
+<br>
+
+<br>
+<img src="assets/insights2.2.png" alt="Insights Sprint 2">
+<br>
+
+<br>
+<img src="assets/insights2.3.png" alt="Insights Sprint 2">
+<br>
+
+
 ### 4.3. Validation Interviews
 #### 4.3.1. Diseño de Entrevistas
 
@@ -3174,3 +3447,40 @@ Los problemas detectados se puntúan bajo la siguiente métrica:
 ## Recomendaciones
 
 - Dentro del roadmap a corto y mediano plazo de la aplicación móvil, se sugiere priorizar la expansión de las integraciones con billeteras digitales locales y pasarelas de pago externas. Las validaciones indicaron que los usuarios buscan liquidar sus deudas con la menor cantidad de fricción posible, por lo que agilizar el flujo de pago directo in-app será vital para la retención y la reducción de la morosidad.
+
+
+## Video About the Product
+
+<br>
+<img src="assets/VideoAboutTheProduct.jpg" alt="videabouttheproduct">
+<br>
+
+- Duración: 6:12 mins
+
+- Youtube: https://www.youtube.com/watch?v=NVFVIfCgTQ4
+- Microsoft: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQBxWyY8_jhcQILuW-XuEOtQAR76RRQ-3nte36kfHOY16HU?e=cgvTo8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
+
+
+## Video App Validation
+
+<br>
+<img src="assets/videoAppValidation.jpg" alt="videabouttheproduct">
+<br>
+
+- Youtube: https://youtu.be/AKwF7MdLJfs
+
+- Microsoft:https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQDKI97wfxZsT6ojQ84-Z26DAcRBgbcwj5sN4bSOb-4Na9U?e=wSybbE&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
+
+## Video About The Team
+
+
+<br>
+<img src="assets/videoAboutTheTeam.jpg" alt="videabouttheproduct">
+<br>
+
+- Youtube: https://youtu.be/CcP1D0Q3aAc
+- Microsoft: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQBcmZdw6h5TT7H1-OUkyZktAcmiqVvxR1kofcM7Q2MqiS0?e=xMDlBF&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+
+
