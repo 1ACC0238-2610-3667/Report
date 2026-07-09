@@ -2767,7 +2767,7 @@ A continuación, se presenta el Sprint Planning 2, donde se incluyen las evidenc
 
 | **Campo**                              | **Descripción**                                                                                                                                                                                                                                                                                                    |
 | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Sprint #**                           | Sprint 1                                                                                                                                                                                                                                                                                                           |
+| **Sprint #**                           | Sprint 2                                                                                                                                                                                                                                                                                                           |
 | **Sprint Planning Background**         |                                                                                                                                                                                                                                                                                                                    |
 | **Date**                               | 2026-06-11                                                                                                                                                                                                                                                                                                         |
 | **Time**                               | 03:00 PM (GMT -5)                                                                                                                                                                                                                                                                                                  |
@@ -3001,6 +3001,254 @@ Evidencias de los insighs del sprint 2:
 <br>
 <img src="assets/insights2.3.png" alt="Insights Sprint 2">
 <br>
+
+
+#### 4.2.3. Sprint 3
+
+A continuación, se presenta el Sprint Planning 3, donde se incluyen las evidencias de planificación e implementación del Landing Page, Mobile App y Backend. También se registran los avances del proyecto e insights de colaboración del equipo a través de GitHub.
+
+##### 4.2.3.1. Sprint Planning 3
+
+| **Campo**                              | **Descripción**                                                                                                                                                                                                                                                                                                    |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Sprint #**                           | Sprint 3                                                                                                                                                                                                                                                                                                           |
+| **Sprint Planning Background**         |                                                                                                                                                                                                                                                                                                                    |
+| **Date**                               | 2026-07-05                                                                                                                                                                                                                                                                                                         |
+| **Time**                               | 03:00 PM (GMT -5)                                                                                                                                                                                                                                                                                                  |
+| **Location**                           | Modalidad remota por Google Meet                                                                                                                                                                                                                                                                                   |
+| **Prepared By**                        | Testigos de Splitly                                                                                                                                                                                                                                                                                              |
+| **Attendees (to planning meeting)**    | Equipo Splitly                                                                                                                                                                                                                                                            |
+| **Sprint 0 Review Summary**        | Este es el tercer sprint. Del Sprint anterior concluimos que nos falta corregir algunas funcionalidades del flujo de la aplicación y ponerla en producción.                                                                                                                                                                                                                                  |
+| **Sprint 0 Retrospective Summary** | Al estar en una face final del proyecto, se identificaron aspectos técnicos por pulir, Debemos verificar que el flujo de aplicación funcione sin fallas y luego subirla a la etapa de producción para dar por concluido el proyecto. |
+| **Sprint Goal & User Stories**         |                                                                                                                                                                                                                                                                                                                    |
+| **Sprint 1 Goal**                      | Subir a producción la aplicación                                                                                                                                                                                       |
+| **Sprint 1 Velocity**                  | 20                                                                                                                                                                                                                                                                                                                  |
+| **Sum of Story Points**                | 10                                                                                                                                                                                                                                                                                                                  |
+
+
+##### 4.2.3.2. Sprint Backlog 3
+
+El Sprint Backlog 3 corresponde al desarrollo de la primera versión de la aplicación Splitly. En este sprint nos enfocaremos en agregar las últimas funcionalidades tanto a la aplicación de Kotlin como de Flutter.
+
+Adicionalmente, se incluyeron tareas técnicas relacionadas con la documentación del despliegue y la configuración de monitoreo básico, asegurando que el proyecto cuente con una base sólida para futuras iteraciones.
+
+El trabajo colaborativo del equipo se gestionó en la herramienta Trello, lo que permitió organizar, priorizar y dar seguimiento a cada tarea de manera eficiente.
+Link al tablero de Trello: https://trello.com/invite/b/6a04a4676f2c78852edaeb1a/ATTI85b6ff75c99bfbde325e6f171ad6e8b4E226ADCE/splitly-sprint-backlog
+
+
+| User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **TS01** | Implementar autenticación JWT | T1 | Configuración JWT | Generación y validación de tokens en el backend | 4 | Héctor Ríos | To-do |
+| **TS02** | Cifrar contraseñas | T1 | Hashing de passwords | Integración de Bcrypt antes de guardar en BD | 3 | Walter Ramirez | To-do |
+| **TS03** | Validar roles backend | T1 | Middleware roles | Proteger rutas según rol (administrador/miembro) | 4 | Joaquin Cuentas | To-do |
+| **TS05** | Conectar formularios con endpoints | T1 | Integración Auth | Conectar UI de login y registro con API | 4 | Jose Luis Martinez Validivia | To-do |
+| **TS05** | Conectar formularios con endpoints | T2 | Integración Gastos | Conectar UI de creación de gastos y pagos con API | 5 | Rodrigo Miraval | To-do |
+| **TS06** | Validar respuestas del backend | T1 | Interceptores HTTP | Manejo centralizado de respuestas y códigos de estado | 3 | Walter Ramirez | To-do |
+| **US37** | Manejo de estados de carga | T1 | UI Loaders | Implementar spinners y mensajes de éxito en la app | 4 | Héctor Ríos | To-do |
+| **TS04** | Actualización de perfil API | T1 | UI Update Perfil | Conectar pantalla de edición con el endpoint de perfil | 3 | Jose Luis Martinez Validivia | To-do |
+| **US09** | Visualizar reportes mensuales | T1 | Reporte básico | Consolidar ingresos y gastos del mes en una vista | 5 | Rodrigo Miraval | To-do |
+| **TS09** | Update/Delete gastos | T1 | Endpoints mutación | Lógica para editar o eliminar un gasto ya registrado | 4 | Joaquin Cuentas | To-do |
+| **TS10** | Integración de gastos | T1 | Testing flujo gastos | Pruebas end-to-end de registro, vista y cálculo de gastos | 3 | Walter Ramirez | To-do |
+
+
+##### 4.2.3.3. Development Evidence for Sprint Review
+
+| Repository Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- |
+| Mobile App - develop | f11feed | feature: aggregate test | Se añadieron pruebas automatizadas para verificar el correcto funcionamiento de las funciones de agregación y consolidación de saldos. | 19/06/2026 |
+| Mobile App - develop | cc89d24 | feat: replace LaunchedEffect with DisposableEffect for lifecycle-aware data loading | Optimización del ciclo de vida en Compose. Reemplazo para garantizar la correcta limpieza de observadores y evitar fugas de memoria al salir de la pantalla. | 18/06/2026 |
+| Mobile App - develop | e089319 | chore: add .env to gitignore | Se actualizó el archivo .gitignore global para excluir archivos de configuración local (.env) y proteger credenciales sensibles. | 18/06/2026 |
+| Mobile App - develop | d8dc4e6 | feat: add .env files to .gitignore for environment variable management | Configuración explícita en el entorno móvil para asegurar que las variables de entorno de desarrollo no sean subidas al repositorio remoto. | 18/06/2026 |
+| Mobile App - develop | f70b021 | feat: integrate dotenv for dynamic base URL configuration | Integración de la librería dotenv para permitir la modificación dinámica de la URL base de las API según el entorno de ejecución (dev/prod). | 18/06/2026 |
+| Mobile App - develop | b56beb7 | feature: 4.2.2.4. Testing Suite Evidence for Sprint Review v1 | Estructuración y carga de evidencias correspondientes a la suite de pruebas unitarias preparadas para la revisión del Sprint 2. | 18/06/2026 |
+| Mobile App - develop | 04456aa | doc(): update README with contributions and reflections | Actualización del archivo de documentación principal con el desglose de aportes individuales del equipo y conclusiones del sprint. | 18/06/2026 |
+| Mobile App - develop | b6e1205 | Add development evidence table to README | Inclusión de la tabla formal de evidencias técnicas dentro del archivo README para simplificar la auditoría técnica. | 18/06/2026 |
+| Mobile App - develop | bee1b20 | Document Sprint Planning 2 and Backlog details | Registro detallado de los acuerdos del Sprint Planning 2, metas del equipo y la estimación de horas asociadas al backlog. | 18/06/2026 |
+| Mobile App - develop | a6f7d8e | refactor: refactor fuctions | Refactorización de funciones secundarias de cálculo y mapeo de datos con el objetivo de mejorar la legibilidad y mantenibilidad del código. | 16/06/2026 |
+| Mobile App - develop | 4ba47d4 | feat: add member app | Implementación y maquetado de la vista inicial con los flujos de funcionalidad específicos para usuarios con rol de Miembro. | 16/06/2026 |
+| Mobile App - develop | 919dd20 | feat: add video about the product | Inclusión del recurso audiovisual explicativo sobre el funcionamiento general de la aplicación Splitly para la presentación técnica. | 16/06/2026 |
+| Mobile App - develop | 4e8ce08 | chore: add new views | Creación y enrutamiento inicial de los contenedores base para las nuevas pantallas requeridas en el Sprint 2. | 14/06/2026 |
+| Mobile App - develop | 109ee85 | chore: add contributionVM instance as paramas to navs views | Inyección de la instancia global de ContributionViewModel en el grafo de navegación para persistir el estado entre pantallas hijas. | 14/06/2026 |
+| Mobile App - develop | 5fadc05 | chore: add complete view Contributions | Finalización de la interfaz de usuario de la pantalla de Contribuciones, permitiendo visualizar los aportes financieros del grupo. | 14/06/2026 |
+
+##### 4.2.3.4. Testing Suite Evidence for Sprint Review
+
+Tal como se estableció en la planificación y retrospectiva del Sprint 1, durante este segundo sprint se procedió con la implementación de la suite de pruebas automatizadas, aprovechando que el backend alcanzó su etapa de completitud y la estructura de la aplicación móvil en Flutter se encontraba consolidada.
+
+El objetivo principal en esta fase fue garantizar la estabilidad de los flujos críticos del sistema (autenticación y gestión de gastos) mediante herramientas nativas del ecosistema de Flutter (`flutter_test` e `integration_test`).
+
+**1. Tipos de Pruebas Implementadas**
+
+Para asegurar la calidad del producto, la estrategia de pruebas abarcó los siguientes niveles:
+
+* **Unit Tests (Pruebas Unitarias):** Se evaluó la lógica de negocio aislada de la interfaz gráfica. Esto incluyó la validación de los modelos de datos, la correcta serialización/deserialización de las respuestas JSON provenientes del backend, y las utilidades matemáticas encargadas del cálculo proporcional de las cuotas.
+* **Widget Tests (Pruebas de Componentes):** Se verificó el correcto renderizado y comportamiento de los componentes individuales de la UI en Flutter. Se comprobó que los formularios de registro e inicio de sesión muestren las validaciones de estado correctas (ej. campos obligatorios vacíos o formatos de correo inválidos) sin necesidad de levantar un emulador completo.
+* **Integration Tests (Pruebas de Integración y Aceptación):** Cumpliendo con lo reprogramado en el Sprint 1, se implementaron pruebas End-to-End (E2E) corriendo en dispositivos simulados. Estas pruebas validaron la comunicación real entre la aplicación móvil y los endpoints del backend desplegados, confirmando flujos completos como el inicio de sesión seguro (JWT) y el registro de un nuevo gasto.
+
+**2. Resumen de Ejecución de Pruebas**
+
+La siguiente tabla detalla un subconjunto representativo de los casos de prueba ejecutados exitosamente durante el cierre del Sprint 2:
+
+| ID Prueba | Tipo de Prueba | Módulo / Historia de Usuario | Descripción de la Validación | Resultado |
+| :--- | :--- | :--- | :--- | :---: |
+| TS-01 | Unit Test | Identity and Access Management | Serialización correcta del modelo `User` y extracción del JWT. | Exitoso |
+| TS-02 | Unit Test | Contributions Distribution | Validación del algoritmo de cálculo proporcional de un gasto entre `n` miembros. | Exitoso |
+| TS-03 | Widget Test | Interfaz de Usuario (UI) | Renderizado del formulario de Login y validación visual de campos vacíos. | Exitoso |
+| TS-04 | Widget Test | Interfaz de Usuario (UI) | Visualización correcta de estados de carga (Spinners) al procesar peticiones. | Exitoso |
+| TS-05 | Integration Test | Flujo End-to-End | Inicio de sesión exitoso con credenciales reales y redirección al Dashboard. | Exitoso |
+
+**3. Evidencias de Ejecución**
+
+La ejecución de la suite automatizada se realizó directamente desde el entorno de desarrollo mediante los comandos de testing de Flutter. Todas las aserciones (*expects*) diseñadas para los módulos de IAM y Contributions Distribution pasaron satisfactoriamente.
+
+<p align="center">
+  <img src="./assets/testeo prueba.jpg" alt="Ejecución de pruebas en Flutter" width="100%">
+  <br>
+  <em>Figura 1. Consola de comandos mostrando la ejecución exitosa de la suite de pruebas unitarias y de widgets en Flutter.</em>
+</p>
+
+**Conclusión del Sprint en Testing:**
+Con la integración de esta suite, se mitiga la deuda técnica del sprint anterior y se establece una base sólida de integración continua, asegurando que las futuras actualizaciones de los flujos de Splitly no rompan las funcionalidades ya validadas.
+
+##### 4.2.3.5. Execution Evidence for Sprint Review
+
+Durante la realización de este segundo sprint se implementó con éxito la primera versión funcional de la aplicación móvil (Mobile App) en Flutter, logrando la integración completa con los servicios web para los flujos críticos como autenticación, gestión de hogares y control de gastos.
+
+
+
+**Mobile App:**
+
+<br>
+<img src="assets/app1.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app2.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app3.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app4.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app5.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app6.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/app7.jpg" alt="Pantalla de Login / Registro">
+<br>
+
+##### 4.2.3.6. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 1 se estableció la estructura base de la documentación de la API. Para este segundo sprint, la documentación en OpenAPI/Swagger fue actualizada en su totalidad para reflejar la culminación del 100% de los endpoints del backend.
+
+El avance más significativo en esta iteración documentada fue la integración del esquema de seguridad **JWT (JSON Web Token)** en los contratos de la API. A continuación, se presentan las tablas de los endpoints finales actualizados, donde se especifica claramente la restricción de autorización. Se documentó que todos los módulos críticos exigen un token Bearer válido, a excepción de las rutas de autenticación inicial.
+
+### 1. Identity and Access Management (Autenticación y Usuarios)
+
+Este módulo fue documentado para diferenciar claramente las rutas públicas de las operaciones privadas que requieren validación del usuario en sesión.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/authentication/sign-up` | Registrar nuevo usuario | POST | Body: `email`, `password`, `name`, `role`, `householdId` | Acceso Público | `200 OK`, `400 Bad Request` |
+| `/api/v1/authentication/sign-in` | Iniciar sesión y obtener token | POST | Body: `email`, `password` | Acceso Público | `200 OK`, `401 Unauthorized` |
+| `/api/v1/user/user/{id}` | Consultar perfil por ID | GET | Path: `id` | Requiere Token | `200 OK`, `401 Unauthorized` |
+| `/api/v1/user/byemail/{emailAddress}`| Actualizar perfil de usuario | PUT | Path: `emailAddress`, Body: `personName`, `password`| Requiere Token | `200 OK`, `403 Forbidden` |
+| `/api/v1/user-income` | Registrar ingresos del usuario | POST | Body: `userId`, `income` | Requiere Token | `201 Created`, `400 Bad Request` |
+
+### 2. Contributions Distribution (Gastos y Cuotas)
+
+La documentación de este módulo fue actualizada para incluir los flujos de creación de facturas (Bills) y el cálculo de la distribución (Contributions), asegurando que solo usuarios autenticados del hogar puedan modificarlos.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/bills` | Registrar nuevo gasto central | POST | Body: `houseHoldId`, `amount`, `description`, `paymentDate`| Requiere Token | `201 Created`, `401 Unauthorized` |
+| `/api/v1/bills/byhousehold/{id}` | Listar gastos del hogar | GET | Path: `id` (Household ID) | Requiere Token | `200 OK`, `404 Not Found` |
+| `/api/v1/contribution` | Generar distribución de pago | POST | Body: `billId`, `strategy`, `deadlineForMembers` | Requiere Token | `201 Created`, `400 Bad Request` |
+| `/api/v1/member_contribution` | Registrar pago de cuota individual| POST | Body: `contributionId`, `memberId`, `amount` | Requiere Token | `201 Created`, `403 Forbidden` |
+| `/api/v1/member_contribution/{id}` | Eliminar registro de pago | DELETE | Path: `id` (Member Contribution ID) | Requiere Token | `200 OK`, `401 Unauthorized` |
+
+### 3. Household Management (Gestión de Hogares e Invitaciones)
+
+Documentación finalizada para el ciclo de vida de los grupos. Se detallaron las respuestas esperadas al interactuar con las invitaciones y los roles internos.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/house_hold` | Crear un nuevo hogar | POST | Body: `name`, `representativeId`, `currency`, `startDate`| Requiere Token | `201 Created`, `401 Unauthorized` |
+| `/api/v1/house_hold/{id}` | Actualizar datos del hogar | PUT | Path: `id`, Body: `name`, `currency`, `memberCount` | Requiere Token | `200 OK`, `404 Not Found` |
+| `/api/v1/household_member` | Añadir miembro al hogar | POST | Body: `householdId`, `userId`, `income` | Requiere Token | `201 Created`, `400 Bad Request` |
+| `/api/v1/invitations` | Generar invitación por correo | POST | Body: `email`, `householdId`, `description` | Requiere Token | `200 OK`, `401 Unauthorized` |
+| `/api/v1/invitations/pending` | Validar invitación pendiente | GET | Query: `email`, `householdId` | Requiere Token | `200 OK`, `404 Not Found` |
+
+### 4. App Management (Configuraciones)
+
+Se agregaron a Swagger los endpoints transversales para manejar las preferencias de la aplicación, garantizando que un usuario solo pueda alterar sus propios ajustes mediante el token.
+
+| Endpoint | Acción Implementada | Método | Parámetros Principales | Seguridad (JWT) | Códigos HTTP |
+| :--- | :--- | :---: | :--- | :---: | :--- |
+| `/api/v1/settings` | Crear preferencias de usuario | POST | Body: `userId`, `language`, `darkMode`, `notificationEnabled` | Requiere Token | `201 Created`, `400 Bad Request` |
+| `/api/v1/settings?userId={id}` | Consultar preferencias | GET | Query: `userId` | Requiere Token | `200 OK`, `404 Not Found` |
+| `/api/v1/settings/{id}` | Actualizar preferencias | PUT | Path: `id`, Body: `language`, `darkMode`, `notification` | Requiere Token | `200 OK`, `403 Forbidden` |
+
+
+##### 4.2.3.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2, se desplegó el backend al 100% de Splitly en el servicio RENDER, asegurando su disponibilidad y persistencia de datos. Se validó el funcionamiento de los endpoints por medio de Swagger y pruebas de integración, y se dejó preparada la arquitectura para futuros desarrollos. Aquí las evidencias principales:
+
+**Backend:**
+
+<br>
+<img src="assets/render1.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render2.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render3.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render4.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render5.png" alt="Swagger Backend Sprint 2">
+<br>
+
+<br>
+<img src="assets/render6.png" alt="Swagger Backend Sprint 2">
+<br>
+
+
+##### 4.2.3.8. Team Collaboration Insights during Sprint
+
+Evidencias de los insighs del sprint 2:
+
+<br>
+<img src="assets/insights2.1.png" alt="Insights Sprint 2">
+<br>
+
+<br>
+<img src="assets/insights2.2.png" alt="Insights Sprint 2">
+<br>
+
+<br>
+<img src="assets/insights2.3.png" alt="Insights Sprint 2">
+<br>
+
+
+
+
 
 
 ### 4.3. Validation Interviews
