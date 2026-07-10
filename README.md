@@ -3028,7 +3028,7 @@ A continuación, se presenta el Sprint Planning 3, donde se incluyen las evidenc
 
 ##### 4.2.3.2. Sprint Backlog 3
 
-El Sprint Backlog 3 corresponde al desarrollo de la primera versión de la aplicación Splitly. En este sprint nos enfocaremos en agregar las últimas funcionalidades tanto a la aplicación de Kotlin como de Flutter.
+El Sprint Backlog 3 corresponde al desarrollo final de la aplicación Splitly. En este sprint nos enfocaremos en agregar las últimas funcionalidades tanto a la aplicación de Kotlin como de Flutter.
 
 Adicionalmente, se incluyeron tareas técnicas relacionadas con la documentación del despliegue y la configuración de monitoreo básico, asegurando que el proyecto cuente con una base sólida para futuras iteraciones.
 
@@ -3038,38 +3038,34 @@ Link al tablero de Trello: https://trello.com/invite/b/6a04a4676f2c78852edaeb1a/
 
 | User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **TS01** | Implementar autenticación JWT | T1 | Configuración JWT | Generación y validación de tokens en el backend | 4 | Héctor Ríos | To-do |
-| **TS02** | Cifrar contraseñas | T1 | Hashing de passwords | Integración de Bcrypt antes de guardar en BD | 3 | Walter Ramirez | To-do |
-| **TS03** | Validar roles backend | T1 | Middleware roles | Proteger rutas según rol (administrador/miembro) | 4 | Joaquin Cuentas | To-do |
-| **TS05** | Conectar formularios con endpoints | T1 | Integración Auth | Conectar UI de login y registro con API | 4 | Jose Luis Martinez Validivia | To-do |
-| **TS05** | Conectar formularios con endpoints | T2 | Integración Gastos | Conectar UI de creación de gastos y pagos con API | 5 | Rodrigo Miraval | To-do |
-| **TS06** | Validar respuestas del backend | T1 | Interceptores HTTP | Manejo centralizado de respuestas y códigos de estado | 3 | Walter Ramirez | To-do |
-| **US37** | Manejo de estados de carga | T1 | UI Loaders | Implementar spinners y mensajes de éxito en la app | 4 | Héctor Ríos | To-do |
-| **TS04** | Actualización de perfil API | T1 | UI Update Perfil | Conectar pantalla de edición con el endpoint de perfil | 3 | Jose Luis Martinez Validivia | To-do |
-| **US09** | Visualizar reportes mensuales | T1 | Reporte básico | Consolidar ingresos y gastos del mes en una vista | 5 | Rodrigo Miraval | To-do |
-| **TS09** | Update/Delete gastos | T1 | Endpoints mutación | Lógica para editar o eliminar un gasto ya registrado | 4 | Joaquin Cuentas | To-do |
-| **TS10** | Integración de gastos | T1 | Testing flujo gastos | Pruebas end-to-end de registro, vista y cálculo de gastos | 3 | Walter Ramirez | To-do |
+| **US17** | Adjuntar comprobantes de gasto | T1 | UI Subida de archivos | Pantalla y lógica para seleccionar y subir imágenes | 4 | Jose Luis Martinez Validivia | To-do |
+| **TS07** | Validar adjunto en gasto | T1 | Middleware de archivos | Validar formato, peso y persistencia de comprobantes | 3 | Walter Ramirez | To-do |
+| **US19** | Comentar o justificar gasto | T1 | UI/API Comentarios | Agregar campo de texto y guardarlo asociado al gasto | 3 | Héctor Ríos | To-do |
+| **US20** | Visualizar gráficos de gastos | T1 | Integración de gráficos | Implementar librería para mostrar distribución de gastos | 5 | Rodrigo Miraval | To-do |
+| **TS08** | Filtrar gastos por fecha | T1 | Endpoint filtros | Añadir query params en API y selector de fechas en UI | 4 | Joaquin Cuentas | To-do |
+| **US14** | Ver historial pagos (representante)| T1 | Vista admin pagos | Lista detallada de todos los pagos recibidos en el hogar | 4 | Jose Luis Martinez Validivia | To-do |
+| **US15** | Ver historial pagos (miembro) | T1 | Vista usuario pagos | Lista de aportes realizados por el usuario logueado | 4 | Rodrigo Miraval | To-do |
+| **US22** | Alertas de pagos pendientes | T1 | Push notifications | Integración de alertas para fechas cercanas de pago | 4 | Héctor Ríos | To-do |
+| **US23** | Recordatorio ingreso | T1 | Lógica de recordatorio | Notificación mensual para actualizar salario/ingreso | 3 | Walter Ramirez | To-do |
+| **TS11** | API programar recordatorios | T1 | Scheduler/Cronjobs | Tarea en background para disparar alertas automáticas | 4 | Joaquin Cuentas | To-do |
 
 
 ##### 4.2.3.3. Development Evidence for Sprint Review
 
 | Repository Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
 | :--- | :--- | :--- | :--- | :--- |
-| Mobile App - develop | f11feed | feature: aggregate test | Se añadieron pruebas automatizadas para verificar el correcto funcionamiento de las funciones de agregación y consolidación de saldos. | 19/06/2026 |
-| Mobile App - develop | cc89d24 | feat: replace LaunchedEffect with DisposableEffect for lifecycle-aware data loading | Optimización del ciclo de vida en Compose. Reemplazo para garantizar la correcta limpieza de observadores y evitar fugas de memoria al salir de la pantalla. | 18/06/2026 |
-| Mobile App - develop | e089319 | chore: add .env to gitignore | Se actualizó el archivo .gitignore global para excluir archivos de configuración local (.env) y proteger credenciales sensibles. | 18/06/2026 |
-| Mobile App - develop | d8dc4e6 | feat: add .env files to .gitignore for environment variable management | Configuración explícita en el entorno móvil para asegurar que las variables de entorno de desarrollo no sean subidas al repositorio remoto. | 18/06/2026 |
-| Mobile App - develop | f70b021 | feat: integrate dotenv for dynamic base URL configuration | Integración de la librería dotenv para permitir la modificación dinámica de la URL base de las API según el entorno de ejecución (dev/prod). | 18/06/2026 |
-| Mobile App - develop | b56beb7 | feature: 4.2.2.4. Testing Suite Evidence for Sprint Review v1 | Estructuración y carga de evidencias correspondientes a la suite de pruebas unitarias preparadas para la revisión del Sprint 2. | 18/06/2026 |
-| Mobile App - develop | 04456aa | doc(): update README with contributions and reflections | Actualización del archivo de documentación principal con el desglose de aportes individuales del equipo y conclusiones del sprint. | 18/06/2026 |
-| Mobile App - develop | b6e1205 | Add development evidence table to README | Inclusión de la tabla formal de evidencias técnicas dentro del archivo README para simplificar la auditoría técnica. | 18/06/2026 |
-| Mobile App - develop | bee1b20 | Document Sprint Planning 2 and Backlog details | Registro detallado de los acuerdos del Sprint Planning 2, metas del equipo y la estimación de horas asociadas al backlog. | 18/06/2026 |
-| Mobile App - develop | a6f7d8e | refactor: refactor fuctions | Refactorización de funciones secundarias de cálculo y mapeo de datos con el objetivo de mejorar la legibilidad y mantenibilidad del código. | 16/06/2026 |
-| Mobile App - develop | 4ba47d4 | feat: add member app | Implementación y maquetado de la vista inicial con los flujos de funcionalidad específicos para usuarios con rol de Miembro. | 16/06/2026 |
-| Mobile App - develop | 919dd20 | feat: add video about the product | Inclusión del recurso audiovisual explicativo sobre el funcionamiento general de la aplicación Splitly para la presentación técnica. | 16/06/2026 |
-| Mobile App - develop | 4e8ce08 | chore: add new views | Creación y enrutamiento inicial de los contenedores base para las nuevas pantallas requeridas en el Sprint 2. | 14/06/2026 |
-| Mobile App - develop | 109ee85 | chore: add contributionVM instance as paramas to navs views | Inyección de la instancia global de ContributionViewModel en el grafo de navegación para persistir el estado entre pantallas hijas. | 14/06/2026 |
-| Mobile App - develop | 5fadc05 | chore: add complete view Contributions | Finalización de la interfaz de usuario de la pantalla de Contribuciones, permitiendo visualizar los aportes financieros del grupo. | 14/06/2026 |
+| Mobile App - develop | d34d10e | feature: add offline mode for reports view | Se implementó el soporte sin conexión para la vista de reportes, permitiendo al usuario acceder a su información financiera previamente descargada sin acceso a internet. | 10/07/2026 |
+| Mobile App - develop | 06e87be | fix: add report creation based on userid | Se corrigió la lógica de generación de reportes para garantizar que estos se creen y vinculen estrictamente al identificador (userid) del usuario autenticado. | 10/07/2026 |
+| Mobile App - develop | a056087 | feature(): add new Reports view in Online mode | Creación e integración de la vista principal de reportes diseñada para consumir datos en tiempo real de la API mediante conexión activa. | 09/07/2026 |
+| Mobile App - develop | cc60700 | feat: add proportional split functionality for contributions and update household member income | Desarrollo del algoritmo para dividir equitativamente los gastos en el hogar en función de los ingresos declarados por cada miembro registrado. | 07/07/2026 |
+| Mobile App - develop | dd83874 | feat: add IncomeScreen and navigation from Settings to Income | Implementación de la pantalla de registro de ingresos (IncomeScreen) y configuración del flujo de navegación desde la sección de ajustes. | 07/07/2026 |
+| Mobile App - develop | d7e9a3f | feat: temporarily comment out repository calls in ReportViewModel | Ajuste temporal en el ViewModel de reportes para aislar el desarrollo de la interfaz de usuario de las dependencias asíncronas del repositorio de datos. | 07/07/2026 |
+| Mobile App - develop | 50a86d6 | add new report views | Estructuración inicial y maquetado de los componentes de la interfaz de usuario destinados a la visualización de reportes mensuales. | 07/07/2026 |
+| Mobile App - develop | 66d0f35 | feat: add debt details to household member view and new API endpoint for contribution retrieval | Incorporación de los detalles de deuda en la vista individual de miembros y conexión con el nuevo endpoint de la API para historial de contribuciones. | 30/06/2026 |
+| Mobile App - develop | 744102f | feat: add pending debts section to dashboard with approval functionality | Agregada una sección en el panel principal para visualizar las deudas pendientes, dotada con botones de acción para su revisión y aprobación. | 30/06/2026 |
+| Mobile App - develop | 1726544 | feat: implement pull-to-refresh functionality and caching for dashboard data | Implementación del gesto de deslizar para actualizar (pull-to-refresh) en el dashboard, complementado con almacenamiento en caché para agilizar la carga de información. | 29/06/2026 |
+| Mobile App - develop | 906222d | feat: add comprehensive translations for dashboard in English and Spanish | Integración de los diccionarios de internacionalización, permitiendo a los usuarios alternar el idioma del dashboard entre inglés y español. | 29/06/2026 |
+| Mobile App - develop | b3281d9 | feat: enhance dashboard with new color palette and localization support | Actualización visual del dashboard aplicando los nuevos lineamientos de la paleta de colores del proyecto y habilitación del sistema multilingüe. | 29/06/2026 |
 
 ##### 4.2.3.4. Testing Suite Evidence for Sprint Review
 
