@@ -3081,32 +3081,57 @@ Durante la realización del sprint final se implementó con éxito versión fina
 **Mobile App:**
 
 <br>
-<img src="assets/app1.jpg" alt="Pantalla de Login / Registro">
+<img src="assets/appUlti1.jpeg" alt="Pantalla de Login / Registro">
 <br>
 
 <br>
-<img src="assets/app2.jpg" alt="Pantalla de Login / Registro">
+<img src="assets/appUlti2.jpeg" alt="Pantalla de Login / Registro">
 <br>
 
 <br>
-<img src="assets/app3.jpg" alt="Pantalla de Login / Registro">
+<img src="assets/appUlti3.jpeg" alt="Pantalla de Login / Registro">
 <br>
 
 <br>
-<img src="assets/app4.jpg" alt="Pantalla de Login / Registro">
+<img src="assets/appUlti4.jpeg" alt="Pantalla de Login / Registro">
 <br>
 
 <br>
-<img src="assets/app5.jpg" alt="Pantalla de Login / Registro">
+<img src="assets/appUlti5.jpeg" alt="Pantalla de Login / Registro">
 <br>
 
 <br>
-<img src="assets/app6.jpg" alt="Pantalla de Login / Registro">
+<img src="assets/appUlti6.jpeg" alt="Pantalla de Login / Registro">
 <br>
 
 <br>
-<img src="assets/app7.jpg" alt="Pantalla de Login / Registro">
+<img src="assets/appUlti7.jpeg" alt="Pantalla de Login / Registro">
 <br>
+
+<br>
+<img src="assets/appUlti8.jpeg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/appUlti9.jpeg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/appUlti10.jpeg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/appUlti11.jpeg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/appUlti12.jpeg" alt="Pantalla de Login / Registro">
+<br>
+
+<br>
+<img src="assets/appUlti13.jpeg" alt="Pantalla de Login / Registro">
+<br>
+
 
 ##### 4.2.3.6. Services Documentation Evidence for Sprint Review
 
