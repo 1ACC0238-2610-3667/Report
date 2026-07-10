@@ -3247,11 +3247,11 @@ Evidencias de los insighs del sprint 3:
 <br>
 
 <br>
-<img src="assets/insights2.2.png" alt="Insights Sprint 2">
+<img src="assets/commit1.png" alt="Insights Sprint 2">
 <br>
 
 <br>
-<img src="assets/insights2.3.png" alt="Insights Sprint 2">
+<img src="assets/commit2.png" alt="Insights Sprint 2">
 <br>
 
 
