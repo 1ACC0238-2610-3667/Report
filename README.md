@@ -3069,46 +3069,12 @@ Link al tablero de Trello: https://trello.com/invite/b/6a04a4676f2c78852edaeb1a/
 
 ##### 4.2.3.4. Testing Suite Evidence for Sprint Review
 
-Tal como se estableció en la planificación y retrospectiva del Sprint 1, durante este segundo sprint se procedió con la implementación de la suite de pruebas automatizadas, aprovechando que el backend alcanzó su etapa de completitud y la estructura de la aplicación móvil en Flutter se encontraba consolidada.
+No se realizaron Unit Tests debido a que en este sprint 3 no se ejecutaron pruebas funcionales ni unitarias. El equipo consideró que no era necesario desarrollar ni documentar nuevos tests porque el backend ya se encontraba completado al 100% en iteraciones anteriores, sin cambios de lógica o nuevas funcionalidades que requirieran validación adicional. Dado que no hubo modificaciones en el código ni integración de nuevos componentes que pudieran generar riesgos, se decidió omitir la ejecución de pruebas y, en consecuencia, no se generó evidencia para este apartado.
 
-El objetivo principal en esta fase fue garantizar la estabilidad de los flujos críticos del sistema (autenticación y gestión de gastos) mediante herramientas nativas del ecosistema de Flutter (`flutter_test` e `integration_test`).
-
-**1. Tipos de Pruebas Implementadas**
-
-Para asegurar la calidad del producto, la estrategia de pruebas abarcó los siguientes niveles:
-
-* **Unit Tests (Pruebas Unitarias):** Se evaluó la lógica de negocio aislada de la interfaz gráfica. Esto incluyó la validación de los modelos de datos, la correcta serialización/deserialización de las respuestas JSON provenientes del backend, y las utilidades matemáticas encargadas del cálculo proporcional de las cuotas.
-* **Widget Tests (Pruebas de Componentes):** Se verificó el correcto renderizado y comportamiento de los componentes individuales de la UI en Flutter. Se comprobó que los formularios de registro e inicio de sesión muestren las validaciones de estado correctas (ej. campos obligatorios vacíos o formatos de correo inválidos) sin necesidad de levantar un emulador completo.
-* **Integration Tests (Pruebas de Integración y Aceptación):** Cumpliendo con lo reprogramado en el Sprint 1, se implementaron pruebas End-to-End (E2E) corriendo en dispositivos simulados. Estas pruebas validaron la comunicación real entre la aplicación móvil y los endpoints del backend desplegados, confirmando flujos completos como el inicio de sesión seguro (JWT) y el registro de un nuevo gasto.
-
-**2. Resumen de Ejecución de Pruebas**
-
-La siguiente tabla detalla un subconjunto representativo de los casos de prueba ejecutados exitosamente durante el cierre del Sprint 2:
-
-| ID Prueba | Tipo de Prueba | Módulo / Historia de Usuario | Descripción de la Validación | Resultado |
-| :--- | :--- | :--- | :--- | :---: |
-| TS-01 | Unit Test | Identity and Access Management | Serialización correcta del modelo `User` y extracción del JWT. | Exitoso |
-| TS-02 | Unit Test | Contributions Distribution | Validación del algoritmo de cálculo proporcional de un gasto entre `n` miembros. | Exitoso |
-| TS-03 | Widget Test | Interfaz de Usuario (UI) | Renderizado del formulario de Login y validación visual de campos vacíos. | Exitoso |
-| TS-04 | Widget Test | Interfaz de Usuario (UI) | Visualización correcta de estados de carga (Spinners) al procesar peticiones. | Exitoso |
-| TS-05 | Integration Test | Flujo End-to-End | Inicio de sesión exitoso con credenciales reales y redirección al Dashboard. | Exitoso |
-
-**3. Evidencias de Ejecución**
-
-La ejecución de la suite automatizada se realizó directamente desde el entorno de desarrollo mediante los comandos de testing de Flutter. Todas las aserciones (*expects*) diseñadas para los módulos de IAM y Contributions Distribution pasaron satisfactoriamente.
-
-<p align="center">
-  <img src="./assets/testeo prueba.jpg" alt="Ejecución de pruebas en Flutter" width="100%">
-  <br>
-  <em>Figura 1. Consola de comandos mostrando la ejecución exitosa de la suite de pruebas unitarias y de widgets en Flutter.</em>
-</p>
-
-**Conclusión del Sprint en Testing:**
-Con la integración de esta suite, se mitiga la deuda técnica del sprint anterior y se establece una base sólida de integración continua, asegurando que las futuras actualizaciones de los flujos de Splitly no rompan las funcionalidades ya validadas.
 
 ##### 4.2.3.5. Execution Evidence for Sprint Review
 
-Durante la realización de este segundo sprint se implementó con éxito la primera versión funcional de la aplicación móvil (Mobile App) en Flutter, logrando la integración completa con los servicios web para los flujos críticos como autenticación, gestión de hogares y control de gastos.
+Durante la realización del sprint final se implementó con éxito versión final de la aplicación móvil (Mobile App) en Flutter, logrando la integración completa con los servicios web para los flujos críticos como autenticación, gestión de hogares y control de gastos.
 
 
 
@@ -3144,9 +3110,8 @@ Durante la realización de este segundo sprint se implementó con éxito la prim
 
 ##### 4.2.3.6. Services Documentation Evidence for Sprint Review
 
-Durante el Sprint 1 se estableció la estructura base de la documentación de la API. Para este segundo sprint, la documentación en OpenAPI/Swagger fue actualizada en su totalidad para reflejar la culminación del 100% de los endpoints del backend.
+Durante el Sprint 3, se revisó el backend de Splitly, asegurando su disponibilidad y persistencia de datos. Durante esta revisión no se incluyó ningún a los endpoints previamente registrados y solo se validó que siguiera funcionando en la etapa de despliegue.
 
-El avance más significativo en esta iteración documentada fue la integración del esquema de seguridad **JWT (JSON Web Token)** en los contratos de la API. A continuación, se presentan las tablas de los endpoints finales actualizados, donde se especifica claramente la restricción de autorización. Se documentó que todos los módulos críticos exigen un token Bearer válido, a excepción de las rutas de autenticación inicial.
 
 ### 1. Identity and Access Management (Autenticación y Usuarios)
 
@@ -3194,11 +3159,6 @@ Se agregaron a Swagger los endpoints transversales para manejar las preferencias
 | `/api/v1/settings?userId={id}` | Consultar preferencias | GET | Query: `userId` | Requiere Token | `200 OK`, `404 Not Found` |
 | `/api/v1/settings/{id}` | Actualizar preferencias | PUT | Path: `id`, Body: `language`, `darkMode`, `notification` | Requiere Token | `200 OK`, `403 Forbidden` |
 
-
-##### 4.2.3.7. Software Deployment Evidence for Sprint Review
-
-Durante el Sprint 2, se desplegó el backend al 100% de Splitly en el servicio RENDER, asegurando su disponibilidad y persistencia de datos. Se validó el funcionamiento de los endpoints por medio de Swagger y pruebas de integración, y se dejó preparada la arquitectura para futuros desarrollos. Aquí las evidencias principales:
-
 **Backend:**
 
 <br>
@@ -3224,6 +3184,33 @@ Durante el Sprint 2, se desplegó el backend al 100% de Splitly en el servicio R
 <br>
 <img src="assets/render6.png" alt="Swagger Backend Sprint 2">
 <br>
+
+
+##### 4.2.3.7. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 3, se revisó el backend de InnoSpace en Azure, asegurando su disponibilidad y persistencia de datos. Asimismo, para finalizar el proyecto llegamos a la etapa de producción llevando la aplicación móvil Splitly, a través de, el servicio Firebase:
+
+
+<br>
+<img src="assets/deploy1.jpeg" alt="Swagger Backend Sprint 3">
+<br>
+
+<br>
+<img src="assets/deploy2.jpeg" alt="Swagger Backend Sprint 3">
+<br>
+
+<br>
+<img src="assets/deploy3.jpeg" alt="Swagger Backend Sprint 3">
+<br>
+
+<br>
+<img src="assets/deploy4.jpeg" alt="Swagger Backend Sprint 3">
+<br>
+
+<br>
+<img src="assets/deploy5.jpeg" alt="Swagger Backend Sprint 3">
+<br>
+
 
 
 ##### 4.2.3.8. Team Collaboration Insights during Sprint
