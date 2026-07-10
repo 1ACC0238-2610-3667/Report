@@ -3703,10 +3703,10 @@ Los problemas detectados se puntúan bajo la siguiente métrica:
 <img src="assets/VideoAboutTheProduct.jpg" alt="videabouttheproduct">
 <br>
 
-- Duración: 6:12 mins
+- Duración: 7:56 mins
 
-- Youtube: https://www.youtube.com/watch?v=NVFVIfCgTQ4
-- Microsoft: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQBxWyY8_jhcQILuW-XuEOtQAR76RRQ-3nte36kfHOY16HU?e=cgvTo8&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D
+- Youtube: https://youtu.be/yXSY7LXhVOI
+- Microsoft: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231c540_upc_edu_pe/IQCsV4yeZa6BQLDCsregf32MAQPsssSTa9iuG4HJ0iJIVQc?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=zh9Sg8
 
 
 
