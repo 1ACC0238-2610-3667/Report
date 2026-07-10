@@ -3696,9 +3696,9 @@ Los problemas detectados se puntúan bajo la siguiente métrica:
 
 
 ## Conclusiones
-- Las sesiones de validación confirmaron nuestra hipótesis principal respecto a la equidad financiera: la automatización del cálculo proporcional de gastos basado en los ingresos reales disminuye significativamente las tensiones domésticas. Los resultados demostraron que la aplicación móvil resuelve de forma efectiva la problemática planteada en los Problem Statements, logrando que tanto los representantes del hogar como los convivientes confíen en el algoritmo de distribución y perciban un alto valor en la transparencia de la información compartida.
+- La aplicación final logra que dividir los gastos en casa sea verdaderamente justo. Al calcular automáticamente cuánto debe pagar cada uno según su sueldo, se reducen las discusiones por dinero. El sistema es exacto y transparente, y hace que todos en el hogar confían en él para llevar sus cuentas claras.
 
-- Frente a los assumptions de riesgo iniciales sobre una posible resistencia tecnológica o desconfianza al registrar datos financieros personales, las validaciones evidenciaron una rápida curva de adopción. Esto se logró gracias a la usabilidad de la interfaz y a la integración ágil de los recursos del dispositivo (como el uso de la cámara para registrar recibos). Se concluye que la solución, apoyada por una propuesta de valor clara desde el Landing Page, supera las barreras de entrada y cumple satisfactoriamente con los criterios de éxito definidos en el ciclo Lean UX.
+- La aplicación cumple con los requisitos de usabilidad, por parte de los usuarios; ya que, se acostumbran rápido a ella y no tienen miedo de registrar sus datos financieros. Detalles prácticos, como poder tomarle foto a los recibos directamente desde el celular, hacen que la experiencia sea muy cómoda. En resumen, hemos entregado un producto completo y fácil de entender que cumple exactamente con lo que promete desde el primer día.
 
 ## Recomendaciones
 
