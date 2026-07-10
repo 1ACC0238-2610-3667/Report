@@ -3215,10 +3215,10 @@ Durante el Sprint 3, se revisó el backend de InnoSpace en Azure, asegurando su 
 
 ##### 4.2.3.8. Team Collaboration Insights during Sprint
 
-Evidencias de los insighs del sprint 2:
+Evidencias de los insighs del sprint 3:
 
 <br>
-<img src="assets/insights2.1.png" alt="Insights Sprint 2">
+<img src="assets/insightsUlti.png" alt="Insights Sprint 3">
 <br>
 
 <br>
