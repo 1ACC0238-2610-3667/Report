@@ -1,42 +1,167 @@
 <p align="center">
-    <img src="./assets/logo-upc.png" alt="upc-logo" width="80px" height="80px"/>
+    <img src="./assets/logo-upc.png" alt="UPC Logo"
+         style="width:110px;height:110px;">
 </p>
 
-<h1 align="center">
+<br><br><br><br><br>
+
+
+<div align="center"
+    style="font-family:Arial,Helvetica,sans-serif;
+           font-size:40px;
+           font-weight:bold;
+           margin-bottom:5px;">
     Universidad Peruana de Ciencias Aplicadas
-</h1>
+</div>
 
-<h3 align="center">
-    Carrera: Ingeniería de Software
-    <br> <br>
-    Curso: 1ACC0238 - Aplicaciones para Dispositivos Móviles
-    <br> <br>
-    Sección: 3667
-    <br> <br>
-    Profesor: Eduardo Martin Reyes Rodriguez
-    <br> <br>
-    Ciclo: 2026-01
-    <br> <br>
-    Informe de Trabajo Final
-    <br> <br>
-    Startup: GroupFund
-    <br> <br>
-    Producto: Splitly  
-</h3>
 
-<div align="center">
+<div align="center"
+     style="font-family:Arial,Helvetica,sans-serif;
+            font-size:22px;
+            line-height:2;">
 
-| <div style="width:300px">Alumno</div>       | <div style="width:125px">Código</div> |
-|:-------------------------------------------:|:-------------------------------------:|
-|  Martínez Valdivia, José Luis               |              u202213989               |
-|       Ríos Pacheco, Héctor Javier           |              u20231c540               |
-| Cuentas Peña, JoaquinAlberto                |              u20201f788               |
-|       Ramirez Escalante, Walter Luis        |              u202221632               |
-|       Miraval Pomalaya, Rodrigo Jesús       |              u202311082               |
+<strong>Ingeniería de Software</strong><br>
+
+Periodo: 2026-01<br>
+
+1ACC0238 | Aplicaciones para Dispositivos Móviles<br>
+
+NRC: 3667<br>
+
+Docente: Eduardo Martin Reyes Rodriguez
 
 </div>
 
-<div align="center"> Abril 2026 </div>
+
+<hr style="width:45%;border:1px solid gray;">
+
+<br>
+<br>
+
+
+<br>
+
+<div align="center"
+    style="font-family:Arial,Helvetica,sans-serif;
+           font-size:42px;
+           font-weight:bold;
+           margin-bottom:20px;">
+    Informe del Trabajo Final
+</div>
+
+<div align="center"
+     style="font-family:Arial,Helvetica,sans-serif;
+            font-size:24px;
+            line-height:2;">
+
+Startup: <strong>GroupFund</strong><br>
+
+Producto: <strong>Splitly</strong>
+
+</div>
+
+<br><br><br>
+<br><br><br>
+
+
+<table align="center"
+       style="border-collapse:collapse; border:none;">
+
+<tr>
+    <td style="border:none; padding:8px 25px; color:#555;">u202213989</td>
+    <td style="border:none; padding:8px 25px;">Martínez Valdivia, José Luis</td>
+</tr>
+
+<tr>
+    <td style="border:none; padding:8px 25px; color:#555;">u20231c540</td>
+    <td style="border:none; padding:8px 25px;">Ríos Pacheco, Héctor Javier</td>
+</tr>
+
+<tr>
+    <td style="border:none; padding:8px 25px; color:#555;">u20201f788</td>
+    <td style="border:none; padding:8px 25px;">Cuentas Peña, Joaquin Alberto</td>
+</tr>
+
+<tr>
+    <td style="border:none; padding:8px 25px; color:#555;">u202221632</td>
+    <td style="border:none; padding:8px 25px;">Ramirez Escalante, Walter Luis</td>
+</tr>
+
+<tr>
+    <td style="border:none; padding:8px 25px; color:#555;">u202311082</td>
+    <td style="border:none; padding:8px 25px;">Miraval Pomalaya, Rodrigo Jesús</td>
+</tr>
+
+</table>
+
+<br><br>
+
+<br><br>
+
+<div align="center"
+     style="font-family:Arial,Helvetica,sans-serif;
+            font-size:20px;
+            font-style:italic;">
+    Julio 2026
+</div>
+
+<br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Registro de Versiones del Informe
@@ -179,34 +304,43 @@ que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Ou
 | Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software | Héctor Rios - AV1: Contribuí realizando el capítulo 1 y organizando las ideas para la continuación del proyecto | Héctor Rios - AV1: El desarrollo del capítulo 1 me permitió reforzar mis conocimientos sobre la estructura inicial de un proyecto de software |
 | | Héctor Rios - TB1: Reforcé la estructuración inicial del proyecto documentando y organizando los contenidos base | Héctor Rios - TB1: Comprendí la importancia de establecer bases sólidas para el desarrollo eficiente del proyecto |
 | | Héctor Rios - AV2: Amplié la documentación del capítulo 1 incorporando mejoras en la definición del problema y objetivos | Héctor Rios - AV2: Consolidé mis conocimientos sobre la planificación estratégica del proyecto |
+| | Héctor Rios - TF: Integré los aportes obtenidos durante el proyecto y revisé la coherencia general de la documentación final | Héctor Rios - TF: Fortalecí mi capacidad para consolidar conocimientos y aplicarlos de forma integral en un proyecto de software |
 | | Jose Luis Martínez Valdivia - AV1: Contribuí en el desarrollo del capítulo 2 - Strategic Level Domain Driven Design | Jose Luis Martínez Valdivia - AV1: El desarrollo del capítulo 2 me permitió enriquecer mis conocimientos de DDD |
 | | Jose Luis Martínez Valdivia - TB1: Apoyé en la definición estratégica del dominio y discusión de soluciones basadas en DDD | Jose Luis Martínez Valdivia - TB1: Fortalecí mi capacidad para debatir e implementar soluciones de servicios web |
 | | Jose Luis Martínez Valdivia - AV2: Profundicé en la aplicación de patrones de DDD en el capítulo 2 | Jose Luis Martínez Valdivia - AV2: Mejoré mi comprensión sobre la aplicación práctica de DDD |
+| | Jose Luis Martínez Valdivia - TF: Consolidé la definición estratégica del dominio validando patrones y decisiones arquitectónicas | Jose Luis Martínez Valdivia - TF: Afianzé mis conocimientos en DDD al aplicarlos de manera integral en la solución final |
 | | Joaquin Alberto Cuentas Peña - AV1: Contribuí en el desarrollo del capítulo 2 con análisis de segmentos objetivos, entrevistas y elaboración de personas | Joaquin Alberto Cuentas Peña - AV1: Conocí la perspectiva de los usuarios que usarán la aplicación |
 | | Joaquin Alberto Cuentas Peña - TB1: Profundicé en el análisis de usuarios y construcción de perfiles enfocados en requisitos | Joaquin Alberto Cuentas Peña - TB1: Logré enfocar mejor los requisitos en función de las necesidades reales del usuario |
 | | Joaquin Alberto Cuentas Peña - AV2: Refiné perfiles de usuario y validé segmentos objetivo | Joaquin Alberto Cuentas Peña - AV2: Logré mayor alineación entre usuario y requisitos |
+| | Joaquin Alberto Cuentas Peña - TF: Consolidé los hallazgos obtenidos de los usuarios y verifiqué la consistencia de los requisitos definidos | Joaquin Alberto Cuentas Peña - TF: Fortalecí mi capacidad para traducir necesidades reales en requisitos de software bien estructurados |
 | | Walter Luis Fajardo Monrroy - AV1: Contribuí en el desarrollo de diagramas y segmentación de bounded context | Walter Luis Fajardo Monrroy - AV1: Permitió asignar bounded context y comprender su interconexión |
 | | Walter Luis Fajardo Monrroy - TB1: Elaboré diagramas adicionales para mejorar la comprensión de los contextos delimitados | Walter Luis Fajardo Monrroy - TB1: Mejoré mi entendimiento sobre la organización modular del sistema |
 | | Walter Luis Fajardo Monrroy - AV2: Ajusté y optimicé diagramas de bounded context | Walter Luis Fajardo Monrroy - AV2: Fortalecí la integración entre contextos |
+| | Walter Luis Fajardo Monrroy - TF: Integré los diagramas finales asegurando coherencia entre los bounded contexts definidos | Walter Luis Fajardo Monrroy - TF: Consolidé mis conocimientos sobre arquitectura orientada a dominios y contextos delimitados |
 | | Rodrigo Jesus Miraval Pomalaya - AV1: Contribuí realizando parte del capítulo 2 con user historias, impact mapping y product backlog | Rodrigo Jesus Miraval Pomalaya - AV1: Profundicé en user historias, impact mapping y backlog |
 | | Rodrigo Jesus Miraval Pomalaya - TB1: Apoyé en la estructuración de requerimientos y priorización mediante herramientas ágiles | Rodrigo Jesus Miraval Pomalaya - TB1: Comprendí mejor la traducción de necesidades del negocio en requisitos claros |
 | | Rodrigo Jesus Miraval Pomalaya - AV2: Mejoré la priorización del backlog | Rodrigo Jesus Miraval Pomalaya - AV2: Afianzé la estructuración ágil de requerimientos |
+| | Rodrigo Jesus Miraval Pomalaya - TF: Consolidé el backlog final verificando la alineación entre requisitos y objetivos del proyecto | Rodrigo Jesus Miraval Pomalaya - TF: Fortalecí mis habilidades en gestión ágil y planificación de proyectos de software |
 | Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de tecnologías de ingeniería de software | Héctor Rios - AV1: Contribuí realizando el capítulo 1, sedimentando las bases del proyecto | Héctor Rios - AV1: Comprendí la importancia de la actualización constante |
 | | Héctor Rios - TB1: Fortalecí la documentación inicial del proyecto para su mejora continua | Héctor Rios - TB1: Reflexioné sobre el aprendizaje continuo como base del crecimiento profesional |
 | | Héctor Rios - AV2: Revisé y actualicé la documentación con retroalimentación | Héctor Rios - AV2: Comprendí la importancia de la mejora continua |
+| | Héctor Rios - TF: Incorporé aprendizajes obtenidos durante todo el proyecto para perfeccionar la documentación final | Héctor Rios - TF: Reafirmé la importancia del aprendizaje continuo para adaptarme a nuevos retos profesionales |
 | | Jose Luis Martínez Valdivia - AV1: Contribuí en el desarrollo del capítulo 2 - Strategic Level DDD | Jose Luis Martínez Valdivia - AV1: Entendí procesos para delimitar alcance y arquitectura |
 | | Jose Luis Martínez Valdivia - TB1: Apoyé en la definición del alcance y arquitectura del proyecto | Jose Luis Martínez Valdivia - TB1: Mejoré mi criterio para planificar soluciones de software |
 | | Jose Luis Martínez Valdivia - AV2: Ajusté la arquitectura según nuevas discusiones | Jose Luis Martínez Valdivia - AV2: Reforcé mi adaptabilidad en diseño de sistemas |
+| | Jose Luis Martínez Valdivia - TF: Consolidé la arquitectura final considerando nuevas perspectivas y mejoras identificadas | Jose Luis Martínez Valdivia - TF: Fortalecí mi capacidad de adaptación y aprendizaje continuo en el diseño de software |
 | | Joaquin Alberto Cuentas Peña - AV1: Reconocí necesidades de usuarios mediante entrevistas | Joaquin Alberto Cuentas Peña - AV1: Este conocimiento permitió crear personas y requisitos funcionales |
 | | Joaquin Alberto Cuentas Peña - TB1: Analicé datos de usuarios para definir posibles funcionalidades | Joaquin Alberto Cuentas Peña - TB1: Fortalecí la identificación de necesidades del usuario |
 | | Joaquin Alberto Cuentas Peña - AV2: Validé necesidades con enfoque iterativo | Joaquin Alberto Cuentas Peña - AV2: Fortalecí el aprendizaje basado en feedback |
+| | Joaquin Alberto Cuentas Peña - TF: Integré la retroalimentación recopilada para optimizar la definición de requisitos finales | Joaquin Alberto Cuentas Peña - TF: Confirmé que el aprendizaje constante mejora la comprensión de las necesidades de los usuarios |
 | | Walter Luis Fajardo Monrroy - AV1: Reconocí segmentos y los convertí en bounded context | Walter Luis Fajardo Monrroy - AV1: Aprendí a segmentar bounded context |
 | | Walter Luis Fajardo Monrroy - TB1: Profundicé en la organización de funcionalidades por contexto | Walter Luis Fajardo Monrroy - TB1: Consolidé mi conocimiento en arquitectura basada en contextos |
 | | Walter Luis Fajardo Monrroy - AV2: Reorganicé contextos según mejoras | Walter Luis Fajardo Monrroy - AV2: Consolidé conocimientos en arquitectura evolutiva |
+| | Walter Luis Fajardo Monrroy - TF: Revisé y optimicé la estructura de contextos delimitados considerando aprendizajes obtenidos | Walter Luis Fajardo Monrroy - TF: Reforcé la importancia de actualizar continuamente los conocimientos de arquitectura de software |
 | | Rodrigo Jesus Miraval Pomalaya - AV1: Contribuí en user historias, impact mapping y backlog | Rodrigo Jesus Miraval Pomalaya - AV1: Comprendí cómo organizar el alcance del proyecto |
 | | Rodrigo Jesus Miraval Pomalaya - TB1: Refiné la priorización del desarrollo | Rodrigo Jesus Miraval Pomalaya - TB1: Mejoré la estructuración del trabajo |
 | | Rodrigo Jesus Miraval Pomalaya - AV2: Reestructuré backlog según nuevas prioridades | Rodrigo Jesus Miraval Pomalaya - AV2: Fortalecí la mejora continua en ágiles |
-
+| | Rodrigo Jesus Miraval Pomalaya - TF: Ajusté y validé la planificación final incorporando nuevas prioridades y aprendizajes | Rodrigo Jesus Miraval Pomalaya - TF: Consolidé la importancia de la mejora continua y la adaptabilidad en metodologías ágiles |
 
 ## Objetivos SMART
 
